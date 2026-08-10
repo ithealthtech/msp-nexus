@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Clean Corporate Light",
+  "settings": { "color": { "palette": [
+    { "slug": "ink", "name": "Ink", "color": "#152033" }, { "slug": "navy", "name": "Navy", "color": "#294260" },
+    { "slug": "slate", "name": "Slate", "color": "#66758a" }, { "slug": "mist", "name": "Mist", "color": "#dfe6ee" },
+    { "slug": "cloud", "name": "Cloud", "color": "#f5f7fa" }, { "slug": "white", "name": "White", "color": "#ffffff" },
+    { "slug": "cyan", "name": "Action blue", "color": "#cfe8ff" }, { "slug": "cyan-dark", "name": "Action blue dark", "color": "#075ea8" },
+    { "slug": "violet", "name": "Innovation violet", "color": "#6246c7" }, { "slug": "success", "name": "Success", "color": "#137a4b" },
+    { "slug": "warning", "name": "Warning", "color": "#a64b00" }
+  ] } },
+  "styles": { "elements": { "button": { "color": { "background": "var:preset|color|navy", "text": "var:preset|color|white" } } } }
+}

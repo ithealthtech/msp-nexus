@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/video-dialog",
+  "version": "0.4.0",
+  "title": "Nexus Video Dialog",
+  "category": "msp-nexus",
+  "icon": "video-alt3",
+  "description": "A click-to-load video dialog that avoids third-party requests before activation.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "heading": { "type": "string", "default": "Watch the service overview" }, "buttonLabel": { "type": "string", "default": "Play video" }, "videoUrl": { "type": "string", "default": "" }, "posterUrl": { "type": "string", "default": "" }, "privacyNotice": { "type": "string", "default": "Playing this video may connect to the selected video provider." } },
+  "supports": { "align": ["wide"], "anchor": true, "html": false, "spacing": { "margin": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/progress-meter",
+  "version": "0.4.0",
+  "title": "Nexus Progress Meter",
+  "category": "msp-nexus",
+  "icon": "performance",
+  "description": "A semantic progress meter for verified maturity, completion, or coverage values.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "label": { "type": "string", "default": "Implementation progress" }, "value": { "type": "number", "default": 65 }, "showValue": { "type": "boolean", "default": true }, "color": { "type": "string", "default": "#69bff5" } },
+  "supports": { "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

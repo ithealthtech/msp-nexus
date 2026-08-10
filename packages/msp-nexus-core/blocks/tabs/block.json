@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/tabs",
+  "version": "0.4.0",
+  "title": "Nexus Accessible Tabs",
+  "category": "msp-nexus",
+  "icon": "index-card",
+  "description": "Keyboard-accessible tabs with a readable no-script fallback.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "items": { "type": "string", "default": "Managed IT|Accountable day-to-day technology operations.\nCybersecurity|Risk-led controls, monitoring, and response.\nCloud|Governed platforms, adoption, and optimization." }, "orientation": { "type": "string", "default": "horizontal" } },
+  "supports": { "align": ["wide"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

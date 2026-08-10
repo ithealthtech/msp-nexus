@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Cybersecurity",
+  "settings": { "color": { "palette": [
+    { "slug": "ink", "name": "Ink", "color": "#07110d" }, { "slug": "navy", "name": "Forest", "color": "#10271e" },
+    { "slug": "slate", "name": "Slate", "color": "#60756b" }, { "slug": "mist", "name": "Mist", "color": "#dce8e1" },
+    { "slug": "cloud", "name": "Cloud", "color": "#f2f8f4" }, { "slug": "white", "name": "White", "color": "#ffffff" },
+    { "slug": "cyan", "name": "Signal green", "color": "#60f0a8" }, { "slug": "cyan-dark", "name": "Signal green dark", "color": "#087844" },
+    { "slug": "violet", "name": "Threat violet", "color": "#8d72ff" }, { "slug": "success", "name": "Success", "color": "#168a50" },
+    { "slug": "warning", "name": "Warning", "color": "#c45118" }
+  ] } },
+  "styles": { "elements": { "button": { "border": { "radius": "0" } }, "heading": { "typography": { "letterSpacing": "-0.015em" } } } }
+}

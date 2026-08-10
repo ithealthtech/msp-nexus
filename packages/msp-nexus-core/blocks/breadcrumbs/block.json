@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/breadcrumbs",
+  "version": "0.4.0",
+  "title": "MSP Breadcrumbs",
+  "category": "theme",
+  "icon": "arrow-right-alt2",
+  "description": "Pluggable semantic breadcrumbs with common SEO-plugin integrations.",
+  "textdomain": "msp-nexus-core",
+  "supports": { "align": ["wide"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "file:./style.css"
+}

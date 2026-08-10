@@ -1,0 +1,11 @@
+parameters:
+  phpVersion: 70433
+  level: 6
+  paths:
+    - packages/msp-nexus
+    - packages/msp-nexus-core
+    - packages/msp-nexus-child
+  excludePaths:
+    analyse:
+      - packages/msp-nexus-core/blocks/*/render.php
+  treatPhpDocTypesAsCertain: false

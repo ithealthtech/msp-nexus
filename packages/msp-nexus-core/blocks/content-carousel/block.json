@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/content-carousel",
+  "version": "0.4.0",
+  "title": "Nexus Content Carousel",
+  "category": "msp-nexus",
+  "icon": "slides",
+  "description": "A keyboard-operable content carousel with pause controls and reduced-motion behavior.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "heading": { "type": "string", "default": "Featured insights" }, "items": { "type": "string", "default": "Build an executive IT roadmap|Connect current condition, business priorities, sequencing, and ownership.|/resources/it-roadmap/\nReview practical security questions|Use evidence to decide which exposures deserve action first.|/resources/security-questions/\nUnderstand useful service metrics|Choose measures that support better operating decisions.|/resources/service-metrics/" }, "autoPlay": { "type": "boolean", "default": false }, "interval": { "type": "number", "default": 7000 } },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

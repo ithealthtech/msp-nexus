@@ -1,0 +1,4 @@
+@import url("./global.css");
+
+.editor-styles-wrapper { min-height: 100%; background: var(--msp-night); color: #fff; }
+.editor-styles-wrapper .msp-nexus-card { border: 1px solid var(--wp--preset--color--mist); }

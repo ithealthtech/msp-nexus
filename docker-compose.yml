@@ -1,0 +1,65 @@
+services:
+  database:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress-local-only
+      MARIADB_ROOT_PASSWORD: root-local-only
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - wordpress-db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:7.0.2-php8.3-apache
+    depends_on:
+      database:
+        condition: service_healthy
+    ports: ["8080:80"]
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress-local-only
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: "1"
+    volumes:
+      - wordpress-files:/var/www/html
+      - ./packages/msp-nexus:/var/www/html/wp-content/themes/msp-nexus:ro
+      - ./packages/msp-nexus-child:/var/www/html/wp-content/themes/msp-nexus-child:ro
+      - ./packages/msp-nexus-core:/var/www/html/wp-content/plugins/msp-nexus-core:ro
+
+  wpcli:
+    image: wordpress:cli-php8.3
+    depends_on: [wordpress]
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress-local-only
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress-files:/var/www/html
+      - ./packages/msp-nexus:/var/www/html/wp-content/themes/msp-nexus:ro
+      - ./packages/msp-nexus-core:/var/www/html/wp-content/plugins/msp-nexus-core:ro
+    entrypoint: ["wp"]
+
+  licensing:
+    image: node:24-alpine
+    working_dir: /app
+    command: ["node", "src/server.js"]
+    ports: ["8787:8787"]
+    environment:
+      PORT: "8787"
+      PUBLIC_ORIGIN: http://localhost:8787
+      LICENSE_KEY_PEPPER: local-development-pepper-32-characters-minimum
+      DOWNLOAD_GRANT_SECRET: local-download-grant-32-characters-minimum
+    volumes:
+      - ./services/licensing-service:/app
+
+volumes:
+  wordpress-db:
+  wordpress-files:

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/menu-panel",
+  "version": "0.4.0",
+  "title": "Nexus Mega Menu Panel",
+  "category": "msp-nexus",
+  "icon": "menu-alt3",
+  "description": "An accessible disclosure that renders a reusable mega-menu layout.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "label": { "type": "string", "default": "Explore" },
+    "layoutSlug": { "type": "string", "default": "" },
+    "hoverOpen": { "type": "boolean", "default": false },
+    "closeOutside": { "type": "boolean", "default": true },
+    "width": { "type": "string", "default": "720px" },
+    "alignment": { "type": "string", "default": "start" }
+  },
+  "supports": { "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

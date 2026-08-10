@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/lottie-animation",
+  "version": "0.4.0",
+  "title": "Nexus Lottie Animation",
+  "category": "msp-nexus",
+  "icon": "format-video",
+  "description": "Render a Lottie JSON animation with local runtime assets and reduced-motion behavior.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "jsonUrl": { "type": "string", "default": "" },
+    "label": { "type": "string", "default": "Animated illustration" },
+    "loop": { "type": "boolean", "default": true },
+    "autoPlay": { "type": "boolean", "default": true },
+    "playOnHover": { "type": "boolean", "default": false },
+    "startWhenVisible": { "type": "boolean", "default": true },
+    "speed": { "type": "number", "default": 1 }
+  },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio",
+  "viewScript": ["msp-nexus-lottie", "file:./view.js"]
+}

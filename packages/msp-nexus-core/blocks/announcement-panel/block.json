@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/announcement-panel",
+  "version": "0.4.0",
+  "title": "MSP Announcement Panel",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Consent-aware banner or modal with frequency, path, focus, and no-script behavior.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "mode": { "type": "string", "default": "banner", "enum": ["banner", "modal"] },
+    "heading": { "type": "string", "default": "Plan with greater confidence" },
+    "body": { "type": "string", "default": "Talk with an advisor about the operating model, risks, and priorities that matter now." },
+    "buttonLabel": { "type": "string", "default": "Book a consultation" },
+    "buttonUrl": { "type": "string", "default": "/contact/" },
+    "delaySeconds": { "type": "number", "default": 4 },
+    "frequencyDays": { "type": "number", "default": 14 },
+    "includePath": { "type": "string", "default": "/" },
+    "excludedReferrer": { "type": "string", "default": "" },
+    "requireConsent": { "type": "boolean", "default": false },
+    "consentKey": { "type": "string", "default": "msp_consent_marketing" }
+  },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "file:./style.css"
+}

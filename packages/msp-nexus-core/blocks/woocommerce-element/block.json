@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/woocommerce-element",
+  "version": "0.4.0",
+  "title": "Nexus WooCommerce Element",
+  "category": "msp-nexus",
+  "icon": "cart",
+  "description": "Context-aware shop, product, cart, checkout, account, and order template elements.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "element": { "type": "string", "default": "product-title" },
+    "count": { "type": "number", "default": 4 },
+    "columns": { "type": "number", "default": 4 },
+    "heading": { "type": "string", "default": "" },
+    "showCounts": { "type": "boolean", "default": true },
+    "instantFilters": { "type": "boolean", "default": true },
+    "shippingThreshold": { "type": "number", "default": 0 }
+  },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": ["msp-nexus-studio", "msp-nexus-woocommerce"],
+  "viewScript": "file:./view.js"
+}
