@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/metric-counter",
+  "version": "0.4.0",
+  "title": "Nexus Metric Counter",
+  "category": "msp-nexus",
+  "icon": "chart-bar",
+  "description": "An accessible reduced-motion-aware metric counter for verified values.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "value": { "type": "number", "default": 100 },
+    "decimals": { "type": "number", "default": 0 },
+    "prefix": { "type": "string", "default": "" },
+    "suffix": { "type": "string", "default": "%" },
+    "label": { "type": "string", "default": "Verified service metric" },
+    "duration": { "type": "number", "default": 1200 }
+  },
+  "supports": { "anchor": true, "html": false, "color": { "text": true, "background": true }, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

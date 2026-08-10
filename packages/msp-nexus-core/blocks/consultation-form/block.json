@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/consultation-form",
+  "version": "0.4.0",
+  "title": "MSP Consultation Form",
+  "category": "widgets",
+  "icon": "email-alt",
+  "description": "Accessible consultation form with consent, spam extension points, rate limiting, and email delivery.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "heading": { "type": "string", "default": "Plan a consultation" },
+    "privacyText": { "type": "string", "default": "I agree that this information may be used to respond to my request. Do not include passwords or sensitive information." }
+  },
+  "supports": { "align": ["wide"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "file:./style.css"
+}

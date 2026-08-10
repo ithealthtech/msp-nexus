@@ -1,0 +1,3942 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MSP Nexus 0.4.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "%1$s positioning for %2$s organizations."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "%s complete MSP starter configurations combine market context, service positioning, and visual systems. Search, preview, then apply only the parts you want."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "A compact native Cover video section for a process, culture, or capability moment."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "A license controls commercial updates, cloud libraries, and support. It never controls whether your public content renders."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "A native Cover video background with accessible text and reduced-motion fallback guidance."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "A portable visual workflow built on WordPress blocks. Nexus controls enhance the editor without converting content into proprietary shortcodes."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "A verified rollback package or required cryptographic extension is unavailable."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "About Us"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Absolute"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Accept optional technologies"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Accessible label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Account"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Account login dropdown"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Accounting"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Action accent color"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Activate license"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Activate the MSP Nexus theme and companion plugin."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Activate WooCommerce to use this element."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Activation identity"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Activation privacy notice"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Activation transmits the entered key, this site origin, a new random installation identifier, and whether WordPress multisite is enabled. The service necessarily observes connection metadata such as IP address for security and rate limiting. It returns a signed entitlement cache. No post content, users, analytics, passwords, or visitor data are sent. Retention and verified deletion requests are documented in the vendor privacy and operations policy."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Activation was not accepted. Check the key, domain allowance, and service connection."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Active theme"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Add %s more to reach free shipping."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Add a block to begin building."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Add a verified customer quotation or clearly label this as your service standard."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/video-dialog/render.php
+msgid "Add a video URL to configure this dialog."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Add New %s"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Add Nexus layout"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Add protected blocks here."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/faq-list/render.php
+msgid "Add published FAQs to populate this section."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/service-grid/render.php
+msgid "Add published services to populate this section."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Add to cart"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Add WooCommerce filter blocks or widgets to the Nexus Shop Sidebar area."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Additional information"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Admin and login accent color"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Admin-bar logo URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Advanced Custom Fields"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Advanced demo reset"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Advanced include/exclude rules"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Advanced reset"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Advanced: one registered handle per line. Never unload security, consent, cart, or form dependencies without testing."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Advanced: one registered handle per line. Test every affected page."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "AI Readiness"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "All formats"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "All industries"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "All listed products"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "All products"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "All service focuses"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "All topics"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "All visual systems"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Allow native lazy loading for supported iframes"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Allow WordPress to install verified MSP Nexus theme and plugin updates automatically."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Allowed user roles"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Alternate editor"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Analytics"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Analytics and tags"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Analytics category label"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/lottie-animation/render.php
+msgid "Animated illustration"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Animation"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Animation duration"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/announcement-panel/render.php
+msgid "Announcement"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Announcement settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Answer the practical questions buyers should resolve before selecting this service."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Any listed product"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Applies to newly generated image sizes when the server image editor supports the selected format."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Apply an original MSP, security, co-managed IT, or cloud consulting profile."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "Apply design tokens"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Apply filters"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Arch mask"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Archive context"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Archive description"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Archive title"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Archive URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Arrow link"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Ascending"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Ask the host to enable a compatible GD or Imagick build."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "At least 50 MB of free content-directory space is required before updating MSP Nexus."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Author IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Author name"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Auto play"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Autoloaded options under 1 MB"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Automatic"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Automatic source link"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Automatic updates"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Automotive"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Available"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Avatar"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Backup acknowledgment and exact typed confirmation are required."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Backup, recovery, communications, testing, and incident coordination."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Banner message"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Bar color"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Base type scale (%)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Before importing"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Beta"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Biography"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Block"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Block styles copied."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Block theme"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Blocks and widgets shown by the WooCommerce off-canvas Shop Sidebar element."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Body"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Body line height (%)"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/breadcrumbs/render.php
+msgid "Breadcrumbs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Browse design library"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Build templates, regions, mega menus, loops, and popups. Published layouts: %d."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Business Continuity"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Business Outcome"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Business outcomes"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Business Outcomes"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Button corner radius (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Button horizontal padding (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Button label"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Button URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Button vertical padding (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Caching"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Canvas tools"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Capacity, coverage, tooling, and specialists for internal IT teams."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Caption"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Card border width (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Card corner radius (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Card shadow level (0–5)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Carousel settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Cart"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Cart totals"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Case studies"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Catalog enquiry URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Catalog mode (disable purchases)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Categories"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Category description"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js
+msgid "Center"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Check"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Checkout"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Checkout presentation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Choice lifetime (days)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Choose a concise, muted background video and provide an equivalent poster image and meaningful page content."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/lottie-animation/render.php
+msgid "Choose a Lottie JSON URL."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Choose a readable JSON bundle."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Choose a starter"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Choose a WooCommerce template element."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Choose content you are allowed to export."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Choose content…"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Choose preferences"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Choose slide"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "Clear"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Clear capability"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Clear MSP Nexus update-check cache"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Click selector"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Client dashboard"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Client footer"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Client header"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Client mode"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Client-facing product name"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Close after navigation"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Close after outside click"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Close cart"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/TemplateConditions.php
+msgid "Close dialog"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/offcanvas-menu/render.php
+msgid "Close menu"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Close shop filters"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Close sign-in form"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/video-dialog/render.php
+msgid "Close video"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Close when the backdrop is clicked"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Cloud Innovation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Cloud Modernization"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Cloud platforms, identity, cost control, resilience, and adoption."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Co-managed IT"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Column headings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Columns"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Comma-separated ISO days: 1 is Monday and 7 is Sunday."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Comma-separated page, post, product, or content IDs."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Comma-separated post type slugs."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Comma-separated role slugs; leave empty for any role."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Comma-separated WooCommerce product IDs."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Comment count"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Commerce"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Company address"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Comparison table settings"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Complete every required field and provide a valid email address."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Compliance Readiness"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Conditional layouts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Conditional page template"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/TemplateConditions.php
+msgid "Conditional template supplied by Nexus Studio."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Configure store presentation while WooCommerce continues to own products, inventory, taxes, payments, accounts, and order security."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Confirmation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Connect forms through reviewed hooks, document data flows, and obtain the required consent before optional tracking."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Connect optional scripts to the Nexus consent categories and verify regional requirements before launch."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Connect the service to productivity, risk, resilience, and visibility."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Consent interface"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Consent preferences"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Consent storage key"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Conservative optimizations"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Construction"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Consultation popup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/ConsultationHandler.php
+msgid "Consultation request from %s"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Contact"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Contact Form 7, WPForms, or Gravity Forms"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Content"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Content directory writable"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-loop/render.php
+msgid "Content pages"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Content query"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Content type"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Content width (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Controls, evidence, ownership, and continuous audit readiness."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Copy styles"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Core plugin"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Corporate Light"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Create a current backup first. This tool targets only posts carrying an MSP Nexus demo key and the exact import options listed below. Posts are moved to Trash for recovery; media, users, terms, tables, and unrelated options are never touched."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Create a current backup."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "Create a reusable navigation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Create draft layout starters"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Create editable draft examples for a conditional page template, header, footer, services mega menu, consultation popup, and service loop. Existing layouts are not changed."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "Create missing draft pages"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Create published Loop layouts under Nexus layouts, then select one here."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Create synced pattern"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Creates a focused portable document containing one block document and its safe public metadata."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "CRM and automation"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Cross-sells"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Current date"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Current estimated autoload payload: %s."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Current post"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Current term"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Current visitor"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Currently active"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Custom and ACF fields"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Custom fields"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Custom URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Custom-field comparison"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Custom-field filter"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Custom-field key"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Custom-field value"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Customer account"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Cybersecurity"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Dashboard welcome message"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Database"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Deactivate this site"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Decimal places"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Default business hours"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Default card"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Default section spacing (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Delay (seconds)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Delay in seconds"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Demo import"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Demo-keyed posts: %d"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Department"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Departments"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Descending"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Description"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Designed for"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Desktop"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Detail"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Details and payment"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Detected"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Detected integrations"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Developers can attach a reviewed CRM connector to msp_nexus_consultation_submitted without changing form markup."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Development"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Diagnostics"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Digital Workplace"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "Directory pages"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Directory settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Disable legacy WordPress emoji scripts and styles"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Disable oEmbed discovery and host scripts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Disable visible PHP debug output on production."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Disabled by default. Maintain a tested backup and staging workflow before enabling."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/announcement-panel/render.php
+msgid "Dismiss announcement"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Dismissal frequency in days"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Dismissal period (days)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Display"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Display context"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Display name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Distraction free"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Download content JSON"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Download JSON bundle"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Download redacted diagnostics JSON"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Downloads organization settings, design/branding/performance presets, Nexus layouts, and current-theme block templates and parts. License credentials and transient state are excluded."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Dry-run target report"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Duplicate"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Dynamic field"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Dynamic source"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Dynamic value settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Edit %s"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Edit global styles, templates, headers, and footers in the native visual canvas."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Edit navigation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Edit Nexus layout"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Edit page content"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Edit site design"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Edit this content"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Editing device"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Editor heartbeat interval"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Education"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Element"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Element key"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Elementor"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Email delivery"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Emergency-support message"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Enable a reviewed full-page cache at the host or caching plugin."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enable accessible quick view"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enable browser-local wishlists"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Enable conservative built-in schema when no supported SEO plugin is active"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Enable the native consultation form handler"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Enable visitor privacy choices"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enabled"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js
+msgid "End"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "End date"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Enforce native lazy loading on non-priority Media Library images"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enhance compatible product filters without full reloads"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enhance variable-product attributes with accessible swatch buttons"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Enquire about this product"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Enter a license key."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Enterprise Dark"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Entrance motion"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Essential"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Essentials-only action"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Events"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Everyone"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Example: en_US, es_ES"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Excerpt"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Exclude current post"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Exclude object IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Exclude post IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Exclude term slugs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Excluded referrer text"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Execution time"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Exit inspection"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Experience preferences"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Expires"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Explain how discovery, transition, operations, review, and improvement work."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Explain who is accountable and how progress is measured."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/menu-panel/render.php
+msgid "Explore"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Export one page or content item"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Export or import settings and reusable Nexus layouts as reviewed JSON bundles."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Export reviewed bundle"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Facebook URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Fade"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Fallback"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "FAQ list settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Favorite"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Favorite elements"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Featured image"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Featured image URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Featured products only"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Field"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Field key"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Filter favorites"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Filter products"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Financial Services"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "First name"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "First taxonomy"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Flex"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Flush rewrite rules once"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Focus"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "For reviewed custom integrations, use a non-executing script type and a category attribute. The browser activates it only after consent."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "Format"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Forms"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Free-shipping progress"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Free-shipping progress threshold"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Front-end inspection"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Front-end script handles to unload"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Front-end style handles to unload"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Full-service MSP"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Gallery IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Generated image format"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Generated image quality"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Generic service pages publish immediately. Unverified proof, people, locations, resources, events, relationships, and legal placeholders remain drafts until you review them."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Give visitors a practical route to continue."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Global design controls"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Government"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Grid"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Guidance"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Header announcement"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Header behavior"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Header fields are used only when the layout area is Header."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Heading"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Heading font weight"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Healthcare"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Healthcare security, cloud, legal…"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Helps measure site use and content effectiveness."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Hexagon mask"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Hide block wireframes"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Hide on desktop"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Hide on mobile"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Hide on tablet"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Hide only the WordPress Events and News widget"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Hide product prices"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Hide while scrolling down and reveal while scrolling up"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/breadcrumbs/render.php packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Home"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Hook-based connector"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Horizontal"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Hospitality"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Host cache or performance plugin"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "HTML element"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "HTTPS"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "HubSpot, Mailchimp, or FluentCRM"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "I acknowledge that a current backup is recommended."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "I have a backup and understand this creates production-safe starter content plus draft placeholders that require review."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Icon"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Icon card settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Image"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Image alt text override"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Image grid"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Image processing"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Image size"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import / export"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import a focused page/content export as a new draft when its slug already exists"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Import activity report"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import current-theme templates and template parts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import into staging first. Existing Nexus layouts and theme templates with the same slug are updated; customer pages and posts are never deleted."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Import job is %1$d%% complete (%2$d of %3$d records). Created: %4$d. Updated: %5$d. You can leave this page and resume safely."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import Nexus-owned starter pages (never overwrite an unmarked customer page)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import reviewed bundle"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Import settings and presets"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Imported %d portable records."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Include object IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Include post IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Include term slugs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Industry"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Industry Categories"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Industry Category"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Inherit"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Inline banner"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Inline block"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Insert portable MSP sections, page starters, and responsive layout variations."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Inspect in Nexus Studio"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/product-showcase/render.php
+msgid "Install and activate WooCommerce to preview products."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Insurance"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Integrations"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Interval in milliseconds"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "Invalid rollback product."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "ISO day numbers 1–7, separated by commas."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Items"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Items per page"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Justify"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Keep motion supportive, compressed, muted, and optional for visitors who prefer reduced motion."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Keep this header visible while scrolling"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Keyboard focus color"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Last import completed at %s. Created: %d. Updated: %d."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Last name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Last successful check"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Launch safety"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Layer navigator"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Layout area"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Layout region settings"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Learn more"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Leave empty to use the Media Library alt text."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Leave this field empty"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Left"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Legal"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "License & updates"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "License activated. The raw key was not stored."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "License ID"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "License key"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "License service"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Life Sciences"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Link"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Link label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Link presentation"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Link URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "LinkedIn URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "List"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Loading revisions…"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Loading starter catalog…"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Locale codes"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Locations"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Locked message"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Logged in"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Logged out"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Logged-in visitors"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Logged-out visitors"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Login background image URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Login logo URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Logistics"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Loop"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Loop item design"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Lottie animation settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Lottie JSON URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Manage installed plugins"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Manage layouts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Manage menus with WordPress Navigation and insert Nexus menu-panel blocks where richer content is needed."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Manage organization-wide contact and conversion details. Content remains available if the commercial license expires."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Manage privacy choices"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Manage reusable layouts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Managed Operations"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Manufacturing"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Marketing"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Marketing and CRM"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Marketing category label"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Masonry"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Match all groups"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Match any group"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Mega menu settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Mega-menu layout slug"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Memory limit"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/offcanvas-menu/render.php
+msgid "Menu"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Menu label"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Message"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Metric settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Mini cart"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Mobile"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Mode"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Modified date"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Month name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "More than 30 Studio template elements, product dynamic values, conditional layouts, wishlist, quick view, side cart, catalog mode, galleries, and checkout presentation become available."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Move down"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Move listed demo posts to Trash"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Move up"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Integrations/Elementor.php
+msgid "MSP Nexus"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "MSP Nexus advanced reset"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/Client.php
+msgid "MSP Nexus could not confirm a current signed entitlement. The public site remains unchanged; commercial updates and cloud downloads stay unavailable until validation succeeds."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "MSP Nexus diagnostics"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "MSP Nexus element"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "MSP Nexus guided setup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/Client.php
+msgid "MSP Nexus is in its offline or renewal grace period until %s. Public content remains unchanged."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "MSP Nexus license"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Bindings.php
+msgid "MSP Nexus organization setting"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "MSP Nexus requires WordPress 6.7 or newer and PHP 7.4.33 or newer."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "MSP Nexus settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "MSP Nexus setup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Blocks/Registry.php
+msgid "MSP Nexus Studio"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Multi-location Business"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Multilingual"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Multisite mode"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Muted text color"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "My account"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Name"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Name this synced pattern"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Navigation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Need help or planning guidance? Use the support route below to reach the responsible team."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Never"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Next slide"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Nexus adaptive starter library"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Nexus client branding"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus Consultation Form"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus Content Loop"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Nexus device design"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Nexus display conditions"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Nexus display rules"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Nexus does not bundle paid plugins or silently transmit visitor data. Select only the tools your operating and privacy model requires."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus Dynamic Value"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus FAQ"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Nexus import and export"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Nexus integrations"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Nexus keeps security notices visible and avoids replacing a dedicated firewall, malware scanner, or login-protection service."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Nexus layout"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Nexus layouts"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Nexus performance"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Nexus performance console"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Nexus portability"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Nexus privacy"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Nexus privacy and consent"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus Service Grid"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Nexus Shop Sidebar"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Nexus starter sites"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Nexus Studio"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Nexus white-label controls"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Nexus Woo Template Element"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Nexus WooCommerce"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Nexus WooCommerce Studio"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Nexus yields schema ownership to supported SEO plugins to reduce duplicate structured data."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "No %s found."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "No link"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "No matching content was found. Clear a filter or try a broader search."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "No MSP Nexus updates have been recorded on this site."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/product-showcase/render.php
+msgid "No products match this showcase."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-loop/render.php
+msgid "No published content matches this loop."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "No revisions are available yet."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "No starter kits match those filters."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "No valid copied styles were found."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "No-results message"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js
+msgid "None"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Nonprofit"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Notice with category controls"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Number of FAQs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Number of services"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Object"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Off-canvas menu settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Off-canvas shop sidebar"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Offer a focused conversation about the current condition and next decision."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Offset"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "One full HTTPS origin per line."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "One per line: Title|Description|URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "One row per line; separate cells with |."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "One tab per line: Label|Content"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Open advanced demo reset (separate confirmation required)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Open diagnostics"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Open first question"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Open on pointer hover"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Open portability tools"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Open Site Editor"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Open support"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Open the first question"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Operation preview"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Optimization"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Optional heading"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Options: msp_nexus_import_state, msp_nexus_import_ledger. The prior homepage settings recorded by the importer will be restored when available."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Order"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Order by"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Order details"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Order overview"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Order steps"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Organic mask"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Organization"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Organization name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Organization settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Orientation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Origin key"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Output"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Overlay the header above the first content section"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Page cache constant"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Pair common operating friction with a responsible service response."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Panel alignment"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Panel position"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Panel width"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Pass"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Paste styles"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Patterns and MSP elements"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Pause"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Pause and cancel this import"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Performance"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Permalink"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Persistent object cache"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "PHP"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Plan"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Plan a consultation"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Play on hover"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Playback speed"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Please wait a moment before submitting another request."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Plugin schema migration"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Popup behavior"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Popup fields are used only when the layout area is Popup. Publish a rule only after previewing it."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Portable presets"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Position"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Post author"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Post count"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Post type"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Post type (optional)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Post type label"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Post types"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Poster image URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Preconnect origins"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Preferences category label"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Prefix"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Preload the singular-page featured image"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Present a client-facing support identity without hiding WordPress security, update, privacy, or license state."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Present measurable outcomes with scope, time period, and honest context."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Presentation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Presentation only. Configure the actual free-shipping method and minimum in WooCommerce shipping zones."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Preserve source format"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Previous slide"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Price"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Primary consultation URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Primary sales phone"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Primary surface color"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Primary text color"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Prior opt-in for optional categories"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Priority"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Privacy & consent"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Privacy choices"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Privacy notice"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Privacy policy"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Privacy policy URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Proactive support, infrastructure, security, lifecycle, and leadership."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Process next safe batch"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product brands"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Product category"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product category slug"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product content"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product count"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Product gallery"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product IDs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Product image"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Product images"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product meta"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Product price"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product rating"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product reviews"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Product reviews render on a public product page."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product showcase settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Product stock"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Product tabs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Product title"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Product view options"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Production debug display disabled"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Production sites"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Products"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Products per page"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Professional Services"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Progress settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Provide accessible visitor choices and activate optional scripts only after the matching category is granted. This tool does not replace legal review or a complete data inventory."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "Publish new Home and set it as front page"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Published date"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Published layout slug"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Purchase access"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Purchased resource"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Purge caches after applying starter profiles, changing templates, or importing a bundle."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Query"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Query parameter"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Questions"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Quick view"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Read-only environment checks plus conservative front-end toggles. Image conversion, cache purges, and database cleanup remain with your host or dedicated performance tooling."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Real Estate"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Recent update history"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Redo"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Refresh"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Registered ACF fields appear in the visual Dynamic Value picker and loop-query controls."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Regular price"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Related products"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Related-content taxonomy"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Relative"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Remembers optional experience and media choices."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Remote deactivation failed; the local entitlement remains intact."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Remove"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Remove block"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Remove Dashicons for signed-out visitors"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "Replace existing Nexus-owned Home composition"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Replace this guidance with accurate, specific content."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Require stored consent before showing"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Require stored marketing consent"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Required for security, forms, navigation, and saved preferences."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Required path prefix"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Required purchase"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Required query value"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Resource Type"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Resource Types"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Resources"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Responsible AI adoption across identity, information, policy, and people."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Responsible next step"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Responsive help, clear ownership, employee experience, and reporting."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "REST API"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Result"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Retail"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Reusable layout starters"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Review"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Review and apply"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Reviewed SMTP provider"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Right"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Rise"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Risk reduction, detection, response, recovery, and governance."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Roadmaps, budgets, architecture, lifecycle, and executive decisions."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Roll back %1$s to %2$s"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "Rollback failed. Review filesystem access, the update log, and the previous verified backup."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Rows"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Run selected repairs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Safe repair tools"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Sale price"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Sales email"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Save"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Save and revisions"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Save choices"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Save revision"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Scheduled tasks"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Script markup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Scroll activation offset (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Scroll depth (%)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Search"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Search %s"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php
+msgid "Search this directory"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Second taxonomy"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Second term slugs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "seconds"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Secure collaboration, communications, devices, adoption, and employee experience."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Security"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Security Signal"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Select a block to see actions."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Selected block"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "SEO"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Separate cells with |."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Separate multiple slugs with commas."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Service Categories"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Service Category"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Service grid settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Service loop region"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Services"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Services mega menu"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Set a free-shipping threshold in Nexus WooCommerce settings."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Set the imported homepage as the static homepage (the prior setting is recorded)."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Setup"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Shop breadcrumbs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Shop columns"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Shop filters"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Shop notices"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Shop products"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Shop title"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Shop view options"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Short description"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Show a branded support widget"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Show an equally accessible essentials-only button"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Show block wireframes"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show dates"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Show excerpts"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show featured images"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show filters"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show pagination"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show percentage"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show product counts"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show ratings"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-carousel/render.php
+msgid "Show slide %d"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Show text label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Showing the latest %d processed records. Created objects can be recovered with the Advanced reset tool; customer-authored objects are never listed."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Side cart"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Sign in"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/purchase-gate/render.php
+msgid "Sign in to verify access"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Signal frame"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Site date format"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Site Kit, GTM4WP, or MonsterInsights"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Six Nexus widgets bridge services, FAQs, forms, dynamic values, loops, and WooCommerce templates into Elementor while retaining site-owned content."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "SKU"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Slide"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Slider"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Slides"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Sodium signatures"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Software & SaaS"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Sort products"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Source"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Stable"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Stable is recommended for production. Preview channels can contain incomplete changes."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Staging sites"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Standard"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js
+msgid "Start"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Start date"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Start idempotent import"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Start when visible"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Starter library pages"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Starter sites"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Starter: %1$s. Manifest version: %2$s. Records: %3$d. Batch size: %4$d."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Static"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/LicenseScreen.php packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Status"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Sticky"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Stock status"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Studio"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Submit consultation request"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Submit when a filter changes"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Suffix"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Summarize the capability, ownership, evidence, and next step."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Support Experience"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Support partner name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Support phone"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Support portal URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Support URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Supporting detail"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Supports campaign attribution and personalized outreach."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Synced pattern created."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Tab settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Tablet"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Tabs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Taxonomy"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Taxonomy relationship"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Taxonomy slug"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Team"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Technology operations built for momentum."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Starter/Catalog.php
+msgid "Technology Strategy"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Technology support"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Technology support by %s"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Telephone"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "Term slugs"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Text"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Text alignment"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Thank you. Your request was submitted."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "The activation response was invalid."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "The bundle must be a JSON file no larger than 2 MB."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "The bundled demo manifest failed integrity or schema validation."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "The bundled demo manifest or integrity digest is invalid. Import is disabled."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "The document matches its latest save."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "The form session expired. Refresh the page and try again."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "The importer adds or updates only records carrying MSP Nexus demo identifiers. It never deletes customer content and can be run repeatedly."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "The MSP Nexus update package failed cryptographic hash verification."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "The MSP Nexus update package identity is invalid."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/ConsultationHandler.php
+msgid "The native consultation form is disabled. Use the published contact channel."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "The raw key is sent once over HTTPS and is not stored in WordPress."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "The request could not be delivered. Please use the published telephone or support channel."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "The selected starter components were applied. Existing non-Nexus pages were preserved."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/starter-sites.js
+msgid "The starter catalog could not be loaded."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "The synced pattern could not be created."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Theme"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "These actions regenerate derived state only. They do not delete posts, media, terms, users, or customer settings."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "These restrained tokens complement, and can be overridden by, native Global Styles."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/purchase-gate/render.php
+msgid "This content is available after purchase."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "This element needs the matching WooCommerce page or product context."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "This is not a supported Nexus bundle."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "This report contains no license key, password, token, customer content, or visitor data."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "This site was deactivated. Public content is unchanged."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Threshold override"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Timed modal"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Title"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/content-directory/render.php packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Topic"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Topics"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Transactional content renders on the public WooCommerce route."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Transactional email sender address"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Transactional email sender name"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Translate Nexus content, templates, strings, and navigation with the plugin that owns language routing."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Trigger"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Two column"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "Type"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "Type %s to enable the reset:"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Underline inline links by default"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Undo"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Unfavorite"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Unknown starter configuration."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Unsaved changes are present."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Update channel"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Update history"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "Upload directory"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Upsells"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "URL"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Use * for any non-empty value."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Use * to require any non-empty value."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Use 0 to inherit the Nexus WooCommerce setting."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Use a reviewed HTTPS or same-origin JSON file."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Use a sticky mobile add-to-cart form"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Use authenticated transactional email and complete DNS authentication; Nexus does not store SMTP secrets."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Use compact spacing after scrolling"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Use dark Studio UI"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "Use essentials only"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Use first column as row headings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "Use light Studio UI"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Use one page-cache owner and test conditional layouts, carts, consent choices, and authenticated routes before enabling optimization."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Use only after a current backup. Rollback replaces product files with the previous signed and hash-verified package; it does not reverse customer content or unrelated database changes."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "Use partner branding on the login and admin footer"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Use px, rem, vw, or %."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Use this space for evidence, an image, process details, or a specific business outcome."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Use your selected form plugin or the built-in consultation form. Avoid running duplicate public forms."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "Useful for dynamic or high-traffic sites when supported by the host."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "User role slugs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "Validate and import"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Value"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Variant group"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Variant weight"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "Verified MSP Nexus updates require the PHP ZIP and Sodium extensions."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "Verified rollback"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Verified source"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Vertical"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "Vertical stack"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Video Background Band"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Video Background Hero"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Video dialog settings"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Video or embed URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Video story"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "View %s"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "View cart"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "View product options"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js
+msgid "Visible ownership"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Visit any public page while signed in and choose “Inspect in Nexus Studio” from the toolbar. The overlay identifies editable page regions and links back to the correct WordPress editor."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Visitor state"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "Visual design"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Visual loop-item layout"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Visual system"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Privacy.php
+msgid "We use essential storage for site operation. Optional analytics and marketing technologies run only according to your preferences."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Performance.php
+msgid "WebP generation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Website"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "Weekdays"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "What would you like to improve?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Branding.php
+msgid "White label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Wide content width (px)"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Wishlist"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "WooCommerce"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
+msgid "WooCommerce element"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "WooCommerce element settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Integrations/WooCommerce.php
+msgid "WooCommerce is not active. Settings can be prepared now and will apply after activation."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "WooCommerce product"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "WooCommerce template element for Nexus Studio."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Wordfence, Solid Security, or host security"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "WordPress"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-workspace.js
+msgid "WordPress provides native drag and drop, undo/redo, autosave, revisions, preview, list view, and keyboard navigation. Nexus layers and tools operate on the same block document."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/consultation-form/render.php
+msgid "Work email"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "WP Rocket, LiteSpeed Cache, or Autoptimize"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "WPML or Polylang"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/DynamicData.php
+msgid "Year"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Integrations.php
+msgid "Yoast SEO, Rank Math, or SEOPress"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "You are not allowed to apply starter sites."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "You are not allowed to cancel demo imports."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Studio.php
+msgid "You are not allowed to create layouts."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "You are not allowed to export Nexus data."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Portability.php
+msgid "You are not allowed to import block templates."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Onboarding.php
+msgid "You are not allowed to import demo content."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+msgid "You are not allowed to manage product licenses."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Reset.php
+msgid "You are not allowed to reset demo content."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/UpdateClient.php
+msgid "You are not allowed to roll back this product."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "You are not allowed to run diagnostics."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Your cart"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Your order qualifies for free shipping."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/woocommerce-element/render.php
+msgid "Your wishlist is empty."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "YouTube URL"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
+msgid "YYYY-MM-DD in the site timezone."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+msgid "ZIP support"
+msgstr ""

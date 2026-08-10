@@ -1,0 +1,917 @@
+{
+  "schema": 1,
+  "version": "2.1.0",
+  "brand": "MSP Nexus production-safe starter",
+  "notice": "Generic services, industries, outcomes, plans, FAQs, and core pages publish by default. Unverified proof, people, locations, resources, events, relationships, and legal placeholders remain drafts until reviewed.",
+  "counts": {
+    "msp_service": 10,
+    "msp_industry": 8,
+    "msp_outcome": 6,
+    "msp_pricing_plan": 3,
+    "msp_case_study": 4,
+    "msp_testimonial": 6,
+    "msp_team": 6,
+    "msp_location": 3,
+    "msp_resource": 12,
+    "msp_event": 1,
+    "msp_partner": 3,
+    "msp_certification": 2,
+    "msp_faq": 8,
+    "page": 9
+  },
+  "content": [
+    {
+      "excerpt": "An accountable operating model for support, monitoring, maintenance, vendors, lifecycle, and planning.",
+      "content": "<!-- wp:paragraph --><p>An accountable operating model for support, monitoring, maintenance, vendors, lifecycle, and planning.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-managed-it",
+      "post_type": "msp_service",
+      "slug": "managed-it",
+      "title": "Managed IT Operations"
+    },
+    {
+      "excerpt": "Specialist capacity, coverage, and mature operations that extend an internal IT team.",
+      "content": "<!-- wp:paragraph --><p>Specialist capacity, coverage, and mature operations that extend an internal IT team.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-co-managed-it",
+      "post_type": "msp_service",
+      "slug": "co-managed-it",
+      "title": "Co-Managed IT"
+    },
+    {
+      "excerpt": "Layered prevention, detection, response, recovery, governance, and executive risk visibility.",
+      "content": "<!-- wp:paragraph --><p>Layered prevention, detection, response, recovery, governance, and executive risk visibility.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-cybersecurity",
+      "post_type": "msp_service",
+      "slug": "cybersecurity",
+      "title": "Managed Cybersecurity"
+    },
+    {
+      "excerpt": "Secure, observable, cost-aware Microsoft cloud and hybrid infrastructure operations.",
+      "content": "<!-- wp:paragraph --><p>Secure, observable, cost-aware Microsoft cloud and hybrid infrastructure operations.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-cloud",
+      "post_type": "msp_service",
+      "slug": "cloud",
+      "title": "Cloud Services"
+    },
+    {
+      "excerpt": "Reliable connectivity, wireless, servers, edge security, documentation, and lifecycle standards.",
+      "content": "<!-- wp:paragraph --><p>Reliable connectivity, wireless, servers, edge security, documentation, and lifecycle standards.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-infrastructure",
+      "post_type": "msp_service",
+      "slug": "infrastructure",
+      "title": "Network & Infrastructure"
+    },
+    {
+      "excerpt": "Responsive human support with context, ownership, communication, and measurable follow-through.",
+      "content": "<!-- wp:paragraph --><p>Responsive human support with context, ownership, communication, and measurable follow-through.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-help-desk",
+      "post_type": "msp_service",
+      "slug": "help-desk",
+      "title": "Employee Support"
+    },
+    {
+      "excerpt": "Recovery capabilities connected to business priorities, incident roles, communications, and testing.",
+      "content": "<!-- wp:paragraph --><p>Recovery capabilities connected to business priorities, incident roles, communications, and testing.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-continuity",
+      "post_type": "msp_service",
+      "slug": "continuity",
+      "title": "Backup & Business Continuity"
+    },
+    {
+      "excerpt": "Budgeting, architecture, risk decisions, roadmaps, and business-aligned technology reviews.",
+      "content": "<!-- wp:paragraph --><p>Budgeting, architecture, risk decisions, roadmaps, and business-aligned technology reviews.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-advisory",
+      "post_type": "msp_service",
+      "slug": "advisory",
+      "title": "Technology Advisory"
+    },
+    {
+      "excerpt": "Disciplined discovery, design, change control, delivery, adoption, and operational handoff.",
+      "content": "<!-- wp:paragraph --><p>Disciplined discovery, design, change control, delivery, adoption, and operational handoff.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-projects",
+      "post_type": "msp_service",
+      "slug": "projects",
+      "title": "Technology Projects"
+    },
+    {
+      "excerpt": "Practical data integration, reporting, automation, governance, and AI readiness.",
+      "content": "<!-- wp:paragraph --><p>Practical data integration, reporting, automation, governance, and AI readiness.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This capability works best as part of an integrated service model with documented ownership, recurring reviews, and a prioritized improvement roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Final scope, platforms, coverage, responsibilities, and commitments should be documented during discovery and contracting.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "service-data-ai",
+      "post_type": "msp_service",
+      "slug": "data-ai",
+      "title": "Data, Automation & Responsible AI"
+    },
+    {
+      "excerpt": "Support care delivery, privacy, uptime, clinical workflows, and distributed teams.",
+      "content": "<!-- wp:paragraph --><p>Support care delivery, privacy, uptime, clinical workflows, and distributed teams.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-healthcare",
+      "post_type": "msp_industry",
+      "slug": "healthcare",
+      "title": "Healthcare"
+    },
+    {
+      "excerpt": "Strengthen security, supervision, resilience, evidence, and client-service operations.",
+      "content": "<!-- wp:paragraph --><p>Strengthen security, supervision, resilience, evidence, and client-service operations.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-financial-services",
+      "post_type": "msp_industry",
+      "slug": "financial-services",
+      "title": "Financial Services"
+    },
+    {
+      "excerpt": "Protect confidential work while improving document, identity, collaboration, and support workflows.",
+      "content": "<!-- wp:paragraph --><p>Protect confidential work while improving document, identity, collaboration, and support workflows.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-legal",
+      "post_type": "msp_industry",
+      "slug": "legal",
+      "title": "Legal Services"
+    },
+    {
+      "excerpt": "Connect office and plant operations with resilient infrastructure, secure access, and vendor coordination.",
+      "content": "<!-- wp:paragraph --><p>Connect office and plant operations with resilient infrastructure, secure access, and vendor coordination.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-manufacturing",
+      "post_type": "msp_industry",
+      "slug": "manufacturing",
+      "title": "Manufacturing"
+    },
+    {
+      "excerpt": "Support field teams, project collaboration, mobile access, job sites, and lifecycle planning.",
+      "content": "<!-- wp:paragraph --><p>Support field teams, project collaboration, mobile access, job sites, and lifecycle planning.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-construction",
+      "post_type": "msp_industry",
+      "slug": "construction",
+      "title": "Construction & Engineering"
+    },
+    {
+      "excerpt": "Make limited resources go further with clear standards, secure collaboration, and predictable planning.",
+      "content": "<!-- wp:paragraph --><p>Make limited resources go further with clear standards, secure collaboration, and predictable planning.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-nonprofit",
+      "post_type": "msp_industry",
+      "slug": "nonprofit",
+      "title": "Nonprofit Organizations"
+    },
+    {
+      "excerpt": "Deliver a responsive, secure technology experience for knowledge-intensive client teams.",
+      "content": "<!-- wp:paragraph --><p>Deliver a responsive, secure technology experience for knowledge-intensive client teams.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-professional-services",
+      "post_type": "msp_industry",
+      "slug": "professional-services",
+      "title": "Professional Services"
+    },
+    {
+      "excerpt": "Establish one operating standard across locations without losing local context.",
+      "content": "<!-- wp:paragraph --><p>Establish one operating standard across locations without losing local context.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Technology decisions should reflect the workflows, constraints, dependencies, and risks that shape the organization.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Requirements vary by organization and jurisdiction; specific security, privacy, and compliance obligations must be validated during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "industry-multi-location",
+      "post_type": "msp_industry",
+      "slug": "multi-location",
+      "title": "Multi-Location Business"
+    },
+    {
+      "excerpt": "Reduce recurring friction and give employees a consistent route to effective support.",
+      "content": "<!-- wp:paragraph --><p>Reduce recurring friction and give employees a consistent route to effective support.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-productive-workforce",
+      "post_type": "msp_outcome",
+      "slug": "productive-workforce",
+      "title": "Build a More Productive Workforce"
+    },
+    {
+      "excerpt": "Reduce likelihood, limit business impact, and recover through tested roles and controls.",
+      "content": "<!-- wp:paragraph --><p>Reduce likelihood, limit business impact, and recover through tested roles and controls.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-cyber-resilience",
+      "post_type": "msp_outcome",
+      "slug": "cyber-resilience",
+      "title": "Improve Cyber Resilience"
+    },
+    {
+      "excerpt": "Connect service scope, lifecycle, consumption, projects, and risk decisions to a visible plan.",
+      "content": "<!-- wp:paragraph --><p>Connect service scope, lifecycle, consumption, projects, and risk decisions to a visible plan.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-predictable-cost",
+      "post_type": "msp_outcome",
+      "slug": "predictable-cost",
+      "title": "Create More Predictable IT Cost"
+    },
+    {
+      "excerpt": "Turn service, risk, investment, and roadmap data into decisions leaders can inspect.",
+      "content": "<!-- wp:paragraph --><p>Turn service, risk, investment, and roadmap data into decisions leaders can inspect.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-executive-visibility",
+      "post_type": "msp_outcome",
+      "slug": "executive-visibility",
+      "title": "Increase Executive Visibility"
+    },
+    {
+      "excerpt": "Standardize identity, devices, collaboration, infrastructure, onboarding, and governance as the organization grows.",
+      "content": "<!-- wp:paragraph --><p>Standardize identity, devices, collaboration, infrastructure, onboarding, and governance as the organization grows.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-scale-confidently",
+      "post_type": "msp_outcome",
+      "slug": "scale-confidently",
+      "title": "Scale with Confidence"
+    },
+    {
+      "excerpt": "Sequence change around dependencies, adoption, continuity, and measurable operational handoff.",
+      "content": "<!-- wp:paragraph --><p>Sequence change around dependencies, adoption, continuity, and measurable operational handoff.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>A useful outcome page connects the current condition to business impact, practical capabilities, adoption work, measures, and a clear next decision.</p><!-- /wp:paragraph --><!-- wp:pattern {\"slug\":\"msp-nexus/conversion-consultation\"} /-->",
+      "status": "publish",
+      "key": "outcome-modernize-safely",
+      "post_type": "msp_outcome",
+      "slug": "modernize-safely",
+      "title": "Modernize Without Disruption"
+    },
+    {
+      "excerpt": "A baseline for standardized support, monitoring, maintenance, and service reviews.",
+      "content": "<!-- wp:paragraph --><p>A baseline for standardized support, monitoring, maintenance, and service reviews.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Every engagement is scoped around the organization, environment, coverage requirements, risk profile, and roadmap. Contact the team for a documented recommendation.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "plan-essential",
+      "post_type": "msp_pricing_plan",
+      "slug": "essential",
+      "title": "Essential IT",
+      "meta": {
+        "_msp_price_mode": "Contact for pricing",
+        "_msp_audience": "Organizations seeking a documented managed-services scope",
+        "_msp_disclaimer": "Availability, scope, terms, and pricing are confirmed in a written proposal."
+      }
+    },
+    {
+      "excerpt": "An expanded model with layered security operations, continuity, and governance.",
+      "content": "<!-- wp:paragraph --><p>An expanded model with layered security operations, continuity, and governance.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Every engagement is scoped around the organization, environment, coverage requirements, risk profile, and roadmap. Contact the team for a documented recommendation.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "plan-resilient",
+      "post_type": "msp_pricing_plan",
+      "slug": "resilient",
+      "title": "Resilient IT",
+      "meta": {
+        "_msp_price_mode": "Contact for pricing",
+        "_msp_audience": "Organizations seeking a documented managed-services scope",
+        "_msp_disclaimer": "Availability, scope, terms, and pricing are confirmed in a written proposal."
+      }
+    },
+    {
+      "excerpt": "A comprehensive model with deeper advisory, roadmap leadership, and complex multi-site coordination.",
+      "content": "<!-- wp:paragraph --><p>A comprehensive model with deeper advisory, roadmap leadership, and complex multi-site coordination.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Every engagement is scoped around the organization, environment, coverage requirements, risk profile, and roadmap. Contact the team for a documented recommendation.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "plan-strategic",
+      "post_type": "msp_pricing_plan",
+      "slug": "strategic",
+      "title": "Strategic IT",
+      "meta": {
+        "_msp_price_mode": "Contact for pricing",
+        "_msp_audience": "Organizations seeking a documented managed-services scope",
+        "_msp_disclaimer": "Availability, scope, terms, and pricing are confirmed in a written proposal."
+      }
+    },
+    {
+      "excerpt": "A clearly fictional case-study example for Healthcare.",
+      "content": "<!-- wp:paragraph --><p>Sample situation: fragmented tools, unclear ownership, recurring disruption, and limited decision visibility.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample approach: discovery, stabilization, operating standards, adoption support, governance, and a sequenced roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample result: Reduced fictional priority-one incident recurrence by 38% over twelve sample months. This metric is fictional and must never be published as a real claim.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "case-harbor-health",
+      "post_type": "msp_case_study",
+      "slug": "harbor-health",
+      "title": "Sample: Harbor Health Builds a Resilient Support Standard",
+      "meta": {
+        "_msp_client_industry": "Healthcare",
+        "_msp_result_summary": "Fictional demonstration result",
+        "_msp_result_metric": "Reduced fictional priority-one incident recurrence by 38% over twelve sample months."
+      }
+    },
+    {
+      "excerpt": "A clearly fictional case-study example for Legal services.",
+      "content": "<!-- wp:paragraph --><p>Sample situation: fragmented tools, unclear ownership, recurring disruption, and limited decision visibility.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample approach: discovery, stabilization, operating standards, adoption support, governance, and a sequenced roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample result: Moved 96% of fictional active matters into a governed collaboration standard. This metric is fictional and must never be published as a real claim.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "case-meridian-legal",
+      "post_type": "msp_case_study",
+      "slug": "meridian-legal",
+      "title": "Sample: Meridian Legal Modernizes Secure Collaboration",
+      "meta": {
+        "_msp_client_industry": "Legal services",
+        "_msp_result_summary": "Fictional demonstration result",
+        "_msp_result_metric": "Moved 96% of fictional active matters into a governed collaboration standard."
+      }
+    },
+    {
+      "excerpt": "A clearly fictional case-study example for Manufacturing.",
+      "content": "<!-- wp:paragraph --><p>Sample situation: fragmented tools, unclear ownership, recurring disruption, and limited decision visibility.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample approach: discovery, stabilization, operating standards, adoption support, governance, and a sequenced roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample result: Improved fictional monitored network availability from 98.7% to 99.8%. This metric is fictional and must never be published as a real claim.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "case-forge-manufacturing",
+      "post_type": "msp_case_study",
+      "slug": "forge-manufacturing",
+      "title": "Sample: Forge Manufacturing Connects Five Facilities",
+      "meta": {
+        "_msp_client_industry": "Manufacturing",
+        "_msp_result_summary": "Fictional demonstration result",
+        "_msp_result_metric": "Improved fictional monitored network availability from 98.7% to 99.8%."
+      }
+    },
+    {
+      "excerpt": "A clearly fictional case-study example for Nonprofit.",
+      "content": "<!-- wp:paragraph --><p>Sample situation: fragmented tools, unclear ownership, recurring disruption, and limited decision visibility.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample approach: discovery, stabilization, operating standards, adoption support, governance, and a sequenced roadmap.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sample result: Shifted fictional unplanned technology spend down by 24% in the sample model. This metric is fictional and must never be published as a real claim.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "case-civic-nonprofit",
+      "post_type": "msp_case_study",
+      "slug": "civic-nonprofit",
+      "title": "Sample: CivicWorks Creates a Predictable IT Roadmap",
+      "meta": {
+        "_msp_client_industry": "Nonprofit",
+        "_msp_result_summary": "Fictional demonstration result",
+        "_msp_result_metric": "Shifted fictional unplanned technology spend down by 24% in the sample model."
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“The team gave us a clearer operating rhythm and made technology decisions easier to lead.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-alex-rivera",
+      "post_type": "msp_testimonial",
+      "slug": "alex-rivera",
+      "title": "Sample testimonial — Alex Rivera",
+      "meta": {
+        "_msp_person_name": "Alex Rivera",
+        "_msp_person_role": "Chief Operating Officer",
+        "_msp_organization": "Harbor Health"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“Support became more consistent, and the roadmap helped us separate urgent work from important work.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-jordan-lee",
+      "post_type": "msp_testimonial",
+      "slug": "jordan-lee",
+      "title": "Sample testimonial — Jordan Lee",
+      "meta": {
+        "_msp_person_name": "Jordan Lee",
+        "_msp_person_role": "Managing Partner",
+        "_msp_organization": "Meridian Legal"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“We finally had one view of risk, reliability, ownership, and the next set of investments.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-morgan-patel",
+      "post_type": "msp_testimonial",
+      "slug": "morgan-patel",
+      "title": "Sample testimonial — Morgan Patel",
+      "meta": {
+        "_msp_person_name": "Morgan Patel",
+        "_msp_person_role": "VP of Operations",
+        "_msp_organization": "Forge Manufacturing"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“The team helped our fictional organization make disciplined choices without losing sight of the mission.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-casey-brooks",
+      "post_type": "msp_testimonial",
+      "slug": "casey-brooks",
+      "title": "Sample testimonial — Casey Brooks",
+      "meta": {
+        "_msp_person_name": "Casey Brooks",
+        "_msp_person_role": "Executive Director",
+        "_msp_organization": "CivicWorks"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“The co-managed model added coverage and specialist depth while our internal team stayed in control.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-taylor-kim",
+      "post_type": "msp_testimonial",
+      "slug": "taylor-kim",
+      "title": "Sample testimonial — Taylor Kim",
+      "meta": {
+        "_msp_person_name": "Taylor Kim",
+        "_msp_person_role": "IT Director",
+        "_msp_organization": "Summit Engineering"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>“The planning cadence made cost drivers and lifecycle decisions much easier to explain.”</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>This person and organization are fictional. Replace only with an approved customer quotation.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "testimonial-riley-johnson",
+      "post_type": "msp_testimonial",
+      "slug": "riley-johnson",
+      "title": "Sample testimonial — Riley Johnson",
+      "meta": {
+        "_msp_person_name": "Riley Johnson",
+        "_msp_person_role": "Finance Director",
+        "_msp_organization": "Bluefield Services"
+      }
+    },
+    {
+      "excerpt": "Fictional Chief Executive Officer profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Maya Chen is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-maya-chen",
+      "post_type": "msp_team",
+      "slug": "maya-chen",
+      "title": "Maya Chen",
+      "meta": {
+        "_msp_person_role": "Chief Executive Officer"
+      }
+    },
+    {
+      "excerpt": "Fictional Chief Technology Officer profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Daniel Okafor is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-daniel-okafor",
+      "post_type": "msp_team",
+      "slug": "daniel-okafor",
+      "title": "Daniel Okafor",
+      "meta": {
+        "_msp_person_role": "Chief Technology Officer"
+      }
+    },
+    {
+      "excerpt": "Fictional VP, Client Operations profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Sofia Martinez is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-sofia-martinez",
+      "post_type": "msp_team",
+      "slug": "sofia-martinez",
+      "title": "Sofia Martinez",
+      "meta": {
+        "_msp_person_role": "VP, Client Operations"
+      }
+    },
+    {
+      "excerpt": "Fictional Director of Cybersecurity profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Noah Williams is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-noah-williams",
+      "post_type": "msp_team",
+      "slug": "noah-williams",
+      "title": "Noah Williams",
+      "meta": {
+        "_msp_person_role": "Director of Cybersecurity"
+      }
+    },
+    {
+      "excerpt": "Fictional Director of Cloud & Data profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Priya Shah is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-priya-shah",
+      "post_type": "msp_team",
+      "slug": "priya-shah",
+      "title": "Priya Shah",
+      "meta": {
+        "_msp_person_role": "Director of Cloud & Data"
+      }
+    },
+    {
+      "excerpt": "Fictional Director of Strategic Advisory profile for the starter library.",
+      "content": "<!-- wp:paragraph --><p>Ethan Brooks is a fictional team member created solely to demonstrate an editable leadership profile.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Replace the biography, credentials, portrait, links, and role with reviewed information before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "team-ethan-brooks",
+      "post_type": "msp_team",
+      "slug": "ethan-brooks",
+      "title": "Ethan Brooks",
+      "meta": {
+        "_msp_person_role": "Director of Strategic Advisory"
+      }
+    },
+    {
+      "excerpt": "Fictional Northeast service location.",
+      "content": "<!-- wp:paragraph --><p>This address, office, and service area are fictional demo content. Replace them before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "location-north-harbor",
+      "post_type": "msp_location",
+      "slug": "north-harbor",
+      "title": "Sample: North Harbor Office",
+      "meta": {
+        "_msp_address": "100 Example Avenue, North Harbor, NY 10000",
+        "_msp_phone": "(800) 555-0199",
+        "_msp_service_area": "Northeast"
+      }
+    },
+    {
+      "excerpt": "Fictional Midwest service location.",
+      "content": "<!-- wp:paragraph --><p>This address, office, and service area are fictional demo content. Replace them before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "location-lakeview",
+      "post_type": "msp_location",
+      "slug": "lakeview",
+      "title": "Sample: Lakeview Office",
+      "meta": {
+        "_msp_address": "200 Sample Street, Lakeview, IL 60000",
+        "_msp_phone": "(800) 555-0199",
+        "_msp_service_area": "Midwest"
+      }
+    },
+    {
+      "excerpt": "Fictional West service location.",
+      "content": "<!-- wp:paragraph --><p>This address, office, and service area are fictional demo content. Replace them before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "location-redwood",
+      "post_type": "msp_location",
+      "slug": "redwood",
+      "title": "Sample: Redwood Office",
+      "meta": {
+        "_msp_address": "300 Demonstration Way, Redwood, CA 90000",
+        "_msp_phone": "(800) 555-0199",
+        "_msp_service_area": "West"
+      }
+    },
+    {
+      "excerpt": "Guide for turning technology priorities into visible, accountable action.",
+      "content": "<!-- wp:paragraph --><p>Start with business priorities, operating friction, material risk, lifecycle obligations, and known growth plans. Group the findings into outcomes leaders can understand rather than a list of tools.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Sequence initiatives by dependency, risk, effort, and business timing. Assign an accountable owner, an expected decision date, and a practical measure of progress to every roadmap item.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Review the roadmap on a recurring cadence. Update assumptions, completed work, new risks, cost forecasts, and the next decisions so the plan remains useful instead of becoming a static document.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "resource-it-roadmap",
+      "post_type": "msp_resource",
+      "slug": "it-roadmap",
+      "title": "Build an Executive IT Roadmap",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Checklist for turning technology priorities into visible, accountable action.",
+      "content": "<!-- wp:paragraph --><p>Begin with identity: who has access, how privileged accounts are controlled, how multifactor authentication is enforced, and how access is removed when roles change.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Review devices, cloud services, backups, monitoring, incident responsibilities, third-party access, user education, and recovery testing. Ask for evidence that controls operate as described.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Finish with a prioritized action list that names owners, dependencies, expected risk reduction, target dates, and the way each improvement will be verified.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "resource-security-questions",
+      "post_type": "msp_resource",
+      "slug": "security-questions",
+      "title": "Questions for a Practical Security Review",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Article for turning technology priorities into visible, accountable action.",
+      "content": "<!-- wp:paragraph --><p>Useful service reporting connects technical work to employee experience, operational risk, and planned improvement. Ticket volume alone rarely explains whether technology is helping the business.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Review response and resolution in context, recurring issue patterns, satisfaction, aging work, security exposure, lifecycle risk, project progress, and roadmap decisions. Include trends and exceptions instead of presenting percentages without context.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Every review should end with named actions, owners, decisions, and follow-up dates. The goal is a shared operating rhythm that makes progress visible and problems harder to ignore.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "resource-service-metrics",
+      "post_type": "msp_resource",
+      "slug": "service-metrics",
+      "title": "Service Metrics Leaders Can Use",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional brief entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample brief landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-co-managed-model",
+      "post_type": "msp_resource",
+      "slug": "co-managed-model",
+      "title": "Sample Brief: Designing a Co-Managed IT Model",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional article entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample article landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-cloud-cost",
+      "post_type": "msp_resource",
+      "slug": "cloud-cost",
+      "title": "Sample Article: Four Cloud Cost Signals to Watch",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional toolkit entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample toolkit landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-incident-tabletop",
+      "post_type": "msp_resource",
+      "slug": "incident-tabletop",
+      "title": "Sample Toolkit: Incident Tabletop Starter",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional checklist entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample checklist landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-continuity-test",
+      "post_type": "msp_resource",
+      "slug": "continuity-test",
+      "title": "Sample Checklist: Business Continuity Test",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional gated guide entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample gated guide landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-ai-readiness",
+      "post_type": "msp_resource",
+      "slug": "ai-readiness",
+      "title": "Sample Guide: Responsible AI Readiness",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional article entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample article landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-identity-baseline",
+      "post_type": "msp_resource",
+      "slug": "identity-baseline",
+      "title": "Sample Article: Identity Is the New Operating Perimeter",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional template entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample template landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-lifecycle-budget",
+      "post_type": "msp_resource",
+      "slug": "lifecycle-budget",
+      "title": "Sample Template: Technology Lifecycle Budget",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional brief entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample brief landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-vendor-risk",
+      "post_type": "msp_resource",
+      "slug": "vendor-risk",
+      "title": "Sample Brief: Practical Vendor Risk Review",
+      "meta": {
+        "_msp_reading_time": "7 minutes"
+      }
+    },
+    {
+      "excerpt": "Original fictional webinar entry for the starter resource library.",
+      "content": "<!-- wp:paragraph --><p>This is a sample webinar landing page. Replace it with a complete, reviewed, original resource before enabling public promotion or collection of contact details.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Explain the intended audience, what the visitor will learn, format, access conditions, privacy use, and an accessible alternative.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "resource-annual-planning",
+      "post_type": "msp_resource",
+      "slug": "annual-planning",
+      "title": "Sample Webinar: Technology Planning Without the Fire Drill",
+      "meta": {
+        "_msp_reading_time": "45 minutes"
+      }
+    },
+    {
+      "excerpt": "A clearly fictional webinar listing.",
+      "content": "<!-- wp:paragraph --><p>This webinar and its speakers are fictional demo content. Replace dates, presenters, registration terms, accessibility accommodations, recording availability, and privacy details before launch.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "event-annual-planning",
+      "post_type": "msp_event",
+      "slug": "technology-planning-without-the-fire-drill",
+      "title": "Sample webinar: Technology Planning Without the Fire Drill",
+      "meta": {
+        "_msp_event_start": "2030-01-15T14:00:00-05:00",
+        "_msp_event_end": "2030-01-15T15:00:00-05:00",
+        "_msp_event_timezone": "America/New_York",
+        "_msp_event_format": "Online sample event"
+      }
+    },
+    {
+      "excerpt": "Fictional partner placeholder; do not imply an actual relationship.",
+      "content": "<!-- wp:paragraph --><p>This relationship entry is a fictional editable sample. Verify authorization, program status, trademark rules, and current tier before publication.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "partner-microsoft",
+      "post_type": "msp_partner",
+      "slug": "microsoft",
+      "title": "Sample technology partner: Microsoft",
+      "meta": {
+        "_msp_partner_tier": "Sample cloud platform"
+      }
+    },
+    {
+      "excerpt": "Fictional partner placeholder; do not imply an actual relationship.",
+      "content": "<!-- wp:paragraph --><p>This relationship entry is a fictional editable sample. Verify authorization, program status, trademark rules, and current tier before publication.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "partner-cisco",
+      "post_type": "msp_partner",
+      "slug": "cisco",
+      "title": "Sample technology partner: Cisco",
+      "meta": {
+        "_msp_partner_tier": "Sample infrastructure platform"
+      }
+    },
+    {
+      "excerpt": "Fictional partner placeholder; do not imply an actual relationship.",
+      "content": "<!-- wp:paragraph --><p>This relationship entry is a fictional editable sample. Verify authorization, program status, trademark rules, and current tier before publication.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "partner-veeam",
+      "post_type": "msp_partner",
+      "slug": "veeam",
+      "title": "Sample technology partner: Veeam",
+      "meta": {
+        "_msp_partner_tier": "Sample continuity platform"
+      }
+    },
+    {
+      "excerpt": "Fictional proof placeholder requiring verification.",
+      "content": "<!-- wp:paragraph --><p>This certification or award is fictional demo content. Replace only with a current, verifiable credential and approved usage language.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "certification-security-program",
+      "post_type": "msp_certification",
+      "slug": "security-program",
+      "title": "Sample Security Program Recognition",
+      "meta": {
+        "_msp_issuer": "Example issuer"
+      }
+    },
+    {
+      "excerpt": "Fictional proof placeholder requiring verification.",
+      "content": "<!-- wp:paragraph --><p>This certification or award is fictional demo content. Replace only with a current, verifiable credential and approved usage language.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "certification-service-quality",
+      "post_type": "msp_certification",
+      "slug": "service-quality",
+      "title": "Sample Service Quality Award",
+      "meta": {
+        "_msp_issuer": "Example publisher"
+      }
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>A strong transition inventories dependencies, documents standards, addresses urgent risk, communicates with users, and establishes an improvement roadmap.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-onboarding",
+      "post_type": "msp_faq",
+      "slug": "onboarding",
+      "title": "What happens during onboarding?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Yes. A co-managed model should define responsibilities, tools, escalation, coverage, documentation, and shared measures before service begins.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-co-managed",
+      "post_type": "msp_faq",
+      "slug": "co-managed",
+      "title": "Can you work with an internal IT team?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Common factors include users, sites, devices, hours, scope, security requirements, platform complexity, projects, consumption, and current-state remediation.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-pricing",
+      "post_type": "msp_faq",
+      "slug": "pricing",
+      "title": "What affects managed service pricing?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>The exact security scope belongs in a reviewed service agreement. Avoid broad promises; identify controls, responsibilities, exclusions, reporting, and response paths.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-security",
+      "post_type": "msp_faq",
+      "slug": "security",
+      "title": "Is cybersecurity included?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Onsite coverage depends on geography, plan, urgency, scheduling, and the agreement. Confirm the available coverage during discovery.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-onsite",
+      "post_type": "msp_faq",
+      "slug": "onsite",
+      "title": "Is onsite support available?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Discovery should identify where existing tools remain appropriate and where standardization materially improves security, supportability, cost, or visibility.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-tools",
+      "post_type": "msp_faq",
+      "slug": "tools",
+      "title": "Will existing tools need to change?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Some plans include defined project capacity while others price projects separately. State the actual commercial model clearly.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-projects",
+      "post_type": "msp_faq",
+      "slug": "projects",
+      "title": "Are projects included?"
+    },
+    {
+      "excerpt": "",
+      "content": "<!-- wp:paragraph --><p>Yes. A responsible transition coordinates access, documentation, vendors, backups, security, user communication, and continuity without disparaging the outgoing provider.</p><!-- /wp:paragraph -->",
+      "status": "publish",
+      "key": "faq-switching",
+      "post_type": "msp_faq",
+      "slug": "switching",
+      "title": "Can we switch from another provider?"
+    },
+    {
+      "excerpt": "Managed technology services homepage.",
+      "content": "<!-- wp:pattern {\"slug\":\"msp-nexus/page-home\"} /-->",
+      "status": "publish",
+      "key": "page-home",
+      "post_type": "page",
+      "template": "",
+      "slug": "home",
+      "title": "Homepage"
+    },
+    {
+      "excerpt": "A practical operating partner for support, security, cloud, and technology planning.",
+      "content": "<!-- wp:pattern {\"slug\":\"msp-nexus/page-about\"} /-->",
+      "status": "publish",
+      "key": "page-about-us",
+      "post_type": "page",
+      "template": "page-no-title",
+      "slug": "about-us",
+      "title": "About us"
+    },
+    {
+      "excerpt": "Starter careers page.",
+      "content": "<!-- wp:paragraph --><p>This draft is a starting point for the careers page.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Add accurate culture, equal-opportunity, accessibility, location, compensation, hiring-process, privacy, and open-role information reviewed for applicable law before publication.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "page-careers",
+      "post_type": "page",
+      "template": "",
+      "slug": "careers",
+      "title": "Careers — Content Review Required"
+    },
+    {
+      "excerpt": "A clear route for existing clients who need technical help.",
+      "content": "<!-- wp:paragraph --><p>Existing clients should use the verified support portal for service requests. For urgent or high-impact issues, follow the escalation instructions in your service agreement.</p><!-- /wp:paragraph --><!-- wp:buttons --><div class=\"wp-block-buttons\"><!-- wp:button {\"metadata\":{\"bindings\":{\"url\":{\"source\":\"msp-nexus/settings\",\"args\":{\"field\":\"support_url\"}}}}} --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"/contact/\">Open the support portal</a></div><!-- /wp:button --></div><!-- /wp:buttons -->",
+      "status": "publish",
+      "key": "page-support",
+      "post_type": "page",
+      "template": "",
+      "slug": "support",
+      "title": "Client Support"
+    },
+    {
+      "excerpt": "Placeholder only.",
+      "content": "<!-- wp:paragraph --><p>This placeholder is not legal advice and is not a privacy policy. A qualified professional must document actual controllers, data categories, purposes, legal bases, sharing, transfers, retention, security, rights, contact routes, and jurisdiction-specific obligations.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "page-privacy",
+      "post_type": "page",
+      "template": "",
+      "slug": "privacy",
+      "title": "Privacy Policy — Professional Review Required"
+    },
+    {
+      "excerpt": "Placeholder only.",
+      "content": "<!-- wp:paragraph --><p>This placeholder is not a conformance claim. Document the actual standard, testing scope, known limitations, remediation process, accessible alternatives, feedback route, and review date.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "page-accessibility",
+      "post_type": "page",
+      "template": "",
+      "slug": "accessibility",
+      "title": "Accessibility Statement — Professional Review Required"
+    },
+    {
+      "excerpt": "Placeholder only.",
+      "content": "<!-- wp:paragraph --><p>Do not publish this placeholder as a cookie notice. Inventory actual storage and tracking technologies, classify purposes, document duration and providers, and integrate an appropriate consent platform where required.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "page-cookies",
+      "post_type": "page",
+      "template": "",
+      "slug": "cookies",
+      "title": "Cookie Notice — Professional Review Required"
+    },
+    {
+      "excerpt": "Placeholder only.",
+      "content": "<!-- wp:paragraph --><p>This placeholder is not legal advice or a contract. Qualified counsel must prepare terms that match the organization, services, jurisdictions, intellectual property, acceptable use, disclaimers, and dispute process.</p><!-- /wp:paragraph -->",
+      "status": "draft",
+      "key": "page-legal",
+      "post_type": "page",
+      "template": "",
+      "slug": "legal",
+      "title": "Terms & Legal Notices — Professional Review Required"
+    },
+    {
+      "excerpt": "Start a conversation about the technology outcomes your organization needs.",
+      "content": "<!-- wp:paragraph --><p>Tell us what is changing, what is getting in the way, and what a better technology outcome looks like.</p><!-- /wp:paragraph --><!-- wp:msp-nexus/consultation-form {\"heading\":\"Plan a consultation\"} /-->",
+      "status": "publish",
+      "key": "page-contact",
+      "post_type": "page",
+      "template": "",
+      "slug": "contact",
+      "title": "Contact us"
+    }
+  ]
+}

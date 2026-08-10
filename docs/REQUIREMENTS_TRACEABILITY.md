@@ -1,0 +1,48 @@
+# Requirements traceability
+
+Status values are `implemented` and `verified`. Verification means evidence exists in repository automation or a recorded runtime review; it does not mean customer content, production secrets, a commerce provider, or a hosting environment has been supplied.
+
+| Capability | Owner and implementation | Administrator workflow | Verification/documentation | Status |
+|---|---|---|---|---|
+| Clean-room reference coverage | `betheme-audit/`, `docs/PUBLIC_SITE_REFERENCE_AUDIT.md` | Read-only reports | Full local manifest/line audit plus public route audit | verified |
+| Native design system | Theme `theme.json`, four `styles/*.json`, `global.css` | Appearance > Editor > Styles | JSON, CSS lint, contrast gate, browser QA | verified |
+| Nexus Studio editing layer | `Admin/Studio.php`, `studio-editor.js`, `studio-workspace.js`, front-end inspection overlay | MSP Nexus > Studio; signed-in toolbar | Hierarchical layers, favorites, context actions, shortcuts, wireframes, style clipboard, device canvas, save snapshots, revisions, 200+ compositions, read-only public mapping | implemented |
+| Responsive visual controls | `Studio/ResponsiveControls.php`, editor inspector and `studio.css` | Any block inspector > Nexus device design | Geometry, spacing, dimensions, display, position, offsets, transforms, type, color, visibility, reduced motion, and cache-safe element conditions across three devices | implemented |
+| Conditional layout engine | `Studio/Layouts.php`, `TemplateConditions.php` | MSP Nexus > Nexus layouts | Template/header/footer/mega-menu/popup/loop areas; context, post type, priority; draft-safe starters | implemented |
+| General dynamic data and loops | `Content/DynamicData.php`, Dynamic Value and Content Loop blocks | Inserter > MSP Nexus Studio | Visual site/post/meta/ACF/archive/author/visitor/term/date/Woo picker; advanced taxonomy/meta/author/include/exclude/related queries; visual loop-item layouts | implemented |
+| Templates and hierarchy | Theme `templates/`, `parts/` | Site Editor and per-page Template selector | 36+ template/part files; runtime activation | verified |
+| Header/footer/mega navigation | Conditional layouts, Menu Panel, Off-canvas Menu, header runtime, theme parts | Site Editor and Nexus layouts | Sticky/overlay/shrink/hide-scroll headers; hover/outside/Escape mega menus; accessible off-canvas dialogs; native Navigation ownership | implemented |
+| Pattern and starter library | `inc/patterns.php`, `patterns/` | Inserter categories and previews | 60+ runtime registration assertion, 12 starters, 4 headers, 4 footers, 3 mega compositions | verified |
+| Adaptive starter library | `Starter/Catalog.php`, `Admin/StarterSites.php`, REST catalog UI, patterns and style variations | MSP Nexus > Starter sites | 800 configurations from 20 industries × 10 service positions × 4 visual systems; search/facets; selective tokens/pages/home/navigation; ownership checks | implemented |
+| Contact and pricing compositions | Pattern definitions | Pattern inserter | At least three named compositions of each | implemented |
+| Popup/announcement and side panel | `announcement-panel` block, popup/support patterns | Block inspector | Consent/frequency/path/referrer/focus/no-script implementation; JS lint/runtime registration | verified |
+| Portable MSP content model | `Content/Registrar.php` | Normal WordPress content menus | 13 CPTs, 6 taxonomies, REST meta; single/multisite runtime assertions | verified |
+| Dynamic data and directories | Bindings plus six server blocks | Block inserter and settings | Block registration/runtime, no-JS directory filters and FAQ disclosures | verified |
+| Schema and SEO coexistence | `Seo/Schema.php` | Settings toggle | Service, Article, FAQ, Event, Person, ProfessionalService; recognized SEO-plugin yield | implemented |
+| Forms and integrations | Consultation block/handler, settings, hooks, compatibility CSS | Settings and block editor | Nonce, honeypot, consent, validation, mail and CRM hook; PHP/CSS checks | verified |
+| WooCommerce/forms/multilingual presentation | Theme CSS, diagnostics detection, native blocks | Install only selected optional plugin | Optional-plugin guide; no bundled paid dependencies | implemented |
+| WooCommerce Studio module | `Integrations/WooCommerce.php`, WooCommerce Element, Purchase Gate, Product Showcase, Dynamic Value | MSP Nexus > WooCommerce; Studio blocks/rules | 36 template elements; HPOS/blocks declarations; catalog/price/swatches/product-count/column/gallery/checkout/mobile controls; AJAX filters, view bar, login, off-canvas filters, shipping progress, purchase access, quick view, wishlist, side cart; order ownership guard | implemented |
+| Layout/template portability | `Admin/Portability.php` | MSP Nexus > Import / export | Versioned JSON, focused content exports/import-as-new-draft, selective settings/templates/pages, 2 MB limit, capability/nonce checks, executable-markup rejection, starter ownership guard | implemented |
+| Client white label | `Admin/Branding.php` | MSP Nexus > White label | Login, admin accent/logo/bar, dashboard support, email sender, footer, and plugin presentation; security, updates, privacy, and licensing remain visible | implemented |
+| Consent and privacy UI | `Admin/Privacy.php`, `consent.js`, `consent.css` | MSP Nexus > Privacy & consent | Accessible category controls, essentials-only choice, first-party persistence, reopen shortcode, category-marked script activation, no server identity log | implemented |
+| Performance console | `Admin/Performance.php` | MSP Nexus > Performance | Cache/object-cache/modern-format/autoload/debug checks; WebP/AVIF output, image quality, lazy/preload, preconnect, heartbeat, guest Dashicons, reviewed asset unload controls | implemented |
+| Purpose-built integration UI | `Admin/Integrations.php`, `Integrations/Elementor.php` | MSP Nexus > Integrations | Commerce/forms/SEO/multilingual/cache/SMTP/analytics/security/CRM/ACF detection plus six optional Elementor bridge widgets | implemented |
+| Guided onboarding/import | `Admin/Onboarding.php`, signed local manifest, demo generator | MSP Nexus > Setup | Integrity, preview, explicit backup/content-status consent, batches, pause/cancel, ledger, 81 records imported twice | verified |
+| Reset/recovery | `Admin/Reset.php`, Diagnostics repairs | MSP Nexus > Advanced reset/Diagnostics | Dry-run enumeration, typed confirmation, Trash recovery, actor logs, derived-state-only repairs | verified |
+| Operational settings/bindings | `Admin/Settings.php`, `Content/Bindings.php` | MSP Nexus > Settings | Allowlist, sanitization, native binding fallback | verified |
+| Diagnostics/support bundle | `Admin/Diagnostics.php` | MSP Nexus > Diagnostics | Environment/integration/import/license/update checks and redacted JSON export | verified |
+| Licensing states/activations | Core client; licensing domain/service | MSP Nexus > License; customer/operator API | Active/grace/expired/suspended/revoked/cancelled, staging, multisite, allowance, idempotency, deactivation tests | verified |
+| Renewal, plan, transfer, privacy | Service domain and `/v1/customer`, `/v1/operator` | Authenticated portals/API | Customer-authorized transfer/export/data request and operator renewal/plan/status tests | verified |
+| Signed updates and delivery | Core `UpdateClient`; service release/update/package modules | Native Updates plus operator API | Ed25519 envelope/manifest, rollout channels, short grants, identity/hash/preflight/history/rollback tests | verified |
+| Commerce webhooks | Service webhook domain and persisted dead letters | Provider-to-service integration | HMAC, clock skew, replay, failure persistence, bounded retry tests | verified |
+| Migrations/uninstall safety | `MigrationRunner.php`, `uninstall.php` | Automatic forward migration; opt-in uninstall deletion | Runtime schema assertion and conservative preservation policy | verified |
+| Localization/RTL/child theme | POT files, `rtl.css`, child package | Language packs and child-theme activation | Generated POTs, lint, packaged artifact | verified |
+| Accessibility | Theme/components | Native editor and front end | Semantic DOM, focus/reflow/reduced motion/contrast/no-JS review; statement documents manual boundary | verified |
+| Performance and assets | Conditional block assets, system fonts, responsive media | WordPress media/caching stack | No jQuery or remote-font dependency; responsive overflow/image/console checks | verified |
+| Security and privacy | All packages | Settings, diagnostics, service operations | Capability/nonce/escaping controls, secret scan, signed artifacts, data-flow inventory | verified |
+| Documentation | `docs/`, package readmes/OpenAPI | Repository/package readers | Install, editor, content, developer, migration, accessibility, privacy, security, licensing, deployment | verified |
+| Packaging | `scripts/package.mjs` | `npm run package` | Deterministic ZIP/TAR/demo outputs, hashes, production exclusions | verified |
+
+## Deliberate native replacements
+
+Nexus Studio does not serialize pages into opaque proprietary shortcodes. It coordinates WordPress blocks, templates, template parts, Global Styles, Navigation, revisions, registered metadata, and theme JSON. Its condition rules are stored as inspectable post meta, and its import format rejects executable markup. Multilingual plugins retain language routing; WooCommerce retains checkout and order ownership. The product excludes arbitrary PHP execution, fake-sale urgency, consent bypasses, paid-plugin bundling, and license-based public-content shutdown.

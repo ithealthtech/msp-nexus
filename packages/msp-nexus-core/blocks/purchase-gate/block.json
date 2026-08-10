@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/purchase-gate",
+  "version": "0.4.0",
+  "title": "Nexus Purchased Content",
+  "category": "msp-nexus",
+  "icon": "lock",
+  "description": "Display nested content only to signed-in customers who purchased the selected WooCommerce products.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "productIds": { "type": "string", "default": "" },
+    "match": { "type": "string", "default": "any" },
+    "fallback": { "type": "string", "default": "This content is available after purchase." }
+  },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": ["msp-nexus-studio", "msp-nexus-woocommerce"]
+}

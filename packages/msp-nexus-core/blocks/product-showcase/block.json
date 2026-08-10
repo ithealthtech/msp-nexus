@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/product-showcase",
+  "version": "0.4.0",
+  "title": "Nexus Product Showcase",
+  "category": "msp-nexus",
+  "icon": "cart",
+  "description": "A WooCommerce-aware product grid that remains inert when WooCommerce is unavailable.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "count": { "type": "number", "default": 4 }, "columns": { "type": "number", "default": 4 }, "category": { "type": "string", "default": "" }, "featuredOnly": { "type": "boolean", "default": false }, "showRating": { "type": "boolean", "default": true } },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

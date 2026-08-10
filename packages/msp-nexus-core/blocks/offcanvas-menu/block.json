@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/offcanvas-menu",
+  "version": "0.4.0",
+  "title": "Nexus Off-canvas Menu",
+  "category": "msp-nexus",
+  "icon": "menu-alt",
+  "description": "A keyboard-accessible side-menu trigger powered by a reusable mega-menu layout.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "buttonLabel": { "type": "string", "default": "Menu" },
+    "layoutSlug": { "type": "string", "default": "" },
+    "position": { "type": "string", "default": "right" },
+    "width": { "type": "string", "default": "420px" },
+    "showLabel": { "type": "boolean", "default": true },
+    "closeOnNavigate": { "type": "boolean", "default": true }
+  },
+  "supports": { "anchor": true, "html": false, "color": { "text": true, "background": true }, "spacing": { "margin": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "viewScript": "file:./view.js",
+  "style": "msp-nexus-studio"
+}

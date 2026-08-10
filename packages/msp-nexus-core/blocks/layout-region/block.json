@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/layout-region",
+  "version": "0.4.0",
+  "title": "Nexus Layout Region",
+  "category": "msp-nexus",
+  "icon": "layout",
+  "description": "Renders a published reusable Nexus layout by slug.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "layoutSlug": { "type": "string", "default": "" }, "area": { "type": "string", "default": "loop" } },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "msp-nexus-product-suite",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Commercial WordPress theme, companion plugin, and licensing service for MSPs.",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "services/licensing-service"
+  ],
+  "scripts": {
+    "check": "npm run check:structure && npm run check:json && npm run check:php && npm run check:js && npm run check:block-markup && npm run check:security && npm run lint && npm run check:design && npm run check:service",
+    "check:structure": "node scripts/check-structure.mjs",
+    "check:json": "node scripts/check-json.mjs",
+    "check:php": "node scripts/check-php.mjs",
+    "check:js": "node scripts/check-js.mjs",
+    "check:design": "node scripts/check-design.mjs",
+    "check:block-markup": "node scripts/check-block-markup.mjs",
+    "check:security": "node scripts/check-security.mjs",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint scripts services packages",
+    "lint:css": "stylelint \"packages/**/*.css\" \"preview/**/*.css\"",
+    "lint:html": "html-validate preview/index.html",
+    "check:service": "npm --workspace services/licensing-service run check --if-present",
+    "qa:php74": "wp-playground-cli run-blueprint --blueprint artifacts/qa-single-site.blueprint.json --blueprint-may-read-adjacent-files --verbosity normal && wp-playground-cli run-blueprint --blueprint artifacts/qa-multisite.blueprint.json --blueprint-may-read-adjacent-files --site-url http://msp-nexus.test --verbosity normal",
+    "package": "node scripts/package.mjs",
+    "demo:generate": "node scripts/generate-demo.mjs",
+    "i18n:generate": "node scripts/generate-pot.mjs",
+    "preview": "node scripts/preview-server.mjs",
+    "test": "npm run check"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@wp-playground/cli": "^3.1.48",
+    "archiver": "^8.0.0",
+    "eslint": "^10.8.1",
+    "html-validate": "^11.6.2",
+    "lighthouse": "^13.4.1",
+    "lottie-web": "^5.13.0",
+    "php-parser": "^3.7.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}

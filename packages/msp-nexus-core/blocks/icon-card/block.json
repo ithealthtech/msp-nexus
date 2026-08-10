@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/icon-card",
+  "version": "0.4.0",
+  "title": "Nexus Icon Card",
+  "category": "msp-nexus",
+  "icon": "shield",
+  "description": "A lightweight original SVG icon card with no icon-font dependency.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "icon": { "type": "string", "default": "shield" }, "heading": { "type": "string", "default": "Security connected to operations" }, "body": { "type": "string", "default": "Explain a specific capability, owner, or business outcome." }, "linkLabel": { "type": "string", "default": "Learn more" }, "linkUrl": { "type": "string", "default": "/services/" } },
+  "supports": { "anchor": true, "html": false, "color": { "text": true, "background": true }, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

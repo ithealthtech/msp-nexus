@@ -1,0 +1,209 @@
+openapi: 3.1.0
+info:
+  title: MSP Nexus Licensing and Update API
+  version: 0.4.0
+  description: Versioned entitlement, activation, release, package, portal, and commerce-webhook API.
+servers:
+  - url: https://licenses.example.com
+paths:
+  /health:
+    get:
+      summary: Liveness check
+      responses:
+        '200': { description: Service is alive }
+  /v1/licenses/activate:
+    post:
+      summary: Activate a license for a normalized site identity
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ActivationRequest' } } } }
+      responses:
+        '200': { description: Signed entitlement envelope, content: { application/json: { schema: { $ref: '#/components/schemas/EntitlementEnvelope' } } } }
+        '403': { $ref: '#/components/responses/Denied' }
+        '409': { description: Activation allowance exhausted }
+        '429': { $ref: '#/components/responses/RateLimited' }
+  /v1/licenses/validate:
+    post:
+      summary: Validate and refresh a site entitlement
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationRequest' } } } }
+      responses:
+        '200': { description: Signed entitlement envelope, content: { application/json: { schema: { $ref: '#/components/schemas/EntitlementEnvelope' } } } }
+        '404': { description: License or activation not found }
+  /v1/licenses/heartbeat:
+    post:
+      summary: Heartbeat and refresh a site entitlement
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationRequest' } } } }
+      responses: { '200': { description: Signed entitlement envelope }, '404': { description: License or activation not found } }
+  /v1/licenses/refresh:
+    post:
+      summary: Alias for an explicit entitlement refresh
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationRequest' } } } }
+      responses: { '200': { description: Signed entitlement envelope } }
+  /v1/licenses/deactivate:
+    post:
+      summary: Release a site activation
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ValidationRequest' } } } }
+      responses:
+        '200': { description: Activation deactivated }
+  /v1/updates/check:
+    post:
+      summary: Retrieve an entitled signed release manifest
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/UpdateRequest' } } } }
+      responses:
+        '200': { description: Signed update manifest }
+        '403': { $ref: '#/components/responses/Denied' }
+        '404': { description: No release is available in the requested channel or rollout bucket }
+  /v1/packages/{product}/{version}:
+    get:
+      summary: Download a hash-verified package with a short-lived scoped grant
+      parameters:
+        - { in: path, name: product, required: true, schema: { type: string } }
+        - { in: path, name: version, required: true, schema: { type: string } }
+        - { in: query, name: grant, required: true, schema: { type: string } }
+      responses:
+        '200': { description: WordPress ZIP package, content: { application/zip: {} } }
+        '403': { description: Invalid or expired grant }
+        '503': { description: Stored package failed digest verification }
+  /v1/customer/licenses:
+    get:
+      summary: List redacted licenses available to a customer portal token
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200': { description: Redacted license collection }
+        '401': { $ref: '#/components/responses/Denied' }
+  /v1/customer/export:
+    get:
+      summary: Export all redacted entitlement and activation data available to a customer portal token
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200': { description: Portable customer entitlement JSON }
+        '401': { $ref: '#/components/responses/Denied' }
+  /v1/customer/activations/transfer:
+    post:
+      summary: Transfer a customer-owned activation to a normalized replacement domain
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [license_id, activation_id, site_url]
+              properties:
+                license_id: { type: string }
+                activation_id: { type: string }
+                site_url: { type: string, format: uri }
+      responses:
+        '200': { description: Updated activation state }
+        '401': { $ref: '#/components/responses/Denied' }
+  /v1/customer/data-requests:
+    post:
+      summary: Record an authenticated export, correction, or deletion request for operator review
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [action]
+              properties:
+                action: { type: string, enum: [export, correction, deletion] }
+                note: { type: string, maxLength: 1000 }
+      responses:
+        '200': { description: Audited request receipt }
+        '401': { $ref: '#/components/responses/Denied' }
+  /v1/operator/licenses:
+    get:
+      summary: List redacted licenses
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: License collection } }
+    post:
+      summary: Issue a license and one-time customer secrets
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Issued license, raw key, and initial portal token } }
+  /v1/operator/licenses/status:
+    post:
+      summary: Suspend, revoke, or restore a license
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Updated license } }
+  /v1/operator/licenses/renew:
+    post:
+      summary: Renew a license and return it to active state
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Renewed license } }
+  /v1/operator/licenses/plan:
+    post:
+      summary: Upgrade or downgrade plan, allowance, and entitlements
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Updated license } }
+  /v1/operator/activations/transfer:
+    post:
+      summary: Transfer an activation to a normalized replacement domain
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Updated signed-equivalent activation state } }
+  /v1/operator/releases:
+    get:
+      summary: List release records and rollout state
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Release collection } }
+    post:
+      summary: Create or update a release record
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Updated release } }
+  /v1/operator/releases/status:
+    post:
+      summary: Publish, pause, withdraw, or return a release to draft
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Updated release status } }
+  /v1/operator/webhooks/retry:
+    post:
+      summary: Retry due commerce webhook dead letters with bounded exponential backoff
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: Retry batch result } }
+  /v1/webhooks/commerce:
+    post:
+      summary: Receive signed payment, order, and subscription events
+      parameters:
+        - { in: header, name: x-msp-signature, required: true, schema: { type: string, example: 't=1786190400,v1=hex-hmac' } }
+      responses:
+        '200': { description: Processed or duplicate event }
+        '401': { description: Invalid signature or timestamp }
+        '503': { description: Handler failed and event entered dead-letter handling }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer }
+  responses:
+    Denied: { description: Authentication or entitlement denied }
+    RateLimited: { description: Rate limit exceeded, headers: { Retry-After: { schema: { type: integer } } } }
+  schemas:
+    ActivationRequest:
+      type: object
+      required: [license_key, site_url, instance_id]
+      properties:
+        license_key: { type: string, writeOnly: true }
+        site_url: { type: string, format: uri }
+        instance_id: { type: string }
+        is_multisite: { type: boolean, default: false }
+    ValidationRequest:
+      type: object
+      required: [license_id, site_url, instance_id]
+      properties:
+        license_id: { type: string }
+        site_url: { type: string, format: uri }
+        instance_id: { type: string }
+    UpdateRequest:
+      allOf:
+        - { $ref: '#/components/schemas/ValidationRequest' }
+        - type: object
+          required: [product]
+          properties:
+            product: { type: string, enum: [msp-nexus, msp-nexus-core] }
+            channel: { type: string, enum: [stable, beta, development], default: stable }
+    EntitlementEnvelope:
+      type: object
+      required: [license_id, status, signed_entitlement, entitlement_signature, signature_algorithm]
+      properties:
+        license_id: { type: string }
+        status: { type: string, enum: [active, grace, expired, suspended, revoked, cancelled] }
+        signed_entitlement: { type: object }
+        entitlement_signature: { type: string, contentEncoding: base64 }
+        signature_algorithm: { const: Ed25519 }

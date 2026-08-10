@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Resource-led footer
+ * Slug: msp-nexus/footer-resource
+ * Categories: footer
+ * Block Types: core/template-part/footer
+ */
+?>
+<!-- wp:group {"align":"full","backgroundColor":"ink","textColor":"white","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} --><div class="wp-block-group alignfull has-white-color has-ink-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":"40%"} --><div class="wp-block-column" style="flex-basis:40%"><!-- wp:site-title {"level":0} /--><!-- wp:paragraph --><p>Accountable support, security, cloud, and technology leadership.</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":2,"fontSize":"medium"} --><h2 class="wp-block-heading has-medium-font-size">Explore</h2><!-- /wp:heading --><!-- wp:navigation {"overlayMenu":"never","orientation":"vertical"} /--></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"level":2,"fontSize":"medium"} --><h2 class="wp-block-heading has-medium-font-size">Resources</h2><!-- /wp:heading --><!-- wp:latest-posts {"postsToShow":3,"displayPostDate":true} /--></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:separator {"align":"wide","backgroundColor":"navy"} --><hr class="wp-block-separator alignwide has-text-color has-navy-color has-alpha-channel-opacity has-navy-background-color has-background"/><!-- /wp:separator --><!-- wp:paragraph {"align":"wide","fontSize":"xs"} --><p class="alignwide has-xs-font-size">Review and publish organization-specific privacy, accessibility, and legal notices before launch.</p><!-- /wp:paragraph --></div><!-- /wp:group -->

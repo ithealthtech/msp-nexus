@@ -1,0 +1,20 @@
+{
+  "name": "msp-nexus/product-suite",
+  "description": "Development quality tooling for the MSP Nexus WordPress product suite.",
+  "type": "project",
+  "require": { "php": ">=7.4.33" },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "phpstan/phpstan": "^2.0",
+    "phpunit/phpunit": "^9.6 || ^10.5 || ^11.0",
+    "szepeviktor/phpstan-wordpress": "^2.0",
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "config": { "allow-plugins": { "dealerdirect/phpcodesniffer-composer-installer": true }, "platform": { "php": "7.4.33" }, "sort-packages": true },
+  "scripts": {
+    "lint": "phpcs",
+    "analyse": "phpstan analyse",
+    "test": "phpunit"
+  }
+}

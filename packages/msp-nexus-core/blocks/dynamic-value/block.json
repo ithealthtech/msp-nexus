@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/dynamic-value",
+  "version": "0.4.0",
+  "title": "Nexus Dynamic Value",
+  "category": "msp-nexus",
+  "icon": "database",
+  "description": "Displays portable site, post, archive, date, meta, or WooCommerce data.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "source": { "type": "string", "default": "post" },
+    "field": { "type": "string", "default": "title" },
+    "fallback": { "type": "string", "default": "" },
+    "prefix": { "type": "string", "default": "" },
+    "suffix": { "type": "string", "default": "" },
+    "tagName": { "type": "string", "default": "span" },
+    "linkTo": { "type": "string", "default": "none" },
+    "customUrl": { "type": "string", "default": "" },
+    "outputType": { "type": "string", "default": "auto" },
+    "imageSize": { "type": "string", "default": "large" },
+    "altText": { "type": "string", "default": "" }
+  },
+  "supports": { "anchor": true, "html": false, "color": { "text": true, "background": true }, "typography": { "fontSize": true }, "spacing": { "margin": true, "padding": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

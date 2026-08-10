@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/comparison-table",
+  "version": "0.4.0",
+  "title": "Nexus Comparison Table",
+  "category": "msp-nexus",
+  "icon": "editor-table",
+  "description": "An accessible responsive comparison table for plans, services, or responsibilities.",
+  "textdomain": "msp-nexus-core",
+  "attributes": { "caption": { "type": "string", "default": "Managed service comparison" }, "columns": { "type": "string", "default": "Capability|Essential|Complete" }, "rows": { "type": "string", "default": "Support coverage|Business hours|24×7\nSecurity monitoring|Optional|Included\nTechnology roadmap|Annual|Quarterly" }, "firstColumnHeader": { "type": "boolean", "default": true } },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false, "spacing": { "margin": true } },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-studio"
+}

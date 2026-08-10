@@ -1,0 +1,2 @@
+/* RTL refinements; primary layouts use logical properties and need few overrides. */
+body { direction: rtl; unicode-bidi: embed; }
