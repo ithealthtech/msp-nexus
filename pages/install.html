@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Install MSP Nexus: requirements, package order, child-theme setup, development tooling, and validation.">
+  <meta name="theme-color" content="#0b0a17">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Install &middot; MSP Nexus</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="MSP Nexus documentation home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MSP Nexus</span>
+      </a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="install.html" aria-current="page">Install</a>
+        <a href="licensing.html">Licensing</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/ithealthtech/msp-nexus">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-doc-theme-toggle aria-label="Use light documentation theme">&#9728;</button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Installation</p>
+        <h1>Install in the right order.</h1>
+        <p class="hero-copy">The theme renders on its own, but the companion plugin owns Nexus Studio, the content model, and the license client. Install both.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container docs-layout">
+        <nav class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <a href="#requirements">Requirements</a>
+          <a href="#order">Install order</a>
+          <a href="#child">Child theme</a>
+          <a href="#demo">Demo content</a>
+          <a href="#development">Development</a>
+          <a href="#validation">Validation</a>
+        </nav>
+
+        <div class="docs-content">
+          <h2 id="requirements">Requirements</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+              <tbody>
+                <tr><td>WordPress</td><td>6.7 minimum &mdash; tested target 7.0.3</td></tr>
+                <tr><td>PHP</td><td>7.4.33 minimum</td></tr>
+                <tr><td>Node.js</td><td>22 or newer, for development tooling only</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Node is not required to <em>run</em> MSP Nexus. It is only needed to build, validate, and package the product from source.</p>
+
+          <h2 id="order">Install order</h2>
+          <ol class="step-list">
+            <li><strong>Back up first</strong>Take and verify a database and files backup before installing a theme that owns full-site editing.</li>
+            <li><strong>Install the theme</strong><code>packages/msp-nexus</code> &mdash; the full-site-editing block theme.</li>
+            <li><strong>Install the companion plugin</strong><code>packages/msp-nexus-core</code> &mdash; without it you get the theme's blocks but not Nexus Studio, the content model, conditional layouts, dynamic blocks, onboarding, diagnostics, or licensing.</li>
+            <li><strong>Activate and run onboarding</strong>The plugin's onboarding flow configures the content model and starter catalog.</li>
+            <li><strong>Add the child theme</strong>Only if you intend to customize &mdash; see below.</li>
+          </ol>
+          <div class="notice notice-warning">
+            <span aria-hidden="true">!</span>
+            <p>Activating the theme without the companion plugin is a supported but reduced configuration. Blocks that depend on the plugin's dynamic data and conditions will not render their full behavior.</p>
+          </div>
+
+          <h2 id="child">Child theme</h2>
+          <p><code>packages/msp-nexus-child</code> is a customization-safe starter. Use it for any client-specific CSS, template overrides, or functions so that updating the parent theme does not overwrite your work.</p>
+          <div class="notice">
+            <span aria-hidden="true">i</span>
+            <p>Editing the parent theme directly is the single most common way to lose customization at update time. Start with the child theme even if you only expect to change one colour.</p>
+          </div>
+
+          <h2 id="demo">Demo content</h2>
+          <p>The <code>demo</code> directory holds original demo data and deterministic import manifests. Deterministic means a given manifest imports the same content every time &mdash; useful for building a repeatable client starting point rather than a one-off.</p>
+
+          <h2 id="development">Development</h2>
+          <div class="code-block">
+            <button class="copy-button" type="button" data-copy-target="#dev-cmds">Copy</button>
+            <pre><code id="dev-cmds">npm install
+npm run check
+npm run package
+npm run qa:php74</code></pre>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+              <tbody>
+                <tr><td><code>npm run check</code></td><td>Structure, JSON, PHP, JS, block markup, security, lint, design, and service checks</td></tr>
+                <tr><td><code>npm run package</code></td><td>Builds distributable packages</td></tr>
+                <tr><td><code>npm run qa:php74</code></td><td>Verifies packaged installs on the PHP 7.4.33 floor</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="validation">Validation</h2>
+          <p>The official WordPress Playground blueprints under <code>artifacts/</code> verify packaged single-site and multisite installs on PHP 7.4.33 <strong>without requiring native PHP or Docker</strong>. The licensing service test suite covers persistence-domain and HTTP contracts.</p>
+          <p>See <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/DEVELOPMENT.md">DEVELOPMENT.md</a> and <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/TESTING_AND_VALIDATION.md">TESTING_AND_VALIDATION.md</a>.</p>
+          <p>Detailed configuration lives in <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/INSTALLATION_AND_CONFIGURATION.md">INSTALLATION_AND_CONFIGURATION.md</a>; upgrade paths in <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/UPGRADE_AND_MIGRATION.md">UPGRADE_AND_MIGRATION.md</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MSP Nexus</span></a>
+        <p class="footer-note">A clean-room WordPress product suite for managed service providers.</p>
+      </div>
+      <div><h3>Learn</h3><a href="install.html">Install</a><a href="licensing.html">Licensing</a><a href="support.html">Support</a></div>
+      <div><h3>Project</h3><a href="https://github.com/ithealthtech/msp-nexus">Repository</a><a href="https://github.com/ithealthtech/msp-nexus/tree/main/docs">Documentation</a><a href="https://github.com/ithealthtech/msp-nexus/issues">Issues</a></div>
+      <div><h3>Policy</h3><a href="https://github.com/ithealthtech/msp-nexus/blob/main/SECURITY.md">Security policy</a><a href="https://github.com/ithealthtech/msp-nexus/blob/main/CONTRIBUTING.md">Contributing</a><p class="footer-note">&copy; <span data-current-year></span> IT Health Tech LLC</p></div>
+    </div>
+  </footer>
+
+  <div class="sr-only" aria-live="polite" data-live-region></div>
+</body>
+</html>

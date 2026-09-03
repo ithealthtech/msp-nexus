@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Troubleshooting MSP Nexus: missing Studio features, lost customizations, update and signature failures, PHP floor issues, and how to report a problem.">
+  <meta name="theme-color" content="#0b0a17">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Support &middot; MSP Nexus</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="MSP Nexus documentation home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MSP Nexus</span>
+      </a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="install.html">Install</a>
+        <a href="licensing.html">Licensing</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="https://github.com/ithealthtech/msp-nexus">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-doc-theme-toggle aria-label="Use light documentation theme">&#9728;</button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Support</p>
+        <h1>Troubleshooting</h1>
+        <p class="hero-copy">Start here before filing an issue.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-filter-list>
+        <div class="section-heading">
+          <p class="section-kicker">Symptom finder</p>
+          <h2>Search troubleshooting</h2>
+        </div>
+        <div class="filter-bar">
+          <label class="sr-only" for="support-search">Search troubleshooting</label>
+          <input class="search-input" id="support-search" type="search" data-filter-input placeholder="Try &quot;update&quot;, &quot;signature&quot;, &quot;PHP&quot;, or &quot;customization&quot;">
+        </div>
+        <div class="accordion">
+          <details data-filter-item>
+            <summary>Nexus Studio or dynamic blocks are missing</summary>
+            <div>
+              <p>The companion plugin is almost certainly not active. <code>packages/msp-nexus-core</code> owns Nexus Studio, the content model, conditional layouts, dynamic blocks, onboarding, diagnostics, integrations, and the license client.</p>
+              <p>The theme alone is a supported but reduced configuration. Install and activate the plugin &mdash; see <a href="install.html#order">install order</a>.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>Customizations disappeared after an update</summary>
+            <div>
+              <p>Changes made directly to the parent theme are overwritten when the parent updates. That is how WordPress themes work, not a defect.</p>
+              <p>Move client-specific CSS, template overrides, and functions into <code>packages/msp-nexus-child</code>. See <a href="install.html#child">child theme</a>.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>Updates are not appearing</summary>
+            <div>
+              <p>Check, in order: is the license active and the site activated; is the licensing service reachable; and has the entitlement cache expired.</p>
+              <p>Sites keep rendering from installed code when the service is unreachable, and signed entitlement caches provide a bounded grace state &mdash; so a site working normally is not evidence that updates are flowing.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>A manifest signature or package hash check failed</summary>
+            <div>
+              <p>Do not work around this. Signature verification failing means the manifest was not signed by a key the site trusts, and a package hash mismatch means the payload is not what was published.</p>
+              <p>If you recently rotated signing keys, confirm the new <em>public</em> key shipped to sites as a trust-set entry <strong>before</strong> the private key started signing, and that the prior verification key is still retained. See <a href="licensing.html#signing">signed updates</a>.</p>
+              <p>Otherwise treat it as a potential incident and follow the runbook in <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/LICENSING_OPERATIONS.md">LICENSING_OPERATIONS.md</a>.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>A download grant link stopped working</summary>
+            <div>
+              <p>Expected. Package grants expire after five minutes and are bound to product, version, license, and site. Request a fresh grant rather than reusing a URL.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>The licensing service returns 429</summary>
+            <div>
+              <p>The built-in limiter defaults to 60 requests per client-route per minute and returns <code>429</code> with a <code>Retry-After</code> header. Honor that header. For production, add distributed limits at the reverse proxy rather than raising the application limit.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>Something breaks only on older PHP</summary>
+            <div>
+              <p>The supported floor is PHP 7.4.33. Run <code>npm run qa:php74</code>, which verifies packaged single-site and multisite installs against that floor through WordPress Playground blueprints &mdash; no native PHP or Docker required.</p>
+            </div>
+          </details>
+          <details data-filter-item>
+            <summary>A capability I expected is not there</summary>
+            <div>
+              <p>This is a pre-1.0 release. Check <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/REQUIREMENTS_TRACEABILITY.md">REQUIREMENTS_TRACEABILITY.md</a>, which records requirement-level evidence and the intentional safety boundaries &mdash; some absences are deliberate rather than unfinished.</p>
+            </div>
+          </details>
+        </div>
+        <p class="empty-state" data-filter-empty>No troubleshooting entry matches that search.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <p class="section-kicker">Still blocked?</p>
+            <h2>Open a reproducible issue.</h2>
+            <p>Include the MSP Nexus version, WordPress and PHP versions, whether the companion plugin is active, single-site or multisite, and the exact steps. Never include license keys, portal tokens, signing keys, customer content, or full IP addresses. Use a private advisory for a suspected vulnerability &mdash; not a public issue.</p>
+          </div>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/ithealthtech/msp-nexus/issues/new">Open issue</a>
+            <a class="button button-danger" href="https://github.com/ithealthtech/msp-nexus/security/advisories/new">Private advisory</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MSP Nexus</span></a>
+        <p class="footer-note">A clean-room WordPress product suite for managed service providers.</p>
+      </div>
+      <div><h3>Learn</h3><a href="install.html">Install</a><a href="licensing.html">Licensing</a><a href="support.html">Support</a></div>
+      <div><h3>Project</h3><a href="https://github.com/ithealthtech/msp-nexus">Repository</a><a href="https://github.com/ithealthtech/msp-nexus/tree/main/docs">Documentation</a><a href="https://github.com/ithealthtech/msp-nexus/issues">Issues</a></div>
+      <div><h3>Policy</h3><a href="https://github.com/ithealthtech/msp-nexus/blob/main/SECURITY.md">Security policy</a><a href="https://github.com/ithealthtech/msp-nexus/blob/main/CONTRIBUTING.md">Contributing</a><p class="footer-note">&copy; <span data-current-year></span> IT Health Tech LLC</p></div>
+    </div>
+  </footer>
+
+  <div class="sr-only" aria-live="polite" data-live-region></div>
+</body>
+</html>
