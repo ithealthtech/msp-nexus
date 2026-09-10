@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How MSP Nexus licensing works: the independent entitlement service, signed update manifests, activation, package grants, and what happens when the service is unreachable.">
+  <meta name="theme-color" content="#0b0a17">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Licensing &middot; MSP Nexus</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="MSP Nexus documentation home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MSP Nexus</span>
+      </a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="install.html">Install</a>
+        <a href="licensing.html" aria-current="page">Licensing</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/ithealthtech/msp-nexus">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-doc-theme-toggle aria-label="Use light documentation theme">&#9728;</button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Licensing</p>
+        <h1>Entitlement without holding sites hostage.</h1>
+        <p class="hero-copy">Distributed WordPress code is GPL-2.0-or-later. Commercial controls apply to the separately provided service and delivery &mdash; not to whether your site keeps working.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container docs-layout">
+        <nav class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <a href="#model">The licensing model</a>
+          <a href="#outage">If the service is unreachable</a>
+          <a href="#signing">Signed updates</a>
+          <a href="#grants">Package grants</a>
+          <a href="#deploy">Deploying the service</a>
+          <a href="#limits">Rate limits</a>
+        </nav>
+
+        <div class="docs-content">
+          <h2 id="model">The licensing model</h2>
+          <p><code>services/licensing-service</code> is an independent entitlement, activation, signed-update, package-delivery, and portal service. It is deployed separately from WordPress.</p>
+          <div class="notice">
+            <span aria-hidden="true">i</span>
+            <p><strong>The GPL line matters.</strong> The theme, plugin, and child starter are GPL-2.0-or-later. What is commercially controlled is access to the update service and package delivery &mdash; a distribution channel, not the code you already have.</p>
+          </div>
+
+          <h2 id="outage">If the service is unreachable</h2>
+          <div class="notice notice-success">
+            <span aria-hidden="true">&#10003;</span>
+            <p><strong>Sites keep rendering.</strong> WordPress continues serving from installed code if the licensing service is unavailable. Signed entitlement caches provide a bounded administrative grace state rather than an immediate hard stop.</p>
+          </div>
+          <p>This is a deliberate design property. An outage in your licensing infrastructure should never take a client's public website down.</p>
+
+          <h2 id="signing">Signed updates</h2>
+          <p>Update manifests are signed with an Ed25519 key. The WordPress client verifies the signature before trusting a manifest, so a compromised or spoofed update endpoint cannot push arbitrary code into a site.</p>
+          <p>Key rotation is a trust-set operation, in this order:</p>
+          <ol class="step-list">
+            <li><strong>Generate offline</strong>Create the new Ed25519 signing key in the controlled release environment.</li>
+            <li><strong>Publish the public key first</strong>Add it to WordPress packages as a trust-set entry <em>before</em> using the new private key.</li>
+            <li><strong>Verify adoption</strong>Deploy the trust-set release and confirm sites have it.</li>
+            <li><strong>Switch signing keys</strong>Only now start signing with the new private key.</li>
+            <li><strong>Retain the old verification key</strong>Through the maximum entitlement-cache, update-manifest, and rollback window.</li>
+            <li><strong>Revoke and record</strong>Retire the prior key and log the rotation in the operator audit log.</li>
+          </ol>
+          <div class="notice notice-danger">
+            <span aria-hidden="true">!</span>
+            <p><strong>Never place a signing private key in WordPress or a public web root.</strong> Rotate license peppers through a versioned multi-pepper verifier &mdash; replacing the only pepper without rehashing customer keys during successful validation will invalidate them.</p>
+          </div>
+
+          <h2 id="grants">Package grants</h2>
+          <p>Download grants expire after <strong>five minutes</strong> and are bound to product, version, license, and site. A leaked grant URL is therefore short-lived and not portable to another site.</p>
+          <p>Webhook signatures allow five minutes of clock skew, and event IDs are persisted so a replayed webhook cannot cause duplicate side effects.</p>
+
+          <h2 id="deploy">Deploying the service</h2>
+          <p>Deploy independently from WordPress, behind TLS, a reverse proxy, and managed network controls. Use a long-running Node 24 runtime. Package binaries belong in immutable object storage or a read-only mounted release directory.</p>
+          <p>Production startup <strong>fails closed</strong> when any of these is missing:</p>
+          <div class="code-block">
+            <button class="copy-button" type="button" data-copy-target="#required-env">Copy</button>
+            <pre><code id="required-env">LICENSE_KEY_PEPPER
+DOWNLOAD_GRANT_SECRET
+MANIFEST_PRIVATE_KEY_PEM
+OPERATOR_TOKEN
+PUBLIC_ORIGIN
+PACKAGE_ROOT</code></pre>
+          </div>
+          <p>Set <code>NODE_ENV=production</code>. Also configure <code>DATA_PATH</code>, package hashes and sizes, <code>COMMERCE_WEBHOOK_SECRET</code>, <code>ENTITLEMENT_CACHE_HOURS</code>, and <code>RATE_LIMIT_PER_MINUTE</code> as applicable. The complete example is <code>services/licensing-service/.env.example</code>.</p>
+          <div class="notice notice-warning">
+            <span aria-hidden="true">!</span>
+            <p>Secrets must be at least 32 random bytes and stored in a managed secret store. Environment files are for local development only. Persistent SQLite is for controlled single-instance installations &mdash; implement the documented repository interface with PostgreSQL before scaling horizontally.</p>
+          </div>
+
+          <h2 id="limits">Rate limits</h2>
+          <p>The built-in single-instance limiter defaults to 60 requests per client-route per minute and returns <code>429</code> with <code>Retry-After</code>. Production reverse proxies should add global and distributed limits, connection and request-body limits, bot/DDoS controls, and trusted-proxy address handling.</p>
+          <p>Full operational detail &mdash; backup and restore, monitoring and alerting, the incident runbook, and data retention &mdash; is in <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/LICENSING_OPERATIONS.md">LICENSING_OPERATIONS.md</a>. Commercial terms are templated in <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/COMMERCIAL_ENTITLEMENT_TERMS_TEMPLATE.md">COMMERCIAL_ENTITLEMENT_TERMS_TEMPLATE.md</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MSP Nexus</span></a>
+        <p class="footer-note">A clean-room WordPress product suite for managed service providers.</p>
+      </div>
+      <div><h3>Learn</h3><a href="install.html">Install</a><a href="licensing.html">Licensing</a><a href="support.html">Support</a></div>
+      <div><h3>Project</h3><a href="https://github.com/ithealthtech/msp-nexus">Repository</a><a href="https://github.com/ithealthtech/msp-nexus/tree/main/docs">Documentation</a><a href="https://github.com/ithealthtech/msp-nexus/issues">Issues</a></div>
+      <div><h3>Policy</h3><a href="https://github.com/ithealthtech/msp-nexus/blob/main/SECURITY.md">Security policy</a><a href="https://github.com/ithealthtech/msp-nexus/blob/main/CONTRIBUTING.md">Contributing</a><p class="footer-note">&copy; <span data-current-year></span> IT Health Tech LLC</p></div>
+    </div>
+  </footer>
+
+  <div class="sr-only" aria-live="polite" data-live-region></div>
+</body>
+</html>

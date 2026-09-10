@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MSP Nexus: a clean-room WordPress block theme, companion plugin, child-theme starter, and independent licensing service built for managed service providers.">
+  <meta name="theme-color" content="#0b0a17">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>MSP Nexus</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="MSP Nexus documentation home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MSP Nexus</span>
+      </a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="install.html">Install</a>
+        <a href="licensing.html">Licensing</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/ithealthtech/msp-nexus">GitHub</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-doc-theme-toggle aria-label="Use light documentation theme">&#9728;</button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">MSP Nexus 0.4.0</p>
+          <h1>A WordPress product suite built for managed service providers.</h1>
+          <p class="hero-copy">A full-site-editing block theme, a companion functionality and visual-design plugin, a customization-safe child starter, and an independent licensing and update service &mdash; all WordPress-native, all clean-room.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="install.html">Install it</a>
+            <a class="button" href="licensing.html">How licensing works</a>
+            <a class="button" href="https://github.com/ithealthtech/msp-nexus">View on GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Compatibility">
+          <div class="release-line">
+            <div>
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="badge badge-warning">Pre-1.0</span>
+            </div>
+            <strong>v0.4.0</strong>
+          </div>
+          <dl class="meta-list">
+            <div class="meta-row"><dt>Tested target</dt><dd>WordPress 7.0.3</dd></div>
+            <div class="meta-row"><dt>Minimum WordPress</dt><dd>6.7</dd></div>
+            <div class="meta-row"><dt>Minimum PHP</dt><dd>7.4.33</dd></div>
+            <div class="meta-row"><dt>Node (tooling)</dt><dd>22 or newer</dd></div>
+            <div class="meta-row"><dt>Theme licence</dt><dd>GPL-2.0-or-later</dd></div>
+          </dl>
+          <div class="notice">
+            <span aria-hidden="true">i</span>
+            <p>Distributed WordPress code is GPL-2.0-or-later. Commercial entitlement controls apply only to separately provided services and delivery.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-compact">
+      <div class="container grid-4" aria-label="The four packages">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">01</div>
+          <h3>Block theme</h3>
+          <p><code>packages/msp-nexus</code> &mdash; a full-site-editing theme using WordPress-native block APIs and semantic HTML.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">02</div>
+          <h3>Companion plugin</h3>
+          <p><code>msp-nexus-core</code> &mdash; Nexus Studio, content model, conditional layouts, dynamic blocks, onboarding, diagnostics, and the license client.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">03</div>
+          <h3>Child starter</h3>
+          <p><code>msp-nexus-child</code> &mdash; a customization-safe starting point so client work survives updates.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">04</div>
+          <h3>Licensing service</h3>
+          <p><code>services/licensing-service</code> &mdash; entitlement, activation, signed updates, package delivery, and the customer portal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Preview</p>
+          <h2>Built to look like a service business, not a template</h2>
+        </div>
+        <figure class="panel">
+          <img src="images/screenshot.png" alt="MSP Nexus managed services homepage preview showing the block theme's default layout" loading="lazy">
+          <figcaption>The default managed-services homepage composition, assembled entirely from native blocks.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">What 0.4.0 delivers</p>
+          <h2>Authoring surface</h2>
+          <p>Filter the list to check whether a capability is present in this release.</p>
+        </div>
+        <div data-filter-list>
+          <div class="filter-bar">
+            <label class="sr-only" for="cap-search">Search capabilities</label>
+            <input class="search-input" id="cap-search" type="search" data-filter-input placeholder="Try &quot;WooCommerce&quot;, &quot;popup&quot;, or &quot;consent&quot;">
+          </div>
+          <ul class="step-list">
+            <li data-filter-item>Expanded Nexus Studio authoring workspace</li>
+            <li data-filter-item>200+ composition inserter</li>
+            <li data-filter-item>800-configuration MSP starter catalog</li>
+            <li data-filter-item>Responsive geometry and display conditions</li>
+            <li data-filter-item>Visual dynamic data and loops</li>
+            <li data-filter-item>Advanced headers, menus, and popups</li>
+            <li data-filter-item>WooCommerce template tooling</li>
+            <li data-filter-item>Elementor widgets</li>
+            <li data-filter-item>Consent controls</li>
+            <li data-filter-item>White labeling and portability</li>
+            <li data-filter-item>Performance tooling</li>
+          </ul>
+          <p class="empty-state" data-filter-empty>No capability matches that search.</p>
+        </div>
+        <div class="notice">
+          <span aria-hidden="true">i</span>
+          <p>See <a href="https://github.com/ithealthtech/msp-nexus/blob/main/docs/REQUIREMENTS_TRACEABILITY.md">requirements traceability</a> for requirement-level evidence and the intentional safety boundaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Provenance</p>
+          <h2>Clean-room, deliberately</h2>
+        </div>
+        <div class="notice notice-warning">
+          <span aria-hidden="true">!</span>
+          <p>Reference products were studied <strong>only</strong> to understand capability categories, packaging conventions, operational safeguards, and commercial expectations. No proprietary source, visual design, copy, trademarks, or update endpoints are reused. The architecture is a WordPress-native replacement, not a source or UI clone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <p class="section-kicker">Pre-1.0</p>
+            <h2>Know what you are adopting.</h2>
+            <p>Version 0.4.0 is a pre-1.0 release. Packaged single-site and multisite installs are verified on PHP 7.4.33 through official WordPress Playground blueprints, and the licensing service has persistence-domain and HTTP contract tests &mdash; but the version number is telling you something. Pilot before you standardize a client base on it.</p>
+          </div>
+          <div class="button-row">
+            <a class="button button-primary" href="install.html">Installation guide</a>
+            <a class="button" href="https://github.com/ithealthtech/msp-nexus/blob/main/CHANGELOG.md">Changelog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MSP Nexus</span></a>
+        <p class="footer-note">A clean-room WordPress product suite for managed service providers.</p>
+      </div>
+      <div><h3>Learn</h3><a href="install.html">Install</a><a href="licensing.html">Licensing</a><a href="support.html">Support</a></div>
+      <div><h3>Project</h3><a href="https://github.com/ithealthtech/msp-nexus">Repository</a><a href="https://github.com/ithealthtech/msp-nexus/tree/main/docs">Documentation</a><a href="https://github.com/ithealthtech/msp-nexus/issues">Issues</a></div>
+      <div><h3>Policy</h3><a href="https://github.com/ithealthtech/msp-nexus/blob/main/SECURITY.md">Security policy</a><a href="https://github.com/ithealthtech/msp-nexus/blob/main/CONTRIBUTING.md">Contributing</a><p class="footer-note">&copy; <span data-current-year></span> IT Health Tech LLC</p></div>
+    </div>
+    <div class="container">
+      <p class="footer-note">WordPress is a trademark of the WordPress Foundation. WooCommerce and Elementor are trademarks of their respective owners. MSP Nexus is not affiliated with or endorsed by any of them.</p>
+    </div>
+  </footer>
+
+  <div class="sr-only" aria-live="polite" data-live-region></div>
+</body>
+</html>
