@@ -1,9 +1,13 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.4.0\n"
+"Project-Id-Version: MSP Nexus 0.5.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "\"Book a call\" link"
+msgstr ""
 
 #: packages/msp-nexus-core/blocks/content-carousel/render.php
 msgid "%1$d of %2$d"
@@ -35,6 +39,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Studio.php
 msgid "A portable visual workflow built on WordPress blocks. Nexus controls enhance the editor without converting content into proprietary shortcodes."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "A short line above the header when you use the \"Header with utility navigation\" layout."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Licensing/UpdateClient.php
@@ -103,6 +111,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Active theme"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Adaptive starter library"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
@@ -361,6 +373,10 @@ msgstr ""
 msgid "Available"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Available to social-link blocks as dynamic values."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Avatar"
 msgstr ""
@@ -437,6 +453,10 @@ msgstr ""
 msgid "Business Continuity"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Business hours"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/Registrar.php
 msgid "Business Outcome"
 msgstr ""
@@ -447,6 +467,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/Registrar.php
 msgid "Business Outcomes"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Business results you deliver, such as less downtime or audit readiness."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -525,12 +549,20 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Categories and tags"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Category description"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js
 msgid "Center"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Certifications and awards you can prove."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Performance.php
@@ -617,6 +649,14 @@ msgstr ""
 msgid "Client mode"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Client portal link"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Client stories with measurable results. Kept as drafts until you verify them."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "Client-facing product name"
 msgstr ""
@@ -657,6 +697,10 @@ msgstr ""
 msgid "Close when the backdrop is clicked"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Cloud & Microsoft 365"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Cloud Innovation"
 msgstr ""
@@ -669,7 +713,7 @@ msgstr ""
 msgid "Cloud platforms, identity, cost control, resilience, and adoption."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Starter/Catalog.php
+#: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Co-managed IT"
 msgstr ""
 
@@ -713,12 +757,24 @@ msgstr ""
 msgid "Company address"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Company content"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Comparison table settings"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
 msgid "Complete every required field and provide a valid email address."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Complete MSP website"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Complete, hand-designed websites. One click creates every page; you then edit the words and photos in the normal editor."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -775,6 +831,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Construction"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Consultation form submissions are emailed here. Also used by the email button on flagship contact pages."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Studio.php
@@ -865,8 +925,16 @@ msgstr ""
 msgid "Create synced pattern"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Create this site"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Portability.php
 msgid "Creates a focused portable document containing one block document and its safe public metadata."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Creates: %s"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php
@@ -953,10 +1021,6 @@ msgstr ""
 msgid "Decimal places"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Default business hours"
-msgstr ""
-
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Default card"
 msgstr ""
@@ -995,6 +1059,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Description"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Design fine-tuning (optional)"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -1265,6 +1333,10 @@ msgstr ""
 msgid "Everyone"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Everything about your business lives here once, and every page that shows it stays in sync. Add a service here and it appears in every service grid automatically."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "Example: en_US, es_ES"
 msgstr ""
@@ -1334,7 +1406,7 @@ msgid "Export reviewed bundle"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Facebook URL"
+msgid "Facebook"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -1377,6 +1449,10 @@ msgstr ""
 msgid "Field key"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Fill these in first. Blocks can show any of them as a dynamic value, so you update them in one place."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Filter favorites"
 msgstr ""
@@ -1397,6 +1473,14 @@ msgstr ""
 msgid "First taxonomy"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Flagship site created: %1$d new page(s), %2$d existing page(s) left untouched."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Flagship sites"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Flex"
 msgstr ""
@@ -1407,6 +1491,22 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Focus"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "For example: \"System down? Call the support line for 24/7 help.\" Available to any block as a dynamic value."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "For example: Mon–Fri 8am–6pm, service desk 24/7. Available to any block as a dynamic value."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "For existing clients who need help now. Available to any block as a dynamic value."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "For new prospects. Used by the call button on flagship contact pages."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Privacy.php
@@ -1465,10 +1565,6 @@ msgstr ""
 msgid "Give visitors a practical route to continue."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Global design controls"
-msgstr ""
-
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Government"
 msgstr ""
@@ -1481,8 +1577,12 @@ msgstr ""
 msgid "Guidance"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Guides, checklists, and downloads for your resource library."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Header announcement"
+msgid "Header and contact buttons read these, so you only change them once."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
@@ -1503,6 +1603,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Healthcare"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Healthcare IT"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
@@ -1563,6 +1667,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Host cache or performance plugin"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "How people reach you"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -1709,6 +1817,10 @@ msgstr ""
 msgid "Integrations"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Integrations and updates"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Interval in milliseconds"
 msgstr ""
@@ -1719,6 +1831,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "ISO day numbers 1–7, separated by commas."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "IT Consulting & vCIO"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
@@ -1797,6 +1913,10 @@ msgstr ""
 msgid "Legal"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Legal IT"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "License & updates"
 msgstr ""
@@ -1838,7 +1958,7 @@ msgid "Link URL"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "LinkedIn URL"
+msgid "LinkedIn"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/blocks/woocommerce-element/render.php
@@ -1941,6 +2061,10 @@ msgstr ""
 msgid "Manufacturing"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Manufacturing IT"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Marketing"
 msgstr ""
@@ -1951,6 +2075,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Marketing category label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Markets you serve, with the regulations and software each one cares about."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -2125,10 +2253,6 @@ msgstr ""
 msgid "Next slide"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/StarterSites.php
-msgid "Nexus adaptive starter library"
-msgstr ""
-
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "Nexus client branding"
 msgstr ""
@@ -2289,6 +2413,10 @@ msgstr ""
 msgid "Nonprofit"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Nothing here yet."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Notice with category controls"
 msgstr ""
@@ -2317,12 +2445,20 @@ msgstr ""
 msgid "Offer a focused conversation about the current condition and next decision."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Offices and service areas, with hours and contact details."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Offset"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "One full HTTPS origin per line."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "One line per address line. Available to any block as a dynamic value."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -2381,6 +2517,10 @@ msgstr ""
 msgid "Optional heading"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Optional. Leave blank to show nothing."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Reset.php
 msgid "Options: msp_nexus_import_state, msp_nexus_import_ledger. The prior homepage settings recorded by the importer will be restored when available."
 msgstr ""
@@ -2429,12 +2569,20 @@ msgstr ""
 msgid "Origin key"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Other pages are created as drafts. Pages that already exist at the same address are never changed."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Output"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "Overlay the header above the first content section"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Overview"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
@@ -2477,6 +2625,10 @@ msgstr ""
 msgid "Pause and cancel this import"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "People and leadership profiles for About and team pages."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Performance"
 msgstr ""
@@ -2499,6 +2651,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/blocks/consultation-form/render.php
 msgid "Plan a consultation"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Plans and prices shown in pricing tables and comparisons."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -2603,14 +2759,6 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Price"
-msgstr ""
-
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Primary consultation URL"
-msgstr ""
-
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Primary sales phone"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -2761,8 +2909,16 @@ msgstr ""
 msgid "Provide accessible visitor choices and activate optional scripts only after the matching category is granted. This tool does not replace legal review or a complete data inventory."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Publish every new page right away"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/starter-sites.js
 msgid "Publish new Home and set it as front page"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Publish the new Home page and make it my homepage"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
@@ -2795,6 +2951,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
 msgid "Questions"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Questions and answers used by FAQ sections across the site."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
@@ -2941,6 +3101,10 @@ msgstr ""
 msgid "Review and apply"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Review pages"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Reviewed SMTP provider"
 msgstr ""
@@ -2987,6 +3151,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Sales email"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Sales phone"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
@@ -3109,6 +3277,10 @@ msgstr ""
 msgid "Set the imported homepage as the static homepage (the prior setting is recorded)."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Settings"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "Setup"
 msgstr ""
@@ -3139,6 +3311,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Shop view options"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Short client quotes for sliders and proof sections."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Content/DynamicData.php
@@ -3225,6 +3401,10 @@ msgstr ""
 msgid "Site Kit, GTM4WP, or MonsterInsights"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Site-wide messages"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Six Nexus widgets bridge services, FAQs, forms, dynamic values, loops, and WooCommerce templates into Elementor while retaining site-owned content."
 msgstr ""
@@ -3243,6 +3423,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Slides"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Small Business IT"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Social profiles"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
@@ -3353,10 +3541,6 @@ msgstr ""
 msgid "Support phone"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Support portal URL"
-msgstr ""
-
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "Support URL"
 msgstr ""
@@ -3417,6 +3601,10 @@ msgstr ""
 msgid "Technology support by %s"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Technology vendors and alliances for logo walls."
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
 msgid "Telephone"
 msgstr ""
@@ -3437,6 +3625,10 @@ msgstr ""
 msgid "Thank you. Your request was submitted."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "That flagship site is not available with the active theme."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "The activation response was invalid."
 msgstr ""
@@ -3451,6 +3643,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "The bundled demo manifest or integrity digest is invalid. Import is disabled."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "The defaults are already tuned for readability. Change these only to match brand guidelines; Appearance > Editor > Styles can override them."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -3505,10 +3701,6 @@ msgstr ""
 msgid "These actions regenerate derived state only. They do not delete posts, media, terms, users, or customer settings."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "These restrained tokens complement, and can be overridden by, native Global Styles."
-msgstr ""
-
 #: packages/msp-nexus-core/blocks/purchase-gate/render.php
 msgid "This content is available after purchase."
 msgstr ""
@@ -3541,6 +3733,10 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Top-bar announcement"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/content-directory/render.php packages/msp-nexus-core/src/Content/Registrar.php
 msgid "Topic"
 msgstr ""
@@ -3567,6 +3763,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "Trigger"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Twelve hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, and healthcare, legal, and manufacturing industry pages. The header and footer menus link them all."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
@@ -3689,6 +3889,10 @@ msgstr ""
 msgid "Use your selected form plugin or the built-in consultation form. Avoid running duplicate public forms."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Used in search-engine structured data. Available to any block as a dynamic value."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Useful for dynamic or high-traffic sites when supported by the host."
 msgstr ""
@@ -3757,6 +3961,10 @@ msgstr ""
 msgid "View %s"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "View all"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "View cart"
 msgstr ""
@@ -3793,6 +4001,10 @@ msgstr ""
 msgid "We use essential storage for site operation. Optional analytics and marketing technologies run only according to your preferences."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "Webinars and events with dates and registration links."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "WebP generation"
 msgstr ""
@@ -3807,6 +4019,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
 msgid "What would you like to improve?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/ContentHub.php
+msgid "What you sell. Each service gets its own page and appears in service grids."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Where the header \"Book a discovery call\" button goes. Leave blank to keep it pointing at your Contact page."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Branding.php
@@ -3917,12 +4137,24 @@ msgstr ""
 msgid "You are not allowed to run diagnostics."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Your business"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "Your cart"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Your Company, LLC"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "Your order qualifies for free shipping."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Your ticketing or client portal. Available to any block as a dynamic value."
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
@@ -3930,7 +4162,7 @@ msgid "Your wishlist is empty."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "YouTube URL"
+msgid "YouTube"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Studio/Layouts.php
@@ -3940,3 +4172,4 @@ msgstr ""
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "ZIP support"
 msgstr ""
+

@@ -7,7 +7,7 @@
 A full-site-editing block theme, a companion functionality and visual-design plugin, a
 customization-safe child starter, and an independent licensing and update service.
 
-[![Version](https://img.shields.io/badge/version-0.4.0-b45309)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.5.0-b45309)](CHANGELOG.md)
 [![WordPress](https://img.shields.io/badge/WordPress-6.7%2B-21759b)](#compatibility-target)
 [![PHP](https://img.shields.io/badge/PHP-7.4.33%2B-777bb4)](#compatibility-target)
 [![Theme licence](https://img.shields.io/badge/theme-GPL--2.0--or--later-blue)](#licensing)
@@ -108,7 +108,10 @@ This constraint is enforced in review — see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Product status
 
-Version 0.4.0 delivers the expanded Nexus Studio authoring workspace, a 200+ composition
+Version 0.5.0 adds a complete, hand-designed 12-page MSP website (core, service, and
+healthcare/legal/manufacturing industry pages) that installs in one click from Starter sites,
+a redesigned header and footer, a single Company content menu, and accessibility and mobile-menu
+fixes. It builds on 0.4.0's expanded Nexus Studio authoring workspace, a 200+ composition
 inserter, an 800-configuration MSP starter catalog, responsive geometry and conditions,
 visual dynamic data and loops, advanced headers/menus/popups, WooCommerce template tooling,
 Elementor widgets, consent controls, white labeling, portability, and performance tooling.
