@@ -14,6 +14,7 @@ if (! defined('ABSPATH')) {
 define('MSP_NEXUS_VERSION', '0.4.0');
 
 require_once get_theme_file_path('inc/patterns.php');
+require_once get_theme_file_path('inc/industry-page.php');
 
 /**
  * Register editor and front-end assets.
@@ -39,8 +40,28 @@ function msp_nexus_enqueue_assets(): void
         array(),
         MSP_NEXUS_VERSION
     );
+    wp_enqueue_style(
+        'msp-nexus-flagship',
+        get_theme_file_uri('assets/css/flagship.css'),
+        array('msp-nexus-global'),
+        MSP_NEXUS_VERSION
+    );
 }
 add_action('wp_enqueue_scripts', 'msp_nexus_enqueue_assets');
+
+/**
+ * Respect the homepage chosen under Settings > Reading. front-page.html ships a
+ * designed default for "latest posts" installs; once a static page is chosen,
+ * that page and its own template must render instead.
+ *
+ * @param string[] $templates Front-page template candidates.
+ * @return string[]
+ */
+function msp_nexus_front_page_hierarchy(array $templates): array
+{
+    return 'page' === get_option('show_on_front') && (int) get_option('page_on_front') > 0 ? array() : $templates;
+}
+add_filter('frontpage_template_hierarchy', 'msp_nexus_front_page_hierarchy');
 
 /** Build a concise description for pages that do not have one yet. */
 function msp_nexus_document_description(): string

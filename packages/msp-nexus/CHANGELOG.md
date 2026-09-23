@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased (0.5.0)
+
+- Complete 12-page MSP website patterns (core, service, and industry pages), a shared industry template, redesigned header and footer with an automatic light variant, CC0 stock photography, and fixes for the static front page, mobile menu, contrast, and button radius.
+
 ## 0.4.0
 
 - Added presentation support for the expanded Nexus Studio element, responsive, header, consent, commerce, and adaptive starter systems.

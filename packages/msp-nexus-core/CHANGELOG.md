@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased (0.5.0)
+
+- Complete MSP website one-click setup, Company content menu and overview, reorganized and reachable Settings, pages keep their address over content-type listings, and the button-radius token only applies when changed.
+
 ## 0.4.0
 
 - Expanded Nexus Studio workspace, revisions, responsive geometry, element conditions, dynamic data/ACF selection, advanced queries, and visual loop layouts.

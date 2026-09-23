@@ -1,0 +1,14 @@
+# Keep LF everywhere. Integrity-checked files (the demo manifest and its digest)
+# must be byte-identical across platforms or verification fails on Windows.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.gz binary
+*.woff binary
+*.woff2 binary
+*.mo binary

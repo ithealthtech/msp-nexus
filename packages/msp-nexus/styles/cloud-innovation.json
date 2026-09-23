@@ -4,7 +4,7 @@
   "title": "Cloud & Innovation",
   "settings": { "color": { "palette": [
     { "slug": "ink", "name": "Ink", "color": "#16132b" }, { "slug": "navy", "name": "Indigo", "color": "#2a2450" },
-    { "slug": "slate", "name": "Slate", "color": "#706a8b" }, { "slug": "mist", "name": "Mist", "color": "#e7e3f4" },
+    { "slug": "slate", "name": "Slate", "color": "#a59fc0" }, { "slug": "mist", "name": "Mist", "color": "#e7e3f4" },
     { "slug": "cloud", "name": "Cloud", "color": "#f8f6ff" }, { "slug": "white", "name": "White", "color": "#ffffff" },
     { "slug": "cyan", "name": "Sky", "color": "#65dcff" }, { "slug": "cyan-dark", "name": "Sky dark", "color": "#126785" },
     { "slug": "violet", "name": "Innovation violet", "color": "#8065ff" }, { "slug": "success", "name": "Success", "color": "#158058" },

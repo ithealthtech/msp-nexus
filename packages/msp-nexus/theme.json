@@ -17,7 +17,7 @@
       "palette": [
         { "slug": "ink", "name": "Ink", "color": "#0b0a17" },
         { "slug": "navy", "name": "Navy", "color": "#121124" },
-        { "slug": "slate", "name": "Slate", "color": "#6f7288" },
+        { "slug": "slate", "name": "Slate", "color": "#a3a6c0" },
         { "slug": "mist", "name": "Mist", "color": "#343858" },
         { "slug": "cloud", "name": "Cloud", "color": "#d9d9e5" },
         { "slug": "white", "name": "White", "color": "#ffffff" },

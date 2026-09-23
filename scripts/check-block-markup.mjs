@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 
-const output = execFileSync('rg', ['--files', 'packages/msp-nexus/templates', 'packages/msp-nexus/parts', 'packages/msp-nexus/patterns'], { encoding: 'utf8' });
+const output = execFileSync('git', ['ls-files', 'packages/msp-nexus/templates', 'packages/msp-nexus/parts', 'packages/msp-nexus/patterns'], { encoding: 'utf8' });
 const files = output.split(/\r?\n/).filter(Boolean).filter((file) => /\.(?:html|php)$/i.test(file));
 const errors = [];
 for (const file of files) {

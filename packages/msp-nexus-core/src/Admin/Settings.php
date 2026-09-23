@@ -38,6 +38,9 @@ final class Settings
             'dashicons-shield-alt',
             58
         );
+        // Without an explicit first entry, the first registered submenu (Nexus layouts) hijacks the
+        // parent link and this settings screen becomes unreachable from the menu.
+        add_submenu_page('msp-nexus', __('MSP Nexus settings', 'msp-nexus-core'), __('Settings', 'msp-nexus-core'), 'manage_options', 'msp-nexus', array($this, 'render'));
     }
 
     /** @param mixed $value
@@ -109,20 +112,24 @@ final class Settings
             <form action="options.php" method="post">
                 <?php settings_fields('msp_nexus'); ?>
                 <table class="form-table" role="presentation">
-                    <?php $this->field('organization_name', __('Organization name', 'msp-nexus-core'), $settings); ?>
-                    <?php $this->field('sales_phone', __('Primary sales phone', 'msp-nexus-core'), $settings, 'tel'); ?>
-                    <?php $this->field('support_phone', __('Support phone', 'msp-nexus-core'), $settings); ?>
-                    <?php $this->field('support_url', __('Support portal URL', 'msp-nexus-core'), $settings, 'url'); ?>
-                    <?php $this->field('sales_email', __('Sales email', 'msp-nexus-core'), $settings, 'email'); ?>
-                    <?php $this->field('cta_url', __('Primary consultation URL', 'msp-nexus-core'), $settings, 'url'); ?>
-                    <?php $this->field('announcement', __('Header announcement', 'msp-nexus-core'), $settings); ?>
-                    <?php $this->field('linkedin_url', __('LinkedIn URL', 'msp-nexus-core'), $settings, 'url'); ?>
-                    <?php $this->field('facebook_url', __('Facebook URL', 'msp-nexus-core'), $settings, 'url'); ?>
-                    <?php $this->field('youtube_url', __('YouTube URL', 'msp-nexus-core'), $settings, 'url'); ?>
-                    <?php $this->textarea('company_address', __('Company address', 'msp-nexus-core'), $settings); ?>
-                    <?php $this->textarea('business_hours', __('Default business hours', 'msp-nexus-core'), $settings); ?>
-                    <?php $this->textarea('emergency_message', __('Emergency-support message', 'msp-nexus-core'), $settings); ?>
-                    <tr><th colspan="2"><h2><?php esc_html_e('Global design controls', 'msp-nexus-core'); ?></h2><p class="description"><?php esc_html_e('These restrained tokens complement, and can be overridden by, native Global Styles.', 'msp-nexus-core'); ?></p></th></tr>
+                    <?php $this->section(__('Your business', 'msp-nexus-core'), __('Fill these in first. Blocks can show any of them as a dynamic value, so you update them in one place.', 'msp-nexus-core')); ?>
+                    <?php $this->field('organization_name', __('Organization name', 'msp-nexus-core'), $settings, 'text', __('Used in search-engine structured data. Available to any block as a dynamic value.', 'msp-nexus-core'), __('Your Company, LLC', 'msp-nexus-core')); ?>
+                    <?php $this->textarea('company_address', __('Company address', 'msp-nexus-core'), $settings, __('One line per address line. Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
+                    <?php $this->textarea('business_hours', __('Business hours', 'msp-nexus-core'), $settings, __('For example: Mon–Fri 8am–6pm, service desk 24/7. Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
+                    <?php $this->section(__('How people reach you', 'msp-nexus-core'), __('Header and contact buttons read these, so you only change them once.', 'msp-nexus-core')); ?>
+                    <?php $this->field('sales_phone', __('Sales phone', 'msp-nexus-core'), $settings, 'tel', __('For new prospects. Used by the call button on flagship contact pages.', 'msp-nexus-core'), '(555) 555-0100'); ?>
+                    <?php $this->field('support_phone', __('Support phone', 'msp-nexus-core'), $settings, 'tel', __('For existing clients who need help now. Available to any block as a dynamic value.', 'msp-nexus-core'), '(555) 555-0199'); ?>
+                    <?php $this->field('sales_email', __('Sales email', 'msp-nexus-core'), $settings, 'email', __('Consultation form submissions are emailed here. Also used by the email button on flagship contact pages.', 'msp-nexus-core'), 'hello@example.com'); ?>
+                    <?php $this->field('support_url', __('Client portal link', 'msp-nexus-core'), $settings, 'url', __('Your ticketing or client portal. Available to any block as a dynamic value.', 'msp-nexus-core'), 'https://support.example.com'); ?>
+                    <?php $this->field('cta_url', __('"Book a call" link', 'msp-nexus-core'), $settings, 'url', __('Where the header "Book a discovery call" button goes. Leave blank to keep it pointing at your Contact page.', 'msp-nexus-core'), 'https://calendly.com/your-team'); ?>
+                    <?php $this->section(__('Social profiles', 'msp-nexus-core'), __('Available to social-link blocks as dynamic values.', 'msp-nexus-core')); ?>
+                    <?php $this->field('linkedin_url', __('LinkedIn', 'msp-nexus-core'), $settings, 'url', '', 'https://www.linkedin.com/company/…'); ?>
+                    <?php $this->field('facebook_url', __('Facebook', 'msp-nexus-core'), $settings, 'url', '', 'https://www.facebook.com/…'); ?>
+                    <?php $this->field('youtube_url', __('YouTube', 'msp-nexus-core'), $settings, 'url', '', 'https://www.youtube.com/@…'); ?>
+                    <?php $this->section(__('Site-wide messages', 'msp-nexus-core'), __('Optional. Leave blank to show nothing.', 'msp-nexus-core')); ?>
+                    <?php $this->field('announcement', __('Top-bar announcement', 'msp-nexus-core'), $settings, 'text', __('A short line above the header when you use the "Header with utility navigation" layout.', 'msp-nexus-core')); ?>
+                    <?php $this->textarea('emergency_message', __('Emergency-support message', 'msp-nexus-core'), $settings, __('For example: "System down? Call the support line for 24/7 help." Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
+                    <?php $this->section(__('Design fine-tuning (optional)', 'msp-nexus-core'), __('The defaults are already tuned for readability. Change these only to match brand guidelines; Appearance > Editor > Styles can override them.', 'msp-nexus-core')); ?>
                     <?php $this->field('accent_color', __('Action accent color', 'msp-nexus-core'), $settings, 'color'); ?>
                     <?php $this->field('surface_color', __('Primary surface color', 'msp-nexus-core'), $settings, 'color'); ?>
                     <?php $this->field('text_color', __('Primary text color', 'msp-nexus-core'), $settings, 'color'); ?>
@@ -141,6 +148,7 @@ final class Settings
                     <?php $this->number('wide_width', __('Wide content width (px)', 'msp-nexus-core'), $settings, 720, 1920, 1216); ?>
                     <?php $this->number('section_spacing', __('Default section spacing (px)', 'msp-nexus-core'), $settings, 24, 160, 80); ?>
                     <tr><th scope="row"><?php esc_html_e('Link presentation', 'msp-nexus-core'); ?></th><td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[link_underline]'); ?>" value="1" <?php checked(! array_key_exists('link_underline', $settings) || ! empty($settings['link_underline'])); ?>> <?php esc_html_e('Underline inline links by default', 'msp-nexus-core'); ?></label></td></tr>
+                    <?php $this->section(__('Integrations and updates', 'msp-nexus-core')); ?>
                     <tr><th scope="row"><?php esc_html_e('Integrations', 'msp-nexus-core'); ?></th><td>
                         <label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[enable_schema]'); ?>" value="1" <?php checked(! array_key_exists('enable_schema', $settings) || ! empty($settings['enable_schema'])); ?>> <?php esc_html_e('Enable conservative built-in schema when no supported SEO plugin is active', 'msp-nexus-core'); ?></label><br>
                         <label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[enable_native_form]'); ?>" value="1" <?php checked(! array_key_exists('enable_native_form', $settings) || ! empty($settings['enable_native_form'])); ?>> <?php esc_html_e('Enable the native consultation form handler', 'msp-nexus-core'); ?></label>
@@ -164,24 +172,33 @@ final class Settings
         <?php
     }
 
+    private function section(string $title, string $description = ''): void
+    {
+        ?>
+        <tr><th colspan="2" style="padding-bottom:0"><h2 style="margin:1.5em 0 .25em"><?php echo esc_html($title); ?></h2><?php if ('' !== $description) : ?><p class="description" style="font-weight:400"><?php echo esc_html($description); ?></p><?php endif; ?></th></tr>
+        <?php
+    }
+
     /** @param array<string, mixed> $settings */
-    private function field(string $name, string $label, array $settings, string $type = 'text'): void
+    private function field(string $name, string $label, array $settings, string $type = 'text', string $help = '', string $placeholder = ''): void
     {
         $id = 'msp-nexus-' . $name;
         ?>
         <tr>
             <th scope="row"><label for="<?php echo esc_attr($id); ?>"><?php echo esc_html($label); ?></label></th>
-            <td><input class="regular-text" id="<?php echo esc_attr($id); ?>" name="<?php echo esc_attr(self::OPTION . '[' . $name . ']'); ?>" type="<?php echo esc_attr($type); ?>" value="<?php echo esc_attr((string) ($settings[$name] ?? '')); ?>"></td>
+            <td><input class="regular-text" id="<?php echo esc_attr($id); ?>" name="<?php echo esc_attr(self::OPTION . '[' . $name . ']'); ?>" type="<?php echo esc_attr($type); ?>" value="<?php echo esc_attr((string) ($settings[$name] ?? '')); ?>"<?php echo '' !== $placeholder ? ' placeholder="' . esc_attr($placeholder) . '"' : ''; ?><?php echo '' !== $help ? ' aria-describedby="' . esc_attr($id . '-help') . '"' : ''; ?>>
+            <?php if ('' !== $help) : ?><p class="description" id="<?php echo esc_attr($id . '-help'); ?>"><?php echo esc_html($help); ?></p><?php endif; ?></td>
         </tr>
         <?php
     }
 
     /** @param array<string, mixed> $settings */
-    private function textarea(string $name, string $label, array $settings): void
+    private function textarea(string $name, string $label, array $settings, string $help = ''): void
     {
         $id = 'msp-nexus-' . $name;
         ?>
-        <tr><th scope="row"><label for="<?php echo esc_attr($id); ?>"><?php echo esc_html($label); ?></label></th><td><textarea class="large-text" id="<?php echo esc_attr($id); ?>" name="<?php echo esc_attr(self::OPTION . '[' . $name . ']'); ?>" rows="3"><?php echo esc_textarea((string) ($settings[$name] ?? '')); ?></textarea></td></tr>
+        <tr><th scope="row"><label for="<?php echo esc_attr($id); ?>"><?php echo esc_html($label); ?></label></th><td><textarea class="large-text" id="<?php echo esc_attr($id); ?>" name="<?php echo esc_attr(self::OPTION . '[' . $name . ']'); ?>" rows="3"<?php echo '' !== $help ? ' aria-describedby="' . esc_attr($id . '-help') . '"' : ''; ?>><?php echo esc_textarea((string) ($settings[$name] ?? '')); ?></textarea>
+        <?php if ('' !== $help) : ?><p class="description" id="<?php echo esc_attr($id . '-help'); ?>"><?php echo esc_html($help); ?></p><?php endif; ?></td></tr>
         <?php
     }
 
