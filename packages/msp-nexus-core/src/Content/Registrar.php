@@ -28,6 +28,20 @@ final class Registrar
         'msp_event' => array('singular' => 'Webinar or Event', 'plural' => 'Webinars and Events', 'icon' => 'dashicons-calendar-alt', 'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions')),
     );
 
+    /** Admin menu that groups every content type instead of 13 top-level entries. */
+    public const MENU_SLUG = 'msp-nexus-content';
+
+    /** @return array<string, array{singular:string,plural:string,icon:string,supports:string[]}> */
+    public static function types(): array
+    {
+        return self::TYPES;
+    }
+
+    private const FLUSH_FLAG = 'msp_nexus_flush_rewrites';
+
+    /** @var array<int, string>|null */
+    private $claimed_slugs = null;
+
     public function register(): void
     {
         foreach (self::TYPES as $slug => $config) {
@@ -36,6 +50,49 @@ final class Registrar
 
         $this->register_taxonomies();
         $this->register_meta();
+
+        add_action('transition_post_status', array($this, 'watch_page_slugs'), 10, 3);
+        add_action('init', array($this, 'maybe_flush'), 99);
+    }
+
+    /**
+     * Top-level published pages whose address matches an automatic listing (for example a
+     * "Services" page at /services/). The page wins: that content type gets no listing, so
+     * existing sites keep their URLs when the plugin is activated.
+     *
+     * @return array<int, string>
+     */
+    private function claimed_slugs(): array
+    {
+        if (null === $this->claimed_slugs) {
+            global $wpdb;
+            $slugs = array_map(array($this, 'archive_slug'), array_keys(self::TYPES));
+            $placeholders = implode(',', array_fill(0, count($slugs), '%s'));
+            // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- placeholders built above.
+            $this->claimed_slugs = $wpdb->get_col($wpdb->prepare("SELECT post_name FROM {$wpdb->posts} WHERE post_type = 'page' AND post_status = 'publish' AND post_parent = 0 AND post_name IN ($placeholders)", $slugs));
+        }
+        return $this->claimed_slugs;
+    }
+
+    /** @param \WP_Post $post */
+    public function watch_page_slugs(string $new_status, string $old_status, $post): void
+    {
+        if (! $post instanceof \WP_Post || 'page' !== $post->post_type || ('publish' !== $new_status && 'publish' !== $old_status)) {
+            return;
+        }
+        $slugs = array_map(array($this, 'archive_slug'), array_keys(self::TYPES));
+        if (in_array($post->post_name, $slugs, true)) {
+            // Post types are already registered for this request, so rebuild rules on the next one.
+            update_option(self::FLUSH_FLAG, 1, false);
+        }
+    }
+
+    public function maybe_flush(): void
+    {
+        if (get_option(self::FLUSH_FLAG)) {
+            delete_option(self::FLUSH_FLAG);
+            flush_rewrite_rules(false);
+        }
     }
 
     /** @param array{singular:string,plural:string,icon:string,supports:string[]} $config */
@@ -57,8 +114,9 @@ final class Registrar
                 'labels'          => $labels,
                 'public'          => true,
                 'show_in_rest'    => true,
-                'has_archive'     => ! in_array($slug, array('msp_testimonial', 'msp_faq'), true),
+                'has_archive'     => ! in_array($slug, array('msp_testimonial', 'msp_faq'), true) && ! in_array($this->archive_slug($slug), $this->claimed_slugs(), true),
                 'hierarchical'    => false,
+                'show_in_menu'    => self::MENU_SLUG,
                 'menu_icon'       => $config['icon'],
                 'supports'        => $config['supports'],
                 'rewrite'         => array('slug' => $this->archive_slug($slug), 'with_front' => false),

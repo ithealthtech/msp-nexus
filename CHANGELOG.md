@@ -1,5 +1,28 @@
 # Changelog
 
+## Unreleased (0.5.0)
+
+### The complete MSP website
+- One unified, hand-designed 12-page site: Home, Services, About, Contact, Cybersecurity, Co-managed IT, Cloud & Microsoft 365, IT Consulting & vCIO, Small Business IT, and Healthcare, Legal, and Manufacturing industry pages. Starter sites → **Complete MSP website** creates every page in one click (existing pages are never changed; optional publish-all).
+- Industry pages share one template (`inc/industry-page.php`) with a per-industry accent, so every industry page stays structurally identical.
+- Signature designs for cybersecurity (dark, signal green), IT consulting (serif editorial), and small business IT (warm, light).
+- Redesigned header and footer with Services and Industries menus, contact details bound to Settings, and an automatic light variant on light pages.
+- Nine CC0 stock photographs (WebP, 405 KB total), each recorded in the asset manifest.
+
+### Easier to use
+- One **Company content** menu with an overview page replaces thirteen top-level menus.
+- The Settings screen is reachable from the menu, grouped into plain-language sections, with hints that describe exactly where each value is used.
+- Phone, email, client portal, hours, and booking link are bound to Settings in the header, footer, and contact pages.
+
+### Fixes
+- A static homepage chosen under Settings → Reading is now respected (`front-page.html` no longer overrides it).
+- A published page keeps its address when a content type would otherwise claim it (for example a Services page at `/services/`).
+- Contrast: submenu text was invisible; secondary text failed WCAG AA in four color styles; two page labels used an unreadable color.
+- The mobile menu opened clipped to the header height on every page (header backdrop filter); it now opens full-screen as a readable list.
+- The site-wide button-radius setting no longer overrides each design's button shape unless changed from the default.
+- The demo importer failed silently on Windows checkouts (line endings changed the manifest digest); `.gitattributes` now enforces LF.
+- Check scripts no longer require ripgrep; the design check reads every style variation instead of a fixed list.
+
 ## 0.4.0 — 2026-08-08
 
 - Expanded Nexus Studio with a hierarchical layer navigator, favorites, context actions, device canvas modes, wireframes, style copy/paste, shortcuts, explicit save snapshots, and revision links.

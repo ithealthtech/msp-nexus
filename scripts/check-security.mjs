@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 
-const output = execFileSync('rg', ['--files', 'packages', 'services', 'scripts', 'docs'], { encoding: 'utf8' });
+const output = execFileSync('git', ['ls-files', 'packages', 'services', 'scripts', 'docs'], { encoding: 'utf8' });
 const files = output.split(/\r?\n/).filter(Boolean).filter((file) => !/\.(png|zip|gz|pot)$/i.test(file));
 const forbidden = [
   /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,

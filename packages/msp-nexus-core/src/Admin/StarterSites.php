@@ -15,12 +15,14 @@ final class StarterSites
 {
     private const OPTION = 'msp_nexus_starter_site';
     private const ACTION = 'msp_nexus_apply_starter';
+    private const FLAGSHIP_ACTION = 'msp_nexus_apply_flagship';
 
     public function register_hooks(): void
     {
         add_action('admin_menu', array($this, 'menu'));
         add_action('admin_enqueue_scripts', array($this, 'assets'));
         add_action('admin_post_' . self::ACTION, array($this, 'apply'));
+        add_action('admin_post_' . self::FLAGSHIP_ACTION, array($this, 'apply_flagship'));
         add_action('rest_api_init', array($this, 'rest_routes'));
         add_filter('wp_theme_json_data_theme', array($this, 'theme_json'));
         add_filter('body_class', array($this, 'body_class'));
@@ -107,13 +109,136 @@ final class StarterSites
         ));
     }
 
+    /**
+     * Hand-designed flagship sites shipped as theme patterns. Offered only when the active
+     * theme registers every pattern the site needs.
+     *
+     * @return array<string, array<string, mixed>>
+     */
+    public static function flagships(): array
+    {
+        return array(
+            'complete' => array(
+                'name' => __('Complete MSP website', 'msp-nexus-core'),
+                'summary' => __('Twelve hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, and healthcare, legal, and manufacturing industry pages. The header and footer menus link them all.', 'msp-nexus-core'),
+                'image' => 'assets/images/stock/datacenter-aisle.webp',
+                'pages' => array(
+                    'home' => array(__('Home', 'msp-nexus-core'), 'flagship-northstar-home'),
+                    'services' => array(__('Services', 'msp-nexus-core'), 'flagship-northstar-services'),
+                    'about-us' => array(__('About Us', 'msp-nexus-core'), 'flagship-northstar-about'),
+                    'contact' => array(__('Contact', 'msp-nexus-core'), 'flagship-northstar-contact'),
+                    'cybersecurity' => array(__('Cybersecurity', 'msp-nexus-core'), 'flagship-bastion-home'),
+                    'co-managed-it' => array(__('Co-managed IT', 'msp-nexus-core'), 'service-co-managed'),
+                    'cloud-microsoft-365' => array(__('Cloud & Microsoft 365', 'msp-nexus-core'), 'service-cloud'),
+                    'it-consulting' => array(__('IT Consulting & vCIO', 'msp-nexus-core'), 'flagship-meridian-home'),
+                    'small-business-it' => array(__('Small Business IT', 'msp-nexus-core'), 'flagship-harbor-home'),
+                    'healthcare-it' => array(__('Healthcare IT', 'msp-nexus-core'), 'flagship-vitals-home'),
+                    'legal-it' => array(__('Legal IT', 'msp-nexus-core'), 'industry-legal'),
+                    'manufacturing-it' => array(__('Manufacturing IT', 'msp-nexus-core'), 'industry-manufacturing'),
+                ),
+            ),
+        );
+    }
+
+    /** @param array<string, mixed> $flagship */
+    private static function flagship_available(array $flagship): bool
+    {
+        $registry = \WP_Block_Patterns_Registry::get_instance();
+        foreach ($flagship['pages'] as $page) {
+            if (! $registry->is_registered('msp-nexus/' . $page[1])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private function render_flagships(): void
+    {
+        $available = array_filter(self::flagships(), array(self::class, 'flagship_available'));
+        if (! $available) {
+            return;
+        }
+        ?>
+        <h2><?php esc_html_e('Flagship sites', 'msp-nexus-core'); ?></h2>
+        <p><?php esc_html_e('Complete, hand-designed websites. One click creates every page; you then edit the words and photos in the normal editor.', 'msp-nexus-core'); ?></p>
+        <?php if (isset($_GET['flagship-applied'])) : ?><div class="notice notice-success is-dismissible"><p><?php printf(esc_html__('Flagship site created: %1$d new page(s), %2$d existing page(s) left untouched.', 'msp-nexus-core'), absint($_GET['flagship-applied']), absint($_GET['flagship-skipped'] ?? 0)); ?> <a href="<?php echo esc_url(admin_url('edit.php?post_type=page')); ?>"><?php esc_html_e('Review pages', 'msp-nexus-core'); ?></a></p></div><?php endif; ?>
+        <div class="msp-nexus-flagships">
+        <?php foreach ($available as $key => $flagship) : ?>
+            <div class="msp-nexus-flagship">
+                <img src="<?php echo esc_url(get_theme_file_uri($flagship['image'])); ?>" alt="" loading="lazy">
+                <div class="msp-nexus-flagship__body">
+                    <h3><?php echo esc_html($flagship['name']); ?></h3>
+                    <p><?php echo esc_html($flagship['summary']); ?></p>
+                    <p class="description"><?php echo esc_html(sprintf(__('Creates: %s', 'msp-nexus-core'), implode(', ', wp_list_pluck($flagship['pages'], 0)))); ?></p>
+                    <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+                        <?php wp_nonce_field(self::FLAGSHIP_ACTION); ?>
+                        <input type="hidden" name="action" value="<?php echo esc_attr(self::FLAGSHIP_ACTION); ?>">
+                        <input type="hidden" name="flagship" value="<?php echo esc_attr($key); ?>">
+                        <label><input type="checkbox" name="make_home" value="1"> <?php esc_html_e('Publish the new Home page and make it my homepage', 'msp-nexus-core'); ?></label>
+                        <label><input type="checkbox" name="publish_all" value="1"> <?php esc_html_e('Publish every new page right away', 'msp-nexus-core'); ?></label>
+                        <p class="description"><?php esc_html_e('Other pages are created as drafts. Pages that already exist at the same address are never changed.', 'msp-nexus-core'); ?></p>
+                        <?php submit_button(__('Create this site', 'msp-nexus-core'), 'primary', 'submit', false); ?>
+                    </form>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+        <style>.msp-nexus-flagships{display:grid;gap:16px;margin-bottom:32px;max-width:1000px}.msp-nexus-flagship{background:#fff;border:1px solid #c3c4c7;border-radius:6px;display:grid;grid-template-columns:320px 1fr;overflow:hidden}.msp-nexus-flagship img{height:100%;object-fit:cover;width:100%}.msp-nexus-flagship__body{padding:16px 20px}.msp-nexus-flagship h3{margin:0 0 6px}.msp-nexus-flagship form label{display:block;margin-block:10px 4px}@media(max-width:600px){.msp-nexus-flagship{grid-template-columns:1fr}.msp-nexus-flagship img{height:140px}}</style>
+        <h2><?php esc_html_e('Adaptive starter library', 'msp-nexus-core'); ?></h2>
+        <?php
+    }
+
+    public function apply_flagship(): void
+    {
+        if (! current_user_can('manage_options')) {
+            wp_die(esc_html__('You are not allowed to apply starter sites.', 'msp-nexus-core'), '', array('response' => 403));
+        }
+        check_admin_referer(self::FLAGSHIP_ACTION);
+        $key = sanitize_key((string) ($_POST['flagship'] ?? ''));
+        $flagships = self::flagships();
+        if (! isset($flagships[$key]) || ! self::flagship_available($flagships[$key])) {
+            wp_die(esc_html__('That flagship site is not available with the active theme.', 'msp-nexus-core'));
+        }
+        $make_home = ! empty($_POST['make_home']);
+        $publish_all = ! empty($_POST['publish_all']);
+        $created = 0;
+        $skipped = 0;
+        foreach ($flagships[$key]['pages'] as $slug => $page) {
+            if (get_page_by_path($slug) instanceof \WP_Post) {
+                ++$skipped;
+                continue;
+            }
+            $is_home = 'home' === $slug && $make_home;
+            $id = wp_insert_post(array(
+                'post_type' => 'page',
+                'post_status' => ($is_home || $publish_all) ? 'publish' : 'draft',
+                'post_name' => $slug,
+                'post_title' => $page[0],
+                'post_content' => '<!-- wp:pattern {"slug":"msp-nexus/' . esc_attr($page[1]) . '"} /-->',
+                'page_template' => 'page-no-title',
+            ), true);
+            if (is_wp_error($id)) {
+                continue;
+            }
+            ++$created;
+            update_post_meta((int) $id, '_msp_nexus_flagship', $key);
+            if ($is_home) {
+                update_option('show_on_front', 'page');
+                update_option('page_on_front', (int) $id);
+            }
+        }
+        wp_safe_redirect(add_query_arg(array('flagship-applied' => $created, 'flagship-skipped' => $skipped), admin_url('admin.php?page=msp-nexus-starters')));
+        exit;
+    }
+
     public function render(): void
     {
         if (! current_user_can('manage_options')) {
             return;
         }
         ?>
-        <div class="wrap msp-nexus-starters"><h1><?php esc_html_e('Nexus adaptive starter library', 'msp-nexus-core'); ?></h1>
+        <div class="wrap msp-nexus-starters"><h1><?php esc_html_e('Nexus starter sites', 'msp-nexus-core'); ?></h1>
+        <?php $this->render_flagships(); ?>
         <p><?php printf(esc_html__('%s complete MSP starter configurations combine market context, service positioning, and visual systems. Search, preview, then apply only the parts you want.', 'msp-nexus-core'), esc_html(number_format_i18n(count(Catalog::all())))); ?></p>
         <?php if (isset($_GET['starter-applied'])) : ?><div class="notice notice-success is-dismissible"><p><?php esc_html_e('The selected starter components were applied. Existing non-Nexus pages were preserved.', 'msp-nexus-core'); ?></p></div><?php endif; ?>
         <div class="msp-nexus-starter-controls"><label><?php esc_html_e('Search', 'msp-nexus-core'); ?><input type="search" data-starter-search placeholder="<?php esc_attr_e('Healthcare security, cloud, legal…', 'msp-nexus-core'); ?>"></label><label><?php esc_html_e('Industry', 'msp-nexus-core'); ?><select data-starter-vertical><option value=""><?php esc_html_e('All industries', 'msp-nexus-core'); ?></option></select></label><label><?php esc_html_e('Focus', 'msp-nexus-core'); ?><select data-starter-focus><option value=""><?php esc_html_e('All service focuses', 'msp-nexus-core'); ?></option></select></label><label><?php esc_html_e('Visual system', 'msp-nexus-core'); ?><select data-starter-style><option value=""><?php esc_html_e('All visual systems', 'msp-nexus-core'); ?></option></select></label></div>

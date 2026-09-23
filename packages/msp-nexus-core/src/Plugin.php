@@ -25,6 +25,7 @@ use MspNexusCore\Seo\Schema;
 use MspNexusCore\Cli\Commands;
 use MspNexusCore\Database\MigrationRunner;
 use MspNexusCore\Admin\Branding;
+use MspNexusCore\Admin\ContentHub;
 use MspNexusCore\Admin\Performance;
 use MspNexusCore\Admin\Privacy;
 use MspNexusCore\Admin\Portability;
@@ -59,6 +60,7 @@ final class Plugin
         add_action('init', array(new BlockRegistry(), 'register'));
         add_action('admin_init', array(new Settings(), 'register'));
         add_action('admin_menu', array(new Settings(), 'menu'));
+        (new ContentHub())->register_hooks();
         (new Onboarding())->register_hooks();
         (new Diagnostics())->register_hooks();
         (new LicenseScreen())->register_hooks();
