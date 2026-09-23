@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (0.5.0)
+## 0.5.0 — 2026-09-23
 
 ### The complete MSP website
 - One unified, hand-designed 12-page site: Home, Services, About, Contact, Cybersecurity, Co-managed IT, Cloud & Microsoft 365, IT Consulting & vCIO, Small Business IT, and Healthcare, Legal, and Manufacturing industry pages. Starter sites → **Complete MSP website** creates every page in one click (existing pages are never changed; optional publish-all).

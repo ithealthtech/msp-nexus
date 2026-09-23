@@ -1,40 +1,1356 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.4.0\n"
+"Project-Id-Version: MSP Nexus 0.5.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "// anatomy of a contained incident"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "// free for qualifying organizations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "// managed detection & response"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "/user/mo"
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "%s provides managed IT, cybersecurity, cloud, infrastructure, and technology advisory services."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "2 engineers · 1 vCIO · 1 security analyst"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "24/7 monitoring and alerting"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "24/7 monitoring that feeds alerts into your queue."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-co-managed.php
+msgid "24/7 security monitoring"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "24/7 SOC feeding your existing ticket system"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "24/7 SOC monitoring with containment authority, not just alerts."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "36-month budget and roadmap"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "A 30-minute assessment call"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A 36-month hardware and licensing forecast, so budget season has no surprises."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "A 45-minute briefing, with no sales pitch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "A CMMC and NIST 800-171 readiness program"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "A confidentiality program your clients would approve"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "A consultant walking a team through a plan"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A consultant walks a leadership team through a plan on a laptop"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "A developer reviewing code on a laptop at a small table"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "A documented security risk analysis of every system that touches patient data."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "A filing deadline does not wait for a frozen laptop."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A free 30-minute assessment covers your security gaps, support pain points, and where spend is leaking. You keep the findings either way."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "A free review of access controls, backups, and email fraud defenses."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "A free review of backups, network segmentation, and vendor access."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "A free review of your backups, access controls, and HIPAA documentation."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "A HIPAA program you can show an auditor"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "A laptop screen in an office"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "A long aisle of enclosed server racks lit in blue"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A named team that already knows your environment."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "A note from our principal"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "A person working on a laptop at a small table"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "A security leader for board updates, budgets, and insurance renewals."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "A security operations center that watches your endpoints, identities, email, and cloud around the clock, and has the authority to contain a threat the moment it is confirmed."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A security score that moves"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "A short call with your IT lead is enough to sketch a responsibility split and a price."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "A small team working together around a table with a laptop"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "A structured onboarding, not a leap of faith."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "A system security plan and plan of action that reflect how you actually work."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "A technology plan your board can read."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "A three-year technology plan tied to your business goals, with priorities, owners, and costs."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "A typical split. Yours is agreed in writing."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "A written findings summary"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "About Northstar"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Active"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Add only what you need"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Add your address under MSP Nexus > Settings."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Adoption help"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Advice not tied to reseller margins"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Advises"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Advisory first. Implementation when it helps."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "After-hours and weekend support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "After-hours desk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "After-hours updates, never during clinic"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Alex Rivera"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "All services"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Already a client and need help?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "An advisor walking a leadership team through a plan"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "An analyst reviews the session, the device, and the user’s normal pattern."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "An impossible-travel sign-in and a new mailbox rule trigger a correlated alert."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "An internal IT team planning work together"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Answer like it is ours"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Answers in minutes from people who know your setup."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Antivirus, patching, email filtering, and a firewall we keep up to date, so a bad click stays a small problem."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Any provider with access to your systems should. We sign ours before we touch a single device."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Approves"
 msgstr ""
 
 #: packages/msp-nexus/functions.php
 msgid "Arrow action"
 msgstr ""
 
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Assess"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Attackers work nights.<br><mark>So do we.</mark>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Audit-ready evidence"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Azure & AWS"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Azure, AWS, and M365 designed, migrated, secured, and cost-controlled."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Backup & disaster recovery"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Backup & recovery"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Backups for email, OneDrive, and SharePoint"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Backups you have actually watched restore."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Batch records, historians, and control rooms"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Behavioral health"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Best for internal IT teams that need after-hours coverage, specialists, or tooling."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Best for organizations without in-house IT, or with one person stretched too thin."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Billable-hour uptime, remote teams"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Board-ready"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Book a 30-minute assessment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Book a 30-minute assessment or send the form below. A solutions engineer replies within one business day."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Book a confidentiality review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Book a HIPAA IT review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Book a plant IT review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Book the review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Book your assessment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Book your free IT check-up."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Budget & vendor management"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Budgeting"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Budgets, lifecycle plans, and audit evidence for HIPAA, CMMC, PCI, and cyber-insurance questionnaires."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Builds the budgets and roadmaps behind every quarterly business review."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Built around how your practice works"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Built around one question: would we want to be our client?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Business associate agreement"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Business-hours help desk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "By appointment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Call the IR hotline"
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Card grid"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Changes timed for planned downtime"
 msgstr ""
 
 #: packages/msp-nexus/functions.php
 msgid "Check list"
 msgstr ""
 
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Choose your support model"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Client portal"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Client satisfaction, trailing 12 months"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Client story · Regional accounting firm"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Close enough to stop by."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Close-up of labeled network patch panel ports"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Closing funds and wire-fraud prevention"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/flagship-northstar-services.php packages/msp-nexus/patterns/service-cloud.php
+msgid "Cloud & Microsoft 365"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Cloud backup"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Cloud that is secure by default and priced on purpose."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Cloud, networking, and security experts when a ticket needs depth."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "CNC, CAD/CAM, and machine-connected PCs"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Co-managed"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-co-managed.php
+msgid "Co-managed IT"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Co-management fails when the provider takes over. We agree up front who owns what, escalate through your team, and document everything in the tools you already use."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Common questions from firm administrators"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Common questions from plant and operations managers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Common questions from practice managers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Compare every feature"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Compare plans"
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Comparison table"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Complete"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Compliance readiness"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Confidentiality is in our contract."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Confidentiality terms"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Configuration drift caught and corrected every month."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Confirm"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Consolidated nine vendors into three and cut annual IT spend."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Construction"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Contact"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Contain"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Continuous scanning, prioritized by what is actually exploitable."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Contract reviews, renewals, and competitive bids so you pay for what you use."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Controlled"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Corporate"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Court-deadline issues jump the queue"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Covers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Credentials, documentation, and vendor contacts moved over with your outgoing provider."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Critical-issue response target"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "CUI handling policy"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Custom"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Cutover weekend"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Cyber insurance"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Cybersecurity"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Cybersecurity & 24/7 SOC"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Day 90"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Deadline-driven requests go to the front of the queue. We know your document management, billing, and e-filing tools, and we coordinate with those vendors for you."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Deal rooms, e-signature, and closing days"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Decides"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Dental"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Describe your real process here. Confirm CMMC and NIST statements against current requirements before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Describe your real process here. This page is not legal advice; confirm professional-responsibility statements with counsel before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Describe your real process here. This page is not legal advice; have counsel review HIPAA claims before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Detect"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Device procurement and setup"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Diagrams, passwords, and runbooks you own."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Director of Service Delivery"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Discrete"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Distribution"
 msgstr ""
 
 #: packages/msp-nexus/functions.php
 msgid "Divided columns"
 msgstr ""
 
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Document management system"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Document management, client confidentiality"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Documentation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Documentation you own and can read"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Documented"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Donor data, grant-funded budgets"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Downtown"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "E-discovery exports, large files, court deadlines"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Earn the renewal"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "EDR on every laptop and server, with remote isolation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Education, government, and more"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "EHR & practice management"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "EHR, e-prescribing, and exam-room devices"
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Elevated surface"
 msgstr ""
 
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Email, OneDrive, SharePoint, and Teams, restorable by item."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Encrypted workstations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Encryption, MFA, access controls, and backups put in place and checked."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Encryption, MFA, matter-level permissions, and secure client file sharing."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Endpoint detection, email filtering, identity protection, and a 24/7 SOC that can isolate a device at 3 a.m. instead of opening a ticket for the morning."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php
+msgid "Enforced"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Engineers on demand"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Enterprise tooling"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "ERP & MES servers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Escalations go through your IT lead"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Essentials"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Estate & family"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Every client gets a dedicated pod. When you call, you reach someone who has seen your network diagram, knows your line-of-business apps, and remembers the last three things you asked for."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Every door, watched."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Every engagement starts with a baseline of your tickets, risks, and spend, so improvement is something you can measure rather than take on faith."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Every ticket gets the urgency we would want for our own business."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Everyone else moves while the office is closed, with a rollback plan ready."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Everything in Essentials plus 24/7 SOC, backup, and a vCIO."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Everything included. Really."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Everything IT, <em>run by one accountable team.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Everything your office runs on, covered."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php
+msgid "Evidence"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Evidence mapped to the frameworks your auditors and insurers ask about"
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Executive quote"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Existing client? Get support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Explain it plainly"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Exploring a new partner?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Fewer repeat tickets"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Financial services"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Find out what an attacker would find first."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Find out what your IT is really costing you."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Find the gaps before opposing counsel does."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Find the single points of failure on your floor."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Firewall and VPN logs correlated in the SIEM"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Firewalls, switches, Wi-Fi, and servers monitored continuously and patched on a published schedule, with diagrams and credentials kept where you can see them."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Firewalls, Wi-Fi, and servers monitored and patched on schedule."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Firm systems check"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Firmware and patch management"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "First 30 days"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Five questions every board should ask about cyber risk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Flat monthly pricing, per user."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Founder & CEO"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Four principles we are held to."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Fractional CIO"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Free check-up"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "From an engineer, with a few questions and times to talk."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "From signed agreement to fully onboarded"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "From the front office to the shop floor"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Fully managed IT"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Gap assessment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Get a free IT check-up"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Get a free Microsoft 365 security check."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Get a risk assessment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Getting started takes one afternoon."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "GLBA, FINRA, examiner requests"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Go to client support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Governance"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Hand us all of IT, or add depth to the team you already have."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Hands typing on a laptop"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Hands typing on a laptop at a shared worktable"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Harbor District"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Hardened from day one"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Head of Security"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Headquarters"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Healthcare"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Healthcare group · 6 clinics"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Healthcare-focused IT support that understands EHR downtime costs appointments, and that HIPAA is a program, not a checkbox."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Help desk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Help desk & end-user support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Help desk, monitoring, patching, and endpoint security."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "HIPAA, EHR uptime, clinical devices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Hours of unplanned downtime during filing season"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "How co-managed IT works"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "How fully managed IT works"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "How our HIPAA program works"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "How to build an IT budget your CFO will sign"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "How we protect client files"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "How we work"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Illustration of a service desk dashboard showing open requests, response times, and security status"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Imaging, sensors, and chairside workstations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Immutable and air-gapped copies"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Immutable backups with restore tests you can see, not just hope for."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Immutable, off-site backups for servers, SaaS, and endpoints, with monthly restore tests and a recovery runbook your leadership team has read."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Incident response"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Incident response retainer"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Included with every service"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Industries"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Informed"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Insights"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Integrated an acquired plant’s systems in one quarter."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Inventory mailboxes, files, and apps, and agree the cutover date."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "IT and security support that knows the difference between the office network and the plant floor, and treats downtime like the lost revenue it is."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "IT for law firms and legal departments"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "IT for manufacturers and distributors"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "IT for medical, dental & behavioral health practices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "IT support built around document management, deadlines, and the duty of confidentiality your clients trust you with."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "IT that answers the first time <em>and</em> plans for the next five years."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Job shops"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Job-site connectivity, field devices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Jordan Chen"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Keep attackers off the floor."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Keep patients moving."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Keep the line running."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Keep their data safe."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Keep your internal IT staff in charge. We add after-hours coverage, specialists, and tooling exactly where you are stretched."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Lakeview"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Layered protection with analysts watching around the clock."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Lead vCIO"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Leadership"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Leads"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Leads the SOC and incident response, and translates risk into board-ready language."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Legal"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Less firefighting. More forward motion."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Licensing review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Lifecycle and warranty tracking"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Litigation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Local IT support for small businesses"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Managed detection & response"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Managed detection and response"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Managed detection and response, identity protection, email security, and vulnerability management, watched around the clock by analysts who can act, not just alert."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Managed IT & security operations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Managing Partner, sample client"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Manufacturer · acquisition"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Manufacturing"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Matter file backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Medical"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Meet the team"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Mergers & growth"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "MFA and conditional access for every account"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "MFA, logging, encryption, and access controls put in place in priority order."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "MFA, patching, and backup coverage tracked monthly against a baseline you sign off on."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "MFA, patching, and backups on day one."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Microsoft 365 and cloud, <em>secure by default.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Microsoft 365 and Google backup"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Microsoft 365 and Google Workspace audit logs"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Microsoft 365, Azure, and AWS designed, migrated, and governed. We right-size licensing every quarter so you stop paying for seats nobody uses."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Migration path"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Migrations with a rollback plan"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Migrations with a rollback plan, a tenant hardened on day one, and licensing reviewed every quarter so you only pay for what people use."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Migrations, rollouts, and network refreshes on demand."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Mon–Fri 8am–6pm, after-hours emergencies"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Mon–Fri, 7am–7pm · Service desk 24/7"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Mon–Fri, 8am–6pm"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Monitored"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Monitoring and reports that keep you ready between assessments."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Monitoring, updates, and backups start right away, and you have one number to call."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Month-to-month after the first term, with an exit plan."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Month-to-month, cancel any time"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Monthly phishing simulations and short training"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Monthly ticket volume after six months"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "More hands for your IT team, <em>without giving up the keys.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Morgan Okafor"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Most breaches start with a stolen password or a phishing email, not a movie-style hack. Our coverage follows where attackers actually get in."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Most chosen"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Most Microsoft 365 breaches start with a default setting."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Most organizations do not have a technology problem. They have a decision problem: too many options, too little context, and nobody whose job it is to connect IT to the business. That is the job we do."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Move"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Move a small group first and fix anything they notice."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Moved over a weekend, not a quarter."
 msgstr ""
 
 #: packages/msp-nexus/functions.php
@@ -61,18 +1377,1075 @@ msgstr ""
 msgid "MSP Nexus: Trust & proof"
 msgstr ""
 
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Multi-factor sign-in"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Named pod"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Need help right now?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Network & infrastructure"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Network discovery, security baseline, and a candid review of what is working."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Network racks with neatly routed patch cables"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Network racks with patch cabling"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Networks that are documented, patched, and boring."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "New hires ready on day one; leavers locked out the same hour."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "New-hire and offboarding checklists"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Nightly backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Nightly off-site backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Nights, weekends, and holidays covered by real people."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "No big migration project. We visit, take stock, and start looking after things the same week."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "No jargon in reports, budgets, or recommendations."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "No lock-in"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "No lock-in. If we are not worth keeping, you can leave cleanly."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "No long-term lock-in"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Nonprofit"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Northside"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Northstar runs help desk, security, cloud, and strategy for organizations of 25 to 1,000 people, with named engineers, published response targets, and a roadmap your leadership team can actually read."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Northstar was founded by people who spent years on the other side of the help desk. We built the provider we wished we could have hired."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Not sure which services you need?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Office / OT network split"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Office and machine networks are segmented, and vendor remote access is logged and time-limited."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Office manager, sample review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Offices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "On-site engineers within an hour of every client."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "On-site help Monday morning, then licensing trimmed to what is used."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "On-site visits scheduled, not just promised"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "One flat monthly fee covers help-desk support, security, and backups for your whole team. When something breaks, you call a person who already knows your office."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "One flat price"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "One team for every layer of your technology."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Ongoing evidence"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Optimize"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Or call us"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "OT networks, ERP, CMMC"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Our CMMC readiness program"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Our engagement terms include confidentiality obligations and limit our staff access to what the work requires."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Our practices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Our risk assessment reviews your external exposure, Microsoft 365 configuration, backups, and MFA coverage, then ranks the fixes by impact. You keep the report."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Our story"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Our team"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Overflow"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Owns"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Owns response targets, pod staffing, and the monthly numbers every client sees."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Passed a HIPAA risk assessment on the first attempt."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Patching and backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Patient-flow issues jump the queue"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "People, not ticket numbers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "per computer / month"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Phishing and wire-fraud awareness for attorneys and staff."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Phishing defense"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Phishing simulation and training"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Phishing simulations and bite-size training people finish."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Phishing, business email compromise, and malicious rules"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Phone, chat, and portal support from engineers who know your environment."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Phone, chat, email, and portal support from a US-based team. Your pod keeps notes on your people, devices, and quirks, so nobody has to explain the same problem twice."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Pick a single service or hand us the whole stack. Every engagement shares the same pod, the same documentation, and the same response targets."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Pick the tools, coverage hours, and specialists your team needs."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Pilot"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-cloud.php
+msgid "Plan"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Plans"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Plans from"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Plans written for decision-makers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Plant systems check"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Policies, access reviews, and restore tests documented as they happen."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Policies, control evidence, and audit support in one place."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Policies, logs, and reports kept in one place for audits and insurers."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Policy and evidence library"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Practice systems check"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Practices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Pre-agreed responders, runbooks, and a guaranteed call-back window."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Predictable spend"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Prefer to reach out directly?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Principal and founder (sample)"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Process"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Production data backups"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Production-impacting issues get answered first, around your shifts. We coordinate with your ERP and equipment vendors, and schedule changes for planned downtime."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Production-stopping issues jump the queue"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Professional services"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Professional services · 140 staff"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Project engineers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Project engineers for migrations and rollouts"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Projects and migrations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Protect billable hours."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Protect privilege."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Published SLAs"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Quarterly business reviews"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Quarterly business reviews, a three-year budget, and audit-ready evidence for HIPAA, CMMC, PCI, SOC 2, and cyber-insurance questionnaires."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Quarterly check for unused seats and better-fit plans."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Quarterly license and cost review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Quarterly roadmap with a dedicated vCIO"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Questions we hear a lot"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Quoting, scheduling, and rugged devices"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Ran IT for a 400-person manufacturer before starting Northstar to fix what frustrated him as a client."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Read the full case study"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Real estate"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Regional office"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Regional offices with on-site engineers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Remediation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Remote vendor access"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Report"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Request the assessment"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Request the check"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Response targets in writing, reported monthly."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Response times, backlog, and security scores are reported, not summarized."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Responsibility"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Risk analysis"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Risk registers, policies, and board reporting that satisfy auditors and insurers."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Risk review"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Risky sign-ins, MFA fatigue, and privilege changes"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "RMM, backup, and documentation platforms without the licensing."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Root-cause reviews target the issues that keep coming back, not just the ones in front of us."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Runs"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php
+msgid "Safeguards"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Sam Patel"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Same engineers every week, not a rotating queue"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Sample engagements. Replace with your own client outcomes before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Sample figures. Replace with verified numbers before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Sample figures. Replace with your measured numbers before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Sample people. Replace with your team, or use the Team directory block to pull from Team Members."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Sample price. Set your own before launch."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Sample pricing. Set your own plans under Pricing Plans."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Sample review. Replace with a real one from your clients."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Scale coverage up or down each quarter"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Schedule a briefing"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Scheduled"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Scheduling, tablets, and multi-location care"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Security"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Security agents deployed, backups verified, and quick wins closed out."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Security awareness"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php packages/msp-nexus/patterns/service-cloud.php
+msgid "Security baseline"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Security governance"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Security operations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Security services"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Security software and updates"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Security stack, patching, and backup included"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "See all industries"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "See if we are the right fit."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "See plans & pricing"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "See where your practice stands in 30 minutes."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Segmented"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Selected engagements"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Send us a message"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Senior leadership without a full-time hire"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Sensitive client records and secure portals"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Servers and apps right-sized, monitored, and cost-tracked."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Service details"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Services"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Sessions revoked, password reset, rule removed, device isolated if needed."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Shared RMM, documentation, and reporting"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Short how-to sessions so Teams and SharePoint actually get used."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Short yearly training and phishing tests for every staff member."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Show the numbers"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Shows your sales phone and email from MSP Nexus > Settings once they are filled in."
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Signal panel"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php
+msgid "Signed"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Skip the form. Open a ticket in the portal or call the service desk for anything urgent."
 msgstr ""
 
 #: packages/msp-nexus/functions.php
 msgid "Soft action"
 msgstr ""
 
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Source code on a laptop screen in an office"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Specialists"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Stabilize"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Staff security training"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Start the conversation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Start with a free assessment. We will map what you have, what is at risk, and the smallest set of services that closes the gaps."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Strategy & roadmap"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Strategy and budget"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Support that fits your practice"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Support that follows your shift schedule"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Surrounding towns"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Switching is easier than you think"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Talk to an engineer"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Talk to an engineer, <em>not a sales script.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Tax season used to mean a week of outages and a server closet held together with hope. This year nobody on the floor noticed IT at all, which is exactly the point."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Team members taking notes together around a laptop"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Teams and SharePoint sharing rules that make sense"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Technology advisory for growing organizations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Technology decisions, <em>made with the whole business in view.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Technology due diligence, integration planning, and new-office launches."
+msgstr ""
+
 #: packages/msp-nexus/functions.php
 msgid "Technology frame"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Telehealth and extra-sensitive records"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Tell us a little about your office and we will set up a time that suits you. No pressure and no jargon."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Tell us what is going on"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Tell us where your team is stretched."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Tenant hardening and conditional access"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Tested recovery-time targets"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "That question shaped everything: small dedicated pods instead of a ticket queue, published response targets instead of vague promises, and documentation clients own outright."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "The basics nobody should have to negotiate."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "The people accountable for your service."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "The same engineers and vCIO every month."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "Therapy & rehab"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Thirty minutes with an engineer, a written summary afterwards, and no pressure either way."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Tickets, invoices, and reports in one place."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Tier 1 overflow and after-hours desk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "Today we support organizations across healthcare, legal, finance, manufacturing, and nonprofits, and we still measure ourselves the same way."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php
+msgid "Training"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Transition"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Type II audited operations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Typical timeline for small and mid-sized organizations. Adjust to your own process."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Under attack right now? Our incident response line is staffed 24/7."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Unlimited help desk, remote and on-site"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Unlimited remote and on-site help"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Unlimited remote and on-site support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Unlimited remote help and on-site visits for printers, passwords, new laptops, and everything in between."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Updates scheduled around trial calendars"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "US-based service desk"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "User lifecycle"
 msgstr ""
 
 #: packages/msp-nexus/functions.php
 msgid "Utility navigation"
 msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Vacation cover"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "vCIO & compliance"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "vCISO"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Vendor management, licensing, and procurement"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Vendor-neutral"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "Vendors"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php packages/msp-nexus/patterns/industry-legal.php packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Verified"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "Vulnerability management"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Warehouse Wi-Fi, scanners, and shipping"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "We already know your regulators, software, and busy season."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "We apply a security baseline before anyone logs in: multi-factor sign-in, conditional access, protected admin accounts, and sharing rules that fit how your team works."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "We are hiring"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "We become your IT department."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "We call your EHR vendor for you"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "We extend the team you have."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "We keep the plant floor separate."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "We look at your computers, network, and backups, and tell you plainly what needs attention."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "We prioritize anything that touches patient flow: front-desk check-in, charting, imaging, and e-prescribing get answered first, and we work directly with your EHR vendor so you do not have to."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "We reply within one business day"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "We review your tenant against a security baseline and show you the top fixes, in plain language."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "We sign a business associate agreement."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-about.php
+msgid "We started as the client <em>who was tired of waiting.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "We take it from here"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "We used to lose half a day every time the server acted up. Now we send a quick message, and it is usually fixed before we finish our coffee."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "We work alongside owners, finance leaders, and boards as a fractional CIO: setting direction, sizing budgets, managing vendors, and making sure the plan actually happens."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "We work in your ticket system, on your priorities."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "We work with offices across the area and can be on-site the same day for anything that cannot be fixed remotely."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "We work with your DMS and billing vendors"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-cloud.php
+msgid "Week 1"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "Week 2"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Weeks 2–3"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Weeks 4–8"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Westgate"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "What changes in the first 90 days"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "What happens next"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-cloud.php
+msgid "What ongoing management includes"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "What we monitor"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "What we run"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-vitals-home.php
+msgid "When the EHR is slow, the waiting room fills up."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "When the ERP stops, so does shipping."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-meridian-home.php
+msgid "When to renegotiate a managed services contract"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Where client data lives, who can reach it, and what would happen if it leaked."
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-manufacturing.php
+msgid "Where controlled information lives and how today’s controls compare to the requirements."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Who does what"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Wire-fraud email checks"
+msgstr ""
+
+#: packages/msp-nexus/patterns/industry-legal.php
+msgid "Written policies and reports for client security questionnaires and insurers."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-bastion-home.php
+msgid "You get a plain-language summary: what happened, what we did, what to change."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "You get a single monthly number for your whole office. No hourly surprises."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Your computers, network, and email, <span>looked after by neighbors.</span>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-services.php
+msgid "Your documentation"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Your environment, your pain points, and what good looks like."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-harbor-home.php
+msgid "Your files and email copied off-site every night, and restore-tested, so a dead drive is an inconvenience, not a disaster."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Your first business review, with a prioritized 12-month roadmap and budget."
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Your IT team"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Your one-person IT department can finally take a week off."
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-home.php
+msgid "Your pod"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Your team stays in charge"
+msgstr ""
+
+#: packages/msp-nexus/patterns/service-co-managed.php
+msgid "Your ticketing, RMM, and documentation, or ours"
+msgstr ""
+
+#: packages/msp-nexus/patterns/flagship-northstar-contact.php
+msgid "Yours to keep, whether or not we work together."
+msgstr ""
+
