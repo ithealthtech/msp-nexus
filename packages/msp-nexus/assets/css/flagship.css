@@ -386,7 +386,7 @@
 .nx-hb-steps li { position: relative; display: flex; flex-direction: column; gap: .25rem; margin-bottom: 1rem; padding: 1.25rem 1.5rem 1.25rem 4.25rem; border-radius: 18px; background: var(--hb-raised); counter-increment: hb; }
 .nx-hb-steps li::before { position: absolute; top: 1.2rem; left: 1.25rem; display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--hb-coral); color: #fff; content: counter(hb); font-weight: 800; }
 .nx-hb-steps strong { color: var(--hb-ink); font-size: 1.1rem; }
-.nx-hb-price { margin: 0 !important; padding: clamp(1.75rem, 4vw, 3rem); border: 2px solid var(--hb-teal); border-radius: 28px; background: var(--hb-raised); }
+.nx-hb-price { margin: 0 auto !important; padding: clamp(1.75rem, 4vw, 3rem); border: 2px solid var(--hb-teal); border-radius: 28px; background: var(--hb-raised); }
 .nx-hb-price p { margin: 0; }
 .nx-hb-price__from { font-weight: 600; }
 .nx-hb-price__amount { color: var(--hb-teal) !important; font-family: var(--wp--preset--font-family--display); font-size: clamp(3rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.05; }
