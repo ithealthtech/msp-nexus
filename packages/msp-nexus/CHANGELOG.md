@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5 — 2026-09-24
+
+- The generated pattern library is built only where patterns are browsed or inserted, or on demand when a page embeds one, instead of on every public page view.
+
 ## 0.5.4 — 2026-09-24
 
 - The small business IT pricing card is centered; cybersecurity pages without a logo get a fully green fallback mark. Theme updates now arrive automatically through MSP Nexus Core.

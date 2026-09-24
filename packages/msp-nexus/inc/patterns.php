@@ -202,6 +202,11 @@ function msp_nexus_page_pattern_definitions(): array
 
 function msp_nexus_register_patterns(): void
 {
+    static $done = false;
+    if ($done) {
+        return;
+    }
+    $done = true;
     foreach (msp_nexus_section_pattern_definitions() as $item) {
         register_block_pattern('msp-nexus/' . $item['slug'], array('title' => __($item['title'], 'msp-nexus'), 'categories' => array($item['category']), 'content' => msp_nexus_section_pattern_content($item)));
     }
@@ -213,4 +218,22 @@ function msp_nexus_register_patterns(): void
         register_block_pattern('msp-nexus/' . $page['slug'], array('title' => __($page['title'], 'msp-nexus'), 'categories' => array('msp-nexus-pages'), 'blockTypes' => array('core/post-content'), 'content' => $content));
     }
 }
-add_action('init', 'msp_nexus_register_patterns', 20);
+/*
+ * The generated library is only needed where patterns are browsed or inserted: admin screens, the
+ * editor's REST requests, and WP-CLI. Public page views skip building it unless a template or post
+ * embeds one of these patterns, in which case it is registered just before that pattern block renders.
+ */
+add_action('init', static function (): void {
+    if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
+        msp_nexus_register_patterns();
+    }
+}, 20);
+add_action('rest_api_init', 'msp_nexus_register_patterns');
+add_filter('pre_render_block', static function ($pre_render, array $block) {
+    $slug = (string) ($block['attrs']['slug'] ?? '');
+    // File-backed theme patterns are already registered; only a missing msp-nexus/ slug needs the generated library.
+    if ('core/pattern' === ($block['blockName'] ?? '') && 0 === strpos($slug, 'msp-nexus/') && ! WP_Block_Patterns_Registry::get_instance()->is_registered($slug)) {
+        msp_nexus_register_patterns();
+    }
+    return $pre_render;
+}, 10, 2);

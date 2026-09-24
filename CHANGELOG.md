@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.5 — 2026-09-24
+
+### Performance and caching
+- Pages that show the consultation form are marked uncacheable (`DONOTCACHEPAGE`, LiteSpeed no-cache, and no-cache headers). A page cache could otherwise serve a stale form nonce, and submissions would fail once it expired.
+- The generated pattern library (91 patterns) is no longer built on public page views. It is registered on admin screens, editor REST requests, and WP-CLI, and on demand just before a template or post renders one of those patterns.
+
 ## 0.5.4 — 2026-09-24
 
 ### Automatic updates
