@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "msp-nexus/faq-list",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "title": "MSP FAQ List",
   "category": "widgets",
   "icon": "editor-help",
