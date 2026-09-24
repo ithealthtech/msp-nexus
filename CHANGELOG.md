@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.2 — 2026-09-24
+
+### Consistent spacing and styling
+- Every page design uses one section rhythm (102px at desktop, 56px on phones) instead of four.
+- One button shape across the site: 10px corners, and filled and outline buttons are the same height. The header button matches.
+- The cybersecurity headline is scaled in line with the other page heroes, and the IT consulting hero photo is square instead of a tall portrait.
+- Headings are followed by the same space everywhere; long assurance paragraphs are capped at a readable line length.
+- New long-form styles (`.nx-fs-legal`) for privacy, accessibility, and terms pages.
+- Footer links are 39px tap targets on phones (was 24px).
+
 ## 0.5.1 — 2026-09-24
 
 ### Dark by default

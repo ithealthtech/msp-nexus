@@ -42,7 +42,7 @@
 .msp-nexus-client-link { flex: 0 0 auto; margin: 0; color: #8fd0f8; white-space: nowrap; }
 .msp-nexus-client-link a { text-decoration: none; }
 .msp-nexus-header-cta { flex: 0 0 auto; }
-.msp-nexus-header-cta .wp-block-button__link { padding: .75rem 1rem; border-color: #77b9ec !important; box-shadow: 0 0 15px rgba(91, 165, 236, .4), inset 0 0 12px rgba(91, 165, 236, .1); color: #b8dcff !important; white-space: nowrap; }
+.msp-nexus-header-cta .wp-block-button__link { padding: .75rem 1rem; border-radius: 10px; border-color: #77b9ec !important; box-shadow: 0 0 15px rgba(91, 165, 236, .4), inset 0 0 12px rgba(91, 165, 236, .1); color: #b8dcff !important; white-space: nowrap; }
 .wp-block-navigation__submenu-container { border: 1px solid var(--msp-line) !important; border-radius: 0 !important; background: #121124 !important; color: #fff !important; box-shadow: 0 20px 60px rgba(0, 0, 0, .45); }
 
 /* Hero */
@@ -212,3 +212,9 @@ body:has(.nx-fs-cta) .msp-nexus-footer { padding-top: clamp(3rem, 6vw, 4.5rem); 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { padding-block: .55rem !important; font-size: 1.15rem; font-weight: 600; }
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container { margin: 0 0 .5rem !important; padding: 0 0 0 1rem !important; border: 0 !important; border-left: 2px solid rgba(124, 201, 247, .35) !important; background: transparent !important; box-shadow: none !important; }
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content { font-size: 1rem; font-weight: 500; opacity: .9; }
+
+/* Footer links are comfortable tap targets on phones. */
+@media (max-width: 781px) {
+  .msp-nexus-footer__nav .wp-block-navigation__container { gap: .15rem; }
+  .msp-nexus-footer .wp-block-navigation-item__content { display: inline-block; padding-block: .45rem; }
+}

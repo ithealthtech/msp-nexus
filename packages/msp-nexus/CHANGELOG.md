@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2 — 2026-09-24
+
+- One section rhythm, button shape, and heading spacing across every page design; square IT consulting hero photo; long-form legal page styles; larger footer tap targets on phones.
+
 ## 0.5.1 — 2026-09-24
 
 - Every page design uses the Nexus dark palette by default (small business IT, IT consulting, and industry pages), and the header and footer stay dark on every page.

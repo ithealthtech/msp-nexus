@@ -26,7 +26,7 @@ async function generate(root, domain, output) {
       entries.get(message).push(file.split(path.sep).join('/'));
     }
   }
-  const lines = ['msgid ""', 'msgstr ""', '"Project-Id-Version: MSP Nexus 0.5.1\\n"', '"MIME-Version: 1.0\\n"', '"Content-Type: text/plain; charset=UTF-8\\n"', '"Content-Transfer-Encoding: 8bit\\n"', ''];
+  const lines = ['msgid ""', 'msgstr ""', '"Project-Id-Version: MSP Nexus 0.5.2\\n"', '"MIME-Version: 1.0\\n"', '"Content-Type: text/plain; charset=UTF-8\\n"', '"Content-Transfer-Encoding: 8bit\\n"', ''];
   for (const [message, references] of [...entries].sort(([a], [b]) => a.localeCompare(b))) {
     lines.push(`#: ${[...new Set(references)].join(' ')}`, `msgid ${quote(message)}`, 'msgstr ""', '');
   }
