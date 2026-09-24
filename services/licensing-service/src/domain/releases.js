@@ -1,3 +1,19 @@
+const releaseKey = (release) => `${release.product}:${release.channel}:${release.version}`;
+
+const hasPackage = (release) => /^[a-f0-9]{64}$/.test(String(release.sha256 ?? '')) && Number(release.size) > 0;
+
+/**
+ * Seed releases a persisted catalog does not have yet. Existing rows are never replaced, so operator
+ * changes (pauses, withdrawals, rollout percentages) survive a service upgrade. An existing catalog
+ * only gains seeds that carry real package metadata, so a deploy without the package hash and size
+ * never advertises an undownloadable release over a working one. An empty catalog takes every seed.
+ */
+export function missingSeedReleases(persisted, seeds) {
+  if (persisted.length === 0) return [...seeds];
+  const known = new Set(persisted.map(releaseKey));
+  return seeds.filter((release) => !known.has(releaseKey(release)) && hasPackage(release));
+}
+
 export class ReleaseCatalog {
   constructor({ items = [], repository, clock = () => new Date() }) {
     this.items = items;

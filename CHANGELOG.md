@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.4 — 2026-09-24
+
+### Automatic updates
+- MSP Nexus Core now updates the theme and plugin from the published GitHub releases when no licensed update channel is active. It checks every six hours, installs a package only when its SHA-256 matches the digest published in that release's manifest and the archive contains the expected product, and shows release notes under View details.
+- With **Automatic updates** enabled in MSP Nexus → Settings, WordPress installs new versions in the background. Otherwise they appear under Dashboard → Updates for one-click install.
+- Sites can opt out with `define( 'MSP_NEXUS_DISABLE_GITHUB_UPDATES', true );` or point at a fork with the `msp_nexus_github_repository` filter.
+
+### Fixes
+- Licensing service: upgrading a running service now adds the new release to an existing catalog instead of keeping only the previous version. Operator edits to existing releases are preserved.
+- Cybersecurity pages without a site logo: the fallback header mark is fully green (its offset shadow stayed blue).
+- The small business IT pricing card is centered; it was pinned to the left of its section.
+
 ## 0.5.3 — 2026-09-24
 
 - The cybersecurity (Bastion) design now carries its signal-green palette into the header, menus, mobile menu, and footer, and tints the site logo to match, so the page no longer sits inside a blue frame. Other pages are unchanged.

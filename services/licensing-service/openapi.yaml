@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: MSP Nexus Licensing and Update API
-  version: 0.5.3
+  version: 0.5.4
   description: Versioned entitlement, activation, release, package, portal, and commerce-webhook API.
 servers:
   - url: https://licenses.example.com

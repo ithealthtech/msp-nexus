@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.5.3\n"
+"Project-Id-Version: MSP Nexus 0.5.4\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1125,10 +1125,6 @@ msgstr ""
 msgid "Disable visible PHP debug output on production."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
-msgid "Disabled by default. Maintain a tested backup and staging workflow before enabling."
-msgstr ""
-
 #: packages/msp-nexus-core/blocks/announcement-panel/render.php
 msgid "Dismiss announcement"
 msgstr ""
@@ -1539,6 +1535,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Front-end style handles to unload"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/GitHubUpdater.php
+msgid "Full release notes"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -3661,6 +3661,14 @@ msgstr ""
 msgid "The importer adds or updates only records carrying MSP Nexus demo identifiers. It never deletes customer content and can be run repeatedly."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Licensing/GitHubUpdater.php
+msgid "The MSP Nexus update package does not contain the expected product, so it was not installed."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Licensing/GitHubUpdater.php
+msgid "The MSP Nexus update package does not match the digest published with its release, so it was not installed."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Licensing/UpdateClient.php
 msgid "The MSP Nexus update package failed cryptographic hash verification."
 msgstr ""
@@ -3807,6 +3815,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Update history"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "Updates come from the published MSP Nexus releases (or your licensed channel, when one is active), and a package is only installed when its SHA-256 digest matches the release. WordPress checks twice a day and installs in the background. Keep a current backup."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php

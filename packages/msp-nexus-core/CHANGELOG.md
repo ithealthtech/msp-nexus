@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.4 — 2026-09-24
+
+- Automatic updates for the theme and plugin from the published GitHub releases, verified against each release's SHA-256 manifest. Enable background installs with MSP Nexus → Settings → Automatic updates.
+
 ## 0.5.3 — 2026-09-24
 
 - Version aligned with the MSP Nexus 0.5.3 theme. No functional changes.
