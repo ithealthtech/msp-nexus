@@ -148,6 +148,10 @@
 .msp-nexus-footer__grid { gap: clamp(1.5rem, 4vw, 3rem); }
 .msp-nexus-footer__brand .wp-block-site-title { margin: 0 0 .75rem; font-weight: 700; line-height: 1.15; }
 .msp-nexus-footer__brand .wp-block-site-title a { text-decoration: none; }
+
+/* With a logo set, the footer shows it in place of the text site title. */
+.msp-nexus-footer__logo { margin: 0 0 1rem; }
+.msp-nexus-footer__brand:has(.msp-nexus-footer__logo img) > .wp-block-site-title { display: none; }
 .msp-nexus-footer__heading { margin: 0 0 1rem; color: #8fd0f8; font-family: var(--wp--preset--font-family--data-mono); font-size: .78rem !important; letter-spacing: .14em; text-transform: uppercase; }
 .msp-nexus-footer__nav .wp-block-navigation__container { flex-direction: column; align-items: flex-start; gap: .6rem; }
 

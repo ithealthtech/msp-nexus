@@ -3,6 +3,7 @@
 ## 0.5.3 — 2026-09-24
 
 - Green header, menus, footer, and logo tint on cybersecurity (Bastion) pages.
+- The footer shows the site logo (when one is set) in place of the text site title.
 
 ## 0.5.2 — 2026-09-24
 
