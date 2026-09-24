@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 — 2026-09-24
+
+- The cybersecurity (Bastion) design now carries its signal-green palette into the header, menus, mobile menu, and footer, and tints the site logo to match, so the page no longer sits inside a blue frame. Other pages are unchanged.
+
 ## 0.5.2 — 2026-09-24
 
 ### Consistent spacing and styling

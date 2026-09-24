@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 — 2026-09-24
+
+- Green header, menus, footer, and logo tint on cybersecurity (Bastion) pages.
+
 ## 0.5.2 — 2026-09-24
 
 - One section rhythm, button shape, and heading spacing across every page design; square IT consulting hero photo; long-form legal page styles; larger footer tap targets on phones.
