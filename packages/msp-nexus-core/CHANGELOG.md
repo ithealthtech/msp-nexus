@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 — 2026-09-24
+
+- Version aligned with the MSP Nexus 0.5.3 theme. No functional changes.
+
 ## 0.5.2 — 2026-09-24
 
 - Version aligned with the MSP Nexus 0.5.2 theme. No functional changes.

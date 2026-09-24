@@ -45,8 +45,8 @@ const privateKey = process.env.MANIFEST_PRIVATE_KEY_PEM
   : generatedKeys.privateKey;
 const publicKey = createPublicKey(privateKey);
 const seededReleases = [
-  { product: 'msp-nexus', productType: 'theme', slug: 'msp-nexus', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.THEME_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.THEME_PACKAGE_SIZE ?? 0), file: 'msp-nexus-0.5.2.zip', changelogUrl: 'https://itdonerightnc.com/' },
-  { product: 'msp-nexus-core', productType: 'plugin', slug: 'msp-nexus-core/msp-nexus-core.php', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.PLUGIN_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.PLUGIN_PACKAGE_SIZE ?? 0), file: 'msp-nexus-core-0.5.2.zip', changelogUrl: 'https://itdonerightnc.com/' }
+  { product: 'msp-nexus', productType: 'theme', slug: 'msp-nexus', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.THEME_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.THEME_PACKAGE_SIZE ?? 0), file: 'msp-nexus-0.5.3.zip', changelogUrl: 'https://itdonerightnc.com/' },
+  { product: 'msp-nexus-core', productType: 'plugin', slug: 'msp-nexus-core/msp-nexus-core.php', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.PLUGIN_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.PLUGIN_PACKAGE_SIZE ?? 0), file: 'msp-nexus-core-0.5.3.zip', changelogUrl: 'https://itdonerightnc.com/' }
 ];
 const persistedReleases = 'function' === typeof repository.listReleases ? await repository.listReleases() : [];
 const releases = persistedReleases.length > 0 ? persistedReleases : seededReleases;
