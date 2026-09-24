@@ -230,7 +230,9 @@ add_action('init', static function (): void {
 }, 20);
 add_action('rest_api_init', 'msp_nexus_register_patterns');
 add_filter('pre_render_block', static function ($pre_render, array $block) {
-    if ('core/pattern' === ($block['blockName'] ?? '') && 0 === strpos((string) ($block['attrs']['slug'] ?? ''), 'msp-nexus/')) {
+    $slug = (string) ($block['attrs']['slug'] ?? '');
+    // File-backed theme patterns are already registered; only a missing msp-nexus/ slug needs the generated library.
+    if ('core/pattern' === ($block['blockName'] ?? '') && 0 === strpos($slug, 'msp-nexus/') && ! WP_Block_Patterns_Registry::get_instance()->is_registered($slug)) {
         msp_nexus_register_patterns();
     }
     return $pre_render;
