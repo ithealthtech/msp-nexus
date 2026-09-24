@@ -23,14 +23,24 @@ test('a service upgrade adds the new seed releases without replacing operator-ed
     { product: 'msp-nexus', channel: 'stable', version: '0.5.2', status: 'paused', rolloutPercent: 10 },
     { product: 'msp-nexus-core', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100 }
   ];
+  const pkg = { sha256: 'b'.repeat(64), size: 1024 };
   const seeds = [
-    { product: 'msp-nexus', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100 },
-    { product: 'msp-nexus', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100 },
-    { product: 'msp-nexus-core', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100 }
+    { product: 'msp-nexus', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100, ...pkg },
+    { product: 'msp-nexus', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, ...pkg },
+    { product: 'msp-nexus-core', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, ...pkg }
   ];
   const added = missingSeedReleases(persisted, seeds);
   assert.deepEqual(added.map((item) => `${item.product}@${item.version}`), ['msp-nexus@0.5.3', 'msp-nexus-core@0.5.3']);
   assert.deepEqual(missingSeedReleases([], seeds), seeds);
   const catalog = new ReleaseCatalog({ items: [...persisted, ...added] });
   assert.equal(catalog.find('msp-nexus', 'stable').version, '0.5.3');
+});
+
+test('an existing catalog does not gain seeds without real package metadata', () => {
+  const persisted = [{ product: 'msp-nexus', channel: 'stable', version: '0.5.2', status: 'published', rolloutPercent: 100, sha256: 'c'.repeat(64), size: 2048 }];
+  const placeholder = { product: 'msp-nexus', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, sha256: 'development-package-not-published', size: 0 };
+  assert.deepEqual(missingSeedReleases(persisted, [placeholder]), []);
+  const catalog = new ReleaseCatalog({ items: [...persisted, ...missingSeedReleases(persisted, [placeholder])] });
+  assert.equal(catalog.find('msp-nexus', 'stable').version, '0.5.2');
+  assert.deepEqual(missingSeedReleases([], [placeholder]), [placeholder]);
 });

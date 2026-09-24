@@ -19,6 +19,7 @@ use MspNexusCore\Content\Registrar as ContentRegistrar;
 use MspNexusCore\Content\Bindings;
 use MspNexusCore\Content\DynamicData;
 use MspNexusCore\Licensing\Client as LicenseClient;
+use MspNexusCore\Licensing\GitHubUpdater;
 use MspNexusCore\Licensing\UpdateClient;
 use MspNexusCore\Forms\ConsultationHandler;
 use MspNexusCore\Seo\Schema;
@@ -79,6 +80,7 @@ final class Plugin
         (new Elementor())->register_hooks();
         (new LicenseClient())->register_hooks();
         (new UpdateClient())->register_hooks();
+        (new GitHubUpdater())->register_hooks();
         (new ConsultationHandler())->register_hooks();
         (new Schema())->register_hooks();
         if (defined('WP_CLI') && WP_CLI && class_exists('WP_CLI')) {

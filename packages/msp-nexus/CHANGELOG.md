@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.4 — 2026-09-24
+
+- The small business IT pricing card is centered; cybersecurity pages without a logo get a fully green fallback mark. Theme updates now arrive automatically through MSP Nexus Core.
+
 ## 0.5.3 — 2026-09-24
 
 - Green header, menus, footer, and logo tint on cybersecurity (Bastion) pages.

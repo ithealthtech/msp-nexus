@@ -163,7 +163,7 @@ final class Settings
                     </tr>
                     <tr>
                         <th scope="row"><?php esc_html_e('Automatic updates', 'msp-nexus-core'); ?></th>
-                        <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[automatic_updates]'); ?>" value="1" <?php checked(! empty($settings['automatic_updates'])); ?>> <?php esc_html_e('Allow WordPress to install verified MSP Nexus theme and plugin updates automatically.', 'msp-nexus-core'); ?></label><p class="description"><?php esc_html_e('Disabled by default. Maintain a tested backup and staging workflow before enabling.', 'msp-nexus-core'); ?></p></td>
+                        <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[automatic_updates]'); ?>" value="1" <?php checked(! empty($settings['automatic_updates'])); ?>> <?php esc_html_e('Allow WordPress to install verified MSP Nexus theme and plugin updates automatically.', 'msp-nexus-core'); ?></label><p class="description"><?php esc_html_e('Updates come from the published MSP Nexus releases (or your licensed channel, when one is active), and a package is only installed when its SHA-256 digest matches the release. WordPress checks twice a day and installs in the background. Keep a current backup.', 'msp-nexus-core'); ?></p></td>
                     </tr>
                 </table>
                 <?php submit_button(); ?>
