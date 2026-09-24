@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 — 2026-09-24
+
+- Every page design uses the Nexus dark palette by default (small business IT, IT consulting, and industry pages), and the header and footer stay dark on every page.
+
 ## 0.5.0 — 2026-09-23
 
 - Complete 12-page MSP website patterns (core, service, and industry pages), a shared industry template, redesigned header and footer with an automatic light variant, CC0 stock photography, and fixes for the static front page, mobile menu, contrast, and button radius.
