@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 — 2026-09-24
+
+- Version aligned with the MSP Nexus 0.5.1 theme. No functional changes.
+
 ## 0.5.0 — 2026-09-23
 
 - Complete MSP website one-click setup, Company content menu and overview, reorganized and reachable Settings, pages keep their address over content-type listings, and the button-radius token only applies when changed.

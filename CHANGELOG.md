@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.1 — 2026-09-24
+
+### Dark by default
+- The small business IT, IT consulting, and healthcare/legal/manufacturing industry designs now use the Nexus dark palette, matching the rest of the site. Each design keeps its own accent: the Nexus blue gradient for small business IT, gold for IT consulting, and blue, rose, or amber for the industry pages.
+- The header and footer stay dark on every page. The automatic light header and footer are removed, so a white logo is always readable.
+- Buttons and numbered markers that carry white text use a deeper fill of each accent. All text on the five redesigned pages meets WCAG AA contrast.
+
 ## 0.5.0 — 2026-09-23
 
 ### The complete MSP website
