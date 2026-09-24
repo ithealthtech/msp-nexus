@@ -7,7 +7,7 @@
 A full-site-editing block theme, a companion functionality and visual-design plugin, a
 customization-safe child starter, and an independent licensing and update service.
 
-[![Version](https://img.shields.io/badge/version-0.5.4-b45309)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.5.5-b45309)](CHANGELOG.md)
 [![WordPress](https://img.shields.io/badge/WordPress-6.7%2B-21759b)](#compatibility-target)
 [![PHP](https://img.shields.io/badge/PHP-7.4.33%2B-777bb4)](#compatibility-target)
 [![Theme licence](https://img.shields.io/badge/theme-GPL--2.0--or--later-blue)](#licensing)
@@ -108,7 +108,7 @@ This constraint is enforced in review — see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Product status
 
-Version 0.5.4 adds automatic updates from the published releases; 0.5.3 gave the cybersecurity design a matching green header and footer; 0.5.2 gave every page design one spacing, button, and heading system. 0.5.0 added a
+Version 0.5.5 makes MSP Nexus safe behind page caches and lighter on public page views; 0.5.4 added automatic updates from the published releases; 0.5.3 gave the cybersecurity design a matching green header and footer; 0.5.2 gave every page design one spacing, button, and heading system. 0.5.0 added a
 complete, hand-designed 12-page MSP website (core, service, and healthcare/legal/manufacturing
 industry pages) that installs in one click from Starter sites, a redesigned header and footer, a
 single Company content menu, and accessibility and mobile-menu fixes. It builds on 0.4.0's expanded Nexus Studio authoring workspace, a 200+ composition

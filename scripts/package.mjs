@@ -78,6 +78,8 @@ foreach (array('msp_service','msp_industry','msp_case_study','msp_location','msp
 foreach (array('msp-nexus/service-grid','msp-nexus/faq-list','msp-nexus/consultation-form','msp-nexus/breadcrumbs','msp-nexus/content-directory','msp-nexus/announcement-panel','msp-nexus/dynamic-value','msp-nexus/content-loop','msp-nexus/layout-region','msp-nexus/menu-panel','msp-nexus/offcanvas-menu','msp-nexus/metric-counter','msp-nexus/tabs','msp-nexus/comparison-table','msp-nexus/progress-meter','msp-nexus/icon-card','msp-nexus/video-dialog','msp-nexus/content-carousel','msp-nexus/lottie-animation','msp-nexus/product-showcase','msp-nexus/woocommerce-element','msp-nexus/purchase-gate') as $block) if (!WP_Block_Type_Registry::get_instance()->is_registered($block)) $failures[] = 'missing_block:' . $block;
 if (800 !== count(MspNexusCore\\Admin\\StarterSites::definitions())) $failures[] = 'starter_site_count';
 if (2 !== (int) get_option('msp_nexus_core_schema_version')) $failures[] = 'migration_not_applied';
+// The generated library is registered for the editor (REST), admin, and on demand, not on plain page views.
+do_action('rest_api_init');
 $patterns = array_filter(WP_Block_Patterns_Registry::get_instance()->get_all_registered(), static fn($pattern) => 0 === strpos((string)($pattern['name'] ?? ''), 'msp-nexus/'));
 if (count($patterns) < 60) $failures[] = 'pattern_count:' . count($patterns);
 update_option('blogname', 'IT Done Right');

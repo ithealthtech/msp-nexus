@@ -1,5 +1,13 @@
 <?php
 /** @var array<string, mixed> $attributes */
+// The form carries a nonce that expires within a day, so a page showing it must never be served from a page cache.
+if (! defined('DONOTCACHEPAGE')) {
+    define('DONOTCACHEPAGE', true);
+}
+do_action('litespeed_control_set_nocache', 'msp-nexus consultation form nonce');
+if (! headers_sent()) {
+    nocache_headers();
+}
 $status = isset($_GET['msp_form']) ? sanitize_key(wp_unslash((string) $_GET['msp_form'])) : '';
 $messages = array(
     'success' => array('success', __('Thank you. Your request was submitted.', 'msp-nexus-core')),

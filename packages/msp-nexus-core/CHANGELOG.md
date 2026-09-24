@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5 — 2026-09-24
+
+- Pages showing the consultation form are excluded from page caches (DONOTCACHEPAGE, LiteSpeed, no-cache headers) so its nonce never goes stale.
+
 ## 0.5.4 — 2026-09-24
 
 - Automatic updates for the theme and plugin from the published GitHub releases, verified against each release's SHA-256 manifest. Enable background installs with MSP Nexus → Settings → Automatic updates.
