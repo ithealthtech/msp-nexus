@@ -1,3 +1,14 @@
+const releaseKey = (release) => `${release.product}:${release.channel}:${release.version}`;
+
+/**
+ * Seed releases a persisted catalog does not have yet. Existing rows are never replaced, so operator
+ * changes (pauses, withdrawals, rollout percentages) survive a service upgrade.
+ */
+export function missingSeedReleases(persisted, seeds) {
+  const known = new Set(persisted.map(releaseKey));
+  return seeds.filter((release) => !known.has(releaseKey(release)));
+}
+
 export class ReleaseCatalog {
   constructor({ items = [], repository, clock = () => new Date() }) {
     this.items = items;

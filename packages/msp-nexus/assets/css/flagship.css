@@ -682,7 +682,7 @@ body:has(.nx-vt-close) .msp-nexus-footer__cta { display: none; }
 /* Bastion pages get a matching green frame: header, menus, and footer follow the page. */
 body:has(.nx-bs-hero) .msp-nexus-header { border-bottom-color: rgba(120, 220, 170, .14); background: rgba(6, 10, 8, .94); }
 body:has(.nx-bs-hero) :is(.msp-nexus-brand, .msp-nexus-footer__brand) .wp-block-site-logo img { filter: hue-rotate(-62deg) saturate(1.1); }
-body:has(.nx-bs-hero) .msp-nexus-brand .wp-block-site-title::before { border-color: #3ee08f; }
+body:has(.nx-bs-hero) .msp-nexus-brand .wp-block-site-title::before { border-color: #3ee08f; box-shadow: .28rem -.28rem 0 -.12rem #060a08, .28rem -.28rem 0 .02rem #1f9e62; }
 
 body:has(.nx-bs-hero) .msp-nexus-primary-nav .wp-block-navigation-item__content:hover,
 body:has(.nx-bs-hero) .msp-nexus-primary-nav .wp-block-navigation-item__content:focus-visible { color: #3ee08f; }

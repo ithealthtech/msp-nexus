@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Licensing service: upgrading a running service now adds the new release to an existing catalog instead of keeping only the previous version. Operator edits to existing releases are preserved.
+- Cybersecurity pages without a site logo: the fallback header mark is fully green (its offset shadow stayed blue).
+
 ## 0.5.3 — 2026-09-24
 
 - The cybersecurity (Bastion) design now carries its signal-green palette into the header, menus, mobile menu, and footer, and tints the site logo to match, so the page no longer sits inside a blue frame. Other pages are unchanged.

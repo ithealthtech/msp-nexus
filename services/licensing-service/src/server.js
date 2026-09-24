@@ -10,7 +10,7 @@ import { PackageDelivery } from './infrastructure/package-delivery.js';
 import { SignedEntitlements } from './domain/entitlements.js';
 import { WebhookProcessor } from './domain/webhooks.js';
 import { RateLimiter } from './infrastructure/rate-limiter.js';
-import { ReleaseCatalog } from './domain/releases.js';
+import { ReleaseCatalog, missingSeedReleases } from './domain/releases.js';
 
 const port = Number.parseInt(process.env.PORT ?? '8787', 10);
 const pepper = process.env.LICENSE_KEY_PEPPER ?? 'local-development-pepper-change-me-now';
@@ -49,10 +49,11 @@ const seededReleases = [
   { product: 'msp-nexus-core', productType: 'plugin', slug: 'msp-nexus-core/msp-nexus-core.php', channel: 'stable', version: '0.5.3', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.PLUGIN_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.PLUGIN_PACKAGE_SIZE ?? 0), file: 'msp-nexus-core-0.5.3.zip', changelogUrl: 'https://itdonerightnc.com/' }
 ];
 const persistedReleases = 'function' === typeof repository.listReleases ? await repository.listReleases() : [];
-const releases = persistedReleases.length > 0 ? persistedReleases : seededReleases;
-if (persistedReleases.length === 0 && 'function' === typeof repository.saveRelease) {
-  for (const release of releases) await repository.saveRelease(release);
+const newSeeds = missingSeedReleases(persistedReleases, seededReleases);
+if (newSeeds.length > 0 && 'function' === typeof repository.saveRelease) {
+  for (const release of newSeeds) await repository.saveRelease(release);
 }
+const releases = [...persistedReleases, ...newSeeds];
 const grantSecret = process.env.DOWNLOAD_GRANT_SECRET ?? pepper;
 const releaseCatalog = new ReleaseCatalog({ items: releases, repository });
 const updates = new UpdateService({
