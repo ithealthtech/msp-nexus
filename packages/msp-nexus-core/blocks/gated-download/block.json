@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/gated-download",
+  "version": "0.6.0",
+  "title": "MSP Gated Download",
+  "category": "widgets",
+  "icon": "download",
+  "description": "Collects name and email, sends the lead to the sales inbox, then reveals a download from the Media Library.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "attachmentId": { "type": "integer", "default": 0 },
+    "heading": { "type": "string", "default": "Get your free copy" },
+    "intro": { "type": "string", "default": "Enter your details and the download unlocks right away." },
+    "buttonLabel": { "type": "string", "default": "Unlock the download" },
+    "downloadLabel": { "type": "string", "default": "Download the PDF" },
+    "privacyText": { "type": "string", "default": "I agree that this information may be used to send me this resource and related information. You can opt out at any time." }
+  },
+  "supports": { "align": ["wide"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-forms"
+}

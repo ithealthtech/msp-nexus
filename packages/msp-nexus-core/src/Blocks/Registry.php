@@ -78,6 +78,12 @@ final class Registry
             array('msp-nexus-studio'),
             MSP_NEXUS_CORE_VERSION
         );
+        wp_register_style(
+            'msp-nexus-forms',
+            plugins_url('assets/forms.css', MSP_NEXUS_CORE_FILE),
+            array(),
+            MSP_NEXUS_CORE_VERSION
+        );
         $blocks = glob(MSP_NEXUS_CORE_PATH . 'blocks/*/block.json');
         if (! is_array($blocks)) {
             return;

@@ -696,3 +696,19 @@ body:has(.nx-bs-hero) .msp-nexus-footer__heading { color: #3ee08f; }
 body:has(.nx-bs-hero) .wp-block-button.msp-nexus-footer__link .wp-block-button__link:hover,
 body:has(.nx-bs-hero) .msp-nexus-footer .wp-block-navigation-item__content:hover { color: #3ee08f; }
 body:has(.nx-bs-hero) .msp-nexus-footer__bar { border-top-color: rgba(120, 220, 170, .14); }
+
+/* Question-and-answer toggles (core/details) in flagship sections. */
+.nx-fs-qa .wp-block-details { margin: 0; padding: 1.15rem 0; border-bottom: 1px solid var(--fs-line); }
+.nx-fs-qa .wp-block-details:first-of-type { border-top: 1px solid var(--fs-line); }
+.nx-fs-qa summary { color: var(--fs-heading); font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+.nx-fs-qa summary:focus-visible { outline: 2px solid var(--fs-accent); outline-offset: 4px; }
+.nx-fs-qa .wp-block-details p { margin: .75rem 0 0; color: var(--fs-copy); }
+
+/* Five-step processes. */
+.nx-fs-steps--five { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) {
+  .nx-fs-steps--five { grid-template-columns: repeat(3, 1fr); row-gap: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .nx-fs-steps--five { grid-template-columns: 1fr; }
+}

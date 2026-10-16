@@ -1,0 +1,28 @@
+/* Shared lead-form styles. Colors derive from currentColor so forms read well on dark and light sections. */
+.msp-nexus-form { position: relative; padding: clamp(1.25rem, 4vw, 2.5rem); border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 18px; background: color-mix(in srgb, currentColor 4%, transparent); }
+.msp-nexus-form > h2 { margin-top: 0; }
+.msp-nexus-form__intro { margin-top: 0; opacity: .85; }
+.msp-nexus-form fieldset { margin: 1.5rem 0 0; padding: 0; border: 0; }
+.msp-nexus-form legend { margin-bottom: .75rem; padding: 0; font-size: 1.05rem; font-weight: 700; }
+.msp-nexus-form__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.25rem; }
+.msp-nexus-form__grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.msp-nexus-form p { margin: 0 0 1rem; }
+.msp-nexus-form label { display: block; margin-bottom: .35rem; font-weight: 600; }
+.msp-nexus-form .msp-nexus-form__hint { display: block; margin-top: .3rem; font-size: .85rem; opacity: .8; }
+.msp-nexus-form :is(input:not([type="checkbox"], [type="radio"]), select, textarea) { box-sizing: border-box; width: 100%; min-height: 2.9rem; padding: .7rem .85rem; border: 1px solid color-mix(in srgb, currentColor 38%, transparent); border-radius: 10px; background: color-mix(in srgb, currentColor 6%, transparent); color: inherit; font: inherit; }
+.msp-nexus-form select option { color: #111; }
+.msp-nexus-form :is(input, select, textarea):focus-visible { outline: 2px solid #7cc9f7; outline-offset: 2px; border-color: #7cc9f7; }
+.msp-nexus-form__checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+.msp-nexus-form__checks label, .msp-nexus-form__consent label { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; }
+.msp-nexus-form__checks input, .msp-nexus-form__consent input { flex: 0 0 auto; width: 1.15rem; height: 1.15rem; margin-top: .2rem; accent-color: #5a66f0; }
+.msp-nexus-form__required { color: inherit; font-weight: 700; }
+.msp-nexus-form__notice { margin-bottom: 1.25rem; padding: .85rem 1rem; border-radius: 10px; border-inline-start: 4px solid; }
+.msp-nexus-form__notice.is-success { border-color: #3ee08f; background: rgba(62, 224, 143, .12); }
+.msp-nexus-form__notice.is-error { border-color: #ff6b6b; background: rgba(255, 107, 107, .12); }
+.msp-nexus-form__submit { margin-top: .5rem; }
+.msp-nexus-form__submit .wp-element-button { min-height: 3.2rem; padding: 1rem 1.6rem; border: 1px solid transparent; border-radius: 10px; background: linear-gradient(100deg, #525ee8 0%, #2b76a8 100%); color: #fff; font-weight: 700; cursor: pointer; }
+.msp-nexus-form__honeypot { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(1px, 1px, 1px, 1px) !important; white-space: nowrap !important; }
+.msp-nexus-form__unlocked { display: grid; gap: 1rem; justify-items: start; }
+@media (max-width: 40rem) {
+  .msp-nexus-form__grid, .msp-nexus-form__grid--3, .msp-nexus-form__checks { grid-template-columns: 1fr; }
+}
