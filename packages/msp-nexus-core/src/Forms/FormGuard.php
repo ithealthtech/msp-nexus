@@ -36,7 +36,9 @@ final class FormGuard
         if (! empty($_POST['company_website'])) {
             self::redirect($return, $success_status, $anchor);
         }
-        $rate_key = 'msp_nexus_form_' . substr(hash('sha256', $action . '|' . (string) ($_SERVER['REMOTE_ADDR'] ?? '') . wp_salt('nonce')), 0, 32);
+        // Keyed on address and submitted email, so coworkers behind one office NAT or proxy do not block each other.
+        $email = strtolower(sanitize_email(wp_unslash((string) ($_POST['email'] ?? ''))));
+        $rate_key = 'msp_nexus_form_' . substr(hash('sha256', $action . '|' . (string) ($_SERVER['REMOTE_ADDR'] ?? '') . '|' . $email . wp_salt('nonce')), 0, 32);
         if (get_transient($rate_key)) {
             self::redirect($return, 'rate', $anchor);
         }

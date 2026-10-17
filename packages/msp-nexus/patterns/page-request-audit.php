@@ -24,7 +24,7 @@ $e = static function (string $text): string {
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"nx-fs-hero__lede"} -->
-<p class="nx-fs-hero__lede"><?php echo $e(__('Is your IT company doing what they say they&#8217;re doing? We provide validation and peace of mind that your IT company is actually doing everything it claims. Tell us a little about your business and we will take it from there.', 'msp-nexus')); ?></p>
+<p class="nx-fs-hero__lede"><?php echo $e(__('Is your IT company doing what they say they’re doing? We provide validation and peace of mind that your IT company is actually doing everything it claims. Tell us a little about your business and we will take it from there.', 'msp-nexus')); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->

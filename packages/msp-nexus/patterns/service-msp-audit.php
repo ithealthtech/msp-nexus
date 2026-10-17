@@ -44,7 +44,7 @@ $link = esc_url(home_url('/request-an-audit/'));
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"className":"nx-fs-hero__title"} -->
-<h1 class="wp-block-heading nx-fs-hero__title"><?php echo wp_kses_post(__('Is your IT company doing what they say they&#8217;re doing? <em>How do you know?</em>', 'msp-nexus')); ?></h1>
+<h1 class="wp-block-heading nx-fs-hero__title"><?php echo wp_kses_post(__('Is your IT company doing what they say they’re doing? <em>How do you know?</em>', 'msp-nexus')); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"nx-fs-hero__lede"} -->
@@ -95,7 +95,7 @@ $link = esc_url(home_url('/request-an-audit/'));
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><?php echo $e(__('Most business owners have no practical way to check their IT company&#8217;s work. Invoices list security tools and backups, but nobody shows you whether they are installed, configured, and working. Usually you find out after a breach, a failed restore, or an insurance claim.', 'msp-nexus')); ?></p>
+<p><?php echo $e(__('Most business owners have no practical way to check their IT company’s work. Invoices list security tools and backups, but nobody shows you whether they are installed, configured, and working. Usually you find out after a breach, a failed restore, or an insurance claim.', 'msp-nexus')); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
