@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.5.5\n"
+"Project-Id-Version: MSP Nexus 0.6.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,8 +25,16 @@ msgstr ""
 msgid "%s complete MSP starter configurations combine market context, service positioning, and visual systems. Search, preview, then apply only the parts you want."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "3rd-party MSP audit request: %1$s (%2$s)"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "A compact native Cover video section for a process, culture, or capability moment."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "A friend or part-time contractor"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
@@ -51,6 +59,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "About Us"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "About you"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "About your business"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -197,6 +213,10 @@ msgstr ""
 msgid "Advanced: one registered handle per line. Test every affected page."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "After an outage, breach, or data loss"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "AI Readiness"
 msgstr ""
@@ -285,6 +305,10 @@ msgstr ""
 msgid "Any listed product"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Application crashes"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Applies to newly generated image sizes when the server image editor supports the selected format."
 msgstr ""
@@ -319,6 +343,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Archive URL"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Are you experiencing any of these?"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Are you satisfied with your current IT provider?"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -389,6 +421,10 @@ msgstr ""
 msgid "Backup, recovery, communications, testing, and incident coordination."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Backups I have never seen tested"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Banner message"
 msgstr ""
@@ -403,6 +439,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "Before importing"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Best way to reach you"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -435,6 +475,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Body line height (%)"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Both (co-managed)"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/breadcrumbs/render.php
@@ -609,12 +653,20 @@ msgstr ""
 msgid "Choose content…"
 msgstr ""
 
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Choose PDF"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Choose preferences"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/content-carousel/render.php
 msgid "Choose slide"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "City"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/content-directory/render.php
@@ -753,6 +805,10 @@ msgstr ""
 msgid "Commerce"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "Company"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Company address"
 msgstr ""
@@ -761,11 +817,15 @@ msgstr ""
 msgid "Company content"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Company name"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Comparison table settings"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
 msgid "Complete every required field and provide a valid email address."
 msgstr ""
 
@@ -827,6 +887,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Conservative optimizations"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Considering a new IT provider"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -953,6 +1017,10 @@ msgstr ""
 msgid "Current estimated autoload payload: %s."
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Current IT provider"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Current post"
 msgstr ""
@@ -999,6 +1067,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Customer account"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Cyber-insurance questionnaire or renewal"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Starter/Catalog.php
@@ -1153,6 +1225,10 @@ msgstr ""
 msgid "Distraction free"
 msgstr ""
 
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Download button label"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Portability.php
 msgid "Download content JSON"
 msgstr ""
@@ -1163,6 +1239,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Download redacted diagnostics JSON"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Download settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/GatedDownloadHandler.php
+msgid "Download: %1$s — %2$s"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Portability.php
@@ -1225,6 +1309,10 @@ msgstr ""
 msgid "Editor heartbeat interval"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "Editors: choose the PDF for this block (attachment ID) in the block settings."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Education"
 msgstr ""
@@ -1241,8 +1329,16 @@ msgstr ""
 msgid "Elementor"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Email"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Email delivery"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Email problems"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -1461,7 +1557,7 @@ msgstr ""
 msgid "Financial Services"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Content/DynamicData.php
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "First name"
 msgstr ""
 
@@ -1487,6 +1583,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Focus"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "For example Dentrix, Dolphin, QuickBooks, an EHR or practice-management system, or a compliance framework such as HIPAA or CMMC."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -1693,6 +1793,10 @@ msgstr ""
 msgid "I have a backup and understand this creates production-safe starter content plus draft placeholders that require review."
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "I would also like a free 15-minute call to talk through my results."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Icon"
 msgstr ""
@@ -1785,6 +1889,10 @@ msgstr ""
 msgid "Industry Category"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Industry-specific software or IT concerns"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Inherit"
 msgstr ""
@@ -1821,8 +1929,16 @@ msgstr ""
 msgid "Integrations and updates"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Internal IT staff"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Interval in milliseconds"
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Introduction"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Licensing/UpdateClient.php
@@ -1869,7 +1985,7 @@ msgstr ""
 msgid "Last import completed at %s. Created: %d. Updated: %d."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Content/DynamicData.php
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Last name"
 msgstr ""
 
@@ -1901,7 +2017,7 @@ msgstr ""
 msgid "Leave empty to use the Media Library alt text."
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
 msgid "Leave this field empty"
 msgstr ""
 
@@ -2029,6 +2145,10 @@ msgstr ""
 msgid "Lottie JSON URL"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Main reason for the audit"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Manage installed plugins"
 msgstr ""
@@ -2111,6 +2231,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Menu label"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Merger, acquisition, or leadership change"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -2229,7 +2353,7 @@ msgstr ""
 msgid "My account"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Content/DynamicData.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Name"
 msgstr ""
 
@@ -2243,6 +2367,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "Need help or planning guidance? Use the support route below to reach the responsible team."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Network outages"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
@@ -2365,6 +2493,10 @@ msgstr ""
 msgid "Nexus yields schema ownership to supported SEO plugins to reduce duplicate structured data."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "No"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/Registrar.php
 msgid "No %s found."
 msgstr ""
@@ -2379,6 +2511,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "No MSP Nexus updates have been recorded on this site."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "No one right now"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/product-showcase/render.php
@@ -2409,8 +2545,16 @@ msgstr ""
 msgid "None"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "None of these"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Nonprofit"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Not sure"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
@@ -2419,6 +2563,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Notice with category controls"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Number of employees"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -2517,6 +2665,10 @@ msgstr ""
 msgid "Optional heading"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Optional. Kept confidential; we never contact your provider without your permission."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Optional. Leave blank to show nothing."
 msgstr ""
@@ -2569,12 +2721,20 @@ msgstr ""
 msgid "Origin key"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Other"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Other pages are created as drafts. Pages that already exist at the same address are never changed."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Output"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Outsourced IT company (MSP)"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
@@ -2641,6 +2801,14 @@ msgstr ""
 msgid "Persistent object cache"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Phone"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Phone system problems"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "PHP"
 msgstr ""
@@ -2665,7 +2833,7 @@ msgstr ""
 msgid "Playback speed"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
 msgid "Please wait a moment before submitting another request."
 msgstr ""
 
@@ -2953,6 +3121,10 @@ msgstr ""
 msgid "Questions"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "Questions about anything in it? Reply to our follow-up email or give us a call."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "Questions and answers used by FAQ sections across the site."
 msgstr ""
@@ -2971,6 +3143,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "Recent update history"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Recently switched providers"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -3025,8 +3201,16 @@ msgstr ""
 msgid "Replace existing Nexus-owned Home composition"
 msgstr ""
 
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Replace PDF"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Replace this guidance with accurate, specific content."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Request my audit"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
@@ -3221,12 +3405,24 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Security concerns"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Security or compliance concern"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Security Signal"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Select a block to see actions."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Select one"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -3425,6 +3621,14 @@ msgstr ""
 msgid "Slides"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Slow or unreachable phone support"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Slow performance"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Small Business IT"
 msgstr ""
@@ -3491,6 +3695,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "Starter: %1$s. Manifest version: %2$s. Records: %3$d. Batch size: %4$d."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "State"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -3609,6 +3817,10 @@ msgstr ""
 msgid "Telephone"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Tell us about your company"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/assets/studio-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
 msgid "Term slugs"
 msgstr ""
@@ -3619,6 +3831,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Text alignment"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Thank you. Your audit request is in. We will reply within one business day to schedule a short discovery call."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "Thank you. Your download is ready below, and a copy of the link stays on this page for 24 hours."
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
@@ -3653,7 +3873,7 @@ msgstr ""
 msgid "The document matches its latest save."
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
 msgid "The form session expired. Refresh the page and try again."
 msgstr ""
 
@@ -3683,6 +3903,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "The raw key is sent once over HTTPS and is not stored in WordPress."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/FormGuard.php
+msgid "The request could not be delivered. Please call us or use the published support channel."
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
@@ -3725,6 +3949,10 @@ msgstr ""
 msgid "This report contains no license key, password, token, customer content, or visitor data."
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/gated-download/render.php
+msgid "This resource is being prepared. Please check back soon or contact us for a copy."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "This site was deactivated. Public content is unchanged."
 msgstr ""
@@ -3737,8 +3965,12 @@ msgstr ""
 msgid "Timed modal"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Content/DynamicData.php
+#: packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Title"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Title or position"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -3789,6 +4021,10 @@ msgstr ""
 msgid "Type %s to enable the reset:"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Unclear or rising IT bills"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Underline inline links by default"
 msgstr ""
@@ -3803,6 +4039,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Unknown starter configuration."
+msgstr ""
+
+#: packages/msp-nexus-core/assets/blocks-editor.js
+msgid "Unlock button label"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -3941,6 +4181,10 @@ msgstr ""
 msgid "Verified source"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Verify my IT provider is doing what they claim"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Vertical"
 msgstr ""
@@ -4013,6 +4257,10 @@ msgstr ""
 msgid "We use essential storage for site operation. Optional analytics and marketing technologies run only according to your preferences."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Weak Wi-Fi signal"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "Webinars and events with dates and registration links."
 msgstr ""
@@ -4033,6 +4281,10 @@ msgstr ""
 msgid "What would you like to improve?"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "What you do, how many locations you have, and roughly how many computers and servers."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "What you sell. Each service gets its own page and appears in service grids."
 msgstr ""
@@ -4043,6 +4295,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "White label"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Who handles your IT today?"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -4089,7 +4345,7 @@ msgstr ""
 msgid "WordPress provides native drag and drop, undo/redo, autosave, revisions, preview, list view, and keyboard navigation. Nexus layers and tools operate on the same block document."
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php
 msgid "Work email"
 msgstr ""
 
@@ -4103,6 +4359,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Year"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+msgid "Yes"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php
@@ -4159,6 +4419,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Your Company, LLC"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php
+msgid "Your current IT support"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php

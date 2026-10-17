@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 — 2026-10-16
+
+### Audits and lead magnets
+- **3rd-party MSP audit** page pattern: why an audit, twelve review areas, a five-step process, deliverables, independence promises, who it is for, seven FAQs, and a call to action.
+- **Request an audit** page pattern with the new **MSP Audit Request Form** block: contact details, business size and location, current provider and satisfaction, problems they are seeing, the reason for the audit, and industry-specific software, emailed to the sales inbox.
+- **Cybersecurity ebook** landing-page pattern with the new **MSP Gated Download** block: visitors enter their details, the lead goes to the sales inbox, and a signed link (valid 24 hours) reveals the PDF chosen from the Media Library.
+- Both forms use nonces, a honeypot, a per-visitor rate limit, and allow-listed choices, and they keep their pages out of page caches.
+
+### Fixes
+- Consultation form success and error messages are readable on dark sections.
+- FAQ toggles (core/details) are styled in flagship sections, and five-step process lists lay out in five columns.
+
 ## 0.5.5 — 2026-09-24
 
 ### Performance and caching

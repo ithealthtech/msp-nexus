@@ -42,11 +42,31 @@
     save: function () { return null; }
   });
 
-  ['msp-nexus/consultation-form', 'msp-nexus/breadcrumbs'].forEach(function (name) {
+  ['msp-nexus/consultation-form', 'msp-nexus/breadcrumbs', 'msp-nexus/audit-request-form'].forEach(function (name) {
     blocks.registerBlockType(name, {
       edit: function (props) { return el(ServerSideRender, { block: name, attributes: props.attributes }); },
       save: function () { return null; }
     });
+  });
+
+  blocks.registerBlockType('msp-nexus/gated-download', {
+    edit: function (props) {
+      var a = props.attributes;
+      var text = function (key, label) { return el(components.TextControl, { label: label, value: a[key], onChange: function (value) { var next = {}; next[key] = value; props.setAttributes(next); } }); };
+      return el(element.Fragment, {}, el(InspectorControls, {}, el(PanelBody, { title: __('Download settings', 'msp-nexus-core'), initialOpen: true },
+        el(blockEditor.MediaUploadCheck, {}, el(blockEditor.MediaUpload, {
+          allowedTypes: ['application/pdf'],
+          value: a.attachmentId,
+          onSelect: function (media) { props.setAttributes({ attachmentId: media.id }); },
+          render: function (obj) { return el(components.Button, { variant: 'secondary', onClick: obj.open }, a.attachmentId ? __('Replace PDF', 'msp-nexus-core') : __('Choose PDF', 'msp-nexus-core')); }
+        })),
+        text('heading', __('Heading', 'msp-nexus-core')),
+        text('intro', __('Introduction', 'msp-nexus-core')),
+        text('buttonLabel', __('Unlock button label', 'msp-nexus-core')),
+        text('downloadLabel', __('Download button label', 'msp-nexus-core'))
+      )), el(ServerSideRender, { block: 'msp-nexus/gated-download', attributes: a }));
+    },
+    save: function () { return null; }
   });
 
   blocks.registerBlockType('msp-nexus/announcement-panel', {

@@ -21,7 +21,9 @@ use MspNexusCore\Content\DynamicData;
 use MspNexusCore\Licensing\Client as LicenseClient;
 use MspNexusCore\Licensing\GitHubUpdater;
 use MspNexusCore\Licensing\UpdateClient;
+use MspNexusCore\Forms\AuditRequestHandler;
 use MspNexusCore\Forms\ConsultationHandler;
+use MspNexusCore\Forms\GatedDownloadHandler;
 use MspNexusCore\Seo\Schema;
 use MspNexusCore\Cli\Commands;
 use MspNexusCore\Database\MigrationRunner;
@@ -82,6 +84,8 @@ final class Plugin
         (new UpdateClient())->register_hooks();
         (new GitHubUpdater())->register_hooks();
         (new ConsultationHandler())->register_hooks();
+        (new AuditRequestHandler())->register_hooks();
+        (new GatedDownloadHandler())->register_hooks();
         (new Schema())->register_hooks();
         if (defined('WP_CLI') && WP_CLI && class_exists('WP_CLI')) {
             \WP_CLI::add_command('msp-nexus', new Commands());

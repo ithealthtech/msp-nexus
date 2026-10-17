@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 — 2026-10-16
+
+- New page patterns: 3rd-party MSP audit, Request an audit, and Cybersecurity ebook download. Styled FAQ toggles and five-step process lists.
+
 ## 0.5.5 — 2026-09-24
 
 - The generated pattern library is built only where patterns are browsed or inserted, or on demand when a page embeds one, instead of on every public page view.

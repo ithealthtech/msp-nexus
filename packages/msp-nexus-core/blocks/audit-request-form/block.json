@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/audit-request-form",
+  "version": "0.6.0",
+  "title": "MSP Audit Request Form",
+  "category": "widgets",
+  "icon": "clipboard",
+  "description": "Detailed request form for a third-party audit of an existing IT provider, delivered to the sales inbox.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "heading": { "type": "string", "default": "Request your third-party audit" },
+    "intro": { "type": "string", "default": "Tell us about your business and your current IT provider. We reply within one business day to schedule a short discovery call." },
+    "privacyText": { "type": "string", "default": "I agree that this information may be used to respond to my audit request. Do not include passwords or sensitive information." }
+  },
+  "supports": { "align": ["wide"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-forms"
+}

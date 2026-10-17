@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 — 2026-10-16
+
+- New blocks: MSP Audit Request Form and MSP Gated Download (email-gated PDF with a signed 24-hour link). Shared form styles, and readable consultation-form notices on dark sections.
+
 ## 0.5.5 — 2026-09-24
 
 - Pages showing the consultation form are excluded from page caches (DONOTCACHEPAGE, LiteSpeed, no-cache headers) so its nonce never goes stale.
