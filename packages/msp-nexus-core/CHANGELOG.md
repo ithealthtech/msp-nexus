@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 — 2026-10-18
+
+- Version aligned with the MSP Nexus 0.8.1 theme.
+
 ## 0.8.0 — 2026-10-18
 
 - Version aligned with the MSP Nexus 0.8.0 theme.

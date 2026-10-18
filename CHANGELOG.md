@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 — 2026-10-18
+
+- Blog articles: the summary under the headline lines up with the title.
+
 ## 0.8.0 — 2026-10-18
 
 ### Blog in the Nexus design
