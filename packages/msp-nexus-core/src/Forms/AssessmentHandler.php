@@ -76,7 +76,8 @@ final class AssessmentHandler
             $sent = wp_mail(FormGuard::recipient(), $subject, $body, array('Reply-To: ' . ('' === $name ? $email : $name . ' <' . $email . '>')));
             do_action('msp_nexus_assessment_processed', $answers, $email, $sent);
         }
-        FormGuard::redirect($return, '' !== $email ? 'sent' : 'scored', self::ANCHOR, array('msp_score' => $answers . '.' . self::sign($answers)));
+        $status = '' === $email ? 'scored' : (! empty($sent) ? 'sent' : 'delivery');
+        FormGuard::redirect($return, $status, self::ANCHOR, array('msp_score' => $answers . '.' . self::sign($answers)));
     }
 
     /** Anonymous scoring still needs a valid nonce; no rate limit, nothing is sent. */
