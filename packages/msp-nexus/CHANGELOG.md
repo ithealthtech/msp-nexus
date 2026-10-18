@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 — 2026-10-18
+
+- Blog article summary aligned with the title.
+
 ## 0.8.0 — 2026-10-18
 
 - Blog index, archive, and single-article templates in the Nexus design, with a blog call-to-action pattern.
