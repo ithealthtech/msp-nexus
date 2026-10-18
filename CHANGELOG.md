@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0 — 2026-10-18
+
+### Blog in the Nexus design
+- New blog index, category archive, and article templates in the Nexus dark palette: page hero, category chips, article cards with category, excerpt, and date, styled pagination, and a closing call to action (free booklet and a call with an engineer).
+- Articles get a hero with category and date, a readable long-form body (headings, lists, links, quotes), previous and next links, and a More insights row.
+
 ## 0.7.0 — 2026-10-18
 
 ### Security self-assessment

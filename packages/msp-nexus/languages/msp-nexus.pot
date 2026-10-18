@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.7.0\n"
+"Project-Id-Version: MSP Nexus 0.8.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1141,6 +1141,10 @@ msgstr ""
 msgid "Free cybersecurity ebook"
 msgstr ""
 
+#: packages/msp-nexus/patterns/blog-cta.php
+msgid "Free for business owners"
+msgstr ""
+
 #: packages/msp-nexus/patterns/page-cybersecurity-ebook.php
 msgid "Free PDF, instant download"
 msgstr ""
@@ -1183,6 +1187,14 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/page-request-audit.php
 msgid "Get a second opinion <em>on your IT.</em>"
+msgstr ""
+
+#: packages/msp-nexus/patterns/blog-cta.php
+msgid "Get our 40-page Cybersecurity Essentials booklet, or talk with an engineer about your setup. No obligation."
+msgstr ""
+
+#: packages/msp-nexus/patterns/blog-cta.php
+msgid "Get the free booklet"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
@@ -2593,7 +2605,7 @@ msgstr ""
 msgid "Switching is easier than you think"
 msgstr ""
 
-#: packages/msp-nexus/patterns/service-co-managed.php
+#: packages/msp-nexus/patterns/blog-cta.php packages/msp-nexus/patterns/service-co-managed.php
 msgid "Talk to an engineer"
 msgstr ""
 
@@ -2827,6 +2839,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/page-cybersecurity-ebook.php
 msgid "Want to know where you stand today?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/blog-cta.php
+msgid "Want to know where your business stands?"
 msgstr ""
 
 #: packages/msp-nexus/patterns/industry-manufacturing.php
