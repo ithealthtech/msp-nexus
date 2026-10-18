@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.6.0\n"
+"Project-Id-Version: MSP Nexus 0.7.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -149,6 +149,10 @@ msgstr ""
 msgid "Add a video URL to configure this dialog."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Add advanced email filtering and set up SPF, DKIM, and DMARC for your domain."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/Registrar.php
 msgid "Add New %s"
 msgstr ""
@@ -265,6 +269,10 @@ msgstr ""
 msgid "Alternate editor"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "An outdated firewall or flat network lets one infected device reach everything."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Analytics"
 msgstr ""
@@ -297,8 +305,16 @@ msgstr ""
 msgid "Announcement settings"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Answer all ten questions to see your score."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Answer the practical questions buyers should resolve before selecting this service."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Antivirus that nobody watches lets an attack run for days unnoticed."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -345,12 +361,20 @@ msgstr ""
 msgid "Archive URL"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Are Windows, macOS, and business applications updated automatically within a few weeks of each release?"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/audit-request-form/render.php
 msgid "Are you experiencing any of these?"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/audit-request-form/render.php
 msgid "Are you satisfied with your current IT provider?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Are your files and email backed up off-site, and has someone actually tested a restore in the last six months?"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -369,6 +393,14 @@ msgstr ""
 msgid "At least 50 MB of free content-directory space is required before updating MSP Nexus."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "At risk"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Attackers exploit known holes within days of a patch being published."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Author IDs"
 msgstr ""
@@ -383,6 +415,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Autoloaded options under 1 MB"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Automate operating system and third-party patching, and report monthly on anything missed."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -805,7 +841,7 @@ msgstr ""
 msgid "Commerce"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/gated-download/render.php
+#: packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/blocks/security-assessment/render.php
 msgid "Company"
 msgstr ""
 
@@ -1125,6 +1161,10 @@ msgstr ""
 msgid "Departments"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Deploy managed endpoint detection and response on every device, with alerts reviewed around the clock."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Descending"
 msgstr ""
@@ -1223,6 +1263,26 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
 msgid "Distraction free"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Do all staff sign in to email and remote access with multi-factor authentication (a code or app prompt, not just a password)?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Do employees get security awareness or phishing training at least once a year?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Do you have a written plan for what to do, and who to call, if you are hacked or hit by ransomware?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Do you have an up-to-date list of every computer, device, and piece of software your business uses?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Does every computer and server run endpoint protection that someone monitors for alerts?"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -1337,6 +1397,10 @@ msgstr ""
 msgid "Email delivery"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Email is how most attacks are delivered."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "Email problems"
 msgstr ""
@@ -1399,6 +1463,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "Enter a license key."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Enter a valid email address and tick the consent box to receive your results."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -1613,6 +1681,10 @@ msgstr ""
 msgid "Format"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Former employees with live accounts are a quiet, common risk."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Forms"
 msgstr ""
@@ -1659,6 +1731,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "Generic service pages publish immediately. Unverified proof, people, locations, resources, events, relationships, and legal placeholders remain drafts until you review them."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Get an expert audit"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -1787,6 +1863,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Reset.php
 msgid "I acknowledge that a current backup is recommended."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "I agree that IT Done Right may use these answers to contact me about my results."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
@@ -1945,6 +2025,14 @@ msgstr ""
 msgid "Invalid rollback product."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Is incoming email filtered for phishing, malicious links, and spoofed senders?"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Is your firewall up to date and managed, with guest Wi-Fi kept separate from business systems?"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "ISO day numbers 1–7, separated by commas."
 msgstr ""
@@ -1963,6 +2051,18 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Justify"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Keep an automatically updated inventory of devices and software, and remove anything unauthorized."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Keep an off-site or immutable copy, back up Microsoft 365 or Google too, and test a restore every quarter."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Keep firewall firmware current, review its rules, and separate guest and business networks."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -2269,6 +2369,10 @@ msgstr ""
 msgid "More than 30 Studio template elements, product dynamic values, conditional layouts, wishlist, quick view, side cart, catalog mode, galleries, and checkout presentation become available."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Most breaches start with a person clicking a convincing email."
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Move down"
 msgstr ""
@@ -2353,7 +2457,7 @@ msgstr ""
 msgid "My account"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/src/Content/DynamicData.php
+#: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/blocks/security-assessment/render.php packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Name"
 msgstr ""
 
@@ -2515,6 +2619,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "No one right now"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "No or not sure"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/product-showcase/render.php
@@ -2765,6 +2873,10 @@ msgstr ""
 msgid "Panel width"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Partly"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Pass"
 msgstr ""
@@ -2801,7 +2913,7 @@ msgstr ""
 msgid "Persistent object cache"
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/blocks/security-assessment/render.php packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "Phone"
 msgstr ""
 
@@ -2831,6 +2943,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Playback speed"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Please wait a moment before submitting again."
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
@@ -3133,6 +3249,14 @@ msgstr ""
 msgid "Quick view"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Ransomware now targets backups, and untested backups often fail when needed."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Read the free Cybersecurity Essentials booklet"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Read-only environment checks plus conservative front-end toggles. Image conversion, cache purges, and database cleanup remain with your host or dedicated performance tooling."
 msgstr ""
@@ -3273,6 +3397,10 @@ msgstr ""
 msgid "Retail"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Retake the assessment"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Studio.php
 msgid "Reusable layout starters"
 msgstr ""
@@ -3323,6 +3451,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Run selected repairs"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Run short annual training plus regular simulated phishing emails."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
@@ -3413,8 +3545,16 @@ msgstr ""
 msgid "Security or compliance concern"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Security self-assessment: %1$d/100 from %2$s"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Security Signal"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "See my score"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -3427,6 +3567,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Selected block"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Send my results"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Send your results to our team and we will reply with practical next steps. No obligation."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php
@@ -3479,6 +3627,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Onboarding.php
 msgid "Setup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Several basic protections are missing. The good news: the fixes below are well understood and affordable for a business your size."
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -3645,6 +3797,10 @@ msgstr ""
 msgid "Software & SaaS"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Some important gaps"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "Sort products"
 msgstr ""
@@ -3715,6 +3871,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Stock status"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Stolen passwords are the most common way attackers get in."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Strong foundation"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Studio.php
@@ -3845,6 +4009,10 @@ msgstr ""
 msgid "Thank you. Your request was submitted."
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Thank you. Your results are on their way to our team, and we will follow up within one business day."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "That flagship site is not available with the active theme."
 msgstr ""
@@ -3899,6 +4067,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Forms/ConsultationHandler.php
 msgid "The native consultation form is disabled. Use the published contact channel."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "The page expired. Refresh and try again."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
@@ -4005,6 +4177,10 @@ msgstr ""
 msgid "Trigger"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Turn on multi-factor sign-in for email, VPN, and admin accounts first, then every cloud app."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Twelve hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, and healthcare, legal, and manufacturing industry pages. The header and footer menus link them all."
 msgstr ""
@@ -4091,6 +4267,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
 msgid "Use a sticky mobile add-to-cart form"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Use an offboarding checklist that disables every account and resets shared passwords the same day."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php
@@ -4253,6 +4433,14 @@ msgstr ""
 msgid "Visual system"
 msgstr ""
 
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Want a specialist to review your answers?"
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "We could not email your results. Your score is below; call us for a copy."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "We use essential storage for site operation. Optional analytics and marketing technologies run only according to your preferences."
 msgstr ""
@@ -4289,8 +4477,16 @@ msgstr ""
 msgid "What you sell. Each service gets its own page and appears in service grids."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "When someone leaves, is their access to email, files, and apps removed the same day?"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Where the header \"Book a discovery call\" button goes. Leave blank to keep it pointing at your Contact page."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Where to start"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Branding.php
@@ -4307,6 +4503,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Wishlist"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Without a plan, the first hours of an incident are lost to confusion."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Integrations/WooCommerce.php
@@ -4345,7 +4545,7 @@ msgstr ""
 msgid "WordPress provides native drag and drop, undo/redo, autosave, revisions, preview, list view, and keyboard navigation. Nexus layers and tools operate on the same block document."
 msgstr ""
 
-#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php
+#: packages/msp-nexus-core/blocks/audit-request-form/render.php packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/blocks/gated-download/render.php packages/msp-nexus-core/blocks/security-assessment/render.php
 msgid "Work email"
 msgstr ""
 
@@ -4357,11 +4557,15 @@ msgstr ""
 msgid "WPML or Polylang"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "Write a one-page incident plan with contacts, first steps, and your insurer’s requirements."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/DynamicData.php
 msgid "Year"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "Yes"
 msgstr ""
 
@@ -4409,6 +4613,18 @@ msgstr ""
 msgid "You are not allowed to run diagnostics."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "You cannot protect what you do not know you have."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "You have a start, but the gaps below are the kind attackers look for. Most can be closed in weeks, not months."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
+msgid "You have most of the essentials in place. An independent audit can confirm they are configured and working the way you think."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Your business"
 msgstr ""
@@ -4427,6 +4643,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "Your order qualifies for free shipping."
+msgstr ""
+
+#: packages/msp-nexus-core/blocks/security-assessment/render.php
+msgid "Your security score"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php

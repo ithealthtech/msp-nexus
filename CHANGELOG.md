@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 — 2026-10-18
+
+### Security self-assessment
+- New **MSP Security Self-Assessment** block and **Security self-assessment** page pattern: ten yes / partly / no questions mapped to the CIS Controls, an instant score out of 100 with a strong / gaps / at-risk rating, and a prioritized plain-English fix for every gap.
+- Scoring runs on the server, so it works without JavaScript. Results come back through a signed link and cannot be tampered with.
+- Visitors can optionally send their results to the sales inbox (rate-limited and nonce-protected); nothing is sent otherwise.
+
 ## 0.6.0 — 2026-10-16
 
 ### Audits and lead magnets

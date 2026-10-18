@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 — 2026-10-18
+
+- New Security self-assessment page pattern.
+
 ## 0.6.0 — 2026-10-16
 
 - New page patterns: 3rd-party MSP audit, Request an audit, and Cybersecurity ebook download. Styled FAQ toggles and five-step process lists.

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.6.0\n"
+"Project-Id-Version: MSP Nexus 0.7.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,6 +55,14 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "3rd-party MSP audits"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "50–79: Important gaps"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "80–100: Strong foundation"
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
@@ -125,6 +133,10 @@ msgstr ""
 msgid "A free review of your backups, access controls, and HIPAA documentation."
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "A good start with holes attackers look for. Most can be closed within weeks."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-vitals-home.php
 msgid "A HIPAA program you can show an auditor"
 msgstr ""
@@ -161,6 +173,10 @@ msgstr ""
 msgid "A practical, plain-English guide to the security steps that matter most for small and mid-sized businesses. Read it in an afternoon, act on it in a week."
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "A quick checkup, not a full exam."
+msgstr ""
+
 #: packages/msp-nexus/patterns/page-request-audit.php
 msgid "A real person reads your request and schedules a 30-minute discovery call."
 msgstr ""
@@ -183,6 +199,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "A security score that moves"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "A self-assessment shows what you believe is in place. An audit shows what is actually configured and working, which is often different."
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-co-managed.php
@@ -317,6 +337,10 @@ msgstr ""
 msgid "Answer like it is ours"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Answer ten yes-or-no questions based on the CIS Controls, the security baseline used by businesses and governments worldwide. You get an instant score and a prioritized list of what to fix first."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
 msgid "Answers in minutes from people who know your setup."
 msgstr ""
@@ -407,6 +431,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/page-request-audit.php
 msgid "Based on your users, devices, and locations. Nothing starts until you approve it."
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Basic protections are missing. The fixes are well understood and affordable."
 msgstr ""
 
 #: packages/msp-nexus/patterns/industry-manufacturing.php
@@ -1101,6 +1129,10 @@ msgstr ""
 msgid "Fractional CIO"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Free 2-minute self-assessment"
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
 msgid "Free check-up"
 msgstr ""
@@ -1261,6 +1293,10 @@ msgstr ""
 msgid "How our HIPAA program works"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "How secure is <em>your business?</em>"
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-meridian-home.php
 msgid "How to build an IT budget your CFO will sign"
 msgstr ""
@@ -1337,6 +1373,10 @@ msgstr ""
 msgid "Insights"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Instant results on screen"
+msgstr ""
+
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Insurance or compliance is asking"
 msgstr ""
@@ -1358,11 +1398,11 @@ msgid "Is it technical?"
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
-msgid "Is your IT company doing what they say they&#8217;re doing? <em>How do you know?</em>"
+msgid "Is your IT company doing what they say they’re doing? <em>How do you know?</em>"
 msgstr ""
 
 #: packages/msp-nexus/patterns/page-request-audit.php
-msgid "Is your IT company doing what they say they&#8217;re doing? We provide validation and peace of mind that your IT company is actually doing everything it claims. Tell us a little about your business and we will take it from there."
+msgid "Is your IT company doing what they say they’re doing? We provide validation and peace of mind that your IT company is actually doing everything it claims. Tell us a little about your business and we will take it from there."
 msgstr ""
 
 #: packages/msp-nexus/patterns/industry-manufacturing.php
@@ -1431,6 +1471,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Know exactly what you have before you sign another contract or move to a new provider."
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Know for sure, not just in theory."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
@@ -1638,7 +1682,7 @@ msgid "Most breaches start with a stolen password or a phishing email, not a mov
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
-msgid "Most business owners have no practical way to check their IT company&#8217;s work. Invoices list security tools and backups, but nobody shows you whether they are installed, configured, and working. Usually you find out after a breach, a failed restore, or an insurance claim."
+msgid "Most business owners have no practical way to check their IT company’s work. Invoices list security tools and backups, but nobody shows you whether they are installed, configured, and working. Usually you find out after a breach, a failed restore, or an insurance claim."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
@@ -1763,6 +1807,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
 msgid "No big migration project. We visit, take stock, and start looking after things the same week."
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "No email required"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-about.php
@@ -1929,6 +1977,10 @@ msgstr ""
 msgid "Our team"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Our third-party audit checks every one of these controls against evidence, and gives you a 90-day plan to close the gaps."
+msgstr ""
+
 #: packages/msp-nexus/patterns/page-cybersecurity-ebook.php
 msgid "Our third-party audit checks your security, backups, and IT provider against the same controls the ebook covers."
 msgstr ""
@@ -2011,6 +2063,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-cloud.php
 msgid "Pilot"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Plain-English fixes for every gap"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-cloud.php
@@ -2209,7 +2265,7 @@ msgstr ""
 msgid "Request a third-party audit today. A short form, a 30-minute call, and a fixed quote. No obligation."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/service-msp-audit.php
+#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/page-security-assessment.php packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Request an audit"
 msgstr ""
 
@@ -2613,6 +2669,10 @@ msgstr ""
 msgid "The essential controls"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "The essentials are in place. Verify they work as intended with an independent audit."
+msgstr ""
+
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "The order to fix things in, rough costs, and who should own each item."
 msgstr ""
@@ -2683,6 +2743,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Uncover cost savings and negotiate better terms on your behalf"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "Under 50: At risk"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-bastion-home.php
@@ -2951,6 +3015,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "What you receive"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-security-assessment.php
+msgid "What your score means"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-vitals-home.php

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 — 2026-10-18
+
+- New MSP Security Self-Assessment block: ten CIS-mapped questions, instant signed score and fixes, optional results by email.
+
 ## 0.6.0 — 2026-10-16
 
 - New blocks: MSP Audit Request Form and MSP Gated Download (email-gated PDF with a signed 24-hour link). Shared form styles, and readable consultation-form notices on dark sections.
