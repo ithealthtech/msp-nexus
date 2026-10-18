@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0 — 2026-10-18
+
+- Version aligned with the MSP Nexus 0.8.0 theme.
+
 ## 0.7.0 — 2026-10-18
 
 - New MSP Security Self-Assessment block: ten CIS-mapped questions, instant signed score and fixes, optional results by email.
