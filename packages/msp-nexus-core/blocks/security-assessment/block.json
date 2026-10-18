@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "msp-nexus/security-assessment",
+  "version": "0.7.0",
+  "title": "MSP Security Self-Assessment",
+  "category": "widgets",
+  "icon": "shield",
+  "description": "Ten-question cybersecurity self-assessment mapped to the CIS Controls, with an instant score, tailored fixes, and optional results by email.",
+  "textdomain": "msp-nexus-core",
+  "attributes": {
+    "heading": { "type": "string", "default": "How secure is your business?" },
+    "intro": { "type": "string", "default": "Ten quick questions, about two minutes. Answer honestly; nothing is sent unless you ask for your results by email." },
+    "auditUrl": { "type": "string", "default": "/request-an-audit/" },
+    "resourceUrl": { "type": "string", "default": "/cybersecurity-essentials/" }
+  },
+  "supports": { "align": ["wide"], "anchor": true, "html": false },
+  "render": "file:./render.php",
+  "editorScript": "msp-nexus-core-blocks-editor",
+  "style": "msp-nexus-forms"
+}

@@ -42,7 +42,7 @@
     save: function () { return null; }
   });
 
-  ['msp-nexus/consultation-form', 'msp-nexus/breadcrumbs', 'msp-nexus/audit-request-form'].forEach(function (name) {
+  ['msp-nexus/consultation-form', 'msp-nexus/breadcrumbs', 'msp-nexus/audit-request-form', 'msp-nexus/security-assessment'].forEach(function (name) {
     blocks.registerBlockType(name, {
       edit: function (props) { return el(ServerSideRender, { block: name, attributes: props.attributes }); },
       save: function () { return null; }
