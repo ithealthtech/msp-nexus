@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.1 — 2026-10-19
+
+- Settings screen reorganized into sections (Business, Contact, Social, Messages, Design, Updates & integrations) with a side menu, keyboard navigation, and search across every setting. One Save still keeps every field, the last section reopens after saving, and a Settings saved notice appears.
+- Design colors start from the theme defaults, fixing a bug where saving the page on a fresh install stored black for every unset color.
+- Admin light/dark mode now follows the computer until each user picks one.
+
 ## 0.9.0 — 2026-10-19
 
 ### Redesigned admin

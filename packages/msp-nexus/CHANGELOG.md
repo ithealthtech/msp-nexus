@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1 — 2026-10-19
+
+- Version aligned with MSP Nexus Core 0.9.1.
+
 ## 0.9.0 — 2026-10-19
 
 - Version aligned with MSP Nexus Core 0.9.0 (redesigned admin).

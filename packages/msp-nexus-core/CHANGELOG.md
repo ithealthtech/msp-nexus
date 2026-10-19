@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1 — 2026-10-19
+
+- Sectioned Settings screen with side menu and search; color fields default to theme colors (no more black on fresh installs); admin scheme follows the OS until chosen.
+
 ## 0.9.0 — 2026-10-19
 
 - Redesigned admin: shared top bar and navigation, card-based screens, new Dashboard, light and dark modes, Settings on its own screen.
