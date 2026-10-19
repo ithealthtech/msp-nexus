@@ -107,7 +107,7 @@ async function sendPackage(response, file, requestId) {
   await pipeline(createReadStream(file.path), response);
 }
 
-export function createHandler({ engine, updates, packages = null, entitlements = null, webhook = null, rateLimiter = null, releaseCatalog = null, operatorToken = '', sessions = new SessionStore(), loginThrottle = new LoginThrottle(), secureCookies = false, assets = loadAssets() }) {
+export function createHandler({ engine, updates, packages = null, entitlements = null, webhook = null, rateLimiter = null, releaseCatalog = null, operatorToken = '', sessions = new SessionStore(), loginThrottle = new LoginThrottle(), secureCookies = false, trustProxyHops = 0, assets = loadAssets() }) {
   const cookieName = (kind) => `${secureCookies ? '__Host-' : ''}${'operator' === kind ? 'nx_op' : 'nx_cu'}`;
   const cookie = (kind, value, maxAge) => `${cookieName(kind)}=${value}; Path=/; HttpOnly; SameSite=Strict; Max-Age=${maxAge}${secureCookies ? '; Secure' : ''}`;
   const sessionFor = (request, kind) => {
@@ -139,7 +139,14 @@ export function createHandler({ engine, updates, packages = null, entitlements =
     if ('GET' !== request.method) assertCsrf(request, found.session, request.headers['x-csrf-token']);
     return found.session.data.portalToken;
   };
-  const clientOf = (request) => request.socket.remoteAddress ?? 'unknown';
+  // Behind trusted reverse proxies, the client is the address the outermost trusted proxy appended to
+  // X-Forwarded-For. Without configured hops the header is ignored, because clients can forge it.
+  const clientOf = (request) => {
+    const socket = request.socket.remoteAddress ?? 'unknown';
+    if (trustProxyHops < 1) return socket;
+    const chain = String(request.headers['x-forwarded-for'] ?? '').split(',').map((part) => part.trim()).filter(Boolean);
+    return chain.length >= trustProxyHops ? chain[chain.length - trustProxyHops] : socket;
+  };
 
   const signIn = async (request, response, requestId, kind) => {
     const base = 'operator' === kind ? '/operator' : '/portal';
@@ -187,7 +194,7 @@ export function createHandler({ engine, updates, packages = null, entitlements =
     const requestId = randomUUID();
     try {
       const route = new URL(request.url, 'http://service.local').pathname;
-      if (rateLimiter && route !== '/health') rateLimiter.consume(`${request.socket.remoteAddress ?? 'unknown'}:${route}`);
+      if (rateLimiter && route !== '/health') rateLimiter.consume(`${clientOf(request)}:${route}`);
       if (request.method === 'GET' && request.url === '/health') return send(response, 200, { status: 'ok' }, requestId);
       if (request.method === 'GET' && request.url.startsWith('/v1/packages/')) {
         if (!packages) throw new Error('release_not_found');

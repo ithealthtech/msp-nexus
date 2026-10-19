@@ -78,7 +78,7 @@ const webhook = process.env.COMMERCE_WEBHOOK_SECRET ? new WebhookProcessor({
   }
 }) : null;
 const rateLimiter = new RateLimiter({ limit: Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60), windowMs: 60000 });
-const server = createServer(createHandler({ engine, updates, packages, entitlements, webhook, rateLimiter, releaseCatalog, operatorToken: process.env.OPERATOR_TOKEN ?? '', secureCookies: process.env.NODE_ENV === 'production' || (process.env.PUBLIC_ORIGIN ?? '').startsWith('https://') }));
+const server = createServer(createHandler({ engine, updates, packages, entitlements, webhook, rateLimiter, releaseCatalog, operatorToken: process.env.OPERATOR_TOKEN ?? '', secureCookies: process.env.NODE_ENV === 'production' || (process.env.PUBLIC_ORIGIN ?? '').startsWith('https://'), trustProxyHops: Math.max(0, Number.parseInt(process.env.TRUST_PROXY_HOPS ?? '0', 10) || 0) }));
 
 server.listen(port, '127.0.0.1', () => {
   console.log(`MSP Nexus licensing service listening on http://127.0.0.1:${port}`);

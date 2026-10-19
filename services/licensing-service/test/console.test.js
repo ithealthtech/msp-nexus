@@ -183,3 +183,23 @@ test('license keys use five readable groups without look-alike characters', asyn
     assert.match(key, /^MSPN-([2-9A-HJ-NP-Z]{5}-){4}[2-9A-HJ-NP-Z]{5}$/);
   }
 });
+
+test('behind a trusted proxy the sign-in lockout is per forwarded client, not per proxy', async (context) => {
+  const { server, origin } = await fixture({ loginThrottle: new LoginThrottle({ limit: 2 }), trustProxyHops: 1 });
+  context.after(() => new Promise((resolve) => server.close(resolve)));
+  const attempt = (client, secret) => fetch(`${origin}/operator/session`, { method: 'POST', redirect: 'manual', headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-forwarded-for': client }, body: form({ secret }) });
+  await attempt('203.0.113.9', 'bad-1');
+  await attempt('203.0.113.9', 'bad-2');
+  assert.equal((await attempt('203.0.113.9', operatorToken)).status, 429);
+  // A spoofed left-most entry does not escape the lockout: the trusted proxy's appended address is used.
+  assert.equal((await attempt('198.51.100.1, 203.0.113.9', operatorToken)).status, 429);
+  assert.equal((await attempt('198.51.100.20', operatorToken)).status, 303);
+});
+
+test('without trusted proxies X-Forwarded-For is ignored', async (context) => {
+  const { server, origin } = await fixture({ loginThrottle: new LoginThrottle({ limit: 1 }) });
+  context.after(() => new Promise((resolve) => server.close(resolve)));
+  const attempt = (client, secret) => fetch(`${origin}/operator/session`, { method: 'POST', redirect: 'manual', headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-forwarded-for': client }, body: form({ secret }) });
+  await attempt('203.0.113.9', 'bad');
+  assert.equal((await attempt('198.51.100.20', operatorToken)).status, 429);
+});

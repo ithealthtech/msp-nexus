@@ -104,7 +104,8 @@
 			});
 			var expiring = licenses.filter(function (l) {
 				var days = N.daysUntil(l.expires_at);
-				return ('active' === l.status || 'grace' === l.status) && days <= 30;
+				// Active only: grace and expired licenses are counted once, under lapsed.
+				return 'active' === l.status && days <= 30;
 			}).sort(function (a, b) {
 				return new Date(a.expires_at) - new Date(b.expires_at);
 			});
