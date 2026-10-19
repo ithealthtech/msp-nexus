@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.3 — 2026-10-19
+
+- Version aligned with the 0.9.3 release (licensing console).
+
 ## 0.9.2 — 2026-10-19
 
 - Version aligned with the MSP Nexus 0.9.2 theme.

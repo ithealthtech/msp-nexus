@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.9.3 — 2026-10-19
+
+### Licensing console
+- The licensing service gets a browser console at /operator: dashboard, searchable license list, license detail (renew, change plan, edit customer, suspend, cancel, revoke, reinstate, move or deactivate sites), new-license flow that shows the key and portal token once, releases, and activity.
+- Customer portal at /portal: plan, sites, move a site, download data, privacy requests.
+- Sign-in with HttpOnly SameSite=Strict session cookies, CSRF tokens, same-origin checks, a strict content security policy, and sign-in lockout.
+- Licenses record customer name, email, and private notes; operators can deactivate a single site; new keys use five readable groups without look-alike characters.
+
 ## 0.9.2 — 2026-10-19
 
 - New Client reviews pattern (msp-nexus/section-reviews, Trust & proof): rating summary with a link to the review profile, a featured client quote, and a grid of review cards with stars, reviewer, and source. Ships with clearly marked samples to replace with real reviews.

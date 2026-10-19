@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: MSP Nexus Licensing and Update API
-  version: 0.9.2
+  version: 0.9.3
   description: Versioned entitlement, activation, release, package, portal, and commerce-webhook API.
 servers:
   - url: https://licenses.example.com
@@ -135,6 +135,22 @@ paths:
       summary: Upgrade or downgrade plan, allowance, and entitlements
       security: [{ bearerAuth: [] }]
       responses: { '200': { description: Updated license } }
+  /v1/operator/licenses/details:
+    post:
+      summary: Update operator-maintained customer name, email, and notes (notes are never shown to customers)
+      security: [{ bearerAuth: [] }, { operatorSession: [] }]
+      responses: { '200': { description: Updated license }, '400': { description: Invalid email } }
+  /v1/operator/activations/deactivate:
+    post:
+      summary: Deactivate one site activation and free its slot
+      security: [{ bearerAuth: [] }, { operatorSession: [] }]
+      responses: { '200': { description: Updated license } }
+  /v1/operator/audit:
+    get:
+      summary: Audit events, newest first
+      security: [{ bearerAuth: [] }, { operatorSession: [] }]
+      parameters: [{ name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 1000, default: 100 } }]
+      responses: { '200': { description: Audit event collection } }
   /v1/operator/activations/transfer:
     post:
       summary: Transfer an activation to a normalized replacement domain
@@ -170,6 +186,7 @@ paths:
         '503': { description: Handler failed and event entered dead-letter handling }
 components:
   securitySchemes:
+    operatorSession: { type: apiKey, in: cookie, name: nx_op, description: "Console session cookie (__Host-nx_op in production); unsafe methods also need x-csrf-token." }
     bearerAuth: { type: http, scheme: bearer }
   responses:
     Denied: { description: Authentication or entitlement denied }
@@ -207,3 +224,10 @@ components:
         signed_entitlement: { type: object }
         entitlement_signature: { type: string, contentEncoding: base64 }
         signature_algorithm: { const: Ed25519 }
+
+x-browser-console: >-
+  The operator console (GET /operator) and customer portal (GET /portal) sign in with a form POST to
+  /operator/session or /portal/session (field: secret) and receive an HttpOnly, SameSite=Strict session cookie
+  (__Host- prefixed and Secure in production). Cookie-authenticated requests other than GET must send the
+  session CSRF token in the x-csrf-token header; a cross-host Origin is rejected (403 csrf_failed). Five failed
+  sign-ins in 15 minutes lock that client out (429). Sign out with POST /operator/session/end or /portal/session/end.

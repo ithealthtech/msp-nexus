@@ -10,9 +10,13 @@ export const LICENSE_STATES = Object.freeze({
   CANCELLED: 'cancelled'
 });
 
+// Exactly 32 symbols without look-alikes (no 0/O or 1/I), so keys survive being read aloud or retyped.
+const KEY_ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+
 export function generateLicenseKey(prefix = 'MSPN') {
-  const body = randomBytes(18).toString('base64url').toUpperCase();
-  return `${prefix}-${body.slice(0, 6)}-${body.slice(6, 12)}-${body.slice(12, 18)}-${body.slice(18)}`;
+  // 25 symbols at 5 bits each is 125 bits. 256 is a multiple of 32, so masking a byte stays uniform.
+  const symbols = [...randomBytes(25)].map((byte) => KEY_ALPHABET[byte & 31]).join('');
+  return `${prefix}-${symbols.match(/.{5}/g).join('-')}`;
 }
 
 export function hashLicenseKey(key, pepper) {
@@ -22,6 +26,16 @@ export function hashLicenseKey(key, pepper) {
 
 export function hashPortalToken(token, pepper) {
   return createHash('sha256').update(`${pepper}:portal:${token}`).digest('hex');
+}
+
+function customerDetails({ customerName = '', customerEmail = '', notes = '' }) {
+  const email = String(customerEmail ?? '').trim().slice(0, 254);
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('invalid_request');
+  return {
+    customerName: String(customerName ?? '').trim().slice(0, 200),
+    customerEmail: email,
+    notes: String(notes ?? '').trim().slice(0, 2000)
+  };
 }
 
 function constantEquals(a, b) {
@@ -67,7 +81,7 @@ export class LicensingEngine {
     return this.#response(license, activation);
   }
 
-  async issue({ plan = 'business', expiresAt, activationLimit = 1, graceDays = 14, allowFreeStaging = true, allowMultisite = false, entitlements = [] }) {
+  async issue({ plan = 'business', expiresAt, activationLimit = 1, graceDays = 14, allowFreeStaging = true, allowMultisite = false, entitlements = [], customerName = '', customerEmail = '', notes = '' }) {
     const expiry = new Date(expiresAt);
     if (Number.isNaN(expiry.getTime())) throw new Error('invalid_request');
     const key = generateLicenseKey();
@@ -84,11 +98,42 @@ export class LicensingEngine {
       allowFreeStaging: Boolean(allowFreeStaging),
       allowMultisite: Boolean(allowMultisite),
       entitlements: [...new Set(entitlements.map(String))],
+      ...customerDetails({ customerName, customerEmail, notes }),
+      issuedAt: this.clock().toISOString(),
       activations: []
     };
     await this.repository.saveLicense(license);
     await this.repository.appendAudit({ action: 'license.issued', licenseId: license.id, at: this.clock().toISOString() });
-    return { license: this.#publicLicense(license), license_key: key, portal_access_token: portalToken };
+    return { license: this.#publicLicense(license, true), license_key: key, portal_access_token: portalToken };
+  }
+
+  /** Operator-maintained customer details; they never affect entitlement. */
+  async updateDetails({ licenseId, customerName = '', customerEmail = '', notes = '' }) {
+    const license = await this.repository.getLicense(licenseId);
+    if (!license) throw new Error('license_not_found');
+    Object.assign(license, customerDetails({ customerName, customerEmail, notes }));
+    await this.repository.saveLicense(license);
+    await this.repository.appendAudit({ action: 'license.details_changed', licenseId, at: this.clock().toISOString() });
+    return this.#publicLicense(license, true);
+  }
+
+  /** Operator deactivation of one site, for when the customer cannot reach the site to deactivate it. */
+  async deactivateActivation({ licenseId, activationId }) {
+    const license = await this.repository.getLicense(licenseId);
+    if (!license) throw new Error('license_not_found');
+    const activation = license.activations.find((item) => item.id === activationId && !item.deactivatedAt);
+    if (!activation) throw new Error('activation_not_found');
+    activation.deactivatedAt = this.clock().toISOString();
+    await this.repository.saveLicense(license);
+    await this.repository.appendAudit({ action: 'license.deactivated', licenseId, activationId, site: activation.site, actor: 'operator', at: this.clock().toISOString() });
+    return this.#publicLicense(license, true);
+  }
+
+  async audit(limit = 100) {
+    if (typeof this.repository.listAudit !== 'function') return [];
+    const events = await this.repository.listAudit(limit);
+    // Newest first regardless of storage adapter; ISO timestamps sort lexically.
+    return events.sort((a, b) => String(b.at ?? '').localeCompare(String(a.at ?? ''))).slice(0, Math.min(1000, Math.max(1, Number(limit) || 100)));
   }
 
   async setStatus({ licenseId, status }) {
@@ -150,7 +195,7 @@ export class LicensingEngine {
 
   async list() {
     const licenses = await this.repository.listLicenses();
-    return licenses.map((license) => this.#publicLicense(license));
+    return licenses.map((license) => this.#publicLicense(license, true));
   }
 
   async customerSummary(portalToken) {
@@ -232,10 +277,13 @@ export class LicensingEngine {
     };
   }
 
-  #publicLicense(license) {
+  #publicLicense(license, operator = false) {
     const expires = new Date(license.expiresAt);
     return {
       id: license.id,
+      customer_name: license.customerName ?? '',
+      customer_email: license.customerEmail ?? '',
+      ...(operator ? { notes: license.notes ?? '', issued_at: license.issuedAt ?? null } : {}),
       status: this.#status(license),
       administrative_status: license.status,
       plan: license.plan,
