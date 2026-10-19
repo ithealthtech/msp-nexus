@@ -107,50 +107,152 @@ final class Settings
         }
 
         $settings = get_option(self::OPTION, array());
+        $settings = is_array($settings) ? $settings : array();
+        $sections = $this->sections();
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only flag set by options.php after a verified save.
+        $saved = isset($_GET['settings-updated']) && 'true' === sanitize_key(wp_unslash((string) $_GET['settings-updated']));
         ?>
-        <div class="wrap">
-            <h1><?php esc_html_e('MSP Nexus settings', 'msp-nexus-core'); ?></h1>
-            <p><?php esc_html_e('Manage organization-wide contact and conversion details. Content remains available if the commercial license expires.', 'msp-nexus-core'); ?></p>
-            <form action="options.php" method="post">
+        <div class="wrap msp-nexus-settings">
+            <h1><?php esc_html_e('Settings', 'msp-nexus-core'); ?></h1>
+            <p><?php esc_html_e('Company details, contact information, and design defaults used across your site. Content stays available if the commercial license expires.', 'msp-nexus-core'); ?></p>
+            <?php if ($saved) : ?><div class="notice notice-success is-dismissible"><p><?php esc_html_e('Settings saved.', 'msp-nexus-core'); ?></p></div><?php endif; ?>
+            <form action="options.php" method="post" class="msp-nexus-settings__form">
                 <?php settings_fields('msp_nexus'); ?>
-                <table class="form-table" role="presentation">
-                    <?php $this->section(__('Your business', 'msp-nexus-core'), __('Fill these in first. Blocks can show any of them as a dynamic value, so you update them in one place.', 'msp-nexus-core')); ?>
-                    <?php $this->field('organization_name', __('Organization name', 'msp-nexus-core'), $settings, 'text', __('Used in search-engine structured data. Available to any block as a dynamic value.', 'msp-nexus-core'), __('Your Company, LLC', 'msp-nexus-core')); ?>
-                    <?php $this->textarea('company_address', __('Company address', 'msp-nexus-core'), $settings, __('One line per address line. Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
-                    <?php $this->textarea('business_hours', __('Business hours', 'msp-nexus-core'), $settings, __('For example: Mon–Fri 8am–6pm, service desk 24/7. Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
-                    <?php $this->section(__('How people reach you', 'msp-nexus-core'), __('Header and contact buttons read these, so you only change them once.', 'msp-nexus-core')); ?>
-                    <?php $this->field('sales_phone', __('Sales phone', 'msp-nexus-core'), $settings, 'tel', __('For new prospects. Used by the call button on flagship contact pages.', 'msp-nexus-core'), '(555) 555-0100'); ?>
-                    <?php $this->field('support_phone', __('Support phone', 'msp-nexus-core'), $settings, 'tel', __('For existing clients who need help now. Available to any block as a dynamic value.', 'msp-nexus-core'), '(555) 555-0199'); ?>
-                    <?php $this->field('sales_email', __('Sales email', 'msp-nexus-core'), $settings, 'email', __('Consultation form submissions are emailed here. Also used by the email button on flagship contact pages.', 'msp-nexus-core'), 'hello@example.com'); ?>
-                    <?php $this->field('support_url', __('Client portal link', 'msp-nexus-core'), $settings, 'url', __('Your ticketing or client portal. Available to any block as a dynamic value.', 'msp-nexus-core'), 'https://support.example.com'); ?>
-                    <?php $this->field('cta_url', __('"Book a call" link', 'msp-nexus-core'), $settings, 'url', __('Where the header "Book a discovery call" button goes. Leave blank to keep it pointing at your Contact page.', 'msp-nexus-core'), 'https://calendly.com/your-team'); ?>
-                    <?php $this->section(__('Social profiles', 'msp-nexus-core'), __('Available to social-link blocks as dynamic values.', 'msp-nexus-core')); ?>
-                    <?php $this->field('linkedin_url', __('LinkedIn', 'msp-nexus-core'), $settings, 'url', '', 'https://www.linkedin.com/company/…'); ?>
-                    <?php $this->field('facebook_url', __('Facebook', 'msp-nexus-core'), $settings, 'url', '', 'https://www.facebook.com/…'); ?>
-                    <?php $this->field('youtube_url', __('YouTube', 'msp-nexus-core'), $settings, 'url', '', 'https://www.youtube.com/@…'); ?>
-                    <?php $this->section(__('Site-wide messages', 'msp-nexus-core'), __('Optional. Leave blank to show nothing.', 'msp-nexus-core')); ?>
-                    <?php $this->field('announcement', __('Top-bar announcement', 'msp-nexus-core'), $settings, 'text', __('A short line above the header when you use the "Header with utility navigation" layout.', 'msp-nexus-core')); ?>
-                    <?php $this->textarea('emergency_message', __('Emergency-support message', 'msp-nexus-core'), $settings, __('For example: "System down? Call the support line for 24/7 help." Available to any block as a dynamic value.', 'msp-nexus-core')); ?>
-                    <?php $this->section(__('Design fine-tuning (optional)', 'msp-nexus-core'), __('The defaults are already tuned for readability. Change these only to match brand guidelines; Appearance > Editor > Styles can override them.', 'msp-nexus-core')); ?>
-                    <?php $this->field('accent_color', __('Action accent color', 'msp-nexus-core'), $settings, 'color'); ?>
-                    <?php $this->field('surface_color', __('Primary surface color', 'msp-nexus-core'), $settings, 'color'); ?>
-                    <?php $this->field('text_color', __('Primary text color', 'msp-nexus-core'), $settings, 'color'); ?>
-                    <?php $this->field('muted_color', __('Muted text color', 'msp-nexus-core'), $settings, 'color'); ?>
-                    <?php $this->field('focus_color', __('Keyboard focus color', 'msp-nexus-core'), $settings, 'color'); ?>
-                    <?php $this->number('button_radius', __('Button corner radius (px)', 'msp-nexus-core'), $settings, 0, 48, 3); ?>
-                    <?php $this->number('button_padding_x', __('Button horizontal padding (px)', 'msp-nexus-core'), $settings, 8, 64, 24); ?>
-                    <?php $this->number('button_padding_y', __('Button vertical padding (px)', 'msp-nexus-core'), $settings, 6, 32, 14); ?>
-                    <?php $this->number('card_radius', __('Card corner radius (px)', 'msp-nexus-core'), $settings, 0, 64, 12); ?>
-                    <?php $this->number('card_border', __('Card border width (px)', 'msp-nexus-core'), $settings, 0, 8, 1); ?>
-                    <?php $this->number('card_shadow', __('Card shadow level (0–5)', 'msp-nexus-core'), $settings, 0, 5, 2); ?>
-                    <?php $this->number('type_scale', __('Base type scale (%)', 'msp-nexus-core'), $settings, 85, 125, 100); ?>
-                    <?php $this->number('heading_weight', __('Heading font weight', 'msp-nexus-core'), $settings, 300, 900, 600); ?>
-                    <?php $this->number('line_height', __('Body line height (%)', 'msp-nexus-core'), $settings, 120, 200, 165); ?>
-                    <?php $this->number('content_width', __('Content width (px)', 'msp-nexus-core'), $settings, 480, 1200, 704); ?>
-                    <?php $this->number('wide_width', __('Wide content width (px)', 'msp-nexus-core'), $settings, 720, 1920, 1216); ?>
-                    <?php $this->number('section_spacing', __('Default section spacing (px)', 'msp-nexus-core'), $settings, 24, 160, 80); ?>
-                    <tr><th scope="row"><?php esc_html_e('Link presentation', 'msp-nexus-core'); ?></th><td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[link_underline]'); ?>" value="1" <?php checked(! array_key_exists('link_underline', $settings) || ! empty($settings['link_underline'])); ?>> <?php esc_html_e('Underline inline links by default', 'msp-nexus-core'); ?></label></td></tr>
-                    <?php $this->section(__('Integrations and updates', 'msp-nexus-core')); ?>
+                <div class="msp-nexus-settings__layout">
+                    <aside class="msp-nexus-settings__nav">
+                        <div class="msp-nexus-settings__search">
+                            <?php Shell::icon('search'); ?>
+                            <label class="screen-reader-text" for="msp-nexus-settings-search"><?php esc_html_e('Search settings', 'msp-nexus-core'); ?></label>
+                            <input type="search" id="msp-nexus-settings-search" placeholder="<?php esc_attr_e('Search settings', 'msp-nexus-core'); ?>" autocomplete="off">
+                        </div>
+                        <ul class="msp-nexus-settings__tabs" role="tablist" aria-orientation="vertical" aria-label="<?php esc_attr_e('Settings sections', 'msp-nexus-core'); ?>">
+                            <?php foreach ($sections as $index => $section) : ?>
+                                <li role="presentation"><a href="#<?php echo esc_attr($section['id']); ?>" id="msp-nexus-tab-<?php echo esc_attr($section['id']); ?>" class="msp-nexus-settings__tab" role="tab" data-section="<?php echo esc_attr($section['id']); ?>" aria-controls="msp-nexus-section-<?php echo esc_attr($section['id']); ?>" aria-selected="<?php echo 0 === $index ? 'true' : 'false'; ?>"><?php Shell::icon($section['icon']); ?><span class="msp-nexus-settings__tab-text"><span class="msp-nexus-settings__tab-label"><?php echo esc_html($section['label']); ?></span><span class="msp-nexus-settings__tab-desc"><?php echo esc_html($section['summary']); ?></span></span><span class="msp-nexus-settings__count" hidden></span></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </aside>
+                    <div class="msp-nexus-settings__panels">
+                        <p class="msp-nexus-settings__empty" hidden><?php esc_html_e('No settings match your search.', 'msp-nexus-core'); ?></p>
+                        <?php foreach ($sections as $section) : ?>
+                            <section class="msp-nexus-settings__panel" id="msp-nexus-section-<?php echo esc_attr($section['id']); ?>" role="tabpanel" aria-labelledby="msp-nexus-tab-<?php echo esc_attr($section['id']); ?>" tabindex="-1">
+                                <header class="msp-nexus-settings__head">
+                                    <span class="msp-nexus-card__icon"><?php Shell::icon($section['icon']); ?></span>
+                                    <div><h2><?php echo esc_html($section['label']); ?></h2><p><?php echo esc_html($section['description']); ?></p></div>
+                                </header>
+                                <?php foreach ($section['groups'] as $group) : ?>
+                                    <?php if ('' !== $group['title']) : ?><h3 class="msp-nexus-settings__group"><?php echo esc_html($group['title']); ?></h3><?php endif; ?>
+                                    <table class="form-table" role="presentation"><?php call_user_func($group['rows'], $settings); ?></table>
+                                <?php endforeach; ?>
+                            </section>
+                        <?php endforeach; ?>
+                        <?php submit_button(__('Save settings', 'msp-nexus-core')); ?>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <?php
+    }
+
+    /**
+     * Settings screen sections. Every field stays in the one form so a single save keeps them all.
+     *
+     * @return array<int, array{id:string,label:string,summary:string,description:string,icon:string,groups:array<int, array{title:string,rows:callable}>}>
+     */
+    private function sections(): array
+    {
+        return array(
+            array(
+                'id' => 'business',
+                'label' => __('Business', 'msp-nexus-core'),
+                'summary' => __('Name, address, hours', 'msp-nexus-core'),
+                'description' => __('Fill these in first. Blocks can show any of them as a dynamic value, so you update them in one place.', 'msp-nexus-core'),
+                'icon' => 'building',
+                'groups' => array(array('title' => '', 'rows' => function (array $settings): void {
+                    $this->field('organization_name', __('Organization name', 'msp-nexus-core'), $settings, 'text', __('Used in search-engine structured data. Available to any block as a dynamic value.', 'msp-nexus-core'), __('Your Company, LLC', 'msp-nexus-core'));
+                    $this->textarea('company_address', __('Company address', 'msp-nexus-core'), $settings, __('One line per address line. Available to any block as a dynamic value.', 'msp-nexus-core'));
+                    $this->textarea('business_hours', __('Business hours', 'msp-nexus-core'), $settings, __('For example: Mon–Fri 8am–6pm, service desk 24/7. Available to any block as a dynamic value.', 'msp-nexus-core'));
+                })),
+            ),
+            array(
+                'id' => 'contact',
+                'label' => __('Contact', 'msp-nexus-core'),
+                'summary' => __('Phones, email, links', 'msp-nexus-core'),
+                'description' => __('Header and contact buttons read these, so you only change them once.', 'msp-nexus-core'),
+                'icon' => 'phone',
+                'groups' => array(array('title' => '', 'rows' => function (array $settings): void {
+                    $this->field('sales_phone', __('Sales phone', 'msp-nexus-core'), $settings, 'tel', __('For new prospects. Used by the call button on flagship contact pages.', 'msp-nexus-core'), '(555) 555-0100');
+                    $this->field('support_phone', __('Support phone', 'msp-nexus-core'), $settings, 'tel', __('For existing clients who need help now. Available to any block as a dynamic value.', 'msp-nexus-core'), '(555) 555-0199');
+                    $this->field('sales_email', __('Sales email', 'msp-nexus-core'), $settings, 'email', __('Consultation form submissions are emailed here. Also used by the email button on flagship contact pages.', 'msp-nexus-core'), 'hello@example.com');
+                    $this->field('support_url', __('Client portal link', 'msp-nexus-core'), $settings, 'url', __('Your ticketing or client portal. Available to any block as a dynamic value.', 'msp-nexus-core'), 'https://support.example.com');
+                    $this->field('cta_url', __('"Book a call" link', 'msp-nexus-core'), $settings, 'url', __('Where the header "Book a discovery call" button goes. Leave blank to keep it pointing at your Contact page.', 'msp-nexus-core'), 'https://calendly.com/your-team');
+                })),
+            ),
+            array(
+                'id' => 'social',
+                'label' => __('Social', 'msp-nexus-core'),
+                'summary' => __('LinkedIn, Facebook, YouTube', 'msp-nexus-core'),
+                'description' => __('Available to social-link blocks as dynamic values.', 'msp-nexus-core'),
+                'icon' => 'share',
+                'groups' => array(array('title' => '', 'rows' => function (array $settings): void {
+                    $this->field('linkedin_url', __('LinkedIn', 'msp-nexus-core'), $settings, 'url', '', 'https://www.linkedin.com/company/…');
+                    $this->field('facebook_url', __('Facebook', 'msp-nexus-core'), $settings, 'url', '', 'https://www.facebook.com/…');
+                    $this->field('youtube_url', __('YouTube', 'msp-nexus-core'), $settings, 'url', '', 'https://www.youtube.com/@…');
+                })),
+            ),
+            array(
+                'id' => 'messages',
+                'label' => __('Messages', 'msp-nexus-core'),
+                'summary' => __('Announcement, emergency line', 'msp-nexus-core'),
+                'description' => __('Optional. Leave blank to show nothing.', 'msp-nexus-core'),
+                'icon' => 'megaphone',
+                'groups' => array(array('title' => '', 'rows' => function (array $settings): void {
+                    $this->field('announcement', __('Top-bar announcement', 'msp-nexus-core'), $settings, 'text', __('A short line above the header when you use the "Header with utility navigation" layout.', 'msp-nexus-core'));
+                    $this->textarea('emergency_message', __('Emergency-support message', 'msp-nexus-core'), $settings, __('For example: "System down? Call the support line for 24/7 help." Available to any block as a dynamic value.', 'msp-nexus-core'));
+                })),
+            ),
+            array(
+                'id' => 'design',
+                'label' => __('Design', 'msp-nexus-core'),
+                'summary' => __('Colors, buttons, spacing', 'msp-nexus-core'),
+                'description' => __('Optional. The defaults are already tuned for readability. Change these only to match brand guidelines; Appearance > Editor > Styles can override them.', 'msp-nexus-core'),
+                'icon' => 'palette',
+                'groups' => array(
+                    array('title' => __('Colors', 'msp-nexus-core'), 'rows' => function (array $settings): void {
+                        $this->color('accent_color', __('Action accent color', 'msp-nexus-core'), $settings, '#69bff5');
+                        $this->color('surface_color', __('Primary surface color', 'msp-nexus-core'), $settings, '#121124');
+                        $this->color('text_color', __('Primary text color', 'msp-nexus-core'), $settings, '#ffffff');
+                        $this->color('muted_color', __('Muted text color', 'msp-nexus-core'), $settings, '#d9d9e5');
+                        $this->color('focus_color', __('Keyboard focus color', 'msp-nexus-core'), $settings, '#69bff5');
+                    }),
+                    array('title' => __('Buttons and cards', 'msp-nexus-core'), 'rows' => function (array $settings): void {
+                        $this->number('button_radius', __('Button corner radius (px)', 'msp-nexus-core'), $settings, 0, 48, 3);
+                        $this->number('button_padding_x', __('Button horizontal padding (px)', 'msp-nexus-core'), $settings, 8, 64, 24);
+                        $this->number('button_padding_y', __('Button vertical padding (px)', 'msp-nexus-core'), $settings, 6, 32, 14);
+                        $this->number('card_radius', __('Card corner radius (px)', 'msp-nexus-core'), $settings, 0, 64, 12);
+                        $this->number('card_border', __('Card border width (px)', 'msp-nexus-core'), $settings, 0, 8, 1);
+                        $this->number('card_shadow', __('Card shadow level (0–5)', 'msp-nexus-core'), $settings, 0, 5, 2);
+                    }),
+                    array('title' => __('Type and spacing', 'msp-nexus-core'), 'rows' => function (array $settings): void {
+                        $this->number('type_scale', __('Base type scale (%)', 'msp-nexus-core'), $settings, 85, 125, 100);
+                        $this->number('heading_weight', __('Heading font weight', 'msp-nexus-core'), $settings, 300, 900, 600);
+                        $this->number('line_height', __('Body line height (%)', 'msp-nexus-core'), $settings, 120, 200, 165);
+                        $this->number('content_width', __('Content width (px)', 'msp-nexus-core'), $settings, 480, 1200, 704);
+                        $this->number('wide_width', __('Wide content width (px)', 'msp-nexus-core'), $settings, 720, 1920, 1216);
+                        $this->number('section_spacing', __('Default section spacing (px)', 'msp-nexus-core'), $settings, 24, 160, 80);
+                        ?>
+                        <tr><th scope="row"><?php esc_html_e('Link presentation', 'msp-nexus-core'); ?></th><td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[link_underline]'); ?>" value="1" <?php checked(! array_key_exists('link_underline', $settings) || ! empty($settings['link_underline'])); ?>> <?php esc_html_e('Underline inline links by default', 'msp-nexus-core'); ?></label></td></tr>
+                        <?php
+                    }),
+                ),
+            ),
+            array(
+                'id' => 'updates',
+                'label' => __('Updates & integrations', 'msp-nexus-core'),
+                'summary' => __('Update channel, schema, forms', 'msp-nexus-core'),
+                'description' => __('How MSP Nexus updates itself and works with other plugins.', 'msp-nexus-core'),
+                'icon' => 'refresh',
+                'groups' => array(array('title' => '', 'rows' => function (array $settings): void {
+                    ?>
                     <tr><th scope="row"><?php esc_html_e('Integrations', 'msp-nexus-core'); ?></th><td>
                         <label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[enable_schema]'); ?>" value="1" <?php checked(! array_key_exists('enable_schema', $settings) || ! empty($settings['enable_schema'])); ?>> <?php esc_html_e('Enable conservative built-in schema when no supported SEO plugin is active', 'msp-nexus-core'); ?></label><br>
                         <label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[enable_native_form]'); ?>" value="1" <?php checked(! array_key_exists('enable_native_form', $settings) || ! empty($settings['enable_native_form'])); ?>> <?php esc_html_e('Enable the native consultation form handler', 'msp-nexus-core'); ?></label>
@@ -167,17 +269,23 @@ final class Settings
                         <th scope="row"><?php esc_html_e('Automatic updates', 'msp-nexus-core'); ?></th>
                         <td><label><input type="checkbox" name="<?php echo esc_attr(self::OPTION . '[automatic_updates]'); ?>" value="1" <?php checked(! empty($settings['automatic_updates'])); ?>> <?php esc_html_e('Allow WordPress to install verified MSP Nexus theme and plugin updates automatically.', 'msp-nexus-core'); ?></label><p class="description"><?php esc_html_e('Updates come from the published MSP Nexus releases (or your licensed channel, when one is active), and a package is only installed when its SHA-256 digest matches the release. WordPress checks twice a day and installs in the background. Keep a current backup.', 'msp-nexus-core'); ?></p></td>
                     </tr>
-                </table>
-                <?php submit_button(); ?>
-            </form>
-        </div>
-        <?php
+                    <?php
+                })),
+            ),
+        );
     }
 
-    private function section(string $title, string $description = ''): void
+    /**
+     * A color picker that starts from the theme default, so an unset value is never saved as black.
+     *
+     * @param array<string, mixed> $settings
+     */
+    private function color(string $name, string $label, array $settings, string $default): void
     {
+        $id = 'msp-nexus-' . $name;
+        $value = sanitize_hex_color((string) ($settings[$name] ?? '')) ?: $default;
         ?>
-        <tr><th colspan="2" style="padding-bottom:0"><h2 style="margin:1.5em 0 .25em"><?php echo esc_html($title); ?></h2><?php if ('' !== $description) : ?><p class="description" style="font-weight:400"><?php echo esc_html($description); ?></p><?php endif; ?></th></tr>
+        <tr><th scope="row"><label for="<?php echo esc_attr($id); ?>"><?php echo esc_html($label); ?></label></th><td><input id="<?php echo esc_attr($id); ?>" name="<?php echo esc_attr(self::OPTION . '[' . $name . ']'); ?>" type="color" value="<?php echo esc_attr($value); ?>"> <span class="description"><?php echo esc_html(sprintf(/* translators: %s: default hex color */ __('Default: %s', 'msp-nexus-core'), $default)); ?></span></td></tr>
         <?php
     }
 

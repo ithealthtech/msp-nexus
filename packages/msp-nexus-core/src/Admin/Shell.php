@@ -57,7 +57,7 @@ final class Shell
         if (! self::is_nexus_screen()) {
             return $classes;
         }
-        return $classes . ' msp-nexus-ui' . ('dark' === self::scheme() ? ' msp-nexus-ui--dark' : '');
+        return $classes . ' msp-nexus-ui msp-nexus-ui--' . self::scheme();
     }
 
     public function save_scheme(): void
@@ -71,9 +71,11 @@ final class Shell
         wp_send_json_success(array('scheme' => $scheme));
     }
 
+    /** The user's saved choice, or auto (follow the operating system) until they pick one. */
     private static function scheme(): string
     {
-        return 'dark' === get_user_meta(get_current_user_id(), self::SCHEME_META, true) ? 'dark' : 'light';
+        $saved = (string) get_user_meta(get_current_user_id(), self::SCHEME_META, true);
+        return in_array($saved, array('light', 'dark'), true) ? $saved : 'auto';
     }
 
     public function render(): void
@@ -239,6 +241,12 @@ final class Shell
             'book' => '<path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/>',
             'help' => '<circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 3-3 3M12 17h.01"/>',
             'refresh' => '<path d="M21 12a9 9 0 01-15.5 6.3L3 16M3 12a9 9 0 0115.5-6.3L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/>',
+            'building' => '<rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/>',
+            'phone' => '<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/>',
+            'share' => '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>',
+            'megaphone' => '<path d="M3 11v3a1 1 0 001 1h3l6 4V6L7 10H4a1 1 0 00-1 1z"/><path d="M17 8a5 5 0 010 8"/>',
+            'palette' => '<path d="M12 3a9 9 0 000 18c1.1 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7H17a4 4 0 004-4c0-4.6-4-8.4-9-8.4z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/>',
+            'search' => '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
         );
         if (! isset($paths[$name])) {
             return;

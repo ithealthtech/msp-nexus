@@ -42,6 +42,27 @@ body.msp-nexus-ui.msp-nexus-ui--dark {
   --nx-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
 }
 
+/* Until a user picks a scheme, follow the operating system. */
+@media (prefers-color-scheme: dark) {
+  body.msp-nexus-ui.msp-nexus-ui--auto {
+    --nx-canvas: #0b0a17;
+    --nx-surface: #14132a;
+    --nx-surface-2: #1b1a36;
+    --nx-line: rgba(160, 170, 235, .16);
+    --nx-text: #eef1fb;
+    --nx-muted: #a3a9c6;
+    --nx-accent: #6c9dff;
+    --nx-accent-strong: #8bb2ff;
+    --nx-accent-soft: rgba(108, 157, 255, .14);
+    --nx-good: #3ccf8e;
+    --nx-good-soft: rgba(60, 207, 142, .14);
+    --nx-warn: #f2b14a;
+    --nx-warn-soft: rgba(242, 177, 74, .14);
+    --nx-bad: #ff7a7a;
+    --nx-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
+  }
+}
+
 body.msp-nexus-ui #wpwrap,
 body.msp-nexus-ui #wpcontent,
 body.msp-nexus-ui #wpbody { background: var(--nx-canvas); }
@@ -149,6 +170,11 @@ body.msp-nexus-ui #wpfooter { color: var(--nx-muted); }
 .msp-nexus-shell__scheme .msp-nexus-icon--sun { display: none; }
 .msp-nexus-ui--dark .msp-nexus-shell__scheme .msp-nexus-icon--sun { display: block; }
 .msp-nexus-ui--dark .msp-nexus-shell__scheme .msp-nexus-icon--moon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  .msp-nexus-ui--auto .msp-nexus-shell__scheme .msp-nexus-icon--sun { display: block; }
+  .msp-nexus-ui--auto .msp-nexus-shell__scheme .msp-nexus-icon--moon { display: none; }
+}
 
 /* ---------- Shell: page header ---------- */
 
@@ -269,7 +295,7 @@ body.msp-nexus-ui #wpfooter { color: var(--nx-muted); }
 .msp-nexus-ui .notice-error, .msp-nexus-ui div.error { border-left-color: var(--nx-bad); }
 .msp-nexus-ui .notice-info { border-left-color: var(--nx-accent); }
 
-.msp-nexus-ui.msp-nexus-ui--dark #screen-meta-links .show-settings { border-color: var(--nx-line); background: var(--nx-surface); color: var(--nx-muted); }
+.msp-nexus-ui #screen-meta-links .show-settings { border-color: var(--nx-line); background: var(--nx-surface); color: var(--nx-muted); }
 
 /* ---------- Dashboard ---------- */
 
@@ -404,4 +430,50 @@ body.msp-nexus-ui #wpfooter { color: var(--nx-muted); }
 @media (max-width: 600px) {
   .msp-nexus-shell { padding-top: 46px; }
   body.msp-nexus-ui #wpbody { padding-top: 0; }
+}
+
+/* ---------- Settings: section menu, search, panels ---------- */
+
+.msp-nexus-settings__layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 20px; }
+.msp-nexus-settings__nav { position: sticky; top: 112px; padding: 12px; border: 1px solid var(--nx-line); border-radius: var(--nx-radius); background: var(--nx-surface); box-shadow: var(--nx-shadow); }
+.msp-nexus-settings__search { position: relative; margin-bottom: 10px; }
+.msp-nexus-settings__search .msp-nexus-icon { position: absolute; top: 50%; left: 12px; width: 16px; height: 16px; color: var(--nx-muted); transform: translateY(-50%); pointer-events: none; }
+.msp-nexus-ui .wrap .msp-nexus-settings__search input { width: 100%; padding-left: 36px; }
+.msp-nexus-settings__tabs { margin: 0; padding: 0; list-style: none; }
+.msp-nexus-settings__tabs li { margin: 0; }
+.msp-nexus-ui .wrap .msp-nexus-settings__tab { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; color: var(--nx-text); text-decoration: none; }
+.msp-nexus-ui .wrap .msp-nexus-settings__tab:hover { background: var(--nx-surface-2); color: var(--nx-text); }
+.msp-nexus-ui .wrap .msp-nexus-settings__tab:focus-visible { outline: 2px solid var(--nx-accent); outline-offset: 1px; box-shadow: none; }
+.msp-nexus-ui .wrap .msp-nexus-settings__tab[aria-selected="true"] { background: var(--nx-accent-soft); }
+.msp-nexus-settings__tab > .msp-nexus-icon { flex: 0 0 auto; width: 18px; height: 18px; padding: 8px; border-radius: 9px; background: var(--nx-surface-2); color: var(--nx-muted); }
+.msp-nexus-settings__tab[aria-selected="true"] > .msp-nexus-icon { background: var(--nx-accent); color: #fff; }
+.msp-nexus-settings__tab-text { display: flex; flex: 1 1 auto; flex-direction: column; min-width: 0; }
+.msp-nexus-settings__tab-label { font-size: 14px; font-weight: 600; }
+.msp-nexus-settings__tab-desc { overflow: hidden; color: var(--nx-muted); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.msp-nexus-settings__count { min-width: 22px; padding: 0 6px; border-radius: 999px; background: var(--nx-accent); color: #fff; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; box-sizing: border-box; }
+.msp-nexus-settings__count[hidden] { display: none; }
+
+.msp-nexus-settings__panel { margin-bottom: 24px; scroll-margin-top: 120px; }
+.msp-nexus-settings__panel:focus { outline: 0; }
+.msp-nexus-settings__head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+.msp-nexus-ui .wrap .msp-nexus-settings__head h2 { margin: 0; font-size: 20px; }
+.msp-nexus-ui .wrap .msp-nexus-settings__head p { margin: 2px 0 0; color: var(--nx-muted); }
+.msp-nexus-ui .wrap .msp-nexus-settings__group { margin: 1.5rem 0 0; color: var(--nx-muted); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.msp-nexus-settings__empty { padding: 32px; border: 1px dashed var(--nx-line); border-radius: var(--nx-radius); color: var(--nx-muted); text-align: center; }
+.msp-nexus-settings__empty[hidden] { display: none; }
+
+/* With JavaScript, show one section at a time; while searching, show every match. */
+.msp-nexus-settings.is-tabbed:not(.is-searching) .msp-nexus-settings__panel:not(.is-active) { display: none; }
+
+.msp-nexus-settings.is-searching .msp-nexus-settings__panel.is-empty,
+.msp-nexus-settings.is-searching .form-table tr.is-hidden,
+.msp-nexus-settings.is-searching .form-table.is-empty,
+.msp-nexus-settings.is-searching .msp-nexus-settings__group.is-empty { display: none; }
+
+@media (max-width: 960px) {
+  .msp-nexus-settings__layout { grid-template-columns: minmax(0, 1fr); }
+  .msp-nexus-settings__nav { position: static; }
+  .msp-nexus-settings__tabs { display: flex; gap: 6px; overflow-x: auto; }
+  .msp-nexus-ui .wrap .msp-nexus-settings__tab { flex: 0 0 auto; }
+  .msp-nexus-settings__tab-desc { display: none; }
 }
