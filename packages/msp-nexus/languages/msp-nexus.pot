@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.9.1\n"
+"Project-Id-Version: MSP Nexus 0.9.2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,6 +59,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "40 pages"
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "5 out of 5 stars"
 msgstr ""
 
 #: packages/msp-nexus/patterns/page-security-assessment.php
@@ -401,6 +405,10 @@ msgstr ""
 msgid "Audit-ready evidence"
 msgstr ""
 
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "average from your review profile (replace with your real rating and count)"
+msgstr ""
+
 #: packages/msp-nexus/patterns/service-cloud.php
 msgid "Azure & AWS"
 msgstr ""
@@ -571,6 +579,22 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "Choose your support model"
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Client A."
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Client B."
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Client C."
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Client company name"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
@@ -1231,6 +1255,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-contact.php
 msgid "Go to client support"
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Google review · year"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-meridian-home.php
@@ -2289,12 +2317,20 @@ msgstr ""
 msgid "Read the full case study"
 msgstr ""
 
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Read them all"
+msgstr ""
+
 #: packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Read-only access wherever possible, under a mutual NDA, removed when we finish."
 msgstr ""
 
 #: packages/msp-nexus/patterns/industry-legal.php
 msgid "Real estate"
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Real reviews from real clients."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-contact.php
@@ -2361,6 +2397,10 @@ msgstr ""
 msgid "Review meeting"
 msgstr ""
 
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Review site · year"
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-vitals-home.php
 msgid "Risk analysis"
 msgstr ""
@@ -2413,6 +2453,10 @@ msgstr ""
 msgid "Sample engagements. Replace with your own client outcomes before launch."
 msgstr ""
 
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Sample featured quote: use your strongest review from a business client here."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "Sample figures. Replace with verified numbers before launch."
 msgstr ""
@@ -2431,6 +2475,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "Sample pricing. Set your own plans under Pricing Plans."
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "Sample review: replace this with a real client review, word for word, and keep the reviewer’s first name and initial."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
@@ -3051,6 +3099,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "What changes in the first 90 days"
+msgstr ""
+
+#: packages/msp-nexus/patterns/section-reviews.php
+msgid "What clients say"
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php

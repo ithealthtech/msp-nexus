@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2 — 2026-10-19
+
+- Client reviews pattern with review cards.
+
 ## 0.9.1 — 2026-10-19
 
 - Version aligned with MSP Nexus Core 0.9.1.
