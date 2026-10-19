@@ -184,11 +184,46 @@
 			}
 		};
 
+		// A field with an invalid value may sit in a hidden section; show it so the browser can point at it.
+		var form = settings.querySelector('form');
+		if (form) {
+			form.addEventListener('submit', function (event) {
+				if (form.checkValidity()) {
+					return;
+				}
+				event.preventDefault();
+				var invalid = form.querySelector(':invalid');
+				var panel = invalid ? invalid.closest('.msp-nexus-settings__panel') : null;
+				if (search && search.value) {
+					search.value = '';
+					filter('');
+				}
+				if (panel) {
+					activate(panel.id, false);
+				}
+				if (invalid) {
+					invalid.reportValidity();
+				}
+			});
+			Array.prototype.forEach.call(form.querySelectorAll('[type="submit"]'), function (button) {
+				button.addEventListener('click', function (event) {
+					if (!form.checkValidity()) {
+						event.preventDefault();
+						form.dispatchEvent(new window.Event('submit', { cancelable: true }));
+					}
+				});
+			});
+		}
+
 		if (search) {
 			search.addEventListener('input', function () {
 				filter(search.value);
 			});
 			search.addEventListener('keydown', function (event) {
+				// Enter would submit the settings form; searching should never save.
+				if ('Enter' === event.key) {
+					event.preventDefault();
+				}
 				if ('Escape' === event.key) {
 					search.value = '';
 					filter('');
