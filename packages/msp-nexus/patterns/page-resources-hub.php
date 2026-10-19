@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Page: Resources
- * Slug: msp-nexus/page-resources
+ * Title: Page: Resources hub
+ * Slug: msp-nexus/page-resources-hub
  * Categories: msp-nexus-pages
  * Block Types: core/post-content
  * Description: Resources hub: the free security booklet, the security self-assessment, articles, FAQ, and third-party audits, plus the latest articles and a call to action.

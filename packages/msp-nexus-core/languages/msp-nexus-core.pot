@@ -4105,6 +4105,10 @@ msgstr ""
 msgid "These actions regenerate derived state only. They do not delete posts, media, terms, users, or customer settings."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/StarterSites.php
+msgid "Thirteen hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, healthcare, legal, and manufacturing industry pages, and a resources hub. The header and footer menus link them all."
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/purchase-gate/render.php
 msgid "This content is available after purchase."
 msgstr ""
@@ -4179,10 +4183,6 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
 msgid "Turn on multi-factor sign-in for email, VPN, and admin accounts first, then every cloud app."
-msgstr ""
-
-#: packages/msp-nexus-core/src/Admin/StarterSites.php
-msgid "Twelve hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, and healthcare, legal, and manufacturing industry pages. The header and footer menus link them all."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php

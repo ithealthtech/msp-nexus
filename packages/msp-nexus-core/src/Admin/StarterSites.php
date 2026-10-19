@@ -120,7 +120,7 @@ final class StarterSites
         return array(
             'complete' => array(
                 'name' => __('Complete MSP website', 'msp-nexus-core'),
-                'summary' => __('Twelve hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, and healthcare, legal, and manufacturing industry pages. The header and footer menus link them all.', 'msp-nexus-core'),
+                'summary' => __('Thirteen hand-designed pages that work as one site: home, services, about, contact, cybersecurity, co-managed IT, cloud and Microsoft 365, IT consulting, small business IT, healthcare, legal, and manufacturing industry pages, and a resources hub. The header and footer menus link them all.', 'msp-nexus-core'),
                 'image' => 'assets/images/stock/datacenter-aisle.webp',
                 'pages' => array(
                     'home' => array(__('Home', 'msp-nexus-core'), 'flagship-northstar-home'),
@@ -135,6 +135,7 @@ final class StarterSites
                     'healthcare-it' => array(__('Healthcare IT', 'msp-nexus-core'), 'flagship-vitals-home'),
                     'legal-it' => array(__('Legal IT', 'msp-nexus-core'), 'industry-legal'),
                     'manufacturing-it' => array(__('Manufacturing IT', 'msp-nexus-core'), 'industry-manufacturing'),
+                    'resources' => array(__('Resources', 'msp-nexus-core'), 'page-resources-hub'),
                 ),
             ),
         );

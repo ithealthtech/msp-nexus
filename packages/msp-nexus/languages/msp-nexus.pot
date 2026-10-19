@@ -53,11 +53,11 @@ msgstr ""
 msgid "36-month budget and roadmap"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/service-msp-audit.php
+#: packages/msp-nexus/patterns/page-resources-hub.php packages/msp-nexus/patterns/service-msp-audit.php
 msgid "3rd-party MSP audits"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "40 pages"
 msgstr ""
 
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Already a client and need help?"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Already have an IT provider? Get an independent check of what is actually configured and working."
 msgstr ""
 
@@ -1041,7 +1041,7 @@ msgstr ""
 msgid "Exploring a new partner?"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "FAQ"
 msgstr ""
 
@@ -1153,7 +1153,7 @@ msgstr ""
 msgid "Free cybersecurity ebook"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Free download"
 msgstr ""
 
@@ -1165,7 +1165,7 @@ msgstr ""
 msgid "Free PDF, instant download"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Free tools to help you <em>protect your business.</em>"
 msgstr ""
 
@@ -1181,7 +1181,7 @@ msgstr ""
 msgid "From signed agreement to fully onboarded"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "From the blog"
 msgstr ""
 
@@ -1409,7 +1409,7 @@ msgstr ""
 msgid "Insights"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Insights & articles"
 msgstr ""
 
@@ -1521,7 +1521,7 @@ msgstr ""
 msgid "Lakeview"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Latest insights"
 msgstr ""
 
@@ -2001,7 +2001,7 @@ msgstr ""
 msgid "Our engagement terms include confidentiality obligations and limit our staff access to what the work requires."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Our free 40-page guide for business owners: today’s threats, the NIST framework, and all 18 CIS Controls explained in plain English, with where a business your size should start."
 msgstr ""
 
@@ -2117,7 +2117,7 @@ msgstr ""
 msgid "Plain-English fixes for every gap"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Plain-English guides, a quick security checkup, and answers to the questions business owners ask us most. No jargon, and no sales pitch required."
 msgstr ""
 
@@ -2157,7 +2157,7 @@ msgstr ""
 msgid "Policy and evidence library"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Practical articles on security, Microsoft 365, the cloud, and getting more from your technology."
 msgstr ""
 
@@ -2281,7 +2281,7 @@ msgstr ""
 msgid "Ran IT for a 400-person manufacturer before starting Northstar to fix what frustrated him as a client."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Rather talk it through?"
 msgstr ""
 
@@ -2325,7 +2325,7 @@ msgstr ""
 msgid "Request a third-party audit today. A short form, a 30-minute call, and a fixed quote. No obligation."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/page-security-assessment.php packages/msp-nexus/patterns/service-msp-audit.php
+#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/page-resources-hub.php packages/msp-nexus/patterns/page-security-assessment.php packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Request an audit"
 msgstr ""
 
@@ -2337,7 +2337,7 @@ msgstr ""
 msgid "Request the check"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Resources"
 msgstr ""
 
@@ -2477,7 +2477,7 @@ msgstr ""
 msgid "Security operations"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Security self-assessment"
 msgstr ""
 
@@ -2633,7 +2633,7 @@ msgstr ""
 msgid "Start with a free assessment. We will map what you have, what is at risk, and the smallest set of services that closes the gaps."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Straight answers about managed IT, what an MSP does, and how our support works."
 msgstr ""
 
@@ -2665,7 +2665,7 @@ msgstr ""
 msgid "Switching is easier than you think"
 msgstr ""
 
-#: packages/msp-nexus/patterns/blog-cta.php packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/service-co-managed.php
+#: packages/msp-nexus/patterns/blog-cta.php packages/msp-nexus/patterns/page-resources-hub.php packages/msp-nexus/patterns/service-co-managed.php
 msgid "Talk to an engineer"
 msgstr ""
 
@@ -2713,7 +2713,7 @@ msgstr ""
 msgid "Tell us what is going on"
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Tell us what you are working on and an engineer will give you a straight answer. No obligation."
 msgstr ""
 
@@ -2721,7 +2721,7 @@ msgstr ""
 msgid "Tell us where your team is stretched."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "Ten yes-or-no questions, an instant score, and a prioritized list of what to fix first."
 msgstr ""
 
@@ -2745,7 +2745,7 @@ msgstr ""
 msgid "The basics nobody should have to negotiate."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-resources.php
+#: packages/msp-nexus/patterns/page-resources-hub.php
 msgid "The Cybersecurity Essentials booklet"
 msgstr ""
 

@@ -2,7 +2,7 @@
 
 ## 0.8.3 — 2026-10-18
 
-- New Resources menu and a Resources hub page pattern (msp-nexus/page-resources): the security booklet, self-assessment, articles, FAQ, and third-party audits in one place, plus the latest articles and a call to action.
+- New Resources menu and a Resources hub page pattern (msp-nexus/page-resources-hub), also created by the Complete MSP website starter: the security booklet, self-assessment, articles, FAQ, and third-party audits in one place, plus the latest articles and a call to action.
 - New tile icons: book, checklist, article, and question.
 
 ## 0.8.2 — 2026-10-18
