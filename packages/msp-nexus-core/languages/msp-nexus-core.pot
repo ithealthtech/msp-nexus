@@ -2617,6 +2617,10 @@ msgstr ""
 msgid "Need help or planning guidance? Use the support route below to reach the responsible team."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Needs attention: %d"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "Network outages"
 msgstr ""

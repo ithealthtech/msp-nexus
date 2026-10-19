@@ -182,7 +182,7 @@ final class Dashboard
         $rows = array_values(array_filter($checks, static function (array $check) use ($wanted): bool {
             return in_array($check['label'], $wanted, true);
         }));
-        $summary = 0 === $problems ? __('Everything looks good.', 'msp-nexus-core') : sprintf(/* translators: %d: number of checks needing attention */ _n('%d item needs attention.', '%d items need attention.', $problems, 'msp-nexus-core'), $problems);
+        $summary = 0 === $problems ? __('Everything looks good.', 'msp-nexus-core') : sprintf(/* translators: %d: number of checks needing attention */ __('Needs attention: %d', 'msp-nexus-core'), $problems);
         return array('summary' => $summary, 'rows' => $rows);
     }
 
@@ -191,10 +191,22 @@ final class Dashboard
     {
         $theme = wp_get_theme('msp-nexus');
         $theme_version = $theme->exists() ? (string) $theme->get('Version') : '';
-        $release = get_site_transient('msp_nexus_github_release');
-        $latest = is_array($release) ? (string) ($release['version'] ?? '') : '';
-        $behind = '' !== $latest && (version_compare(MSP_NEXUS_CORE_VERSION, $latest, '<') || ('' !== $theme_version && version_compare($theme_version, $latest, '<')));
-        $auto = in_array('msp-nexus-core/msp-nexus-core.php', (array) get_site_option('auto_update_plugins', array()), true);
+        // WordPress's own update transients hold whatever the active channel (GitHub or licensed) offered.
+        $themes = get_site_transient('update_themes');
+        $plugins = get_site_transient('update_plugins');
+        $checked = is_object($themes) && ! empty($themes->last_checked) && is_object($plugins) && ! empty($plugins->last_checked);
+        $offers = array();
+        if (is_object($themes) && isset($themes->response['msp-nexus']['new_version'])) {
+            $offers[] = (string) $themes->response['msp-nexus']['new_version'];
+        }
+        if (is_object($plugins) && isset($plugins->response['msp-nexus-core/msp-nexus-core.php']->new_version)) {
+            $offers[] = (string) $plugins->response['msp-nexus-core/msp-nexus-core.php']->new_version;
+        }
+        usort($offers, 'version_compare');
+        $behind = array() !== $offers;
+        $latest = $behind ? (string) end($offers) : ($checked ? MSP_NEXUS_CORE_VERSION : '');
+        $settings = get_option('msp_nexus_settings', array());
+        $auto = is_array($settings) && ! empty($settings['automatic_updates']);
         $rows = array(
             array('label' => __('Theme', 'msp-nexus-core'), 'status' => 'info', 'detail' => '' !== $theme_version ? $theme_version : __('not installed', 'msp-nexus-core')),
             array('label' => __('Plugin', 'msp-nexus-core'), 'status' => 'info', 'detail' => MSP_NEXUS_CORE_VERSION),
