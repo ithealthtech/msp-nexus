@@ -11,7 +11,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('MSP_NEXUS_VERSION', '0.8.2');
+define('MSP_NEXUS_VERSION', '0.8.3');
 
 require_once get_theme_file_path('inc/patterns.php');
 require_once get_theme_file_path('inc/industry-page.php');

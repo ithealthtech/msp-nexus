@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.8.2\n"
+"Project-Id-Version: MSP Nexus 0.8.3\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,8 +53,12 @@ msgstr ""
 msgid "36-month budget and roadmap"
 msgstr ""
 
-#: packages/msp-nexus/patterns/service-msp-audit.php
+#: packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/service-msp-audit.php
 msgid "3rd-party MSP audits"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "40 pages"
 msgstr ""
 
 #: packages/msp-nexus/patterns/page-security-assessment.php
@@ -299,6 +303,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-contact.php
 msgid "Already a client and need help?"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Already have an IT provider? Get an independent check of what is actually configured and working."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-meridian-home.php
@@ -1033,6 +1041,10 @@ msgstr ""
 msgid "Exploring a new partner?"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "FAQ"
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "Fewer repeat tickets"
 msgstr ""
@@ -1141,12 +1153,20 @@ msgstr ""
 msgid "Free cybersecurity ebook"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Free download"
+msgstr ""
+
 #: packages/msp-nexus/patterns/blog-cta.php
 msgid "Free for business owners"
 msgstr ""
 
 #: packages/msp-nexus/patterns/page-cybersecurity-ebook.php
 msgid "Free PDF, instant download"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Free tools to help you <em>protect your business.</em>"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-contact.php
@@ -1159,6 +1179,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "From signed agreement to fully onboarded"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "From the blog"
 msgstr ""
 
 #: packages/msp-nexus/patterns/industry-manufacturing.php
@@ -1385,6 +1409,10 @@ msgstr ""
 msgid "Insights"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Insights & articles"
+msgstr ""
+
 #: packages/msp-nexus/patterns/page-security-assessment.php
 msgid "Instant results on screen"
 msgstr ""
@@ -1491,6 +1519,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-harbor-home.php
 msgid "Lakeview"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Latest insights"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
@@ -1969,6 +2001,10 @@ msgstr ""
 msgid "Our engagement terms include confidentiality obligations and limit our staff access to what the work requires."
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Our free 40-page guide for business owners: today’s threats, the NIST framework, and all 18 CIS Controls explained in plain English, with where a business your size should start."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-meridian-home.php
 msgid "Our practices"
 msgstr ""
@@ -2081,6 +2117,10 @@ msgstr ""
 msgid "Plain-English fixes for every gap"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Plain-English guides, a quick security checkup, and answers to the questions business owners ask us most. No jargon, and no sales pitch required."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-northstar-home.php packages/msp-nexus/patterns/service-cloud.php
 msgid "Plan"
 msgstr ""
@@ -2115,6 +2155,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
 msgid "Policy and evidence library"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Practical articles on security, Microsoft 365, the cloud, and getting more from your technology."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-vitals-home.php
@@ -2237,6 +2281,10 @@ msgstr ""
 msgid "Ran IT for a 400-person manufacturer before starting Northstar to fix what frustrated him as a client."
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Rather talk it through?"
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-northstar-home.php
 msgid "Read the full case study"
 msgstr ""
@@ -2277,7 +2325,7 @@ msgstr ""
 msgid "Request a third-party audit today. A short form, a 30-minute call, and a fixed quote. No obligation."
 msgstr ""
 
-#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/page-security-assessment.php packages/msp-nexus/patterns/service-msp-audit.php
+#: packages/msp-nexus/patterns/page-cybersecurity-ebook.php packages/msp-nexus/patterns/page-request-audit.php packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/page-security-assessment.php packages/msp-nexus/patterns/service-msp-audit.php
 msgid "Request an audit"
 msgstr ""
 
@@ -2287,6 +2335,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-cloud.php
 msgid "Request the check"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Resources"
 msgstr ""
 
 #: packages/msp-nexus/patterns/service-msp-audit.php
@@ -2423,6 +2475,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/service-co-managed.php
 msgid "Security operations"
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Security self-assessment"
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-bastion-home.php
@@ -2577,6 +2633,10 @@ msgstr ""
 msgid "Start with a free assessment. We will map what you have, what is at risk, and the smallest set of services that closes the gaps."
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Straight answers about managed IT, what an MSP does, and how our support works."
+msgstr ""
+
 #: packages/msp-nexus/patterns/flagship-meridian-home.php
 msgid "Strategy & roadmap"
 msgstr ""
@@ -2605,7 +2665,7 @@ msgstr ""
 msgid "Switching is easier than you think"
 msgstr ""
 
-#: packages/msp-nexus/patterns/blog-cta.php packages/msp-nexus/patterns/service-co-managed.php
+#: packages/msp-nexus/patterns/blog-cta.php packages/msp-nexus/patterns/page-resources.php packages/msp-nexus/patterns/service-co-managed.php
 msgid "Talk to an engineer"
 msgstr ""
 
@@ -2653,8 +2713,16 @@ msgstr ""
 msgid "Tell us what is going on"
 msgstr ""
 
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Tell us what you are working on and an engineer will give you a straight answer. No obligation."
+msgstr ""
+
 #: packages/msp-nexus/patterns/service-co-managed.php
 msgid "Tell us where your team is stretched."
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "Ten yes-or-no questions, an instant score, and a prioritized list of what to fix first."
 msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
@@ -2675,6 +2743,10 @@ msgstr ""
 
 #: packages/msp-nexus/patterns/flagship-northstar-services.php
 msgid "The basics nobody should have to negotiate."
+msgstr ""
+
+#: packages/msp-nexus/patterns/page-resources.php
+msgid "The Cybersecurity Essentials booklet"
 msgstr ""
 
 #: packages/msp-nexus/patterns/page-cybersecurity-ebook.php
