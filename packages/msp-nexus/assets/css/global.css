@@ -45,6 +45,26 @@
 .msp-nexus-header-cta .wp-block-button__link { padding: .75rem 1rem; border-radius: 10px; border-color: #77b9ec !important; box-shadow: 0 0 15px rgba(91, 165, 236, .4), inset 0 0 12px rgba(91, 165, 236, .1); color: #b8dcff !important; white-space: nowrap; }
 .wp-block-navigation__submenu-container { border: 1px solid var(--msp-line) !important; border-radius: 0 !important; background: #121124 !important; color: #fff !important; box-shadow: 0 20px 60px rgba(0, 0, 0, .45); }
 
+/* Primary navigation: larger, calmer, more spacious desktop menu. */
+@media (min-width: 901px) {
+  .msp-nexus-primary-nav .wp-block-navigation__container { gap: .25rem; }
+  .msp-nexus-primary-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content { padding: .55rem .75rem; border-radius: 8px; color: #d6deeb; font-size: .95rem; font-weight: 500; letter-spacing: .01em; line-height: 1.2; transition: color .15s ease, background-color .15s ease; }
+
+  .msp-nexus-primary-nav .wp-block-navigation__container > .wp-block-navigation-item:hover > .wp-block-navigation-item__content,
+  .msp-nexus-primary-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content:focus-visible { background: rgba(124, 201, 247, .1); color: #fff; }
+  .msp-nexus-primary-nav .wp-block-navigation-item__content[aria-current="page"] { color: #fff; box-shadow: inset 0 -2px 0 var(--msp-blue); }
+  .msp-nexus-primary-nav .wp-block-navigation__submenu-icon { margin-left: .1rem; color: #8fa3bd; }
+  .msp-nexus-primary-nav .wp-block-navigation__submenu-container { min-width: 15rem !important; padding: .45rem !important; border-radius: 12px !important; }
+  .msp-nexus-primary-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content { padding: .6rem .85rem !important; border-radius: 8px; color: #d6deeb; font-size: .95rem; font-weight: 500; }
+
+  .msp-nexus-primary-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+  .msp-nexus-primary-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus-visible { background: rgba(124, 201, 247, .1); color: #fff; }
+  .msp-nexus-client-link { font-size: .95rem; font-weight: 500; }
+}
+@media (min-width: 901px) and (max-width: 1240px) {
+  .msp-nexus-primary-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content { padding-inline: .5rem; font-size: .9rem; }
+}
+
 /* Hero */
 .msp-nexus-hero { position: relative; min-height: calc(100svh - 5.5rem); padding-block: clamp(4rem, 8vw, 8rem) clamp(5rem, 10vw, 9rem); background: radial-gradient(circle at 68% 42%, rgba(65, 102, 231, .14), transparent 32%), #020514; }
 .msp-nexus-hero::after { position: absolute; right: 8%; bottom: 5%; width: 7px; height: 7px; border-radius: 50%; background: var(--msp-blue); box-shadow: -8vw 3rem 0 #3848b3, 5vw -7rem 0 #6abcf3, -2vw -15rem 0 #303f92; content: ""; opacity: .8; }
