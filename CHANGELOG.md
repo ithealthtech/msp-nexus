@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2 — 2026-10-19
+
+- New Client reviews pattern (msp-nexus/section-reviews, Trust & proof): rating summary with a link to the review profile, a featured client quote, and a grid of review cards with stars, reviewer, and source. Ships with clearly marked samples to replace with real reviews.
+
 ## 0.9.1 — 2026-10-19
 
 - Settings screen reorganized into sections (Business, Contact, Social, Messages, Design, Updates & integrations) with a side menu, keyboard navigation, and search across every setting. One Save still keeps every field, the last section reopens after saving, and a Settings saved notice appears.
