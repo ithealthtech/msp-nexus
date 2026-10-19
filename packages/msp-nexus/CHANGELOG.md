@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0 — 2026-10-19
+
+- Version aligned with MSP Nexus Core 0.9.0 (redesigned admin).
+
 ## 0.8.4 — 2026-10-18
 
 - Footer Resources column; brand block on its own row at tablet widths.

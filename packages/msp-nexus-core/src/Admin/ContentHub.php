@@ -41,7 +41,7 @@ final class ContentHub
         if (empty($submenu['msp-nexus']) || ! is_array($submenu['msp-nexus'])) {
             return;
         }
-        $order = array('msp-nexus', 'msp-nexus-setup', 'msp-nexus-starters', 'msp-nexus-studio', 'edit.php?post_type=msp_nexus_layout', 'msp-nexus-branding', 'msp-nexus-portability', 'msp-nexus-performance', 'msp-nexus-privacy', 'msp-nexus-integrations', 'msp-nexus-woocommerce', 'msp-nexus-license', 'msp-nexus-diagnostics', 'msp-nexus-reset');
+        $order = array('msp-nexus', 'msp-nexus-settings', 'msp-nexus-setup', 'msp-nexus-starters', 'msp-nexus-studio', 'edit.php?post_type=msp_nexus_layout', 'msp-nexus-branding', 'msp-nexus-portability', 'msp-nexus-performance', 'msp-nexus-privacy', 'msp-nexus-integrations', 'msp-nexus-woocommerce', 'msp-nexus-license', 'msp-nexus-diagnostics', 'msp-nexus-reset');
         $rank = array_flip($order);
         $items = array_values($submenu['msp-nexus']);
         usort($items, static function (array $a, array $b) use ($rank): int {

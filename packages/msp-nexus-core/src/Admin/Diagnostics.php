@@ -35,7 +35,7 @@ final class Diagnostics
         ?>
         <div class="wrap"><h1><?php esc_html_e('MSP Nexus diagnostics', 'msp-nexus-core'); ?></h1><p><?php esc_html_e('This report contains no license key, password, token, customer content, or visitor data.', 'msp-nexus-core'); ?></p>
         <table class="widefat striped"><thead><tr><th><?php esc_html_e('Check', 'msp-nexus-core'); ?></th><th><?php esc_html_e('Status', 'msp-nexus-core'); ?></th><th><?php esc_html_e('Detail', 'msp-nexus-core'); ?></th></tr></thead><tbody>
-        <?php foreach ($checks as $check) : ?><tr><th scope="row"><?php echo esc_html($check['label']); ?></th><td><?php echo esc_html($check['status']); ?></td><td><code><?php echo esc_html($check['detail']); ?></code></td></tr><?php endforeach; ?>
+        <?php foreach ($checks as $check) : ?><tr><th scope="row"><?php echo esc_html($check['label']); ?></th><td><span class="msp-nexus-pill is-<?php echo esc_attr($check['status']); ?>"><?php echo esc_html($check['status']); ?></span></td><td><code><?php echo esc_html($check['detail']); ?></code></td></tr><?php endforeach; ?>
         </tbody></table>
         <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>"><input type="hidden" name="action" value="<?php echo esc_attr(self::EXPORT_ACTION); ?>"><?php wp_nonce_field(self::EXPORT_ACTION); ?><?php submit_button(__('Download redacted diagnostics JSON', 'msp-nexus-core'), 'secondary'); ?></form>
         <h2><?php esc_html_e('Safe repair tools', 'msp-nexus-core'); ?></h2><p><?php esc_html_e('These actions regenerate derived state only. They do not delete posts, media, terms, users, or customer settings.', 'msp-nexus-core'); ?></p>
@@ -67,6 +67,7 @@ final class Diagnostics
         if (in_array('update_cache', $requested, true)) {
             delete_site_transient('msp_nexus_update_msp-nexus');
             delete_site_transient('msp_nexus_update_msp-nexus-core');
+            delete_site_transient('msp_nexus_github_release');
             $completed[] = 'update_cache';
         }
         $log = (array) get_option('msp_nexus_repair_log', array());

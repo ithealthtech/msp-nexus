@@ -29,18 +29,20 @@ final class Settings
 
     public function menu(): void
     {
+        $dashboard = new Dashboard();
         add_menu_page(
             __('MSP Nexus', 'msp-nexus-core'),
             __('MSP Nexus', 'msp-nexus-core'),
             'manage_options',
             'msp-nexus',
-            array($this, 'render'),
+            array($dashboard, 'render'),
             'dashicons-shield-alt',
             58
         );
         // Without an explicit first entry, the first registered submenu (Nexus layouts) hijacks the
-        // parent link and this settings screen becomes unreachable from the menu.
-        add_submenu_page('msp-nexus', __('MSP Nexus settings', 'msp-nexus-core'), __('Settings', 'msp-nexus-core'), 'manage_options', 'msp-nexus', array($this, 'render'));
+        // parent link and the dashboard becomes unreachable from the menu.
+        add_submenu_page('msp-nexus', __('MSP Nexus dashboard', 'msp-nexus-core'), __('Dashboard', 'msp-nexus-core'), 'manage_options', 'msp-nexus', array($dashboard, 'render'));
+        add_submenu_page('msp-nexus', __('MSP Nexus settings', 'msp-nexus-core'), __('Settings', 'msp-nexus-core'), 'manage_options', 'msp-nexus-settings', array($this, 'render'));
     }
 
     /** @param mixed $value
