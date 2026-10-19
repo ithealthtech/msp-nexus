@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.8.4\n"
+"Project-Id-Version: MSP Nexus 0.9.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +11,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/blocks/content-carousel/render.php
 msgid "%1$d of %2$d"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "%1$d of %2$d complete"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -43,6 +47,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "A native Cover video background with accessible text and reduced-motion fallback guidance."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "A newer version is available."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Studio.php
@@ -109,6 +117,10 @@ msgstr ""
 msgid "Activate WooCommerce to use this element."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Activation and update channel"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "Activation identity"
 msgstr ""
@@ -125,7 +137,7 @@ msgstr ""
 msgid "Activation was not accepted. Check the key, domain allowance, and service connection."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Active theme"
 msgstr ""
 
@@ -139,6 +151,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Add a block to begin building."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Add a contact email"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Add a phone number"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -181,6 +201,10 @@ msgstr ""
 msgid "Add WooCommerce filter blocks or widgets to the Nexus Shop Sidebar area."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Add your logo"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Additional information"
 msgstr ""
@@ -205,7 +229,7 @@ msgstr ""
 msgid "Advanced include/exclude rules"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Reset.php
+#: packages/msp-nexus-core/src/Admin/Reset.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Advanced reset"
 msgstr ""
 
@@ -429,7 +453,7 @@ msgstr ""
 msgid "Automatic source link"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Settings.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Automatic updates"
 msgstr ""
 
@@ -649,6 +673,10 @@ msgstr ""
 msgid "Check"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Check for updates now"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
 msgid "Checkout"
 msgstr ""
@@ -663,6 +691,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Choose a concise, muted background video and provide an equivalent poster image and meaningful page content."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Choose a homepage"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/lottie-animation/render.php
@@ -743,6 +775,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "Client stories with measurable results. Kept as drafts until you verify them."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Client-facing admin branding"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Branding.php
@@ -849,7 +885,7 @@ msgstr ""
 msgid "Company address"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/ContentHub.php
+#: packages/msp-nexus-core/src/Admin/ContentHub.php packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Company content"
 msgstr ""
 
@@ -949,8 +985,16 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Contact %s"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Integrations.php
 msgid "Contact Form 7, WPForms, or Gravity Forms"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Contact support"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Integrations/Elementor/Widgets.php
@@ -979,6 +1023,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Controls, evidence, ownership, and continuous audit readiness."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Cookie choices and scripts"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
@@ -1113,6 +1161,14 @@ msgstr ""
 msgid "Cybersecurity"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Dark mode"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Dashboard"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Branding.php
 msgid "Dashboard welcome message"
 msgstr ""
@@ -1177,6 +1233,10 @@ msgstr ""
 msgid "Design fine-tuning (optional)"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Design tokens and popups"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Designed for"
 msgstr ""
@@ -1209,7 +1269,7 @@ msgstr ""
 msgid "Development"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Diagnostics.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Diagnostics"
 msgstr ""
 
@@ -1281,6 +1341,10 @@ msgstr ""
 msgid "Do you have an up-to-date list of every computer, device, and piece of software your business uses?"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Documentation"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
 msgid "Does every computer and server run endpoint protection that someone monitors for alerts?"
 msgstr ""
@@ -1349,8 +1413,16 @@ msgstr ""
 msgid "Edit Nexus layout"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Edit or add pages"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Studio.php
 msgid "Edit page content"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Edit site"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Studio.php
@@ -1469,6 +1541,10 @@ msgstr ""
 msgid "Enter a valid email address and tick the consent box to receive your results."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Enter your company name"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Starter/Catalog.php
 msgid "Enterprise Dark"
 msgstr ""
@@ -1495,6 +1571,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "Everything about your business lives here once, and every page that shows it stays in sync. Add a service here and it appears in every service grid automatically."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Everything for your website in one place: company details, page designs, and the health of your site."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Everything looks good."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
@@ -1633,6 +1717,10 @@ msgstr ""
 msgid "First taxonomy"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Fix"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Flagship site created: %1$d new page(s), %2$d existing page(s) left untouched."
 msgstr ""
@@ -1689,6 +1777,10 @@ msgstr ""
 msgid "Forms"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Forms, SEO, and other plugins"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Free-shipping progress"
 msgstr ""
@@ -1707,6 +1799,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Front-end style handles to unload"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Full diagnostics"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Licensing/GitHubUpdater.php
@@ -1753,6 +1849,14 @@ msgstr ""
 msgid "Guidance"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Guided setup"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Guides and release notes."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/ContentHub.php
 msgid "Guides, checklists, and downloads for your resource library."
 msgstr ""
@@ -1767,6 +1871,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Studio/Layouts.php
 msgid "Header fields are used only when the layout area is Header."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Header, footer, and templates"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -1787,6 +1895,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Healthcare security, cloud, legal…"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Help"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Privacy.php
@@ -1853,7 +1965,7 @@ msgstr ""
 msgid "HTML element"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "HTTPS"
 msgstr ""
 
@@ -1905,7 +2017,7 @@ msgstr ""
 msgid "Image size"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Portability.php
+#: packages/msp-nexus-core/src/Admin/Portability.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Import / export"
 msgstr ""
 
@@ -1939,6 +2051,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Portability.php
 msgid "Import settings and presets"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Import starter content safely"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Portability.php
@@ -2001,7 +2117,7 @@ msgstr ""
 msgid "Insurance"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Admin/Settings.php
+#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Integrations"
 msgstr ""
 
@@ -2093,7 +2209,19 @@ msgstr ""
 msgid "Last successful check"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Latest release"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Launch checklist"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Launch checklist progress"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Launch safety"
 msgstr ""
 
@@ -2107,6 +2235,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Layout region settings"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Layouts"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/content-carousel/render.php
@@ -2133,7 +2265,11 @@ msgstr ""
 msgid "Legal IT"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Let search engines find the site"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/LicenseScreen.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "License & updates"
 msgstr ""
 
@@ -2321,7 +2457,7 @@ msgstr ""
 msgid "Mega-menu layout slug"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Memory limit"
 msgstr ""
 
@@ -2381,11 +2517,15 @@ msgstr ""
 msgid "Move listed demo posts to Trash"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Move settings between sites"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Move up"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Integrations/Elementor.php
+#: packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Admin/Shell.php packages/msp-nexus-core/src/Integrations/Elementor.php
 msgid "MSP Nexus"
 msgstr ""
 
@@ -2395,6 +2535,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Licensing/Client.php
 msgid "MSP Nexus could not confirm a current signed entitlement. The public site remains unchanged; commercial updates and cloud downloads stay unavailable until validation succeeds."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Settings.php
+msgid "MSP Nexus dashboard"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
@@ -2661,6 +2805,14 @@ msgstr ""
 msgid "Nonprofit"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "not checked yet"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "not installed"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Forms/AuditRequestHandler.php
 msgid "Not sure"
 msgstr ""
@@ -2689,6 +2841,10 @@ msgstr ""
 msgid "Object"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Off"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Off-canvas menu settings"
 msgstr ""
@@ -2707,6 +2863,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Offset"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "On"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
@@ -2857,6 +3017,10 @@ msgstr ""
 msgid "Page cache constant"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Pages"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Pair common operating friction with a responsible service response."
 msgstr ""
@@ -2901,7 +3065,7 @@ msgstr ""
 msgid "People and leadership profiles for About and team pages."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Performance.php
+#: packages/msp-nexus-core/src/Admin/Performance.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Performance"
 msgstr ""
 
@@ -2921,7 +3085,11 @@ msgstr ""
 msgid "Phone system problems"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Phones, email, address"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "PHP"
 msgstr ""
 
@@ -2951,6 +3119,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/blocks/consultation-form/render.php packages/msp-nexus-core/src/Forms/FormGuard.php
 msgid "Please wait a moment before submitting another request."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Plugin"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
@@ -3061,7 +3233,7 @@ msgstr ""
 msgid "Priority"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Privacy.php
+#: packages/msp-nexus-core/src/Admin/Privacy.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Privacy & consent"
 msgstr ""
 
@@ -3193,6 +3365,10 @@ msgstr ""
 msgid "Provide accessible visitor choices and activate optional scripts only after the matching category is granted. This tool does not replace legal review or a complete data inventory."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Publish a privacy policy"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/StarterSites.php
 msgid "Publish every new page right away"
 msgstr ""
@@ -3245,6 +3421,10 @@ msgstr ""
 msgid "Questions and answers used by FAQ sections across the site."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Quick actions"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Integrations/WooCommerce.php
 msgid "Quick view"
 msgstr ""
@@ -3259,6 +3439,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Read-only environment checks plus conservative front-end toggles. Image conversion, cache purges, and database cleanup remain with your host or dedicated performance tooling."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Ready-made page sets"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Starter/Catalog.php
@@ -3301,6 +3485,10 @@ msgstr ""
 msgid "Relative"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Release notes"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Privacy.php
 msgid "Remembers optional experience and media choices."
 msgstr ""
@@ -3319,6 +3507,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Performance.php
 msgid "Remove Dashicons for signed-out visitors"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Remove imported demo content"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/starter-sites.js
@@ -3447,6 +3639,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Rows"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Run a check to see the latest version."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
@@ -3589,6 +3785,10 @@ msgstr ""
 msgid "Separate multiple slugs with commas."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Serve the site over HTTPS"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Content/Registrar.php
 msgid "Service Categories"
 msgstr ""
@@ -3613,6 +3813,10 @@ msgstr ""
 msgid "Services mega menu"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Services, team, reviews"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php
 msgid "Set a free-shipping threshold in Nexus WooCommerce settings."
 msgstr ""
@@ -3621,7 +3825,7 @@ msgstr ""
 msgid "Set the imported homepage as the static homepage (the prior setting is recorded)."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Settings.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Settings.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "Settings"
 msgstr ""
 
@@ -3809,6 +4013,10 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Speed checks and safe tweaks"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Stable"
 msgstr ""
@@ -3845,7 +4053,7 @@ msgstr ""
 msgid "Starter library pages"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Admin/Studio.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Shell.php packages/msp-nexus-core/src/Admin/StarterSites.php packages/msp-nexus-core/src/Admin/Studio.php
 msgid "Starter sites"
 msgstr ""
 
@@ -3877,11 +4085,15 @@ msgstr ""
 msgid "Stolen passwords are the most common way attackers get in."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Store presentation"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Forms/AssessmentHandler.php
 msgid "Strong foundation"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Studio.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Shell.php packages/msp-nexus-core/src/Admin/Studio.php
 msgid "Studio"
 msgstr ""
 
@@ -3927,6 +4139,14 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-workspace.js
 msgid "Synced pattern created."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "System status"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "System status and repairs"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
@@ -4073,6 +4293,10 @@ msgstr ""
 msgid "The page expired. Refresh and try again."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "The places you will visit most."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "The raw key is sent once over HTTPS and is not stored in WordPress."
 msgstr ""
@@ -4097,7 +4321,7 @@ msgstr ""
 msgid "The synced pattern could not be created."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/LicenseScreen.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/LicenseScreen.php
 msgid "Theme"
 msgstr ""
 
@@ -4147,6 +4371,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/blocks/audit-request-form/render.php
 msgid "Title or position"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "Tools"
 msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Settings.php
@@ -4233,6 +4461,10 @@ msgstr ""
 msgid "Update history"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Updates"
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Settings.php
 msgid "Updates come from the published MSP Nexus releases (or your licensed channel, when one is active), and a package is only installed when its SHA-256 digest matches the release. WordPress checks twice a day and installs in the background. Keep a current backup."
 msgstr ""
@@ -4311,6 +4543,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/assets/blocks-editor.js
 msgid "Use px, rem, vw, or %."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Use readable page addresses"
 msgstr ""
 
 #: packages/msp-nexus-core/assets/studio-editor.js
@@ -4409,6 +4645,14 @@ msgstr ""
 msgid "View product options"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "View site"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Shell.php
+msgid "View site (opens in a new tab)"
+msgstr ""
+
 #: packages/msp-nexus-core/assets/studio-editor.js
 msgid "Visible ownership"
 msgstr ""
@@ -4465,6 +4709,10 @@ msgstr ""
 msgid "Weekdays"
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "Welcome, %s"
+msgstr ""
+
 #: packages/msp-nexus-core/blocks/consultation-form/render.php
 msgid "What would you like to improve?"
 msgstr ""
@@ -4489,7 +4737,7 @@ msgstr ""
 msgid "Where to start"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Branding.php
+#: packages/msp-nexus-core/src/Admin/Branding.php packages/msp-nexus-core/src/Admin/Shell.php
 msgid "White label"
 msgstr ""
 
@@ -4509,7 +4757,7 @@ msgstr ""
 msgid "Without a plan, the first hours of an incident are lost to confusion."
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Integrations/WooCommerce.php
+#: packages/msp-nexus-core/src/Admin/Integrations.php packages/msp-nexus-core/src/Admin/Shell.php packages/msp-nexus-core/src/Integrations/WooCommerce.php
 msgid "WooCommerce"
 msgstr ""
 
@@ -4537,7 +4785,7 @@ msgstr ""
 msgid "Wordfence, Solid Security, or host security"
 msgstr ""
 
-#: packages/msp-nexus-core/src/Admin/Diagnostics.php
+#: packages/msp-nexus-core/src/Admin/Dashboard.php packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "WordPress"
 msgstr ""
 
@@ -4581,6 +4829,10 @@ msgstr ""
 msgid "You are not allowed to cancel demo imports."
 msgstr ""
 
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "You are not allowed to check for updates."
+msgstr ""
+
 #: packages/msp-nexus-core/src/Admin/Studio.php
 msgid "You are not allowed to create layouts."
 msgstr ""
@@ -4611,6 +4863,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "You are not allowed to run diagnostics."
+msgstr ""
+
+#: packages/msp-nexus-core/src/Admin/Dashboard.php
+msgid "You are up to date."
 msgstr ""
 
 #: packages/msp-nexus-core/src/Forms/AssessmentHandler.php

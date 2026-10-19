@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0 — 2026-10-19
+
+- Redesigned admin: shared top bar and navigation, card-based screens, new Dashboard, light and dark modes, Settings on its own screen.
+- Diagnostics status badges; the update-cache repair also clears the GitHub release lookup.
+
 ## 0.8.4 — 2026-10-18
 
 - Version aligned with the MSP Nexus 0.8.4 theme.

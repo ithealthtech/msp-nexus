@@ -1,0 +1,407 @@
+/* MSP Nexus admin shell: top bar, page header, card styling for Nexus screens, and the dashboard. */
+
+body.msp-nexus-ui {
+  --nx-canvas: #f3f5fa;
+  --nx-surface: #fff;
+  --nx-surface-2: #f7f9fc;
+  --nx-line: #e2e7f0;
+  --nx-text: #17203a;
+  --nx-muted: #5b6582;
+  --nx-accent: #2f6bff;
+  --nx-accent-strong: #1f56e0;
+  --nx-accent-soft: rgba(47, 107, 255, .1);
+  --nx-cyan: #1fb3ee;
+  --nx-good: #17905a;
+  --nx-good-soft: rgba(23, 144, 90, .12);
+  --nx-warn: #b86e00;
+  --nx-warn-soft: rgba(214, 140, 0, .14);
+  --nx-bad: #d23b3b;
+  --nx-radius: 16px;
+  --nx-radius-sm: 10px;
+  --nx-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 8px 24px rgba(16, 24, 40, .04);
+
+  background: var(--nx-canvas);
+  color: var(--nx-text);
+}
+
+body.msp-nexus-ui.msp-nexus-ui--dark {
+  --nx-canvas: #0b0a17;
+  --nx-surface: #14132a;
+  --nx-surface-2: #1b1a36;
+  --nx-line: rgba(160, 170, 235, .16);
+  --nx-text: #eef1fb;
+  --nx-muted: #a3a9c6;
+  --nx-accent: #6c9dff;
+  --nx-accent-strong: #8bb2ff;
+  --nx-accent-soft: rgba(108, 157, 255, .14);
+  --nx-good: #3ccf8e;
+  --nx-good-soft: rgba(60, 207, 142, .14);
+  --nx-warn: #f2b14a;
+  --nx-warn-soft: rgba(242, 177, 74, .14);
+  --nx-bad: #ff7a7a;
+  --nx-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+body.msp-nexus-ui #wpwrap,
+body.msp-nexus-ui #wpcontent,
+body.msp-nexus-ui #wpbody { background: var(--nx-canvas); }
+
+body.msp-nexus-ui #wpfooter { color: var(--nx-muted); }
+
+/* ---------- Shell: top bar ---------- */
+
+.msp-nexus-shell { margin-left: -20px; }
+
+.msp-nexus-shell__bar {
+  position: sticky;
+  top: 32px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 64px;
+  padding: 0 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  background: linear-gradient(90deg, #0c0b1f 0%, #121236 100%);
+  color: #fff;
+}
+
+.msp-nexus-shell__brand { display: flex; flex: 0 0 auto; align-items: center; gap: .6rem; color: #fff; text-decoration: none; }
+.msp-nexus-shell__brand:hover, .msp-nexus-shell__brand:focus { color: #fff; }
+.msp-nexus-shell__mark { position: relative; width: 16px; height: 16px; margin: 0 .3rem 0 .1rem; border: 2px solid #69bff5; transform: skew(-18deg); }
+.msp-nexus-shell__mark::after { position: absolute; top: -7px; right: -7px; width: 8px; height: 8px; border: 2px solid #3176ca; content: ""; }
+.msp-nexus-shell__logo-img { max-width: 140px; max-height: 32px; }
+.msp-nexus-shell__name { font-size: 15px; font-weight: 800; font-style: italic; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+.msp-nexus-shell__version { padding: 1px 8px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; color: #a8b3d6; font-size: 11px; font-weight: 600; line-height: 18px; }
+
+.msp-nexus-shell__nav { flex: 1 1 auto; min-width: 0; }
+.msp-nexus-shell__menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.msp-nexus-shell__menu > li { position: relative; margin: 0; }
+
+.msp-nexus-shell__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #c9d1e8;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.msp-nexus-shell__tab:hover,
+.msp-nexus-shell__tab:focus-visible { background: rgba(255, 255, 255, .07); color: #fff; }
+.msp-nexus-shell__tab.is-active { background: rgba(105, 160, 255, .18); color: #fff; }
+.msp-nexus-shell__tab.is-active .msp-nexus-icon { color: #69bff5; }
+.msp-nexus-shell__tab:focus-visible, .msp-nexus-shell__icon-btn:focus-visible, .msp-nexus-shell__tool:focus-visible { outline: 2px solid #69bff5; outline-offset: 2px; box-shadow: none; }
+.msp-nexus-shell__tab .msp-nexus-icon { width: 18px; height: 18px; }
+.msp-nexus-shell__tab .msp-nexus-icon--chevron { width: 14px; height: 14px; margin-left: -.15rem; transition: transform .15s ease; }
+.msp-nexus-shell__tab[aria-expanded="true"] .msp-nexus-icon--chevron { transform: rotate(180deg); }
+
+.msp-nexus-shell__dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 101;
+  width: 330px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid var(--nx-line);
+  border-radius: 14px;
+  background: var(--nx-surface);
+  box-shadow: 0 20px 50px rgba(10, 12, 30, .22);
+  list-style: none;
+}
+
+.msp-nexus-shell__dropdown[hidden] { display: none; }
+.msp-nexus-shell__dropdown li { margin: 0; }
+.msp-nexus-shell__tool { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 10px; color: var(--nx-text); text-decoration: none; }
+.msp-nexus-shell__tool:hover, .msp-nexus-shell__tool:focus-visible, .msp-nexus-shell__tool.is-active { background: var(--nx-surface-2); color: var(--nx-text); }
+.msp-nexus-shell__tool .msp-nexus-icon { flex: 0 0 auto; width: 18px; height: 18px; padding: 9px; border-radius: 10px; background: var(--nx-accent-soft); color: var(--nx-accent); }
+.msp-nexus-shell__tool-text { display: flex; flex-direction: column; min-width: 0; }
+.msp-nexus-shell__tool-label { font-size: 14px; font-weight: 600; }
+.msp-nexus-shell__tool-desc { color: var(--nx-muted); font-size: 12.5px; }
+
+.msp-nexus-shell__actions { display: flex; flex: 0 0 auto; gap: 4px; }
+
+.msp-nexus-shell__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #c9d1e8;
+  cursor: pointer;
+}
+
+.msp-nexus-shell__icon-btn:hover { background: rgba(255, 255, 255, .07); color: #fff; }
+.msp-nexus-shell__icon-btn .msp-nexus-icon { width: 19px; height: 19px; }
+.msp-nexus-shell__scheme .msp-nexus-icon--sun { display: none; }
+.msp-nexus-ui--dark .msp-nexus-shell__scheme .msp-nexus-icon--sun { display: block; }
+.msp-nexus-ui--dark .msp-nexus-shell__scheme .msp-nexus-icon--moon { display: none; }
+
+/* ---------- Shell: page header ---------- */
+
+.msp-nexus-shell__sub { padding: 22px 0 0 20px; }
+.msp-nexus-shell__crumbs { display: flex; flex-wrap: wrap; gap: .5rem; max-width: 1280px; margin: 0 auto; padding: 0 28px; box-sizing: border-box; color: var(--nx-muted); font-size: 13px; list-style: none; }
+.msp-nexus-shell__crumbs li { margin: 0; }
+.msp-nexus-shell__crumbs li + li::before { margin-right: .5rem; color: var(--nx-line); content: "/"; }
+.msp-nexus-shell__crumbs a { color: var(--nx-muted); text-decoration: none; }
+.msp-nexus-shell__crumbs a:hover { color: var(--nx-accent); }
+.msp-nexus-shell__crumbs [aria-current] { color: var(--nx-text); font-weight: 600; }
+
+/* ---------- Existing Nexus screens, restyled as cards ---------- */
+
+.msp-nexus-ui #wpbody-content > .wrap { max-width: 1280px; margin: 8px auto 0; padding: 0 28px 48px; box-sizing: border-box; color: var(--nx-text); }
+.msp-nexus-ui #wpbody-content .wrap > h1 { margin: 0 0 .35rem; padding: 0; color: var(--nx-text); font-size: 28px; font-weight: 700; line-height: 1.25; }
+.msp-nexus-ui #wpbody-content .wrap > h1 + p { max-width: 760px; margin-top: 0; color: var(--nx-muted); font-size: 15px; }
+.msp-nexus-ui .wrap :is(h3, h4, h5) { color: var(--nx-text); }
+.msp-nexus-ui .wrap h2 { margin: 2rem 0 .35rem; color: var(--nx-text); font-size: 17px; font-weight: 650; }
+.msp-nexus-ui .wrap h2 + p, .msp-nexus-ui .wrap .description, .msp-nexus-ui .wrap p.description { color: var(--nx-muted); }
+.msp-nexus-ui .wrap p, .msp-nexus-ui .wrap li, .msp-nexus-ui .wrap label, .msp-nexus-ui .wrap td, .msp-nexus-ui .wrap th { color: inherit; }
+.msp-nexus-ui .wrap a { color: var(--nx-accent); }
+.msp-nexus-ui .wrap a:hover { color: var(--nx-accent-strong); }
+.msp-nexus-ui .wrap code { padding: 2px 6px; border-radius: 6px; background: var(--nx-surface-2); color: var(--nx-text); }
+
+.msp-nexus-ui .wrap .form-table {
+  margin-top: .75rem;
+  overflow: hidden;
+  border: 1px solid var(--nx-line);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--nx-radius);
+  background: var(--nx-surface);
+  box-shadow: var(--nx-shadow);
+}
+
+.msp-nexus-ui .wrap .form-table th { width: 240px; padding: 22px 24px; color: var(--nx-text); font-weight: 600; vertical-align: top; }
+.msp-nexus-ui .wrap .form-table td { padding: 16px 24px; }
+.msp-nexus-ui .wrap .form-table tr + tr > * { border-top: 1px solid var(--nx-line); }
+.msp-nexus-ui .wrap .form-table .description { margin-top: 6px; font-size: 13px; }
+
+.msp-nexus-ui .wrap input:is([type="text"], [type="url"], [type="email"], [type="tel"], [type="number"], [type="password"], [type="search"], [type="date"]),
+.msp-nexus-ui .wrap select,
+.msp-nexus-ui .wrap textarea {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--nx-line);
+  border-radius: var(--nx-radius-sm);
+  background: var(--nx-surface-2);
+  color: var(--nx-text);
+  box-shadow: none;
+}
+
+.msp-nexus-ui .wrap select { padding-right: 32px; }
+.msp-nexus-ui .wrap input[type="color"] { width: 48px; height: 36px; padding: 2px; border: 1px solid var(--nx-line); border-radius: 8px; background: var(--nx-surface); }
+
+.msp-nexus-ui .wrap input:focus,
+.msp-nexus-ui .wrap select:focus,
+.msp-nexus-ui .wrap textarea:focus { border-color: var(--nx-accent); outline: 0; box-shadow: 0 0 0 3px var(--nx-accent-soft); }
+
+.msp-nexus-ui .wrap input[type="checkbox"], .msp-nexus-ui .wrap input[type="radio"] { border-color: var(--nx-muted); background: var(--nx-surface); accent-color: var(--nx-accent); }
+.msp-nexus-ui .wrap input[type="checkbox"]:checked::before { filter: hue-rotate(0); }
+
+.msp-nexus-ui .wrap .button,
+.msp-nexus-ui .msp-nexus-shell .button {
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--nx-line);
+  border-radius: var(--nx-radius-sm);
+  background: var(--nx-surface);
+  color: var(--nx-text);
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.msp-nexus-ui .wrap .button:hover, .msp-nexus-ui .wrap .button:focus { border-color: var(--nx-accent); background: var(--nx-surface); color: var(--nx-accent); }
+.msp-nexus-ui .wrap .button:focus { box-shadow: 0 0 0 3px var(--nx-accent-soft); }
+.msp-nexus-ui .wrap .button-primary { border-color: var(--nx-accent); background: var(--nx-accent); color: #fff; }
+.msp-nexus-ui .wrap .button-primary:hover, .msp-nexus-ui .wrap .button-primary:focus { border-color: var(--nx-accent-strong); background: var(--nx-accent-strong); color: #fff; }
+.msp-nexus-ui .wrap .button-hero { min-height: 46px; padding: 0 22px; font-size: 15px; line-height: 44px; }
+
+.msp-nexus-ui .wrap p.submit {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  gap: .75rem;
+  margin: 1.5rem 0 0;
+  padding: 14px 20px;
+  border: 1px solid var(--nx-line);
+  border-radius: var(--nx-radius);
+  background: color-mix(in srgb, var(--nx-surface) 92%, transparent);
+  box-shadow: 0 -6px 24px rgba(16, 24, 40, .06);
+  backdrop-filter: blur(8px);
+}
+
+.msp-nexus-ui .wrap .widefat {
+  overflow: hidden;
+  border: 1px solid var(--nx-line);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--nx-radius);
+  background: var(--nx-surface);
+  box-shadow: var(--nx-shadow);
+}
+
+.msp-nexus-ui .wrap .widefat thead th, .msp-nexus-ui .wrap .widefat thead td { padding: 12px 16px; border-bottom: 1px solid var(--nx-line); background: var(--nx-surface-2); color: var(--nx-muted); font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.msp-nexus-ui .wrap .widefat tbody th, .msp-nexus-ui .wrap .widefat tbody td { padding: 12px 16px; color: var(--nx-text); }
+.msp-nexus-ui .wrap .widefat tbody tr + tr > * { border-top: 1px solid var(--nx-line); }
+.msp-nexus-ui .wrap .striped > tbody > :nth-child(odd) { background: transparent; }
+.msp-nexus-ui .wrap .striped > tbody > :nth-child(even) { background: var(--nx-surface-2); }
+
+.msp-nexus-ui .wrap .card { padding: 20px 22px; border: 1px solid var(--nx-line); border-radius: var(--nx-radius); background: var(--nx-surface); color: var(--nx-text); box-shadow: var(--nx-shadow); }
+.msp-nexus-ui .wrap .card h2, .msp-nexus-ui .wrap .card h3 { margin-top: 0; color: var(--nx-text); }
+
+.msp-nexus-ui .notice, .msp-nexus-ui div.updated, .msp-nexus-ui div.error { border: 1px solid var(--nx-line); border-left-width: 4px; border-radius: 12px; background: var(--nx-surface); color: var(--nx-text); box-shadow: none; }
+.msp-nexus-ui .notice-success, .msp-nexus-ui div.updated { border-left-color: var(--nx-good); }
+.msp-nexus-ui .notice-warning { border-left-color: var(--nx-warn); }
+.msp-nexus-ui .notice-error, .msp-nexus-ui div.error { border-left-color: var(--nx-bad); }
+.msp-nexus-ui .notice-info { border-left-color: var(--nx-accent); }
+
+.msp-nexus-ui.msp-nexus-ui--dark #screen-meta-links .show-settings { border-color: var(--nx-line); background: var(--nx-surface); color: var(--nx-muted); }
+
+/* ---------- Dashboard ---------- */
+
+.msp-nexus-dash__hero {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 32px 36px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: radial-gradient(ellipse 60% 120% at 100% 0%, rgba(31, 179, 238, .35), transparent 60%), linear-gradient(120deg, #0f0e2c 0%, #172a66 55%, #1d4fa8 100%);
+  color: #fff;
+}
+
+.msp-nexus-ui #wpbody-content .msp-nexus-dash__hero h1 { margin: 0; padding: 0; color: #fff; font-size: 30px; font-weight: 750; line-height: 1.2; }
+.msp-nexus-dash__eyebrow { margin: 0 0 .4rem; color: #8fd0f8; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.msp-nexus-ui .wrap .msp-nexus-dash__lede { max-width: 560px; margin: .5rem 0 0; color: #c9d6f5; font-size: 15px; }
+.msp-nexus-dash__hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.msp-nexus-ui .wrap .msp-nexus-dash__hero .button:not(.button-primary) { border-color: rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .08); color: #fff; }
+.msp-nexus-ui .wrap .msp-nexus-dash__hero .button:not(.button-primary):hover { border-color: #fff; background: rgba(255, 255, 255, .14); }
+.msp-nexus-ui .wrap .msp-nexus-dash__hero .button-primary { border-color: #fff; background: #fff; color: #10204d; }
+.msp-nexus-ui .wrap .msp-nexus-dash__hero .button-primary:hover { border-color: #dfe9ff; background: #dfe9ff; color: #10204d; }
+
+.msp-nexus-dash__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+.msp-nexus-dash__actions { grid-column: span 8; }
+.msp-nexus-dash__checklist { grid-column: span 4; grid-row: span 2; }
+.msp-nexus-dash__status, .msp-nexus-dash__updates { grid-column: span 4; }
+.msp-nexus-dash__help { grid-column: 1 / -1; }
+
+.msp-nexus-card { padding: 22px 24px; border: 1px solid var(--nx-line); border-radius: var(--nx-radius); background: var(--nx-surface); box-shadow: var(--nx-shadow); }
+.msp-nexus-card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.msp-nexus-card__icon { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: var(--nx-accent-soft); color: var(--nx-accent); }
+.msp-nexus-card__icon .msp-nexus-icon { width: 21px; height: 21px; }
+.msp-nexus-ui .wrap .msp-nexus-card__head h2 { margin: 0; font-size: 16px; }
+.msp-nexus-ui .wrap .msp-nexus-card__head p { margin: 2px 0 0; color: var(--nx-muted); font-size: 13px; }
+.msp-nexus-card__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 16px 0 0; }
+.msp-nexus-card__foot a { font-weight: 600; text-decoration: none; }
+
+.msp-nexus-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.msp-nexus-tiles li { margin: 0; }
+.msp-nexus-ui .wrap .msp-nexus-tile { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 16px; border: 1px solid var(--nx-line); border-radius: 12px; background: var(--nx-surface-2); color: var(--nx-text); text-decoration: none; box-sizing: border-box; transition: border-color .15s ease, transform .15s ease; }
+.msp-nexus-ui .wrap .msp-nexus-tile:hover, .msp-nexus-ui .wrap .msp-nexus-tile:focus-visible { border-color: var(--nx-accent); color: var(--nx-text); transform: translateY(-2px); }
+.msp-nexus-tile__icon { margin-bottom: 6px; color: var(--nx-accent); }
+.msp-nexus-tile__icon .msp-nexus-icon { width: 24px; height: 24px; }
+.msp-nexus-tile__label { font-size: 14px; font-weight: 600; }
+.msp-nexus-tile__desc { color: var(--nx-muted); font-size: 12.5px; }
+
+.msp-nexus-progress { height: 8px; margin-bottom: 8px; overflow: hidden; border-radius: 999px; background: var(--nx-surface-2); box-shadow: inset 0 0 0 1px var(--nx-line); }
+.msp-nexus-progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--nx-accent), var(--nx-cyan)); }
+
+.msp-nexus-checklist, .msp-nexus-links { margin: 0; padding: 0; list-style: none; }
+.msp-nexus-checklist li { display: flex; align-items: center; gap: 10px; margin: 0; padding: 10px 0; border-top: 1px solid var(--nx-line); }
+.msp-nexus-checklist li:first-child { border-top: 0; }
+.msp-nexus-checklist__mark { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; }
+.msp-nexus-checklist__mark .msp-nexus-icon { width: 14px; height: 14px; }
+.is-done .msp-nexus-checklist__mark { background: var(--nx-good-soft); color: var(--nx-good); }
+.is-todo .msp-nexus-checklist__mark { background: var(--nx-warn-soft); color: var(--nx-warn); }
+.msp-nexus-checklist__label { flex: 1 1 auto; font-size: 13.5px; }
+.is-done .msp-nexus-checklist__label { color: var(--nx-muted); }
+.msp-nexus-checklist a { font-size: 13px; font-weight: 600; text-decoration: none; }
+
+.msp-nexus-stats { margin: 0; }
+.msp-nexus-stats__row { display: flex; justify-content: space-between; gap: 1rem; padding: 9px 0; border-top: 1px solid var(--nx-line); }
+.msp-nexus-stats__row:first-child { border-top: 0; }
+.msp-nexus-stats dt { color: var(--nx-muted); font-size: 13px; }
+.msp-nexus-stats dd { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; font-weight: 600; text-align: right; }
+.msp-nexus-stats__row:is(.is-pass, .is-notice, .is-fail) dd::before { width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; content: ""; }
+.msp-nexus-stats__row.is-pass dd::before { background: var(--nx-good); }
+.msp-nexus-stats__row.is-notice dd::before { background: var(--nx-warn); }
+.msp-nexus-stats__row.is-fail dd::before { background: var(--nx-bad); }
+
+.msp-nexus-dash__help .msp-nexus-card__head { margin-bottom: 12px; }
+.msp-nexus-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.msp-nexus-links li { margin: 0; }
+.msp-nexus-ui .wrap .msp-nexus-links a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--nx-line); border-radius: 10px; background: var(--nx-surface-2); color: var(--nx-text); font-weight: 600; text-decoration: none; }
+.msp-nexus-ui .wrap .msp-nexus-links a:hover { border-color: var(--nx-accent); color: var(--nx-accent); }
+.msp-nexus-links .msp-nexus-icon { width: 18px; height: 18px; color: var(--nx-accent); }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1280px) {
+  .msp-nexus-shell__tab:not(.is-active) span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .msp-nexus-shell__more .msp-nexus-shell__tab span { position: static; width: auto; height: auto; clip: auto; }
+}
+
+@media (max-width: 1100px) {
+  .msp-nexus-dash__actions, .msp-nexus-dash__checklist { grid-column: 1 / -1; grid-row: auto; }
+  .msp-nexus-dash__status, .msp-nexus-dash__updates { grid-column: span 6; }
+}
+
+@media (max-width: 782px) {
+  .msp-nexus-shell { margin-left: -10px; }
+  .msp-nexus-shell__bar { position: relative; top: auto; flex-wrap: wrap; gap: .5rem 1rem; padding: 10px 16px; }
+  .msp-nexus-shell__nav { order: 3; flex-basis: 100%; }
+  .msp-nexus-shell__actions { margin-left: auto; }
+  .msp-nexus-shell__sub { padding: 16px 0 0 10px; }
+  .msp-nexus-shell__crumbs { padding: 0 16px; }
+  .msp-nexus-shell__dropdown { width: min(330px, calc(100vw - 32px)); }
+  .msp-nexus-ui #wpbody-content > .wrap { padding: 0 16px 40px; }
+  .msp-nexus-ui .wrap .form-table th { width: auto; padding: 16px 16px 4px; }
+  .msp-nexus-ui .wrap .form-table td { padding: 8px 16px 16px; }
+  .msp-nexus-ui .wrap .form-table tr + tr td { border-top: 0; }
+  .msp-nexus-dash__hero { padding: 24px; }
+  .msp-nexus-dash__status, .msp-nexus-dash__updates { grid-column: 1 / -1; }
+  .msp-nexus-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+
+.msp-nexus-pill { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--nx-surface-2); color: var(--nx-muted); font-size: 12px; font-weight: 600; line-height: 20px; text-transform: capitalize; }
+.msp-nexus-pill.is-pass { background: var(--nx-good-soft); color: var(--nx-good); }
+.msp-nexus-pill.is-notice { background: var(--nx-warn-soft); color: var(--nx-warn); }
+.msp-nexus-pill.is-fail { background: rgba(210, 59, 59, .12); color: var(--nx-bad); }
+.msp-nexus-pill.is-info { background: var(--nx-accent-soft); color: var(--nx-accent); }
+
+/* Screens with their own card markup pick up the shell surfaces, so they work in dark mode too. */
+.msp-nexus-ui :is(.msp-nexus-flagship, .msp-nexus-starter-card, .msp-nexus-hub__card) { border-color: var(--nx-line); border-radius: var(--nx-radius); background: var(--nx-surface); color: var(--nx-text); box-shadow: var(--nx-shadow); }
+.msp-nexus-ui .msp-nexus-integration-status { background: var(--nx-surface-2); color: var(--nx-muted); }
+.msp-nexus-ui .msp-nexus-integration-status.is-active { background: var(--nx-good-soft); color: var(--nx-good); }
+
+/* List screens (Nexus layouts). */
+.msp-nexus-ui #wpbody-content .wrap > h1.wp-heading-inline { margin-right: 12px; vertical-align: middle; }
+.msp-nexus-ui .wrap .page-title-action { top: 0; padding: 6px 14px; border-color: var(--nx-accent); border-radius: var(--nx-radius-sm); background: transparent; color: var(--nx-accent); font-weight: 600; vertical-align: middle; }
+.msp-nexus-ui .wrap .page-title-action:hover { background: var(--nx-accent); color: #fff; }
+.msp-nexus-ui .wrap .widefat :is(tfoot th, tfoot td) { border-top: 1px solid var(--nx-line); background: var(--nx-surface-2); }
+.msp-nexus-ui .wrap .widefat :is(th, td) a { color: var(--nx-accent); }
+.msp-nexus-ui .wrap .subsubsub { color: var(--nx-muted); }
+
+/* Under 600px WordPress pads #wpbody to clear its absolute toolbar; the shell sits above #wpbody, so it takes that padding instead. */
+@media (max-width: 600px) {
+  .msp-nexus-shell { padding-top: 46px; }
+  body.msp-nexus-ui #wpbody { padding-top: 0; }
+}

@@ -29,6 +29,8 @@ use MspNexusCore\Seo\Schema;
 use MspNexusCore\Cli\Commands;
 use MspNexusCore\Database\MigrationRunner;
 use MspNexusCore\Admin\Branding;
+use MspNexusCore\Admin\Dashboard;
+use MspNexusCore\Admin\Shell;
 use MspNexusCore\Admin\ContentHub;
 use MspNexusCore\Admin\Performance;
 use MspNexusCore\Admin\Privacy;
@@ -64,6 +66,8 @@ final class Plugin
         add_action('init', array(new BlockRegistry(), 'register'));
         add_action('admin_init', array(new Settings(), 'register'));
         add_action('admin_menu', array(new Settings(), 'menu'));
+        (new Shell())->register_hooks();
+        (new Dashboard())->register_hooks();
         (new ContentHub())->register_hooks();
         (new Onboarding())->register_hooks();
         (new Diagnostics())->register_hooks();

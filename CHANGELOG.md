@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0 — 2026-10-19
+
+### Redesigned admin
+- Every MSP Nexus admin screen now shares one app-style shell: a branded top bar with icon navigation (Dashboard, Settings, Starter sites, Studio, Layouts) and a Tools menu with short descriptions, breadcrumbs, and card-based settings, tables, and notices.
+- New Dashboard landing screen: welcome banner, quick actions, a launch checklist with one-click fixes, system status, update status with a Check for updates now button, and help links.
+- Light and dark modes, remembered per user.
+- Settings moved to its own screen (admin.php?page=msp-nexus-settings); the MSP Nexus menu now opens the Dashboard.
+- White-label client mode shows the partner product name and admin logo in the shell.
+- Diagnostics: status badges, and Clear update-check cache now also clears the GitHub release lookup.
+
 ## 0.8.4 — 2026-10-18
 
 - Footer gets a Resources column (all resources, insights, security booklet, self-assessment, FAQ). On tablet widths the brand block takes its own row so the four link columns stay readable.
