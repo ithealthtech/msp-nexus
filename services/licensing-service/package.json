@@ -1,13 +1,16 @@
 {
   "name": "@msp-nexus/licensing-service",
-  "version": "0.8.2",
+  "version": "0.9.3",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "node src/server.js",
     "check": "node --check src/server.js && node --check src/domain/licensing.js && node --check src/infrastructure/sqlite-repository.js && node --check src/infrastructure/package-delivery.js && node --check src/infrastructure/rate-limiter.js && node --test",
-    "test": "node --test"
+    "test": "node --test",
+    "dev:console": "node scripts/dev-console.mjs"
   },
   "license": "UNLICENSED"
 }

@@ -45,8 +45,8 @@ const privateKey = process.env.MANIFEST_PRIVATE_KEY_PEM
   : generatedKeys.privateKey;
 const publicKey = createPublicKey(privateKey);
 const seededReleases = [
-  { product: 'msp-nexus', productType: 'theme', slug: 'msp-nexus', channel: 'stable', version: '0.9.2', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.THEME_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.THEME_PACKAGE_SIZE ?? 0), file: 'msp-nexus-0.9.2.zip', changelogUrl: 'https://itdonerightnc.com/' },
-  { product: 'msp-nexus-core', productType: 'plugin', slug: 'msp-nexus-core/msp-nexus-core.php', channel: 'stable', version: '0.9.2', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.PLUGIN_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.PLUGIN_PACKAGE_SIZE ?? 0), file: 'msp-nexus-core-0.9.2.zip', changelogUrl: 'https://itdonerightnc.com/' }
+  { product: 'msp-nexus', productType: 'theme', slug: 'msp-nexus', channel: 'stable', version: '0.9.3', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.THEME_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.THEME_PACKAGE_SIZE ?? 0), file: 'msp-nexus-0.9.3.zip', changelogUrl: 'https://itdonerightnc.com/' },
+  { product: 'msp-nexus-core', productType: 'plugin', slug: 'msp-nexus-core/msp-nexus-core.php', channel: 'stable', version: '0.9.3', status: 'published', rolloutPercent: 100, requiresWordPress: '6.7', testedWordPress: '7.0', requiresPhp: '7.4.33', sha256: process.env.PLUGIN_PACKAGE_SHA256 ?? 'development-package-not-published', size: Number(process.env.PLUGIN_PACKAGE_SIZE ?? 0), file: 'msp-nexus-core-0.9.3.zip', changelogUrl: 'https://itdonerightnc.com/' }
 ];
 const persistedReleases = 'function' === typeof repository.listReleases ? await repository.listReleases() : [];
 const newSeeds = missingSeedReleases(persistedReleases, seededReleases);
@@ -78,7 +78,7 @@ const webhook = process.env.COMMERCE_WEBHOOK_SECRET ? new WebhookProcessor({
   }
 }) : null;
 const rateLimiter = new RateLimiter({ limit: Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60), windowMs: 60000 });
-const server = createServer(createHandler({ engine, updates, packages, entitlements, webhook, rateLimiter, releaseCatalog, operatorToken: process.env.OPERATOR_TOKEN ?? '' }));
+const server = createServer(createHandler({ engine, updates, packages, entitlements, webhook, rateLimiter, releaseCatalog, operatorToken: process.env.OPERATOR_TOKEN ?? '', secureCookies: process.env.NODE_ENV === 'production' || (process.env.PUBLIC_ORIGIN ?? '').startsWith('https://'), trustProxyHops: Math.max(0, Number.parseInt(process.env.TRUST_PROXY_HOPS ?? '0', 10) || 0) }));
 
 server.listen(port, '127.0.0.1', () => {
   console.log(`MSP Nexus licensing service listening on http://127.0.0.1:${port}`);

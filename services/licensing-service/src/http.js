@@ -1,6 +1,9 @@
 import { randomUUID, timingSafeEqual } from 'node:crypto';
 import { createReadStream } from 'node:fs';
 import { pipeline } from 'node:stream/promises';
+import { URLSearchParams } from 'node:url';
+import { LoginThrottle, SessionStore, parseCookies, safeEquals } from './console/sessions.js';
+import { appPage, loadAssets, signInPage } from './console/pages.js';
 
 const errors = {
   invalid_json: 400,
@@ -30,6 +33,8 @@ const errors = {
   ,rate_limited: 429
   ,invalid_release: 400
   ,invalid_release_status: 400
+  ,csrf_failed: 403
+  ,sign_in_locked: 429
 };
 
 async function readBody(request) {
@@ -72,22 +77,24 @@ function tokenEquals(left, right) {
   return a.length > 0 && a.length === b.length && timingSafeEqual(a, b);
 }
 
-function requireOperator(request, expected) {
-  if (!expected || !tokenEquals(bearer(request), expected)) throw new Error('operator_access_denied');
-}
 
-function escapeHtml(value) {
-  return String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
-}
 
-function sendHtml(response, status, html, requestId) {
+const PAGE_CSP = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'";
+
+function sendHtml(response, status, html, requestId, extraHeaders = {}) {
   const encoded = Buffer.from(html);
   response.writeHead(status, {
     'content-type': 'text/html; charset=utf-8', 'content-length': encoded.length,
-    'cache-control': 'no-store', 'content-security-policy': "default-src 'none'; style-src 'unsafe-inline'; form-action 'none'; frame-ancestors 'none'; base-uri 'none'",
-    'referrer-policy': 'no-referrer', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-request-id': requestId
+    'cache-control': 'no-store', 'content-security-policy': PAGE_CSP,
+    'referrer-policy': 'no-referrer', 'x-content-type-options': 'nosniff', 'x-frame-options': 'DENY', 'x-request-id': requestId,
+    ...extraHeaders
   });
   response.end(encoded);
+}
+
+function redirect(response, location, requestId, extraHeaders = {}) {
+  response.writeHead(303, { location, 'cache-control': 'no-store', 'x-request-id': requestId, ...extraHeaders });
+  response.end();
 }
 
 async function sendPackage(response, file, requestId) {
@@ -100,17 +107,94 @@ async function sendPackage(response, file, requestId) {
   await pipeline(createReadStream(file.path), response);
 }
 
-function portalDocument(title, intro, licenses) {
-  const cards = licenses.map((license) => `<article><h2>${escapeHtml(license.plan)} plan</h2><dl><dt>Status</dt><dd>${escapeHtml(license.status)}</dd><dt>Expires</dt><dd>${escapeHtml(license.expires_at)}</dd><dt>Production activations</dt><dd>${license.active_production_activations} / ${license.activation_limit}</dd><dt>Staging activations</dt><dd>${license.active_staging_activations}</dd></dl><h3>Sites</h3><ul>${license.activations.map((item) => `<li>${escapeHtml(item.site)} — ${item.deactivated_at ? 'deactivated' : 'active'}</li>`).join('') || '<li>No active sites</li>'}</ul></article>`).join('');
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${escapeHtml(title)}</title><style>body{font:16px/1.6 system-ui;margin:0;background:#f4f7fb;color:#081527}main{max-width:72rem;margin:auto;padding:3rem 1.25rem}article{background:#fff;border:1px solid #dbe5ef;border-radius:.6rem;padding:1.5rem;margin:1rem 0}dl{display:grid;grid-template-columns:minmax(10rem,1fr) 2fr;gap:.5rem}dt{font-weight:700}h1,h2,h3{line-height:1.15}</style><main><h1>${escapeHtml(title)}</h1><p>${escapeHtml(intro)}</p>${cards}</main></html>`;
-}
+export function createHandler({ engine, updates, packages = null, entitlements = null, webhook = null, rateLimiter = null, releaseCatalog = null, operatorToken = '', sessions = new SessionStore(), loginThrottle = new LoginThrottle(), secureCookies = false, trustProxyHops = 0, assets = loadAssets() }) {
+  const cookieName = (kind) => `${secureCookies ? '__Host-' : ''}${'operator' === kind ? 'nx_op' : 'nx_cu'}`;
+  const cookie = (kind, value, maxAge) => `${cookieName(kind)}=${value}; Path=/; HttpOnly; SameSite=Strict; Max-Age=${maxAge}${secureCookies ? '; Secure' : ''}`;
+  const sessionFor = (request, kind) => {
+    const id = parseCookies(request.headers.cookie)[cookieName(kind)];
+    const session = sessions.get(id, kind);
+    return session ? { id, session } : null;
+  };
+  // Cookie-authenticated changes need the session's CSRF token and, when the browser sends one, a same-host Origin.
+  const assertCsrf = (request, session, supplied) => {
+    const origin = request.headers.origin;
+    if (origin) {
+      let host = '';
+      try { host = new URL(origin).host; } catch { host = ''; }
+      if (host !== request.headers.host) throw new Error('csrf_failed');
+    }
+    if (!safeEquals(supplied ?? '', session.csrf)) throw new Error('csrf_failed');
+  };
+  const requireOperator = (request) => {
+    if (operatorToken && tokenEquals(bearer(request), operatorToken)) return;
+    const found = sessionFor(request, 'operator');
+    if (!found) throw new Error('operator_access_denied');
+    if ('GET' !== request.method) assertCsrf(request, found.session, request.headers['x-csrf-token']);
+  };
+  const customerToken = (request) => {
+    const token = bearer(request);
+    if (token) return token;
+    const found = sessionFor(request, 'customer');
+    if (!found) return '';
+    if ('GET' !== request.method) assertCsrf(request, found.session, request.headers['x-csrf-token']);
+    return found.session.data.portalToken;
+  };
+  // Behind trusted reverse proxies, the client is the address the outermost trusted proxy appended to
+  // X-Forwarded-For. Without configured hops the header is ignored, because clients can forge it.
+  const clientOf = (request) => {
+    const socket = request.socket.remoteAddress ?? 'unknown';
+    if (trustProxyHops < 1) return socket;
+    const chain = String(request.headers['x-forwarded-for'] ?? '').split(',').map((part) => part.trim()).filter(Boolean);
+    return chain.length >= trustProxyHops ? chain[chain.length - trustProxyHops] : socket;
+  };
 
-export function createHandler({ engine, updates, packages = null, entitlements = null, webhook = null, rateLimiter = null, releaseCatalog = null, operatorToken = '' }) {
+  const signIn = async (request, response, requestId, kind) => {
+    const base = 'operator' === kind ? '/operator' : '/portal';
+    const form = new URLSearchParams(await readBody(request));
+    const secret = String(form.get('secret') ?? '').trim();
+    const client = clientOf(request);
+    try {
+      loginThrottle.assertAllowed(client);
+    } catch {
+      return sendHtml(response, 429, signInPage(kind, { error: 'Too many attempts. Wait 15 minutes, then try again.' }), requestId, { 'retry-after': '900' });
+    }
+    let data = {};
+    if ('operator' === kind) {
+      if (!operatorToken) return sendHtml(response, 503, signInPage(kind, { error: 'Operator access is not configured on this server. Set OPERATOR_TOKEN.' }), requestId);
+      if (!tokenEquals(secret, operatorToken)) {
+        loginThrottle.fail(client);
+        return sendHtml(response, 401, signInPage(kind, { error: 'That access key is not valid.' }), requestId);
+      }
+    } else {
+      try {
+        await engine.customerSummary(secret);
+      } catch {
+        loginThrottle.fail(client);
+        return sendHtml(response, 401, signInPage(kind, { error: 'That access token is not valid.' }), requestId);
+      }
+      data = { portalToken: secret };
+    }
+    loginThrottle.succeed(client);
+    const { id } = sessions.create(kind, data);
+    return redirect(response, base, requestId, { 'set-cookie': cookie(kind, id, Math.floor(sessions.absoluteMs / 1000)) });
+  };
+
+  const signOut = async (request, response, requestId, kind) => {
+    const base = 'operator' === kind ? '/operator' : '/portal';
+    const form = new URLSearchParams(await readBody(request));
+    const found = sessionFor(request, kind);
+    if (found) {
+      assertCsrf(request, found.session, form.get('csrf'));
+      sessions.destroy(found.id);
+    }
+    return redirect(response, base, requestId, { 'set-cookie': cookie(kind, '', 0) });
+  };
+
   return async (request, response) => {
     const requestId = randomUUID();
     try {
       const route = new URL(request.url, 'http://service.local').pathname;
-      if (rateLimiter && route !== '/health') rateLimiter.consume(`${request.socket.remoteAddress ?? 'unknown'}:${route}`);
+      if (rateLimiter && route !== '/health') rateLimiter.consume(`${clientOf(request)}:${route}`);
       if (request.method === 'GET' && request.url === '/health') return send(response, 200, { status: 'ok' }, requestId);
       if (request.method === 'GET' && request.url.startsWith('/v1/packages/')) {
         if (!packages) throw new Error('release_not_found');
@@ -120,12 +204,31 @@ export function createHandler({ engine, updates, packages = null, entitlements =
         const file = await packages.authorize({ product: decodeURIComponent(segments[2]), version: decodeURIComponent(segments[3]), grant: url.searchParams.get('grant') ?? '' });
         return sendPackage(response, file, requestId);
       }
-      if (request.method === 'GET' && request.url === '/v1/operator/licenses') { requireOperator(request, operatorToken); return send(response, 200, { licenses: await engine.list() }, requestId); }
-      if (request.method === 'GET' && request.url === '/v1/operator/releases') { requireOperator(request, operatorToken); return send(response, 200, { releases: releaseCatalog ? releaseCatalog.list() : [] }, requestId); }
-      if (request.method === 'GET' && request.url === '/operator') { requireOperator(request, operatorToken); return sendHtml(response, 200, portalDocument('MSP Nexus operator portal', 'License status and activation visibility. Administrative mutations use the authenticated API.', await engine.list()), requestId); }
-      if (request.method === 'GET' && request.url === '/v1/customer/licenses') return send(response, 200, { licenses: await engine.customerSummary(bearer(request)) }, requestId);
-      if (request.method === 'GET' && request.url === '/v1/customer/export') return send(response, 200, { schema: 1, generated_at: new Date().toISOString(), licenses: await engine.customerSummary(bearer(request)) }, requestId);
-      if (request.method === 'GET' && request.url === '/customer') return sendHtml(response, 200, portalDocument('MSP Nexus customer portal', 'Review entitlements, dates, and activated sites. Contact support for billing changes.', await engine.customerSummary(bearer(request))), requestId);
+      if (request.method === 'GET' && route.startsWith('/console/assets/')) {
+        const asset = assets.get(route.slice('/console/assets/'.length));
+        if (!asset) return send(response, 404, { error: 'not_found' }, requestId);
+        response.writeHead(200, { 'content-type': asset.type, 'content-length': asset.body.length, 'cache-control': 'no-cache', 'x-content-type-options': 'nosniff', 'x-request-id': requestId });
+        return response.end(asset.body);
+      }
+      if (request.method === 'GET' && (route === '/operator' || route === '/portal')) {
+        const kind = route === '/operator' ? 'operator' : 'customer';
+        const found = sessionFor(request, kind);
+        return sendHtml(response, 200, found ? appPage(kind, found.session.csrf) : signInPage(kind), requestId);
+      }
+      if (request.method === 'GET' && route === '/customer') return redirect(response, '/portal', requestId);
+      if (request.method === 'POST' && route === '/operator/session') return await signIn(request, response, requestId, 'operator');
+      if (request.method === 'POST' && route === '/portal/session') return await signIn(request, response, requestId, 'customer');
+      if (request.method === 'POST' && route === '/operator/session/end') return await signOut(request, response, requestId, 'operator');
+      if (request.method === 'POST' && route === '/portal/session/end') return await signOut(request, response, requestId, 'customer');
+      if (request.method === 'GET' && route === '/v1/operator/licenses') { requireOperator(request); return send(response, 200, { licenses: await engine.list() }, requestId); }
+      if (request.method === 'GET' && route === '/v1/operator/releases') { requireOperator(request); return send(response, 200, { releases: releaseCatalog ? releaseCatalog.list() : [] }, requestId); }
+      if (request.method === 'GET' && route === '/v1/operator/audit') {
+        requireOperator(request);
+        const limit = Number.parseInt(new URL(request.url, 'http://service.local').searchParams.get('limit') ?? '100', 10);
+        return send(response, 200, { events: await engine.audit(limit) }, requestId);
+      }
+      if (request.method === 'GET' && route === '/v1/customer/licenses') return send(response, 200, { licenses: await engine.customerSummary(customerToken(request)) }, requestId);
+      if (request.method === 'GET' && route === '/v1/customer/export') return send(response, 200, { schema: 1, generated_at: new Date().toISOString(), licenses: await engine.customerSummary(customerToken(request)) }, requestId);
       if (request.method !== 'POST') return send(response, 404, { error: 'not_found' }, requestId);
       const raw = await readBody(request);
       if (request.url === '/v1/webhooks/commerce') {
@@ -134,16 +237,18 @@ export function createHandler({ engine, updates, packages = null, entitlements =
       }
       const payload = parseBody(raw);
       let result;
-      if (request.url === '/v1/operator/licenses') { requireOperator(request, operatorToken); result = await engine.issue({ plan: payload.plan, expiresAt: payload.expires_at, activationLimit: payload.activation_limit, graceDays: payload.grace_days, allowFreeStaging: payload.allow_free_staging, allowMultisite: payload.allow_multisite, entitlements: Array.isArray(payload.entitlements) ? payload.entitlements : [] }); }
-      else if (request.url === '/v1/operator/licenses/status') { requireOperator(request, operatorToken); result = await engine.setStatus({ licenseId: payload.license_id, status: payload.status }); }
-      else if (request.url === '/v1/operator/licenses/renew') { requireOperator(request, operatorToken); result = await engine.renew({ licenseId: payload.license_id, expiresAt: payload.expires_at }); }
-      else if (request.url === '/v1/operator/licenses/plan') { requireOperator(request, operatorToken); result = await engine.changePlan({ licenseId: payload.license_id, plan: payload.plan, activationLimit: payload.activation_limit, entitlements: payload.entitlements }); }
-      else if (request.url === '/v1/operator/activations/transfer') { requireOperator(request, operatorToken); result = await engine.transfer({ licenseId: payload.license_id, activationId: payload.activation_id, siteUrl: payload.site_url }); }
-      else if (request.url === '/v1/operator/releases') { requireOperator(request, operatorToken); if (!releaseCatalog) throw new Error('release_not_found'); result = await releaseCatalog.upsert(payload); }
-      else if (request.url === '/v1/operator/releases/status') { requireOperator(request, operatorToken); if (!releaseCatalog) throw new Error('release_not_found'); result = await releaseCatalog.changeStatus({ product: payload.product, version: payload.version, channel: payload.channel, status: payload.status }); }
-      else if (request.url === '/v1/operator/webhooks/retry') { requireOperator(request, operatorToken); if (!webhook) throw new Error('webhook_not_configured'); result = await webhook.retryDue(payload.limit); }
-      else if (request.url === '/v1/customer/activations/transfer') result = await engine.customerTransfer({ portalToken: bearer(request), licenseId: payload.license_id, activationId: payload.activation_id, siteUrl: payload.site_url });
-      else if (request.url === '/v1/customer/data-requests') result = await engine.requestDataAction({ portalToken: bearer(request), action: payload.action, note: payload.note });
+      if (request.url === '/v1/operator/licenses') { requireOperator(request); result = await engine.issue({ customerName: payload.customer_name, customerEmail: payload.customer_email, notes: payload.notes, plan: payload.plan, expiresAt: payload.expires_at, activationLimit: payload.activation_limit, graceDays: payload.grace_days, allowFreeStaging: payload.allow_free_staging, allowMultisite: payload.allow_multisite, entitlements: Array.isArray(payload.entitlements) ? payload.entitlements : [] }); }
+      else if (request.url === '/v1/operator/licenses/status') { requireOperator(request); result = await engine.setStatus({ licenseId: payload.license_id, status: payload.status }); }
+      else if (request.url === '/v1/operator/licenses/renew') { requireOperator(request); result = await engine.renew({ licenseId: payload.license_id, expiresAt: payload.expires_at }); }
+      else if (request.url === '/v1/operator/licenses/plan') { requireOperator(request); result = await engine.changePlan({ licenseId: payload.license_id, plan: payload.plan, activationLimit: payload.activation_limit, entitlements: payload.entitlements }); }
+      else if (request.url === '/v1/operator/licenses/details') { requireOperator(request); result = await engine.updateDetails({ licenseId: payload.license_id, customerName: payload.customer_name, customerEmail: payload.customer_email, notes: payload.notes }); }
+      else if (request.url === '/v1/operator/activations/deactivate') { requireOperator(request); result = await engine.deactivateActivation({ licenseId: payload.license_id, activationId: payload.activation_id }); }
+      else if (request.url === '/v1/operator/activations/transfer') { requireOperator(request); result = await engine.transfer({ licenseId: payload.license_id, activationId: payload.activation_id, siteUrl: payload.site_url }); }
+      else if (request.url === '/v1/operator/releases') { requireOperator(request); if (!releaseCatalog) throw new Error('release_not_found'); result = await releaseCatalog.upsert(payload); }
+      else if (request.url === '/v1/operator/releases/status') { requireOperator(request); if (!releaseCatalog) throw new Error('release_not_found'); result = await releaseCatalog.changeStatus({ product: payload.product, version: payload.version, channel: payload.channel, status: payload.status }); }
+      else if (request.url === '/v1/operator/webhooks/retry') { requireOperator(request); if (!webhook) throw new Error('webhook_not_configured'); result = await webhook.retryDue(payload.limit); }
+      else if (request.url === '/v1/customer/activations/transfer') result = await engine.customerTransfer({ portalToken: customerToken(request), licenseId: payload.license_id, activationId: payload.activation_id, siteUrl: payload.site_url });
+      else if (request.url === '/v1/customer/data-requests') result = await engine.requestDataAction({ portalToken: customerToken(request), action: payload.action, note: payload.note });
       else if (request.url === '/v1/licenses/activate') { const value = await engine.activate({ key: payload.license_key, siteUrl: payload.site_url, instanceId: payload.instance_id, isMultisite: payload.is_multisite }); result = entitlements ? entitlements.envelope(value) : value; }
       else if (request.url === '/v1/licenses/validate') { const value = await engine.validate({ licenseId: payload.license_id, siteUrl: payload.site_url, instanceId: payload.instance_id }); result = entitlements ? entitlements.envelope(value) : value; }
       else if (request.url === '/v1/licenses/heartbeat' || request.url === '/v1/licenses/refresh') { const value = await engine.heartbeat({ licenseId: payload.license_id, siteUrl: payload.site_url, instanceId: payload.instance_id }); result = entitlements ? entitlements.envelope(value) : value; }
