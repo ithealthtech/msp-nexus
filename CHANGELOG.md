@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2 — 2026-10-18
+
+- Header menu is easier to read: larger, lighter-weight links with more space between them, a soft highlight on hover and keyboard focus, an underline on the current page, and roomier dropdowns.
+
 ## 0.8.1 — 2026-10-18
 
 - Blog articles: the summary under the headline lines up with the title.

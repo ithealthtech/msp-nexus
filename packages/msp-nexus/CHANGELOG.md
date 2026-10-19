@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2 — 2026-10-18
+
+- Easier-to-read header menu: larger links, more spacing, hover and current-page states, roomier dropdowns.
+
 ## 0.8.1 — 2026-10-18
 
 - Blog article summary aligned with the title.
