@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.3 — 2026-10-18
+
+- New Resources menu and a Resources hub page pattern (msp-nexus/page-resources-hub), also created by the Complete MSP website starter: the security booklet, self-assessment, articles, FAQ, and third-party audits in one place, plus the latest articles and a call to action.
+- New tile icons: book, checklist, article, and question.
+
 ## 0.8.2 — 2026-10-18
 
 - Header menu is easier to read: larger, lighter-weight links with more space between them, a soft highlight on hover and keyboard focus, an underline on the current page, and roomier dropdowns.

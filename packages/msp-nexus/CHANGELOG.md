@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.3 — 2026-10-18
+
+- Resources menu in the header and a Resources hub page pattern.
+- New tile icons: book, checklist, article, question.
+
 ## 0.8.2 — 2026-10-18
 
 - Easier-to-read header menu: larger links, more spacing, hover and current-page states, roomier dropdowns.
