@@ -7,7 +7,7 @@
 A full-site-editing block theme, a companion functionality and visual-design plugin, a
 customization-safe child starter, and an independent licensing and update service.
 
-[![Version](https://img.shields.io/badge/version-0.8.3-b45309)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.8.4-b45309)](CHANGELOG.md)
 [![WordPress](https://img.shields.io/badge/WordPress-6.7%2B-21759b)](#compatibility-target)
 [![PHP](https://img.shields.io/badge/PHP-7.4.33%2B-777bb4)](#compatibility-target)
 [![Theme licence](https://img.shields.io/badge/theme-GPL--2.0--or--later-blue)](#licensing)

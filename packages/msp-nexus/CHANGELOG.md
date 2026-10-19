@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.4 — 2026-10-18
+
+- Footer Resources column; brand block on its own row at tablet widths.
+- Larger, higher-contrast footer text and headings.
+
 ## 0.8.3 — 2026-10-18
 
 - Resources menu in the header and a Resources hub page pattern.

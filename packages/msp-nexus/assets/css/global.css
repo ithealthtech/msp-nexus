@@ -161,35 +161,43 @@
 
 /* Footer */
 .msp-nexus-footer { padding-block: 0 2rem; border-top: 1px solid rgba(160, 170, 235, .18); background: #070612; }
-.msp-nexus-footer p, .msp-nexus-footer li { color: #c9cadb; font-size: .92rem; }
+.msp-nexus-footer p, .msp-nexus-footer li { color: #d0d6e4; font-size: .98rem; line-height: 1.6; }
 .msp-nexus-footer__cta { gap: 1.5rem; margin-block: clamp(3rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.5rem); padding: clamp(1.75rem, 4vw, 2.5rem); border: 1px solid rgba(120, 135, 255, .3); border-radius: 18px; background: radial-gradient(ellipse 60% 120% at 100% 0, rgba(120, 135, 255, .22), transparent 60%), #121124; }
 .msp-nexus-footer__cta-title { margin: 0 0 .35rem; font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
 .msp-nexus-footer__cta p { margin: 0; }
 .msp-nexus-footer__grid { gap: clamp(1.5rem, 4vw, 3rem); }
+
+/* Footer: with five columns, give the brand its own row on tablet widths. */
+@media (min-width: 782px) and (max-width: 1100px) {
+  .msp-nexus-footer__grid { flex-wrap: wrap !important; }
+  .msp-nexus-footer__grid > .msp-nexus-footer__brand { flex-basis: 100% !important; }
+  .msp-nexus-footer__grid > .msp-nexus-footer__col { flex: 1 1 0 !important; min-width: 9rem; }
+}
+
 .msp-nexus-footer__brand .wp-block-site-title { margin: 0 0 .75rem; font-weight: 700; line-height: 1.15; }
 .msp-nexus-footer__brand .wp-block-site-title a { text-decoration: none; }
 
 /* With a logo set, the footer shows it in place of the text site title. */
 .msp-nexus-footer__logo { margin: 0 0 1rem; }
 .msp-nexus-footer__brand:has(.msp-nexus-footer__logo img) > .wp-block-site-title { display: none; }
-.msp-nexus-footer__heading { margin: 0 0 1rem; color: #8fd0f8; font-family: var(--wp--preset--font-family--data-mono); font-size: .78rem !important; letter-spacing: .14em; text-transform: uppercase; }
-.msp-nexus-footer__nav .wp-block-navigation__container { flex-direction: column; align-items: flex-start; gap: .6rem; }
+.msp-nexus-footer__heading { margin: 0 0 1.1rem; color: #9fd6fa; font-family: var(--wp--preset--font-family--data-mono); font-size: .84rem !important; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.msp-nexus-footer__nav .wp-block-navigation__container { flex-direction: column; align-items: flex-start; gap: .7rem; }
 
 /* Pages that end in their own call to action should not get a second one from the footer. */
 body:has(.nx-fs-cta) .msp-nexus-footer__cta { display: none; }
 body:has(.nx-fs-cta) .msp-nexus-footer { padding-top: clamp(3rem, 6vw, 4.5rem); }
-.msp-nexus-footer .wp-block-navigation-item__content { color: #e2e3f0; text-decoration: none; }
+.msp-nexus-footer .wp-block-navigation-item__content { color: #d6deeb; font-size: .98rem; font-weight: 500; letter-spacing: .01em; line-height: 1.35; text-decoration: none; }
 .msp-nexus-footer .wp-block-navigation-item__content:hover, .msp-nexus-footer .wp-block-navigation-item__content:focus-visible { color: #fff; text-decoration: underline; }
 .msp-nexus-footer__contact { gap: .45rem; margin-top: 1rem; }
-.wp-block-button.msp-nexus-footer__link .wp-block-button__link, .wp-block-button.msp-nexus-client-link__button .wp-block-button__link { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: #e2e3f0; font-size: .92rem; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.wp-block-button.msp-nexus-footer__link .wp-block-button__link, .wp-block-button.msp-nexus-client-link__button .wp-block-button__link { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: #d6deeb; font-size: .98rem; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 .wp-block-button.msp-nexus-footer__link .wp-block-button__link:hover, .wp-block-button.msp-nexus-client-link__button .wp-block-button__link:hover { box-shadow: none; color: #fff; transform: none; }
 .wp-block-button.msp-nexus-client-link__button .wp-block-button__link { color: #8fd0f8; text-decoration: none; white-space: nowrap; }
-.msp-nexus-footer__note { margin-top: .9rem; color: #a9acc6 !important; font-size: .85rem !important; white-space: pre-line; }
+.msp-nexus-footer__note { margin-top: .9rem; color: #b8bfd2 !important; font-size: .92rem !important; line-height: 1.55; white-space: pre-line; }
 .msp-nexus-footer__bar { gap: .75rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.25rem; border-top: 1px solid rgba(160, 170, 235, .16); }
-.msp-nexus-footer__bar p { margin: 0; font-size: .82rem; }
-.msp-nexus-footer__bar a { color: #e2e3f0; }
+.msp-nexus-footer__bar p { margin: 0; font-size: .9rem; }
+.msp-nexus-footer__bar a { color: #d6deeb; }
 .msp-nexus-footer__copyright { gap: .35rem; }
-.msp-nexus-footer__copyright :is(p,.wp-block-site-title) { margin: 0; font-size: .82rem !important; font-weight: 400; }
+.msp-nexus-footer__copyright :is(p,.wp-block-site-title) { margin: 0; font-size: .9rem !important; font-weight: 400; }
 .msp-nexus-footer__copyright .wp-block-site-title a { text-decoration: none; }
 
 /* Third-party integrations */

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.4 — 2026-10-18
+
+- Footer gets a Resources column (all resources, insights, security booklet, self-assessment, FAQ). On tablet widths the brand block takes its own row so the four link columns stay readable.
+- Footer text is easier to read: larger links and body copy, brighter colors, and clearer column headings, matching the header menu.
+
 ## 0.8.3 — 2026-10-18
 
 - New Resources menu and a Resources hub page pattern (msp-nexus/page-resources-hub), also created by the Complete MSP website starter: the security booklet, self-assessment, articles, FAQ, and third-party audits in one place, plus the latest articles and a call to action.
