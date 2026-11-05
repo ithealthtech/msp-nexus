@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.4 — 2026-11-04
+
+### Content fields save again
+- Content types with their own fields (Pricing Plans, Case Studies, Locations, Testimonials, Team, Resources, Partners, Certifications and Events) now declare custom-fields support. Without it WordPress kept their registered fields out of the REST API and the block editor, so a plan's price, features and button link, a team member's role, and the rest were silently dropped on save.
+- A **Details** panel in the editor's document settings edits each type's fields: text, longer text, URLs and an on/off switch for a highlighted pricing plan.
+- The Playground QA run checks that pricing plan fields round-trip through REST and that every type with fields supports them.
+
 ## 0.9.3 — 2026-10-19
 
 ### Licensing console

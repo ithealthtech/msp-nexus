@@ -134,6 +134,16 @@ if ($home instanceof WP_Post) {
   update_option('show_on_front', 'page');
   update_option('page_on_front', $home->ID);
 }
+// Content fields are editable through REST (they need custom-fields support to be exposed at all).
+wp_set_current_user(1);
+$plan_id = wp_insert_post(array('post_type' => 'msp_pricing_plan', 'post_status' => 'draft', 'post_title' => 'QA plan'));
+$plan_req = new WP_REST_Request('POST', '/wp/v2/msp_pricing_plan/' . $plan_id);
+$plan_req->set_body_params(array('meta' => array('_msp_price_display' => '$99/mo', '_msp_cta_url' => 'https://example.com/buy', '_msp_highlighted' => '1')));
+$plan_res = rest_do_request($plan_req);
+$plan_meta = $plan_res->get_data()['meta'] ?? array();
+if ('$99/mo' !== get_post_meta($plan_id, '_msp_price_display', true) || 'https://example.com/buy' !== ($plan_meta['_msp_cta_url'] ?? '') || '1' !== ($plan_meta['_msp_highlighted'] ?? '')) $failures[] = 'content_fields_rest_roundtrip';
+foreach (array_keys(MspNexusCore\\Content\\Registrar::FIELDS) as $field_type) if (!post_type_supports($field_type, 'custom-fields')) $failures[] = 'content_fields_support:' . $field_type;
+wp_set_current_user(0);
 $diagnostics = new MspNexusCore\\Admin\\Diagnostics();
 $launch_check = array_values(array_filter($diagnostics->checks(), static fn($check) => 'Launch safety' === ($check['label'] ?? '')));
 if (empty($launch_check) || 'pass' !== ($launch_check[0]['status'] ?? '')) $failures[] = 'unverified_starter_content_published';

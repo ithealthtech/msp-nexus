@@ -28,6 +28,25 @@ final class Registrar
         'msp_event' => array('singular' => 'Webinar or Event', 'plural' => 'Webinars and Events', 'icon' => 'dashicons-calendar-alt', 'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions')),
     );
 
+    /**
+     * Each type's own fields: meta key => [label, kind]. kind is text, textarea, url or toggle.
+     * Types listed here get 'custom-fields' support, without which WordPress keeps registered
+     * meta out of the REST API and the block editor, so the fields could never be saved.
+     *
+     * @var array<string, array<string, array{0:string,1:string}>>
+     */
+    public const FIELDS = array(
+        'msp_case_study' => array('_msp_client_industry' => array('Client industry', 'text'), '_msp_result_summary' => array('Result summary', 'textarea'), '_msp_result_metric' => array('Headline metric', 'text')),
+        'msp_location' => array('_msp_address' => array('Address', 'textarea'), '_msp_phone' => array('Phone', 'text'), '_msp_service_area' => array('Service area', 'text'), '_msp_coordinates' => array('Coordinates (lat,lng)', 'text'), '_msp_hours' => array('Hours', 'text'), '_msp_contact_email' => array('Contact email', 'text')),
+        'msp_testimonial' => array('_msp_person_name' => array('Person', 'text'), '_msp_person_role' => array('Role', 'text'), '_msp_organization' => array('Organization', 'text')),
+        'msp_team' => array('_msp_person_role' => array('Role', 'text'), '_msp_linkedin_url' => array('LinkedIn URL', 'url')),
+        'msp_resource' => array('_msp_download_url' => array('Download URL', 'url'), '_msp_reading_time' => array('Reading time', 'text')),
+        'msp_partner' => array('_msp_partner_url' => array('Partner URL', 'url'), '_msp_partner_tier' => array('Partner tier', 'text')),
+        'msp_certification' => array('_msp_issuer' => array('Issuer', 'text'), '_msp_valid_through' => array('Valid through', 'text'), '_msp_verification_url' => array('Verification URL', 'url')),
+        'msp_pricing_plan' => array('_msp_audience' => array('Audience', 'text'), '_msp_price_mode' => array('Price mode (for example Per month)', 'text'), '_msp_price_display' => array('Price shown', 'text'), '_msp_features' => array('Features (separate with ·)', 'textarea'), '_msp_highlighted' => array('Highlight this plan', 'toggle'), '_msp_disclaimer' => array('Disclaimer', 'textarea'), '_msp_cta_url' => array('Button URL', 'url')),
+        'msp_event' => array('_msp_event_start' => array('Starts', 'text'), '_msp_event_end' => array('Ends', 'text'), '_msp_event_timezone' => array('Time zone', 'text'), '_msp_registration_url' => array('Registration URL', 'url'), '_msp_event_format' => array('Format', 'text')),
+    );
+
     /** Admin menu that groups every content type instead of 13 top-level entries. */
     public const MENU_SLUG = 'msp-nexus-content';
 
@@ -53,6 +72,7 @@ final class Registrar
 
         add_action('transition_post_status', array($this, 'watch_page_slugs'), 10, 3);
         add_action('init', array($this, 'maybe_flush'), 99);
+        add_action('enqueue_block_editor_assets', array($this, 'fields_panel'));
     }
 
     /**
@@ -118,7 +138,7 @@ final class Registrar
                 'hierarchical'    => false,
                 'show_in_menu'    => self::MENU_SLUG,
                 'menu_icon'       => $config['icon'],
-                'supports'        => $config['supports'],
+                'supports'        => isset(self::FIELDS[$slug]) ? array_values(array_unique(array_merge($config['supports'], array('custom-fields')))) : $config['supports'],
                 'rewrite'         => array('slug' => $this->archive_slug($slug), 'with_front' => false),
                 'template_lock'   => false,
                 'map_meta_cap'    => true,
@@ -196,19 +216,25 @@ final class Registrar
         );
     }
 
+    /** The Details panel in the block editor, for the type being edited. */
+    public function fields_panel(): void
+    {
+        $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+        $type = $screen ? (string) $screen->post_type : '';
+        if (! isset(self::FIELDS[$type])) {
+            return;
+        }
+        $fields = array();
+        foreach (self::FIELDS[$type] as $key => $field) {
+            $fields[] = array('key' => $key, 'label' => __($field[0], 'msp-nexus-core'), 'kind' => $field[1]);
+        }
+        wp_enqueue_script('msp-nexus-content-fields', plugins_url('assets/content-fields.js', MSP_NEXUS_CORE_FILE), array('wp-plugins', 'wp-edit-post', 'wp-editor', 'wp-element', 'wp-components', 'wp-data', 'wp-i18n'), MSP_NEXUS_CORE_VERSION, true);
+        wp_localize_script('msp-nexus-content-fields', 'mspNexusContentFields', array('title' => __('Details', 'msp-nexus-core'), 'fields' => $fields));
+    }
+
     private function register_meta(): void
     {
-        $fields = array(
-            'msp_case_study' => array('_msp_client_industry', '_msp_result_summary', '_msp_result_metric'),
-            'msp_location' => array('_msp_address', '_msp_phone', '_msp_service_area', '_msp_coordinates', '_msp_hours', '_msp_contact_email'),
-            'msp_testimonial' => array('_msp_person_name', '_msp_person_role', '_msp_organization'),
-            'msp_team' => array('_msp_person_role', '_msp_linkedin_url'),
-            'msp_resource' => array('_msp_download_url', '_msp_reading_time'),
-            'msp_partner' => array('_msp_partner_url', '_msp_partner_tier'),
-            'msp_certification' => array('_msp_issuer', '_msp_valid_through', '_msp_verification_url'),
-            'msp_pricing_plan' => array('_msp_audience', '_msp_price_mode', '_msp_price_display', '_msp_features', '_msp_highlighted', '_msp_disclaimer', '_msp_cta_url'),
-            'msp_event' => array('_msp_event_start', '_msp_event_end', '_msp_event_timezone', '_msp_registration_url', '_msp_event_format'),
-        );
+        $fields = array_map(static fn (array $f): array => array_keys($f), self::FIELDS);
 
         foreach ($fields as $post_type => $keys) {
             foreach ($keys as $key) {

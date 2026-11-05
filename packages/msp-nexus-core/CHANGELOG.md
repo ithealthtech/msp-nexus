@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.4 — 2026-11-04
+
+- Content types with registered fields declare custom-fields support, so the fields save through the editor and the REST API, with a Details panel to edit them.
+
 ## 0.9.3 — 2026-10-19
 
 - Version aligned with the 0.9.3 release (licensing console).
