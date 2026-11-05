@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MSP Nexus 0.9.3\n"
+"Project-Id-Version: MSP Nexus 0.9.4\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1275,6 +1275,10 @@ msgstr ""
 
 #: packages/msp-nexus-core/src/Admin/Diagnostics.php
 msgid "Detail"
+msgstr ""
+
+#: packages/msp-nexus-core/src/Content/Registrar.php
+msgid "Details"
 msgstr ""
 
 #: packages/msp-nexus-core/blocks/woocommerce-element/render.php

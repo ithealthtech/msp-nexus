@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.4 — 2026-11-04
+
+- Version aligned with the 0.9.4 release (content fields fix in MSP Nexus Core).
+
 ## 0.9.3 — 2026-10-19
 
 - Version aligned with the 0.9.3 release (licensing console).
